@@ -1,0 +1,32 @@
+<% "Search" %>
+
+<p>
+  <%= link_to "New Search", new_search_path %> |
+  <%= link_to "Edit", edit_search_path(@search) %> |
+  <%= link_to "Destroy", @search, :confirm => 'Are you sure?', :method => :delete %> |
+</p>
+
+
+<table>
+	<tr>
+		<th align="left" width="25%"><%= 'Name' %></th>
+	    <th align="left" width="10%"><%= 'Number' %></th>
+	    <th align="left" width="20%"><%= 'Instructor' %></th>
+	    <th align="left" width="10%"><%= 'Room' %></th>
+	    <th align="left" width="5%"><%=  'Day' %></th>
+	    <th align="left" width="5%"><%=  'Units' %></th>
+	    <th align="left" width="15%"><%=  'Time' %></th>
+	    <th align="left" width="10%"><%=  'Limitations' %></th>
+	</tr>
+<%= render :partial => @search.courses %>
+</table>
+
+<p>
+  <%= link_to "New Search", new_search_path %> |
+  <%= link_to "Edit", edit_search_path(@search) %> |
+  <%= link_to "Destroy", @search, :confirm => 'Are you sure?', :method => :delete %> |
+</p>
+
+
+
+

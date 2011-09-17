@@ -1,17 +1,19 @@
 <h1>YLS courses</h1>
 
-<table>
+<p>
+<strong><%= link_to "Search courses by criteria", new_search_path %></strong>
+</p>
+
+<table class="course_list">
   <tr>
-    <th><%= sortable 'name' %></th>
-    <th><%= sortable 'number' %></th>
-    <th><%= sortable 'instructor' %></th>
-    <th><%= sortable 'room' %></th>
-    <th><%= sortable 'day' %></th>
-    <th><%= sortable 'units' %></th>
-    <th><%= sortable 'time' %></th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th align="left" width="25%"><%= sortable 'name' %></th>
+    <th align="left" width="10%"><%= sortable 'number' %></th>
+    <th align="left" width="20%"><%= sortable 'instructor' %></th>
+    <th align="left" width="10%"><%= sortable 'room' %></th>
+    <th align="left" width="5%"><%= sortable 'day' %></th>
+    <th align="left" width="5%"><%= sortable 'units' %></th>
+    <th align="left" width="15%"><%= sortable 'time' %></th>
+    <th align="left" width="10%"><%= sortable 'limitations' %></th>
   </tr>
 
 <% @courses.each do |course| %>
@@ -23,6 +25,7 @@
     <td><%= course.day %></td>
     <td><%= course.units %></td>
     <td><%= course.time %></td>
+	<td><%= course.limitations %></td>
     <td><%= link_to 'Show', course %></td>
     <td><%= link_to 'Edit', edit_course_path(course) %></td>
     <td><%= link_to 'Destroy', course, :confirm => 'Are you sure?', :method => :delete %></td>

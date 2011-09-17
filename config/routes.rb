@@ -1,4 +1,6 @@
 YlsCourses::Application.routes.draw do
+  resources :searches
+
   resources :courses
   
   root :to => 'courses#index'

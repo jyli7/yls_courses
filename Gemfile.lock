@@ -47,7 +47,11 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metaclass (0.0.1)
     mime-types (1.16)
+    mocha (0.10.0)
+      metaclass (~> 0.0.1)
+    nifty-generators (0.4.6)
     nokogiri (1.5.0)
     polyglot (0.3.2)
     rack (1.2.4)
@@ -109,6 +113,8 @@ DEPENDENCIES
   factory_girl_rails (= 1.0)
   faker (= 0.3.1)
   gravatar_image_tag (= 1.0.0.pre2)
+  mocha
+  nifty-generators
   rails (= 3.0.9)
   rspec-rails (= 2.6.1)
   spork (= 0.9.0.rc8)

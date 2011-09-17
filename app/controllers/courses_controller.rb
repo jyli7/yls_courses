@@ -5,6 +5,7 @@ class CoursesController < ApplicationController
   # GET /courses.xml
   def index
     @courses = Course.order(sort_column + " " + sort_direction)
+    @title = "List"
 
     respond_to do |format|
       format.html # index.html.erb

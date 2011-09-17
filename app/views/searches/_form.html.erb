@@ -1,0 +1,23 @@
+<%= form_for @search do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :Course_Name %><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :instructor %><br />
+    <%= f.text_field :instructor %>
+  </p>
+
+  <p>
+    <%= f.label :day %><br />
+    <%= f.select :day, [['Any', nil],['M', 'M'], ['T', 'T'], ['W', 'W'], ['Th', 'Th'], ['F', 'F']]  %>
+
+  </p>  
+  <p>
+    <%= f.label :units %><br />
+    <%= f.select :units, [['Any', nil],['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']]  %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
