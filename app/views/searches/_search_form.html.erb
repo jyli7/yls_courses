@@ -1,0 +1,28 @@
+<% @title %>
+
+<%= form_for @search do |f| %>
+  <%= f.error_messages %>
+  <table>
+	<tr>
+	    <th><%= f.label :Course_Name %></th>
+		<th><%= f.label :instructor %></th>
+		<th><%= f.label :Meets_on_this_day %></th>
+		<th><%= f.label :units %></th>
+    </tr>
+	<tr>
+		<td><%= f.text_field :name %></td>
+    	<td><%= f.text_field :instructor %></td>
+		<td><%= fields_for "days" do |form| %>
+			M: <%= form.check_box "", {}, 'M', ''  %>
+			T: <%= form.check_box "", {}, 'T', '' %>
+			W: <%= form.check_box "", {}, 'W', '' %>
+			Th: <%= form.check_box "", {}, 'Th', '' %>
+			F: <%= form.check_box "", {}, 'F', '' %>
+			<% end %>
+	    <td><%= f.select :units, [['Any', nil],['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']]  %></td>
+	  </p>
+	</tr>
+ </table>
+
+  <p><%= button_to 'Search', searches_path %></p>
+<% end %>

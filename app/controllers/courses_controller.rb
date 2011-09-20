@@ -5,8 +5,9 @@ class CoursesController < ApplicationController
   # GET /courses.xml
   def index
     @courses = Course.order(sort_column + " " + sort_direction)
-    @title = "List"
-
+    @search = Search.new 
+    @search_show = Search.last
+        
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @courses }

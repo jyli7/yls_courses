@@ -3,7 +3,7 @@ class Search < ActiveRecord::Base
   
   def courses
     @courses ||= find_courses
-  end 
+  end   
   
   private 
   
@@ -20,7 +20,7 @@ class Search < ActiveRecord::Base
     end  
   
     def day_conditions
-      ["courses.day LIKE ?", "%#{day}%"] unless day.blank?
+      ["courses.day LIKE ?", "%"+ @days.join("%")+"%"] unless @days == nil
     end
       
     def unit_conditions

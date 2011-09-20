@@ -8,7 +8,6 @@ require 'rubygems'
   book = Spreadsheet.open '/Users/jimmyli/rails_projects/grocery_helper/public/data/YLS_Classes.xls'
   sheet1 = book.worksheet 'Sheet1'
 
-'''
   name_array = [] # for names
   sheet1.each 3 do |row|
     name_array << row[0] 
@@ -47,7 +46,7 @@ require 'rubygems'
 
   count = 0
   for course in Course.all
-    course.update_attribute :day, cnum_array[count]
+    course.update_attribute :days, cnum_array[count]
     count += 1
   end
 
@@ -85,8 +84,6 @@ require 'rubygems'
     course.update_attribute :units, cnum_array[count]
     count += 1
   end
-
-'''
 
   cnum_array = [] # for limitations
   sheet1.each 3 do |row|

@@ -1,12 +1,12 @@
 class SearchesController < ApplicationController
+  attr_accessor :create
 
-  
   def index
     @searches = Search.all
   end
 
   def show
-    @search = Search.find(params[:id])
+    @search_show = Search.find(params[:id])
   end
 
   def new
@@ -16,12 +16,17 @@ class SearchesController < ApplicationController
 
   def create
     @search = Search.new(params[:search])
-    if @search.save
-      redirect_to @search, :notice => "Successfully created search."
-    else
-      render :action => 'new'
+    @days = params[:days]
+    
+    respond_to do |format|  
+      if @search.save 
+        format.html { redirect_to courses_path, :notice => "Successfully created search."}
+        format.js 
+      else
+        format.html { render :action => 'new' }
+      end
     end
-  end
+  end 
 
   def edit
     @search = Search.find(params[:id])
