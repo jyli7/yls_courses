@@ -1,15 +1,15 @@
 <% "Search" %>
 <table>
-	<tr>
-		<th align="left" width="25%"><%= 'Name' %></th>
-	    <th align="left" width="10%"><%= 'Number' %></th>
-	    <th align="left" width="20%"><%= 'Instructor' %></th>
-	    <th align="left" width="10%"><%= 'Room' %></th>
-	    <th align="left" width="5%"><%=  'Day' %></th>
-	    <th align="left" width="5%"><%=  'Units' %></th>
-	    <th align="left" width="15%"><%=  'Time' %></th>
-	    <th align="left" width="10%"><%=  'Limitations' %></th>
-	</tr>
+  <tr>
+    <th align="left" width="25%"><%= sortable 'name' %></th>
+    <th align="left" width="10%"><%= sortable 'number' %></th>
+    <th align="left" width="15%"><%= sortable 'instructor' %></th>
+    <th align="left" width="10%"><%= sortable 'room' %></th>
+    <th align="left" width="10%"><%= sortable 'day' %></th>
+    <th align="left" width="5%"><%= sortable 'units' %></th>
+    <th align="left" width="15%"><%= sortable 'time' %></th>
+    <th align="left" width="10%"><%= sortable 'limitations' %></th>
+  </tr>
 <%= render :partial => @search_show.courses %>
 </table>
 

@@ -6,7 +6,7 @@
 	<tr>
 	    <th><%= f.label :Course_Name %></th>
 		<th><%= f.label :instructor %></th>
-		<th><%= f.label :Meets_on_this_day %></th>
+		<th><%= f.label :Meets_on_at_least_these_days %></th>
 		<th><%= f.label :units %></th>
     </tr>
 	<tr>
@@ -19,10 +19,12 @@
 			Th: <%= form.check_box "", {}, 'Th', '' %>
 			F: <%= form.check_box "", {}, 'F', '' %>
 			<% end %>
+		</td>
 	    <td><%= f.select :units, [['Any', nil],['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']]  %></td>
 	  </p>
 	</tr>
  </table>
+<em>You may leave any of the above fields blank </em>
 
   <p><%= button_to 'Search', searches_path %></p>
 <% end %>

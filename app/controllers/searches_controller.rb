@@ -1,5 +1,5 @@
 class SearchesController < ApplicationController
-  attr_accessor :create
+  helper_method :sort_column, :sort_direction
 
   def index
     @searches = Search.all
@@ -16,7 +16,8 @@ class SearchesController < ApplicationController
 
   def create
     @search = Search.new(params[:search])
-    @days = params[:days]
+    $days = params[:days]
+    $searchable = 1 
     
     respond_to do |format|  
       if @search.save 
@@ -46,4 +47,14 @@ class SearchesController < ApplicationController
     @search.destroy
     redirect_to searches_url, :notice => "Successfully destroyed search."
   end
+  
+  private 
+  
+    def sort_column
+      Course.column_names.include?(params[:sort]) ? params[:sort] : "name"
+    end
+
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+    end
 end

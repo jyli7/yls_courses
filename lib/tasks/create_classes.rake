@@ -46,7 +46,7 @@ require 'rubygems'
 
   count = 0
   for course in Course.all
-    course.update_attribute :days, cnum_array[count]
+    course.update_attribute :day, cnum_array[count]
     count += 1
   end
 

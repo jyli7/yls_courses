@@ -6,6 +6,8 @@ gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'will_paginate', '3.0.pre2'
 gem 'calendar_date_select', '1.16.3'
 gem 'spreadsheet'
+gem 'rd_searchlogic', :require => 'searchlogic', :git => 'git://github.com/railsdog/searchlogic.git'
+gem 'hirb'
 
 group :development do
   gem 'rspec-rails', '2.6.1'

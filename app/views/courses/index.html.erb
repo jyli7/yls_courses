@@ -5,8 +5,9 @@
 </div>
 <%= link_to "Full course list", courses_path %>
 
-<% if @search.save %>
+<% if $searchable == 1 %>
 	<div id = "results_scroll">
+		HELLO1!
 		<%= render :partial => 'searches/search_results' %>
 	</div>
 <% else %>

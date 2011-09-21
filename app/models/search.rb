@@ -1,5 +1,4 @@
 class Search < ActiveRecord::Base
-  attr_accessible :name, :day, :units, :instructor
   
   def courses
     @courses ||= find_courses
@@ -8,7 +7,7 @@ class Search < ActiveRecord::Base
   private 
   
     def find_courses
-      Course.find(:all, :conditions => conditions)
+      Course.find(:all, :conditions => conditions, :order => :units) 
     end 
   
     def name_conditions
@@ -20,11 +19,11 @@ class Search < ActiveRecord::Base
     end  
   
     def day_conditions
-      ["courses.day LIKE ?", "%"+ @days.join("%")+"%"] unless @days == nil
+      ["courses.day LIKE ?", "%"+ $days.join("%")+"%"] 
     end
       
     def unit_conditions
-      ["courses.units LIKE ?", "%#{units}%"] unless units.blank?
+      ["courses.units LIKE ?", "%" + "%#{units}%"] unless units.blank?
     end
 
     def conditions
