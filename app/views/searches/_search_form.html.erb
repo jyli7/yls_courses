@@ -1,26 +1,16 @@
 <% @title %>
 
 <%= form_for @search do |f| %>
-  <%= f.error_messages %>
   <table>
 	<tr>
-	    <th><%= f.label :Course_Name %></th>
-		<th><%= f.label :instructor %></th>
-		<th><%= f.label :Meets_on_at_least_these_days %></th>
-		<th><%= f.label :units %></th>
+	    <th><%= f.label :name_like, "Name" %></th>
+		<th><%= f.label :instructor_like, "Instructor" %></th>
+		<th><%= f.label :day_like, "Meets on these days" %></th>
+		<th><%= f.label :units_like, "Units" %></th>
     </tr>
 	<tr>
-		<td><%= f.text_field :name %></td>
-    	<td><%= f.text_field :instructor %></td>
-		<td><%= fields_for "days" do |form| %>
-			M: <%= form.check_box "", {}, 'M', ''  %>
-			T: <%= form.check_box "", {}, 'T', '' %>
-			W: <%= form.check_box "", {}, 'W', '' %>
-			Th: <%= form.check_box "", {}, 'Th', '' %>
-			F: <%= form.check_box "", {}, 'F', '' %>
-			<% end %>
-		</td>
-	    <td><%= f.select :units, [['Any', nil],['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']]  %></td>
+		<td><%= f.text_field :name_like %></td>
+    	<td><%= f.text_field :instructor_like %></td>
 	  </p>
 	</tr>
  </table>

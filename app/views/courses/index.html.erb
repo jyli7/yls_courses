@@ -1,18 +1,59 @@
 <h1> YLS courses</h1>
 <%= notice %>
 <div id="search_form">
-	<%= render 'searches/search_form' %>
+	<%= form_for @search do |f| %>
+	  <table>
+		<tr>
+		    <th><%= f.label :name_like, "Name" %></th>
+			<th><%= f.label :instructor_like, "Instructor" %></th>
+			<th><%= f.label :day_like, "Meets on these days" %></th>
+			<th><%= f.label :units_like, "Units" %></th>
+			<th><%= f.label :limitations_like, "Limitations" %></th>
+	    </tr>
+		<tr>
+			<td><%= f.text_field :name_like %></td>
+	    	<td><%= f.text_field :instructor_like %></td>
+			<td><%= f.select :day_like, ['M', 'T', 'W', 'Th', 'F' ], { :include_blank => true, :selected => :blank }  %></td>
+			<td><%= f.select :units_like, ['1', '2', '3', '4'], { :include_blank => true, :selected => :blank } %></td>
+			<td><%= f.select :limitations_like, ['Limited', 'Permission', 'LSO'], { :include_blank => true, :selected => :blank } %></td>
+		  </p>
+		</tr>
+	 </table>
+	<%= f.submit "Search" %>
+	<br>
+	<% end %>
 </div>
-<%= link_to "Full course list", courses_path %>
 
-<% if $searchable == 1 %>
-	<div id = "results_scroll">
-		HELLO1!
-		<%= render :partial => 'searches/search_results' %>
-	</div>
-<% else %>
-	<div id = "results_scroll">
-		<%= render :partial => 'full_course_list' %>
-	</div>
-<% end %>
-
+<br>
+Sort by:
+<%= sort_link @search, :name %> |
+<%= sort_link @search, :instructor %> |
+<%= sort_link @search, :day %> |
+<%= sort_link @search, :units %> |
+<%= sort_link @search, :limitations %> 
+	
+<table>
+  <tr>
+    <th align="left" width="25%"><%= 'Name' %></th>
+    <th align="left" width="10%"><%= 'Number' %></th>
+    <th align="left" width="15%"><%= 'Instructor' %></th>
+    <th align="left" width="10%"><%= 'Room' %></th>
+    <th align="left" width="10%"><%= 'Day' %></th>
+    <th align="left" width="5%"><%=  'Units' %></th>
+    <th align="left" width="15%"><%= 'Time' %></th>
+    <th align="left" width="10%"><%= 'Limitations' %></th>
+  </tr>
+	<% for course in @courses %>
+		<tr>
+		   <td><%= course.name %></td>
+		   <td><%= course.number %></td>
+		   <td><%= course.instructor %></td>
+		   <td><%= course.room %></td>
+		   <td><%= course.day %></td>
+		   <td><%= course.units %></td>
+		   <td><%= course.time %></td>
+		   <td><%= course.limitations %></td>
+		   <td><%= link_to 'Show', course %></td>
+		</tr>
+	<% end %>
+</table>
