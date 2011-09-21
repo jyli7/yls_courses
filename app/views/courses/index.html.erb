@@ -6,14 +6,14 @@
 		<tr>
 		    <th><%= f.label :name_like, "Name" %></th>
 			<th><%= f.label :instructor_like, "Instructor" %></th>
-			<th><%= f.label :day_like, "Meets on these days" %></th>
+			<th><%= f.label :day_like, "Days (e.g. M or MW)" %></th>
 			<th><%= f.label :units_like, "Units" %></th>
 			<th><%= f.label :limitations_like, "Limitations" %></th>
 	    </tr>
 		<tr>
-			<td><%= f.text_field :name_like %></td>
-	    	<td><%= f.text_field :instructor_like %></td>
-			<td><%= f.select :day_like, ['M', 'T', 'W', 'Th', 'F' ], { :include_blank => true, :selected => :blank }  %></td>
+			<td><%= f.text_field :name_like, :size => 35 %></td>
+	    	<td><%= f.text_field :instructor_like, :size => 35 %></td>
+			<td><%= f.text_field :day_like, :size => 10%></td>
 			<td><%= f.select :units_like, ['1', '2', '3', '4'], { :include_blank => true, :selected => :blank } %></td>
 			<td><%= f.select :limitations_like, ['Limited', 'Permission', 'LSO'], { :include_blank => true, :selected => :blank } %></td>
 		  </p>
@@ -37,9 +37,9 @@ Sort by:
     <th align="left" width="25%"><%= 'Name' %></th>
     <th align="left" width="10%"><%= 'Number' %></th>
     <th align="left" width="15%"><%= 'Instructor' %></th>
-    <th align="left" width="10%"><%= 'Room' %></th>
-    <th align="left" width="10%"><%= 'Day' %></th>
-    <th align="left" width="5%"><%=  'Units' %></th>
+    <th align="left" width="8%"><%= 'Room' %></th>
+    <th align="left" width="7%"><%= ' Day' %></th>
+    <th align="left" width="10%"><%=  'Units' %></th>
     <th align="left" width="15%"><%= 'Time' %></th>
     <th align="left" width="10%"><%= 'Limitations' %></th>
   </tr>
