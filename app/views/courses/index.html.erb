@@ -1,26 +1,27 @@
-<h1> YLS courses</h1>
-<%= notice %>
+<table width="100%" cellspacing="0" cellpadding="0" border="0" id='yls'>
+	<tr>
+		<th> YLS Courses: Spring 2012 </th>
+	</tr>
+</table>
 <div id="search_form">
 	<%= form_for @search do |f| %>
-	  <table>
+	  <table id="search">
 		<tr>
-		    <th><%= f.label :name_like, "Name" %></th>
-			<th><%= f.label :instructor_like, "Instructor" %></th>
-			<th><%= f.label :day_like, "Days (e.g. M or MW)" %></th>
-			<th><%= f.label :units_like, "Units" %></th>
-			<th><%= f.label :limitations_like, "Limitations" %></th>
+		    <th width="30%"><%= f.label :name_like, "Name" %></th>
+			<th width="30%"><%= f.label :instructor_like, "Instructor" %></th>
+			<th width="15%"><%= f.label :day_like, "Days (e.g. M or MW)" %></th>
+			<th width="11%"><%= f.label :units_like, "Units" %></th>
+			<th width="14%"><%= f.label :limitations_like, "Limitations" %></th>
 	    </tr>
 		<tr>
-			<td><%= f.text_field :name_like, :size => 35 %></td>
-	    	<td><%= f.text_field :instructor_like, :size => 35 %></td>
-			<td><%= f.text_field :day_like, :size => 10%></td>
+			<td><%= f.text_field :name_like, :size => 30 %></td>
+	    	<td><%= f.text_field :instructor_like, :size => 30 %></td>
+			<td><%= f.text_field :day_like, :size => 15%></td>
 			<td><%= f.select :units_like, ['1', '2', '3', '4'], { :include_blank => true, :selected => :blank } %></td>
 			<td><%= f.select :limitations_like, ['Limited', 'Permission', 'LSO'], { :include_blank => true, :selected => :blank } %></td>
-		  </p>
 		</tr>
+		<tr><td><%= f.submit "Search" %></td></tr>	
 	 </table>
-	<%= f.submit "Search" %>
-	<br>
 	<% end %>
 </div>
 
@@ -31,29 +32,30 @@ Sort by:
 <%= sort_link @search, :day %> |
 <%= sort_link @search, :units %> |
 <%= sort_link @search, :limitations %> 
+<br>
+
+<!-- Table markup -->	
+<table id="course_list">
 	
-<table>
-  <tr>
-    <th align="left" width="25%"><%= 'Name' %></th>
-    <th align="left" width="10%"><%= 'Number' %></th>
-    <th align="left" width="15%"><%= 'Instructor' %></th>
-    <th align="left" width="8%"><%= 'Room' %></th>
-    <th align="left" width="7%"><%= ' Day' %></th>
-    <th align="left" width="10%"><%=  'Units' %></th>
-    <th align="left" width="15%"><%= 'Time' %></th>
-    <th align="left" width="10%"><%= 'Limitations' %></th>
-  </tr>
-	<% for course in @courses %>
-		<tr>
-		   <td><%= course.name %></td>
-		   <td><%= course.number %></td>
-		   <td><%= course.instructor %></td>
-		   <td><%= course.room %></td>
-		   <td><%= course.day %></td>
-		   <td><%= course.units %></td>
-		   <td><%= course.time %></td>
-		   <td><%= course.limitations %></td>
-		   <td><%= link_to 'Show', course %></td>
-		</tr>
-	<% end %>
+  <!-- Table header -->
+  <thead>
+	  <tr>
+	    <th scope="col" align="left" width="20%"><%= 'Name' %></th>
+	    <th scope="col" align="left" width="10%"><%= 'Number' %></th>
+	    <th scope="col" align="left" width="20%"><%= 'Instructor' %></th>
+	    <th scope="col" align="left" width="5%"><%= 'Room' %></th>
+	    <th scope="col" align="left" width="4%"><%= 'Day' %></th>
+	    <th scope="col" align="left" width="6%"><%= 'Units' %></th>
+	    <th scope="col" align="left" width="10%"><%= 'Time' %></th>
+	    <th scope="col" align="left" width="12%"><%= 'Limitations' %></th>
+	    <th scope="col" align="left" width="0%"><%= '' %></th>
+	  </tr>
+  </thead>
+	
+  <!-- Table body -->
+
+  <tbody>
+	<%= render :partial => 'tbody' %>
+  </tbody>
+
 </table>

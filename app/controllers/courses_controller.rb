@@ -6,6 +6,7 @@ class CoursesController < ApplicationController
   def index
     @search = Course.search(params[:search])
     @courses = @search.all
+    @count = 1
         
     respond_to do |format|
       format.html # index.html.erb

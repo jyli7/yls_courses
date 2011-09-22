@@ -2,12 +2,13 @@ desc "Fetch law classes"
 task :fetch_classes => :environment do 
 require 'spreadsheet'
 require 'rubygems'
+require 'time'
 
   Spreadsheet.client_encoding = 'UTF-8'
 
   book = Spreadsheet.open '/Users/jimmyli/rails_projects/grocery_helper/public/data/YLS_Classes.xls'
   sheet1 = book.worksheet 'Sheet1'
-
+'''
   name_array = [] # for names
   sheet1.each 3 do |row|
     name_array << row[0] 
@@ -95,5 +96,64 @@ require 'rubygems'
     course.update_attribute :limitations, cnum_array[count]
     count += 1
   end
+
+
+  cnum_array = [] # for http addresses
+  sheet1.each 3 do |row|
+    cnum_array << row[8] 
+  end
+
+  count = 0
+  for course in Course.all
+    course.update_attribute :address, cnum_array[count]
+    count += 1
+  end
+
+'''
+
+  cnum_array = [] # for start times
+  sheet1.each 3 do |row|
+    unless row[9].blank?
+      time = Time.parse(row[9])
+      time = time.utc
+      time = time.to_s
+      time = time.delete "-"
+      time = time.delete ":"
+      time = time.delete "UTC"
+      time = time.chop
+      time = time.gsub(" ", "T")
+      time = time.insert -1, "Z"
+      cnum_array << time
+    end 
+  end
+
+  count = 0
+  for course in Course.all
+    course.update_attribute :start_time, cnum_array[count]
+    count += 1
+  end
+  
+  cnum_array = [] # for end times
+  sheet1.each 3 do |row|
+    unless row[9].blank?
+      time = Time.parse(row[10])
+      time = time.utc
+      time = time.to_s
+      time = time.delete "-"
+      time = time.delete ":"
+      time = time.delete "UTC"
+      time = time.chop
+      time = time.gsub(" ", "T")
+      time = time.insert -1, "Z"
+      cnum_array << time
+    end 
+  end
+
+  count = 0
+  for course in Course.all
+    course.update_attribute :end_time, cnum_array[count]
+    count += 1
+  end
+
 
 end 
