@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110922162057) do
+ActiveRecord::Schema.define(:version => 20110927204627) do
 
   create_table "courses", :force => true do |t|
     t.string   "name"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20110922162057) do
     t.string   "address"
     t.string   "end_time"
     t.string   "start_time"
+    t.string   "descrip"
   end
 
   create_table "searches", :force => true do |t|

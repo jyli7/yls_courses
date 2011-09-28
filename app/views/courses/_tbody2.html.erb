@@ -1,0 +1,32 @@
+<% for course in @courses %>
+	<% if @count % 2 == 0 %>
+		<tr class="even">
+		   <td><%= link_to course.name, course.address, :class => "course_name" %></td>
+		   <td><%= course.number %></td>
+		   <td><%= course.instructor %></td>
+		   <td><%= course.room %></td>
+		   <td><%= course.day %></td>
+		   <td><%= course.units %></td>
+		   <td><%= course.time %></td>
+		   <td><%= course.limitations %></td>
+		   <td><a href="http://www.google.com/calendar/event?action=TEMPLATE&text=<%= course.name %> &dates=<%= course.start_time %>/<%= course.end_time %>&details=<%= course.name%>%20with%20<%= course.instructor %>&location=<%= course.room %>&trp=false&sprop=&sprop=name:" target="_blank"> Add to Calendar </a></td>
+		</tr>
+		<tr>
+			<td><%= course.descrip %></td>
+		</tr>
+		<% @count += 1 %>
+	<% else %>
+		<tr class="odd">
+		   <td><%= link_to course.name, course.address, :class => "course_name" %></td>
+		   <td><%= course.number %></td>
+		   <td><%= course.instructor %></td>
+		   <td><%= course.room %></td>
+		   <td><%= course.day %></td>
+		   <td><%= course.units %></td>
+		   <td><%= course.time %></td>
+		   <td><%= course.limitations %></td>
+		   <td><a href="http://www.google.com/calendar/event?action=TEMPLATE&text=<%= course.name %> &dates=<%= course.start_time %>/<%= course.end_time %>&details=<%= course.name%>%20with%20<%= course.instructor %>&location=<%= course.room %>&trp=false&sprop=&sprop=name:" target="_blank"> Add to Calendar </a></td>
+		</tr>
+		<% @count += 1 %>
+	<% end %>	
+<% end %>

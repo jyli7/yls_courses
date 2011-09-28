@@ -8,7 +8,7 @@ gem 'calendar_date_select', '1.16.3'
 gem 'spreadsheet'
 gem 'hirb'
 gem 'meta_search'
-
+gem 'hpricot'
 
 group :development do
   gem 'rspec-rails', '2.6.1'

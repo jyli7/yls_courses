@@ -82,7 +82,11 @@ table#search td {
 	padding: 2px 2px 5px 2px;
 }
 
+/*horizontal bars */
 
+.zebra {
+	background-color:#2D647F;
+}
 
 /* Round corners */
 

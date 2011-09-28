@@ -24,14 +24,6 @@
 	 </table>
 	<% end %>
 </div>
-
-<br>
-Sort by:
-<%= sort_link @search, :name %> |
-<%= sort_link @search, :instructor %> |
-<%= sort_link @search, :day %> |
-<%= sort_link @search, :units %> |
-<%= sort_link @search, :limitations %> 
 <br>
 
 <!-- Table markup -->	
@@ -40,15 +32,15 @@ Sort by:
   <!-- Table header -->
   <thead>
 	  <tr>
-	    <th scope="col" align="left" width="20%"><%= 'Name' %></th>
-	    <th scope="col" align="left" width="10%"><%= 'Number' %></th>
-	    <th scope="col" align="left" width="20%"><%= 'Instructor' %></th>
-	    <th scope="col" align="left" width="5%"><%= 'Room' %></th>
-	    <th scope="col" align="left" width="4%"><%= 'Day' %></th>
-	    <th scope="col" align="left" width="6%"><%= 'Units' %></th>
-	    <th scope="col" align="left" width="10%"><%= 'Time' %></th>
-	    <th scope="col" align="left" width="12%"><%= 'Limitations' %></th>
-	    <th scope="col" align="left" width="0%"><%= '' %></th>
+	    <th scope="col" align="left" width="17%"><%= sort_link @search, :name %></th>
+	    <th scope="col" align="left" width="10%"><%= sort_link @search, :number %></th>
+	    <th scope="col" align="left" width="17%"><%= sort_link @search, :instructor %></th>
+	    <th scope="col" align="left" width="8%"><%= sort_link @search, :room %></th>
+	    <th scope="col" align="left" width="7%"><%= sort_link @search, :day %></th>
+	    <th scope="col" align="left" width="6%"><%= sort_link @search, :units %></th>
+	    <th scope="col" align="left" width="8%"><%= sort_link @search, :time %></th>
+	    <th scope="col" align="left" width="12%"><%= sort_link @search, :limitations %></th>
+	    <th scope="col" align="left" width="8%"><%= '' %></th>
 	  </tr>
   </thead>
 	

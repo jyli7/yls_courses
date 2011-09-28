@@ -1,0 +1,1168 @@
+
+
+<HTML>
+<HEAD>
+
+<meta NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+
+<script language="Javascript" type="text/javascript">
+
+<!--// hide from old browsers
+
+window.onerror=null; //Don't show error messages
+
+// Determine Web Browser Version
+browser = (((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) >= 3 )) || ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4 )))
+
+// Preload document images for onMouseOver events
+function preload() {
+        this.length = preload.arguments.length;
+        for (var i = 0; i < this.length; i++) {
+                this[i] = new Image();
+                this[i].src = preload.arguments[i];
+        }
+} // End of preload function
+
+// Function to display new image on onMouseOver and onMouseOut event
+function select(orig, replace) {
+	if (browser) {
+        	for (var i=0; i < document.images.length; i++) {
+			origimg = document.images[i].src.substring(document.images[i].src.lastIndexOf("/") + 1,document.images[i].src.length);
+
+			if (origimg == orig) {
+				var replaceindex = i;
+				var inout = "in";
+				directory = document.images[replaceindex].src.substring(0, document.images[replaceindex].src.lastIndexOf("/") + 1);
+			}
+
+			if (origimg == replace) {
+				var replaceindex = i;
+				var inout = "out";
+				directory = document.images[replaceindex].src.substring(0, document.images[replaceindex].src.lastIndexOf("/") + 1);
+			}
+		}
+
+		if (inout == "out") {
+			document.images[replaceindex].src = directory + orig;
+		} else {
+			document.images[replaceindex].src = directory + replace;
+		}
+
+        }
+} // End of select function
+
+// -------------------- Change Below Here ------------------------------
+
+// List of images to load - Add any images that will be displayed on a onMouseOver event.
+if (browser) {
+       //var stuff = new preload(
+       //"images/fallCoursesOn.gif",
+       //"images/jtermCoursesOn.gif",
+       //"images/springCoursesOn.gif",
+       //"images/facultyOn.gif",
+       //"images/updatesChangesOn.gif",
+       //"images/axessOn.gif",
+       //"images/examsOn.gif");
+
+       var stuff = new preload("");
+
+}
+
+// End hide from old browsers -->
+</script>
+<script language="JavaScript" type="text/javascript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v3.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+<link rel="stylesheet" type="text/css" href="/wsw/utilities/styles.css">
+
+<TITLE>Course Overview </TITLE>
+</HEAD>
+<body>
+
+<!-- begin header.inc -->
+<!-- end header.inc -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr align="right" valign="top">
+    <td height="19" bgcolor="#FFFFFF"> <a href="http://www.law.yale.edu/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('ylshome','','/wsw/images/top-ylshome-over.gif',1)"><img src="/wsw/images/top-ylshome-default.gif" width="70" height="17" name="ylshome" alt="YLS Home" vspace="1" hspace="0" border="0"></a>
+      <a href="http://www.law.yale.edu/faculty/faculty.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('faculty','','/wsw/images/top-faculty-over.gif',1)"><img src="/wsw/images/top-faculty-default.gif" width="70" height="17" name="faculty" alt="Faculty" vspace="1" hspace="0" border="0"></a>
+      <a href="http://www.law.yale.edu/studentlife/studentlife.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('students','','/wsw/images/top-students-over.gif',1)"><img src="/wsw/images/top-students-default.gif" width="70" height="17" name="students" alt="Students" border="0" vspace="1" hspace="0"></a>
+		  <a href="http://www.law.yale.edu/alumni/alumni.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('alumni','','/wsw/images/top-alumni-over.gif',1)"><img src="/wsw/images/top-alumni-default.gif" width="70" height="17" name="alumni" alt="Alumni" vspace="1" hspace="0" border="0"></a>
+    </td>
+  </tr>
+  <tr>
+    <td height="60" bgcolor="#FFFFFF"><img src="/wsw/images/yls.gif" width="293" height="60" usemap="#Map" border="0" alt="Yale Law School"><map name="Map"><area shape="rect" coords="49,11,285,47" href="http://www.law.yale.edu/"><area shape="rect" coords="9,12,43,46" href="http://www.law.yale.edu/"></map></td>
+  </tr>
+  <tr>
+    <td height="3" bgcolor="#0044AA"><img src="/wsw/images/spacer.gif" alt=" " width="100" height="3"></td>
+  </tr>
+</table>
+
+<table width="646" cellspacing=0 cellpadding=0 border=0><tr>
+<!-- left margin -->
+<td width=5 ROWSPAN=2>&nbsp;</td>
+
+<!-- sidebar links -->
+<td width=138 align=right valign=top ROWSPAN=2 NOWRAP >
+  <br><br>
+
+  
+
+  <p><a href="/wsw/default.asp" class="whitelink">Home</a></p>
+
+  
+
+  <p><a href="/wsw/prereg/course_overview.asp?Term=Fall" class="whitelink">Fall 2011 Courses</a></p>
+  
+  <p><a href="/wsw/prereg/course_overview.asp?Term=Spring" class="whitelink">Spring 2012 Courses</a></p>
+
+  
+
+  <p><a HREF="/wsw/prereg/examSched.asp?Term=Fall" class="whitelink">Fall 2011 Exam Schedule<br></a></p>
+  
+  <p><a HREF="/wsw/prereg/examSched.asp?Term=Spring" class="whitelink">Spring 2012 Exam Schedule<br></a></p>
+  <!--<p><a href="http://www.law.yale.edu/academics/academiccalendar.asp" class="whitelink">Academic Calendar</a></p>-->
+  <!--<p><a href="http://www.law.yale.edu/inside/html/Registrars_Office/reg-acarem.htm" class="whitelink">Academic Reminders</a></p>-->
+  <!--<p><a href="http://www.law.yale.edu/inside/html/registrars_office/reg-impdates.htm" class="whitelink">Important Dates &amp; Deadlines</a></p>-->
+  <!--<p><a href="https://inside.law.yale.edu/departments/RegistrarsOffice/Manage%20Department%20Documents%20%20NonInternal/Important%20Dates.pdf" class="whitelink">Important Dates &amp; Deadlines</a></p>-->
+
+  
+	  <p><a href="/wsw/prereg/changesUpdates.asp" class="whitelink">Changes & Updates</a></p>
+  <!--<p><a href="http://www.law.yale.edu/inside/html/registrars_office/contact.htm" class="whitelink">Office of the Registrar</a></p>-->
+  <p><a href="https://inside.law.yale.edu/Primary/Students/Pages/RegistrarsOffice.aspx" class="whitelink">Office of the Registrar</a></p>
+
+
+</td>
+
+<!-- spacer -->
+<td width=20 ROWSPAN=2 NOWRAP >&nbsp;</td>
+
+<!-- title -->
+<td height=36 valign=top align=right>
+</td>
+</tr>
+<tr>
+
+<!-- main body -->
+<td width=470>
+
+
+<!-- table_pre_inc.asp -->
+<table width="550" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="11"><img src="/wsw/images/table-tl.gif" alt="table corner" width="11" height="11"></td>
+    <td background="/wsw/images/table-top.gif" height="11"><img src="/wsw/images/spacer.gif" alt=" " width="528" height="11"></td>
+    <td height="11"><img src="/wsw/images/table-tr.gif" alt="table corner" width="11" height="11"></td>
+  </tr>
+  <tr>
+    <td width="11" background="/wsw/images/table-left.gif">&nbsp;</td>
+    <td bgcolor="#FFFFFF">
+      <table width="100%" border="0" cellspacing="0" cellpadding="10">
+        <tr>
+          <td class="typical">
+
+<TABLE BORDER="0" WIDTH="550" CELLSPACING="3" CELLPADDING="3">
+	<TR ALIGN="LEFT">
+            <TD COLSPAN="4" VALIGN="top">
+                <H2>Spring 2012 Course Overview</H2>
+				 <A HREF=courseDetails.asp?cScope=Spring> All Spring Courses - Details</A><BR>
+
+            </TD>
+	</TR>
+    <TR ALIGN="left" class="coursesheading">
+		<TD WIDTH="225" VALIGN="top"><B>Course</B></TD>
+	    <TD WIDTH="86" VALIGN="top"><B>Number</B></TD>
+	    <TD WIDTH="125" VALIGN="top"><B>Instructor(s)</B></TD>
+	    <TD WIDTH="210" VALIGN="top"><B>Days and Times</B></TD>
+	    <TD WIDTH="50" VALIGN="top"><B>Units</B></TD>
+	    <TD WIDTH="105" VALIGN="top"><B>Enrollment<BR>
+                Limitations</B></TD>
+       
+	</TR>
+        <TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109684">Access to Knowledge Practicum </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21264-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Bramble  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  W  </TD><TD nowrap>  3:10p-5:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2-3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109685">Administrative Law            </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21601-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Parrillo  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  MT  </TD><TD nowrap>  4:10p-6:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>4 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109686">Administrative Law            </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21048-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Ho  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  MT  </TD><TD nowrap>  4:10p-6:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>4 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109687">Adv Advocacy Children & Youth </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21513-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Peters  </TD> 
+ <TD WIDTH='210' VALIGN='top' >  </TD> 
+ <TD WIDTH='50'  VALIGN='top'>1-3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109690">Adv Criminal Defense Project  </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21685-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Doherty / Ullmann  </TD> 
+ <TD WIDTH='210' VALIGN='top' >  </TD> 
+ <TD WIDTH='50'  VALIGN='top'>1-3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109695">Adv Landlord/Tenant Clinic    </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21337-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Dineen / Pottenger  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  Th  </TD><TD nowrap>  12:40p-2:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>1-3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109701">Adv Supreme Court Advocacy    </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21543-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Greenhouse / Meyer  </TD> 
+ <TD WIDTH='210' VALIGN='top' >  </TD> 
+ <TD WIDTH='50'  VALIGN='top'>1 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109874">Adv Transnatl Devlopmnt Clinic</A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21693-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Ahmad / Brescia  </TD> 
+ <TD WIDTH='210' VALIGN='top' >  </TD> 
+ <TD WIDTH='50'  VALIGN='top'>1-3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109702">Adv Veterans Legal ServsClinic</A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21631-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Doherty / Middleton / Wishnie  </TD> 
+ <TD WIDTH='210' VALIGN='top' >  </TD> 
+ <TD WIDTH='50'  VALIGN='top'>2-3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109691">Adv. EducationAdequacyProj.   </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21558-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Brescia  </TD> 
+ <TD WIDTH='210' VALIGN='top' >  </TD> 
+ <TD WIDTH='50'  VALIGN='top'>1-3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109688">AdvCivilLibertiesPost9-11     </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21674-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Metcalf / Wishnie  </TD> 
+ <TD WIDTH='210' VALIGN='top' >  </TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109693">AdvImmigrationLegalServsClinic</A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21168-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Lucht / Peters / Wizner / Zonana  </TD> 
+ <TD WIDTH='210' VALIGN='top' >  </TD> 
+ <TD WIDTH='50'  VALIGN='top'>1-3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109696">AdvLglSrvcesImmigrantCommuniti</A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21553-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Lucht / Wizner  </TD> 
+ <TD WIDTH='210' VALIGN='top' >  </TD> 
+ <TD WIDTH='50'  VALIGN='top'>1-3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109699">AdvLowensteinHumRtsClinic     </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21584-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Silk  </TD> 
+ <TD WIDTH='210' VALIGN='top' >  </TD> 
+ <TD WIDTH='50'  VALIGN='top'>2-3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109703">AdvWorkr&ImmigrantRtsClinic   </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21555-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Wishnie  </TD> 
+ <TD WIDTH='210' VALIGN='top' >  </TD> 
+ <TD WIDTH='50'  VALIGN='top'>1-3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109689">Advanced CED Clinic           </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21511-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Brescia / Golden  </TD> 
+ <TD WIDTH='210' VALIGN='top' >  </TD> 
+ <TD WIDTH='50'  VALIGN='top'>1-3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109692">Advanced Ethics Bureau        </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21686-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Fox  </TD> 
+ <TD WIDTH='210' VALIGN='top' >  </TD> 
+ <TD WIDTH='50'  VALIGN='top'>1-3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109694">Advanced IRAP                 </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21624-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Wishnie  </TD> 
+ <TD WIDTH='210' VALIGN='top' >  </TD> 
+ <TD WIDTH='50'  VALIGN='top'>2-3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109698">Advanced Legal Research       </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21027-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Harrison / Kauffman / Nann / Tubbs / VanderHeijden  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  TTh  </TD><TD nowrap>  8:40a-10:00a  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109697">Advanced Legal Writing        </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21343-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Harrison  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  TTh  </TD><TD nowrap>  12:40p-2:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Limited   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109700">Advanced SFALP                </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21598-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Gerken / Lee  </TD> 
+ <TD WIDTH='210' VALIGN='top' >  </TD> 
+ <TD WIDTH='50'  VALIGN='top'>1-3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109704">Advocacy for Children & Youth </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21387-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Peters  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  T  </TD><TD nowrap>  12:10p-2:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> LSO Ballot Required   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109705">American Legal History        </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21063-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Witt  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  ThF  </TD><TD nowrap>  10:40a-12:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109706">American Legal History:Res Sem</A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21682-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Parrillo  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  F  </TD><TD nowrap>  9:10a-10:30a  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>1 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109707">Antidiscrimination Law        </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21417-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Siegel  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  M  </TD><TD nowrap>  2:10p-4:00p  </TD>  <TD nowrap >  SLB </TD></TR>  <TR><TD nowrap>  W  </TD><TD nowrap>  1:10p-3:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>4 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109708">Antitrust                     </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21068-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Klevorick  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  TTh  </TD><TD nowrap>  2:10p-4:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>4 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109760">Banking Law and Regulation    </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21171-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Macey  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  M  </TD><TD nowrap>  2:10p-4:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109709">Bankruptcy                    </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21204-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Schwartz  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  TTh  </TD><TD nowrap>  2:10p-4:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>4 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109710">Beyond Autonomy               </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21684-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Gerken / Levinson  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  T  </TD><TD nowrap>  4:10p-6:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Limited   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109711">Business Organizations        </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21040-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Brooks  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  M  </TD><TD nowrap>  2:10p-4:00p  </TD>  <TD nowrap >  SLB </TD></TR>  <TR><TD nowrap>  W  </TD><TD nowrap>  1:10p-3:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>4 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Limited   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109712">Business Organizations        </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21274-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Romano  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  MW  </TD><TD nowrap>  10:10a-12:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>4 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109713">CapPunshmnt:Race,Poverty,Disad</A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21426-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Bright  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  M  </TD><TD nowrap>  10:10a-12:00p  </TD>  <TD nowrap >  SLB </TD></TR>  <TR><TD nowrap>  W  </TD><TD nowrap>  10:10a-1:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>4 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109714">Capital Punishment Clinic     </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21082-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Bright / Gohara  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  T  </TD><TD nowrap>  12:10p-2:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109715">Challenges of General Counsel </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21664-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Heineman / Solender  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  Th  </TD><TD nowrap>  6:10p-8:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109717">Community & Econ Development  </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21016-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Brescia / Golden / Hudspeth / Muckenfuss / Nadel  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  MW  </TD><TD nowrap>  2:30p-4:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>4 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109718">Comparative Administrative Law</A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21679-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Rose-Ackerman  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  MW  </TD><TD nowrap>  1:30p-3:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Limited   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109797">Complex Civil Lit.            </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21055-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Underhill  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  Th  </TD><TD nowrap>  4:10p-6:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109719">Conservatism                  </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21675-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Moyn  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  W  </TD><TD nowrap>  10:10a-12:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Limited   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109722">Const. Litigation Seminar     </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21345-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Calabresi / Walker  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  WTh  </TD><TD nowrap>  4:10p-6:00p  </TD>  <TD nowrap >   </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Limited   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109720">Const.Philos.Hist.            </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21046-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Ackerman  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  MT  </TD><TD nowrap>  4:10p-6:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>4 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109721">ConstLaw,SocSci&Philosophy    </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21661-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Deutsch  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  T  </TD><TD nowrap>  10:10a-12:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109723">Cont. Leg. Iss. in Afr.       </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21139-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Brilmayer / Wade  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  W  </TD><TD nowrap>  12:10p-2:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>1 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109716">ContempIssuesLaw&Business     </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21502-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Romano  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  M  </TD><TD nowrap>  4:10p-6:30p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Limited   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109724">Corruption, Econ. Dev. & Dem. </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21042-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Rose-Ackerman  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  T  </TD><TD nowrap>  2:10p-4:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2-3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Limited   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109796">Crim. Law & Adm.              </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21075-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Stith  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  WF  </TD><TD nowrap>  10:30a-12:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109725">Criminal Defense Project      </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21590-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Doherty / Ullmann  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  W  </TD><TD nowrap>  1:10p-3:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109726">Criminal Law & Administration </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21303-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Whitman  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  MW  </TD><TD nowrap>  1:10p-3:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>4 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109727">Crisis 21st Cent Constitution </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21576-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Ackerman  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  Th  </TD><TD nowrap>  2:10p-4:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Limited   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109728">Democracy and Distribution    </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21578-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Graetz / Shapiro  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  M  </TD><TD nowrap>  1:30p-3:20p  </TD>  <TD nowrap >   </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2-3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Limited   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109729">Democratic Constitutionalism  </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21432-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Post / Siegel  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  T  </TD><TD nowrap>  4:10p-6:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2-3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Limited   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109730">Disability Rights and Policy  </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21339-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Jolls  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  Th  </TD><TD nowrap>  11:10a-1:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Limited   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109731">Disasters                     </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21691-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Brooks / Fidell  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  T  </TD><TD nowrap>  2:10p-4:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109733">Education Adequacy Project    </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21470-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Brescia / Knopp / Weisman  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  M  </TD><TD nowrap>  6:10p-8:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> LSO Ballot Required   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109734">Efficient TechniquesLegal Res </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21486-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Eiseman / Kauffman / Nann / Tubbs / VanderHeijden  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  W  </TD><TD nowrap>  1:10p-3:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>1 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109735">Engineering&Ownership of Life </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21441-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Kevles  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  W  </TD><TD nowrap>  3:30p-5:20p  </TD>  <TD nowrap >   </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109737">Environ. Law & Pol.           </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21033-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Elliott  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  F  </TD><TD nowrap>  10:10a-1:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109736">Environ.Protection Clinic     </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21321-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Kennedy  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  M  </TD><TD nowrap>  12:10p-2:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Limited   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109738">Ethicl,Legl,SocResp: Investors</A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21680-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Macey  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  M  </TD><TD nowrap>  10:10a-12:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109739">Ethics Bureau at Yale         </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21653-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Fox  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  T  </TD><TD nowrap>  2:10p-4:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109740">Family, State, and Market     </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21677-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Alstott / Schultz  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  T  </TD><TD nowrap>  2:10p-4:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109742">Federal Criminal Prosecution  </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21504-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Stith  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  TTh  </TD><TD nowrap>  12:10p-1:30p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109743">Federal Income Taxation       </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21050-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Alstott  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  MW  </TD><TD nowrap>  10:10a-12:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>4 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109744">First Amendment               </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21230-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Balkin  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  MT  </TD><TD nowrap>  4:10p-6:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>4 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109746">Globalization,Devl,Poverty&Law</A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21506-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Tung  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  Th  </TD><TD nowrap>  2:10p-4:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Limited   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109745">GloblHealthEthics,Politcs&Econ</A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21595-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Pogge / Ruger  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  T  </TD><TD nowrap>  10:10a-12:00p  </TD>  <TD nowrap >   </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109747">History of Common Law         </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21531-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Langbein  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  MW  </TD><TD nowrap>  10:40a-12:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109748">Human Rights Workshop         </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21193-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Kahn  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  Th  </TD><TD nowrap>  4:10p-6:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>1 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109749">Immigration Legal Services    </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21012-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Lucht / Peters / Wizner / Zonana  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  M  </TD><TD nowrap>  12:10p-2:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> LSO Ballot Required   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109750">Information Privacy Law       </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21687-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Jolls  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  Th  </TD><TD nowrap>  1:10p-3:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109751">International Commerc. Arbit. </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21283-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Reisman  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  M  </TD><TD nowrap>  9:10a-11:00a  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109752">International Human Rights    </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21009-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Moyn  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  TTh  </TD><TD nowrap>  12:40p-2:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109753">International Trade Law       </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21635-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Grewal  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  TTh  </TD><TD nowrap>  12:40p-2:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109754">Internet Privacy              </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21636-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Cohen  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  MW  </TD><TD nowrap>  4:10p-5:30p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109755">Intro to Transnational Law    </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21454-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Hathaway / Shapiro  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  TTh  </TD><TD nowrap>  10:10a-12:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>4 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109777">Introd. to the Phil. of Law   </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21275-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Shapiro  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  TTh  </TD><TD nowrap>  1:30p-2:20p  </TD>  <TD nowrap >   </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109756">Landlord/Tenant Legal Services</A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21004-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Dineen / Pottenger  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  Th  </TD><TD nowrap>  2:10p-4:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> LSO Ballot Required   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109759">Law and Globalization         </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21508-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Stone Sweet / Walker  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  T  </TD><TD nowrap>  4:10p-6:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Limited   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109761">Law of Climate Change         </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21566-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Kysar  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  MW  </TD><TD nowrap>  1:30p-2:50p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109757">Law, Econ. & Org.             </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21041-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Brooks / Jolls  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  Th  </TD><TD nowrap>  4:10p-5:40p  </TD>  <TD nowrap >  SLB-121 </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>1 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109758">Law, Inst & Devlpmt Early Amer</A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21565-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Priest  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  W  </TD><TD nowrap>  1:10p-3:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Limited   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=110192">Law, Politcs&SocLatinAmerica  </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21620-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Kauffman / Miguel  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  Th  </TD><TD nowrap>  12:10p-2:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>1 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109762">Laws of War:Contrversy&Precdnt</A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21690-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Hathaway / Witt  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  Th  </TD><TD nowrap>  2:10p-4:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109763">Lawyering Ethics Clinic       </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21134-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Blando / Curtis  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  T  </TD><TD nowrap>  10:10a-12:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> LSO Ballot Required   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109765">Legal Assistance              </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21057-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Dineen  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  F  </TD><TD nowrap>  11:10a-1:00p  </TD>  <TD nowrap >   </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> LSO Ballot Required   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109767">LegalWriting through a Lawsuit</A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21683-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Harrison / Messing  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  Th  </TD><TD nowrap>  4:10p-6:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109768">Legislative Advocacy Clinic   </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21392-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Geballe / Pottenger / Staples  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  F  </TD><TD nowrap>  10:10a-12:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> LSO Ballot Required   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109764">Legl&EconAnalysis of Contracts</A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21692-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Brooks  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  T  </TD><TD nowrap>  10:10a-12:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109766">LeglSrvcesImmigrantCommunities</A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21552-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Lucht / Parkin / Wizner  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  W  </TD><TD nowrap>  3:10p-5:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> LSO Ballot Required   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109769">Liman: Justice and Courts     </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21534-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Metcalf / Resnik / Sanneh  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  M  </TD><TD nowrap>  6:10p-8:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109770">Local Government in Action    </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21547-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Gerken / Lee  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  W  </TD><TD nowrap>  6:30p-8:30p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>1 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109771">Lowenstein Int'l. Hum. Rights </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21152-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Metcalf / Silk  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  TF  </TD><TD nowrap>  10:10a-12:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109772">MediaFreedm&InfoAccessClinic  </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21627-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Balkin / Schulz  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  W  </TD><TD nowrap>  10:10a-12:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2-3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109773">Military Justice              </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21678-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Fidell  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  W  </TD><TD nowrap>  4:10p-6:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109774">Mortgage Foreclosure Clinic   </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21671-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Pottenger  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  W  </TD><TD nowrap>  4:10p-6:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2-3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> LSO Ballot Required   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109732">NGOs,Humantiariansm&USForPol  </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21689-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Brilmayer  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  Th  </TD><TD nowrap>  10:10a-12:00p  </TD>  <TD nowrap >   </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Limited   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109775">Nonprofit Org. Clinic         </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21056-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Davis / Lindsay / Simon  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  F  </TD><TD nowrap>  1:10p-3:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>1-2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109776">Persuasian and Politics       </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21676-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Garsten / Kahn  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  T  </TD><TD nowrap>  4:10p-6:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109778">Property                      </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21409-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Priest  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  TTh  </TD><TD nowrap>  2:10p-3:30p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109779">Property                      </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21017-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Ellickson  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  TTh  </TD><TD nowrap>  10:10a-12:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>4 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109780">Property: Ind.Res.            </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21018-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Ellickson  </TD> 
+ <TD WIDTH='210' VALIGN='top' >  </TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Limited   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109781">Prosecution Externship        </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21088-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > McGarry / Pottenger  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  W  </TD><TD nowrap>  6:10p-7:30p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2-3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109782">Quantitative Corporate Finance</A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21071-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Ayres  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  TTh  </TD><TD nowrap>  10:40a-12:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109783">Res. Meth Amer Legal Hist     </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21080-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Kauffman / Nann / Shapiro  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  W  </TD><TD nowrap>  10:10a-12:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109784">Sentencing Workshop           </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21383-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Curtis / Gertner  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  W  </TD><TD nowrap>  4:10p-6:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109786">SpecLeglRes: Corporate Law    </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21487-02 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Chisholm / Kauffman  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  Th  </TD><TD nowrap>  6:10p-8:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>1 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109785">SpecLeglRes:For&IntlLaw       </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21487-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Kauffman / Miguel / Nann / Tubbs  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  F  </TD><TD nowrap>  10:10a-12:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>1 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109787">Supreme Court Advocacy        </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21262-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Greenhouse / Meyer  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  W  </TD><TD nowrap>  6:10p-8:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109873">Transnatl Development Clinic  </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21650-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Ahmad / Brescia  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  T  </TD><TD nowrap>  10:10a-12:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109788">Treaties&Other Intl Agreements</A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21460-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Brilmayer / Reisman  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  M  </TD><TD nowrap>  2:10p-4:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109789">Trial Practice                </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21183-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Pottenger / Wizner  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  T  </TD><TD nowrap>  6:10p-8:30p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109790">US & EuropeanConstitutionalism</A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21248-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Grimm  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  MW  </TD><TD nowrap>  10:10a-12:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Limited   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109791">US International Taxation     </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21100-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Samuels  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  W  </TD><TD nowrap>  4:10p-6:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>3 </TD> 
+ <TD WIDTH='105' VALIGN='top'> </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109792">Veterans Legal Services Clinic</A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21630-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Doherty / Middleton / Wishnie  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  T  </TD><TD nowrap>  10:10a-12:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> LSO Ballot Required   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109793">VeteransLegalServicesFieldwork</A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21681-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Doherty / Middleton / Wishnie  </TD> 
+ <TD WIDTH='210' VALIGN='top' >  </TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowA">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109794">Worker&Immigrant Rights Clinic</A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21324-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Ahmad / Wishnie  </TD> 
+ <TD NOWRAP VALIGN='top' >  <TABLE>  <TR><TD nowrap>  W  </TD><TD nowrap>  10:10a-12:00p  </TD>  <TD nowrap >  SLB </TD></TR>  </TABLE></TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> LSO Ballot Required   </TD> 
+</TR>
+<TR ALIGN='LEFT' class="coursesrowB">
+ <TD WIDTH='225' VALIGN='top'> <DIV ALIGN='left'><A HREF="CourseDetails.asp?cClschedid=109795">Worker&ImmigrantRts:Fieldwork </A> </DIV> </TD> 
+ <TD WIDTH='86'  VALIGN='top' nowrap>21540-01 </TD> 
+ <TD WIDTH='125' VALIGN='top' > Ahmad / Wishnie  </TD> 
+ <TD WIDTH='210' VALIGN='top' >  </TD> 
+ <TD WIDTH='50'  VALIGN='top'>2 </TD> 
+ <TD WIDTH='105' VALIGN='top'> Permission of Instructor   </TD> 
+</TR>
+
+</TABLE>
+<!-- table_post_inc.asp -->
+		  </td>
+        </tr>
+      </table></td>
+    <td width="11" background="/wsw/images/table-right.gif">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="11"><img src="/wsw/images/table-bl.gif" alt="table corner" width="11" height="11"></td>
+    <td background="/wsw/images/table-bottom.gif"><img src="/wsw/images/spacer.gif" alt=" " width="528" height="11"></td>
+    <td width="11"><img src="/wsw/images/table-br.gif" alt="table corner" width="11" height="11"></td>
+  </tr>
+</table>
+<BR CLEAR="all">
+<BR>
+
+<!-- begin general Footer -->
+
+<center>
+Copyright &copy;2011 <a href="http://www.law.yale.edu">Yale Law 
+      School.</a><br>
+      Please address questions and comments to <a href="mailto:registrar.law@yale.edu">registrar.law@yale.edu</a>.<br> 
+      <a href="http://www.law.yale.edu/about/administrative_offices.asp">Contact Us</a> | <a href="http://www.law.yale.edu/about/gettinghere.asp">Directions</a> 
+      | <a href="http://www.law.yale.edu/utilities/SiteIndex.htm">Sitemap</a>  
+</center>
+</td>
+</tr>
+</TABLE><BR CLEAR="ALL">
+
+<!-- end footer.inc -->
+
+
+
+
+</body>
+</HTML>
