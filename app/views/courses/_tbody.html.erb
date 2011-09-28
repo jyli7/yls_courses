@@ -1,7 +1,7 @@
 <% for course in @courses %>
 	<tr>
-	   <td><%= link_to course.name, course.address, :class => "course_name" %></td>
-	   <td class="course_number"><%= course.number %></td>
+	   <td><a class="course_name_click" href='#'><%= course.name %></a></td>
+	   <td><%= course.number %></td>
 	   <td><%= course.instructor %></td>
 	   <td><%= course.room %></td>
 	   <td><%= course.day %></td>
@@ -10,7 +10,7 @@
 	   <td><%= course.limitations %></td>
 	   <td><a href="http://www.google.com/calendar/event?action=TEMPLATE&text=<%= course.name %> &dates=<%= course.start_time %>/<%= course.end_time %>&details=<%= course.name%>%20with%20<%= course.instructor %>&location=<%= course.room %>&trp=false&sprop=&sprop=name:" target="_blank"> Add to Calendar </a></td>
 	</tr>
-	<tr class="course_descrip">
-		<td><%= course.descrip %></td>
+	<tr class='course_descrip'>
+		<td width='100%'><%= course.descrip %></td>
 	</tr>
 <% end %>

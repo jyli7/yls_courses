@@ -9,6 +9,7 @@ gem 'spreadsheet'
 gem 'hirb'
 gem 'meta_search'
 gem 'hpricot'
+gem 'nokogiri'
 
 group :development do
   gem 'rspec-rails', '2.6.1'

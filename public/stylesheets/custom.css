@@ -88,6 +88,10 @@ table#search td {
 	background-color:#2D647F;
 }
 
+tr.zebraHover {
+	background-color: #FFFACD;
+}
+
 /* Round corners */
 
 .round {

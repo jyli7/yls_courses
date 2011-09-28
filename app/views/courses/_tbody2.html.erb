@@ -1,7 +1,7 @@
 <% for course in @courses %>
 	<% if @count % 2 == 0 %>
 		<tr class="even">
-		   <td><%= link_to course.name, course.address, :class => "course_name" %></td>
+		   <td><%= link_to course.name, course.address, :class => "course_name_click" %></td>
 		   <td><%= course.number %></td>
 		   <td><%= course.instructor %></td>
 		   <td><%= course.room %></td>

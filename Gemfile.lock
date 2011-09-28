@@ -125,6 +125,7 @@ DEPENDENCIES
   meta_search
   mocha
   nifty-generators
+  nokogiri
   rails (= 3.0.9)
   rspec-rails (= 2.6.1)
   spork (= 0.9.0.rc8)
