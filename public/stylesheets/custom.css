@@ -154,10 +154,10 @@ hr#border_line {
 #calendar_header, .calendar_body {
 	display:inline-block;
 	margin: 0 0 0 15px;
-	width:95px;
+	width:110px;
 }
 
 .descrip_body {
-	width:1100px;
+	text-align:justify;
 	padding: 3px 0 5px 0;
 }

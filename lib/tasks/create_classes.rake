@@ -8,9 +8,9 @@ require 'time'
 
   book = Spreadsheet.open '/Users/jimmyli/rails_projects/grocery_helper/public/data/YLS_Classes.xls'
   sheet1 = book.worksheet 'Sheet1'
-'''
+
   name_array = [] # for names
-  sheet1.each 3 do |row|
+  sheet1.each 2 do |row|
     name_array << row[0] 
   end
   
@@ -19,7 +19,7 @@ require 'time'
   end 
 
   cnum_array = [] # for course numbers
-  sheet1.each 3 do |row|
+  sheet1.each 2 do |row|
     cnum_array << row[1] 
   end
 
@@ -30,7 +30,7 @@ require 'time'
   end 
 
   cnum_array = [] # for instructors
-  sheet1.each 3 do |row|
+  sheet1.each 2 do |row|
     cnum_array << row[2] 
   end
 
@@ -41,7 +41,7 @@ require 'time'
   end
 
   cnum_array = [] # for day
-  sheet1.each 3 do |row|
+  sheet1.each 2 do |row|
     cnum_array << row[3] 
   end
 
@@ -52,7 +52,7 @@ require 'time'
   end
 
   cnum_array = [] # for time
-  sheet1.each 3 do |row|
+  sheet1.each 2 do |row|
     cnum_array << row[4] 
   end
 
@@ -64,7 +64,7 @@ require 'time'
 
 
   cnum_array = [] # for room
-  sheet1.each 3 do |row|
+  sheet1.each 2 do |row|
     cnum_array << row[5] 
   end
 
@@ -76,7 +76,7 @@ require 'time'
 
 
   cnum_array = [] # for units
-  sheet1.each 3 do |row|
+  sheet1.each 2 do |row|
     cnum_array << row[6] 
   end
 
@@ -87,7 +87,7 @@ require 'time'
   end
 
   cnum_array = [] # for limitations
-  sheet1.each 3 do |row|
+  sheet1.each 2 do |row|
     cnum_array << row[7] 
   end
 
@@ -99,7 +99,7 @@ require 'time'
 
 
   cnum_array = [] # for http addresses
-  sheet1.each 3 do |row|
+  sheet1.each 2 do |row|
     cnum_array << row[8] 
   end
 
@@ -110,9 +110,8 @@ require 'time'
   end
 
 '''
-
   cnum_array = [] # for start times
-  sheet1.each 3 do |row|
+  sheet1.each 2 do |row|
     unless row[9].blank?
       time = Time.parse(row[9])
       time = time.utc
@@ -134,7 +133,7 @@ require 'time'
   end
   
   cnum_array = [] # for end times
-  sheet1.each 3 do |row|
+  sheet1.each 2 do |row|
     unless row[9].blank?
       time = Time.parse(row[10])
       time = time.utc
@@ -155,5 +154,6 @@ require 'time'
     count += 1
   end
 
+'''
 
 end 
