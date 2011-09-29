@@ -1,53 +1,87 @@
-<table width="100%" cellspacing="0" cellpadding="0" border="0" id='yls'>
-	<tr>
-		<th> YLS Courses: Spring 2012 </th>
-	</tr>
-</table>
-<div id="search_form">
-	<%= form_for @search do |f| %>
-	  <table id="search">
+<div id="container">
+	<table width="100%" cellspacing="0" cellpadding="0" border="0" id='yls'>
 		<tr>
-		    <th width="30%"><%= f.label :name_like, "Name" %></th>
-			<th width="30%"><%= f.label :instructor_like, "Instructor" %></th>
-			<th width="15%"><%= f.label :day_like, "Days (e.g. M or MW)" %></th>
-			<th width="11%"><%= f.label :units_like, "Units" %></th>
-			<th width="14%"><%= f.label :limitations_like, "Limitations" %></th>
-	    </tr>
-		<tr>
-			<td><%= f.text_field :name_like, :size => 30 %></td>
-	    	<td><%= f.text_field :instructor_like, :size => 30 %></td>
-			<td><%= f.text_field :day_like, :size => 15%></td>
-			<td><%= f.select :units_like, ['1', '2', '3', '4'], { :include_blank => true, :selected => :blank } %></td>
-			<td><%= f.select :limitations_like, ['Limited', 'Permission', 'LSO'], { :include_blank => true, :selected => :blank } %></td>
+			<th> YLS Courses: Spring 2012 </th>
 		</tr>
-		<tr><td><%= f.submit "Search" %></td></tr>	
-	 </table>
-	<% end %>
+	</table>
+
+	<div id="search_form"> <!--search box -->
+		<%= form_for @search do |f| %>
+			<div class="field_container">
+				<div id="name_search"><%= f.label :name_like, "Name" %></div>
+				<div id="name_box"><%= f.text_field :name_like, :size => 30 %></div>
+			</div>
+		
+			<div class="field_container">
+				<div id="number_search"><%= f.label :number_like, "Number" %></div>
+				<div id="number_box"><%= f.text_field :number_like, :size => 7 %></div>
+			</div>
+		
+			<div class="field_container">
+				<div id="instructor_search"><%= f.label :instructor_like, "Instructor" %></div>
+				<div id="instructor_box"><%= f.text_field :instructor_like, :size => 20 %></div>
+			</div>
+
+			<div class="field_container">
+				<div id="room_search"><%= f.label :room_like, "Room" %></div>
+				<div id="room_box"><%= f.text_field :room_like, :size => 8 %></div>
+			</div>
+		
+			<div class="field_container">
+				<div id="day_search"><%= f.label :day_like, "Day" %></div>
+				<div id="day_box"><%= f.text_field :day_like, :size => 8%></div>
+			</div>
+				
+			<div class="field_container">
+				<div id="units_search"><%= f.label :units_like, "Units" %></div>
+				<div id="units_box"><%= f.select :units_like, ['1', '2', '3', '4'], {:include_blank => true, :selected => :blank}, {:style => 'width:70px'} %></div>
+			</div>
+		
+			<div class="field_container">
+				<div id="time_search"><%= f.label :time_like, "Time" %></div>
+				<div id="time_box"><%= f.text_field :time_like, :size => 10%></div>
+			</div>
+		
+			<div id="limitations_search"><%= f.label :limitations_like, "Limitations" %></div>
+			<div id="limitations_box"><%= f.select :limitations_like, ['Limited', 'Permission', 'LSO'], { :include_blank => true, :selected => :blank } %></div>
+		<div id="search_button"><%= f.submit "Search" %></div>	
+		<div id="course_list_link"><%= link_to "Full Course List", courses_path%></div>
+		<% end %>	
+	</div>
+
+	<br>
+
+	<div id="course_table">
+		<div id="first_row">
+			<span id="name_header"><%= sort_link @search, :name %></span>
+			<span id="number_header"><%= sort_link @search, :number %></span>
+			<span id="instructor_header"><%= sort_link @search, :instructor %></span>
+			<span id="room_header"><%= sort_link @search, :room %></span>
+			<span id="day_header"><%= sort_link @search, :day %></span>
+			<span id="units_header"><%= sort_link @search, :units %></span>
+			<span id="time_header"><%= sort_link @search, :time %></span>
+			<span id="limitations_header"><%= sort_link @search, :limitations %></span>
+			<span id="calendar_header"></div>
+		</div>
+		<hr id="border_line">
+
+		<% for course in @courses %>
+		<div class="other_rows">
+			<span class="name_body"><a class="course_name_click" href='#'><%= course.name %></a></span>
+			<span class="number_body"><%= course.number %></span>
+			<span class="instructor_body"><%= course.instructor %></span>
+			<span class="room_body"><%= course.room %></span>
+			<span class="day_body"><%= course.day %></span>
+			<span class="units_body"><%= course.units %></span>
+			<span class="time_body"><%= course.time %></span>
+			<span class="limitations_body"><%= course.limitations %></span>
+			<span class="calendar_body"> <!--calendadiv-->
+			   <a href="http://www.google.com/calendar/event?action=TEMPLATE&text=<%= course.name %> &dates=<%= course.start_time %>/<%= course.end_time %>&details=<%= course.name%>%20with%20<%= course.instructor %>&location=<%= course.room %>&trp=false&sprop=&sprop=name:" target="_blank"> Add to Calendar</a>
+			</span>
+		</div>
+		<div class="descrip_body">
+			<%= course.descrip %>
+		</div>
+		<% end %>
+	</div>
 </div>
-<br>
-
-<!-- Table markup -->	
-<table id="course_list">
-	
-  <!-- Table header -->
-  <thead>
-	  <tr>
-	    <th scope="col" align="left" width="17%"><%= sort_link @search, :name %></th>
-	    <th scope="col" align="left" width="10%"><%= sort_link @search, :number %></th>
-	    <th scope="col" align="left" width="17%"><%= sort_link @search, :instructor %></th>
-	    <th scope="col" align="left" width="8%"><%= sort_link @search, :room %></th>
-	    <th scope="col" align="left" width="7%"><%= sort_link @search, :day %></th>
-	    <th scope="col" align="left" width="6%"><%= sort_link @search, :units %></th>
-	    <th scope="col" align="left" width="8%"><%= sort_link @search, :time %></th>
-	    <th scope="col" align="left" width="12%"><%= sort_link @search, :limitations %></th>
-	    <th scope="col" align="left" width="8%"><%= '' %></th>
-	  </tr>
-  </thead>
-	
-  <!-- Table body -->
-
-  <tbody>
-	<%= render :partial => 'tbody' %>
-  </tbody>
-
-</table>

@@ -27,9 +27,13 @@ a:visited {
 }
 
 
-/* Tables */
+div#container {
+	margin:5px 20px 10px 15px;
+}
 
-table#yls{
+/* Top of Course Index */
+
+table#yls{   
 	font-size:25px;
 	width: 100%;
 	text-align:left;
@@ -37,59 +41,42 @@ table#yls{
 	border-bottom: 2px solid #FFFFFF;
 }
 
-table#course_list {
-	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-	border-width: 1px;
-	border-spacing: 2px;
-	border-style: hidden;
-	text-align: left;
-	border-collapse: collapse;
-}
-table#course_list th {
-	font-size: 14px;
-	font-weight: bold;
-	padding: 10px 8px;
-	padding: 1px;
-	border-bottom: 1px dashed #FFFFFF;
+/*Search Form */
+
+div#search_form {
+	border:1px solid gray;
+	padding: 3px;
+	margin: 0 0 5px 0;
+	height:95px;
+	background-color:#2D647F;
+	font-size:105%;
 }
 
-table#course_list td {
-	padding: 1px 1px 2px 3px;
+
+div#name_search div#name_box {	
+	float:left;
 }
 
-table#course_list .odd
-{
-	background: #2D647F;
+div.field_container {
+	float:left;
+	margin-right:3px;
 }
 
-table#search{
-	text-align: left;
-	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-	table-layout:auto;
-	width: 1000px;
-	background: #2D647F;
-	padding: 8px 4px 8px 8px;
+div#search_button {
+	position:relative;
+	margin: 5px 0 3px 0;
 }
 
-table#search th {
-	font-weight:normal;
-	padding: 1px 1px 3px 3px;
+div#course_list_link {
+	margin: 6px 0 0 0;
+	font-size:12px;
 }
 
-table#search td {
-	font-weight:normal;
-	width: 10px;
-	padding: 2px 2px 5px 2px;
-}
 
 /*horizontal bars */
 
 .zebra {
 	background-color:#2D647F;
-}
-
-tr.zebraHover {
-	background-color: #FFFACD;
 }
 
 /* Round corners */
@@ -98,4 +85,79 @@ tr.zebraHover {
   -moz-border-radius:    10px;
   -webkit-border-radius: 10px;
   border-radius:         10px;
+}
+
+/*Course Table */
+
+div#course_table {
+	margin: 10px 0 0 0;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+}
+
+div#first_row {
+	display:inline-block;
+	font-size:115%;
+}
+
+.other_rows {
+	margin:5px 0 0 0;
+}
+
+hr#border_line {
+	margin-top:0px;
+	height:0.5px;
+	border:1px dashed white;
+	background-color:transparent;
+}
+
+#name_header, .name_body, div#name_search {
+	display:inline-block;
+	width:220px;
+	margin: 0 0 0 0;
+}
+
+#number_header, .number_body, div#number_search {
+	display:inline-block;
+	width:90px;
+}
+
+#instructor_header, .instructor_body, div#instructor_search {
+	display:inline-block;
+	width:160px;
+}
+
+#room_header, .room_body, div#room_search {
+	display:inline-block;
+	width:90px;
+}
+
+#day_header, .day_body, div#day_search {
+	display:inline-block;
+	width:90px;
+}
+
+#units_header, .units_body, div#units_search {
+	display:inline-block;
+	width:90px;
+}
+
+#time_header, .time_body, div#time_search {
+	display:inline-block;
+	width:100px;
+}
+
+#limitations_header, .limitations_body {
+	display:inline-block;
+	width:140px;
+}
+
+#calendar_header, .calendar_body {
+	display:inline-block;
+	margin: 0 0 0 15px;
+	width:95px;
+}
+
+.descrip_body {
+	width:1100px;
+	padding: 3px 0 5px 0;
 }
