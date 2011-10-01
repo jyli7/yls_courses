@@ -10,5 +10,12 @@ task :get_descrip => :environment do
     new_descrip = doc.at_css("tr:nth-child(4) td").text
     course.update_attribute :descrip, new_descrip
   end 
+  
+  file = File.new("course_data/Spring2011.html")
+  text = file.readlines
+  text = text.join('\n')
+  
+  match = /\(([0-9]+), ([0-9]+)\)">Access to Knowledge Practicum/.match text
+  puts match, match[0], match[1], match[2]
 
 end 

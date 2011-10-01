@@ -1,0 +1,489 @@
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Course Evaluations</title>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<script type="text/JavaScript" language="JavaScript1.1">
+
+        function courseWindow(crn, termCode)
+        {
+        summaryUrl = 'Summary?crn=' + crn + '&termCode=' + termCode;
+        newWindow = window.open(summaryUrl, crn + termCode, 'width=900,height=600,scrollbars,resizable');
+        newWindow.focus();
+        }
+
+        function changeSortOrder()
+        {
+        
+
+        var sortOrder = document.chooseSortOrder.sortOptions.options[document.chooseSortOrder.sortOptions.selectedIndex].value;
+        var termCode = document.chooseTerm.termOptions.options[document.chooseTerm.termOptions.selectedIndex].value;
+
+        
+        location.href = "CourseList?"  + "subjectCode=" + "LAW" + "&sortOrder=" + sortOrder  + '&termCode=' + termCode;
+        }
+
+        function changeTerm()
+        {
+        
+        var termCode = document.chooseTerm.termOptions.options[document.chooseTerm.termOptions.selectedIndex].value;
+
+        location.href = "CourseList?" + "subjectCode=" + "LAW" + '&termCode=' + termCode;
+        }
+
+      </script>
+<link rel="stylesheet" type="text/css" href="../oce.css">
+<style type="text/css">
+
+body { background-color: #FFFFFF; font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+
+a { color: blue; font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+
+.welcome-text { font-size: 12px; }
+
+.copyright {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	text-align: left; }
+
+</style>
+</head>
+<body class="background-white" bgcolor="#FFFFFF">
+<blockquote>
+<table cellPadding="0" border="0" width="600">
+<tbody>
+<tr>
+<td align="right"><img height="45" width="570" src="../images/yale_oce_banner.gif"></td>
+</tr>
+<tr>
+<td valign="top">
+<table width="100%" style="border-style: ridge; border-width: 2px; border-color: #003399" cellpadding="10" cellspacing="0">
+<tr valign="top" class="borderTopSides">
+<td nowrap="nowrap" valign="bottom" align="right"><b><a href="mailto:susan.monsen@yale.edu" class="content-text-small">CONTACT</a>&nbsp;&nbsp;<a href="http://www.law.yale.edu/ocev/studenthelp.htm" class="content-text-small">HELP</a>&nbsp;&nbsp;<a href="../Logout" class="content-text-small">LOGOUT</a></b></td>
+</tr>
+<tr>
+<td colspan="2">
+<table class="welcome-text" cellspacing="0" cellpadding="10" border="0" width="100%">
+<tr>
+<td colspan="2" nowrap="nowrap">
+<p>Welcome to Online Course Evaluations. Please choose which course you would like to view:</p>
+</td>
+</tr>
+<tr>
+<td valign="bottom" class="content-text" align="left" width="40%">
+<form name="chooseSortOrder"> Sort by:
+                                <select name="sortOptions" onChange="changeSortOrder()"><option value="last-name">Instructor's Last Name</option><option value="title" selected>Title</option></select>
+</form>
+</td><td valign="bottom" class="content-text" align="left" width="60%">
+<form name="chooseTerm">Term:
+          <select onChange="changeTerm()" name="termOptions"><option value="200303" selected>Fall 2003</option><option value="200401">Spring 2004</option><option value="200403">Fall 2004</option><option value="200501">Spring 2005</option><option value="200503">Fall 2005</option><option value="200601">Spring 2006</option><option value="200603">Fall 2006</option><option value="200701">Spring 2007</option><option value="200703">Fall 2007</option><option value="200801">Spring 2008</option><option value="200803">Fall 2008</option><option value="200901">Spring 2009</option><option value="200903">Fall 2009</option><option value="201001">Spring 2010</option><option value="201003">Fall 2010</option><option value="201101">Spring 2011</option></select>
+</form>
+</td>
+</tr>
+</table>
+<br>
+<table cellpadding="10" cellspacing="0" border="0" width="100%">
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10760, 200303)">[The] Formation of Lawyers</a>&nbsp;
+                Dalton</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10136, 200303)">[The] Information Society</a>&nbsp;
+                Balkin</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10143, 200303)">[The] Nuclear Dilemma</a>&nbsp;
+                Schell</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10069, 200303)">Administrative Law</a>&nbsp;
+                Mashaw</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10088, 200303)">Administrative Law II</a>&nbsp;
+                Levine</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10071, 200303)">Advanced Antitrust</a>&nbsp;
+                Priest</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10072, 200303)">Advanced Contracts</a>&nbsp;
+                Markovits</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10073, 200303)">Advanced Legal Writing</a>&nbsp;
+                Harrison</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10074, 200303)">Advanced Torts</a>&nbsp;
+                Priest</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10131, 200303)">Banking Law &amp; Regulation</a>&nbsp;
+                Macey</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10077, 200303)">Bankruptcy</a>&nbsp;
+                Schwartz</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10076, 200303)">BlncingCivLibs&amp;NatlSecPost9/11</a>&nbsp;
+                Koh</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10295, 200303)">Business Organizations</a>&nbsp;
+                Brooks</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10144, 200303)">Capital Punishment: Seminar</a>&nbsp;
+                Bright</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10078, 200303)">Children, Families &amp;the State:</a>&nbsp;
+                Burt</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10132, 200303)">Communications Law</a>&nbsp;
+                Benkler</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10079, 200303)">Community Legal Services</a>&nbsp;
+                Lucht,&nbsp;
+                Solomon,&nbsp;
+                Wizner</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10080, 200303)">Complex Federal Litigation</a>&nbsp;
+                Dignam</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(16944, 200303)">Constitutional Law I: Group 1</a>&nbsp;
+                Eskridge</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(16945, 200303)">Constitutional Law I: Group 2</a>&nbsp;
+                Gewirtz</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(16946, 200303)">Constitutional Law I: Group 3</a>&nbsp;
+                Kahn</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(16947, 200303)">Constitutional Law I: Group 4</a>&nbsp;
+                Yoshino</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(16948, 200303)">Constitutional Law I: Group 5</a>&nbsp;
+                Balkin</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(16949, 200303)">Constitutional Law I: Group 6</a>&nbsp;
+                Post</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(16942, 200303)">Constitutional Law I: Sect. A</a>&nbsp;
+                Siegel</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(16943, 200303)">Constitutional Law I: Sect. B</a>&nbsp;
+                Rubenfeld</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(16953, 200303)">Contracts I: Group 1</a>&nbsp;
+                Ayres</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(16954, 200303)">Contracts I: Group 2</a>&nbsp;
+                Whitman</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(16950, 200303)">Contracts I: Section A</a>&nbsp;
+                Chua</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(16951, 200303)">Contracts I: Section B</a>&nbsp;
+                Carter</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(16952, 200303)">Contracts I: Section C</a>&nbsp;
+                Brooks</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10082, 200303)">Convicting the Innocent</a>&nbsp;
+                Duke</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10083, 200303)">Corporate Taxation</a>&nbsp;
+                Alstott</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10084, 200303)">Corr. Econ. Dev. &amp; Dem.</a>&nbsp;
+                Rose-Ackerman</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10085, 200303)">Crim.Law &amp; Administration</a>&nbsp;
+                Kahan</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10927, 200303)">Crim Proc:ProsecutionAdjudic</a>&nbsp;
+                Stith</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10135, 200303)">Crim Procedure: Investigation</a>&nbsp;
+                McAdams</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10090, 200303)">Design Publ. Inst.:Gov w/o Emp</a>&nbsp;
+                Graetz,&nbsp;
+                Mashaw</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10091, 200303)">Engineering&amp;Ownership of Life</a>&nbsp;
+                Kevles</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10134, 200303)">Environmental Law &amp; Policy</a>&nbsp;
+                Esty</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap">Environmental Protec. Clinic&nbsp;
+                Bryk</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10092, 200303)">Ethics in the Practice of Law</a>&nbsp;
+                Cantrell,&nbsp;
+                Curtis,&nbsp;
+                Wizner</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10093, 200303)">Evidence</a>&nbsp;
+                Damaska</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10094, 200303)">Family Law: Adult Relations</a>&nbsp;
+                Burt</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10095, 200303)">Fed Courts &amp; Jurisdictions</a>&nbsp;
+                Days</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10096, 200303)">Federal Income Taxation</a>&nbsp;
+                Graetz</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10097, 200303)">Fugitive Resources: Sem</a>&nbsp;
+                Rose</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10119, 200303)">Honor,Esteem,Status,&amp;Law</a>&nbsp;
+                Ellickson,&nbsp;
+                Kahan,&nbsp;
+                McAdams,&nbsp;
+                Whitman</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap">Housing &amp; Community Dvelpmnt&nbsp;
+                Solomon</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10101, 200303)">Human Rights Wkshp</a>&nbsp;
+                Kahn</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10102, 200303)">Immigration Legal Services</a>&nbsp;
+                Lucht,&nbsp;
+                Peters,&nbsp;
+                Wizner,&nbsp;
+                Zonana</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10881, 200303)">Intl Courts &amp; Tribunals</a>&nbsp;
+                Wald</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10146, 200303)">Introduction to Islamic Law</a>&nbsp;
+                Abou el Fadl</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10104, 200303)">Justice</a>&nbsp;
+                Ackerman</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap">Just War Theory&nbsp;
+                Carter</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10106, 200303)">Landlord/Tenant Law</a>&nbsp;
+                Dineen</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10107, 200303)">Law, Econ. &amp; Org.</a>&nbsp;
+                Ayres,&nbsp;
+                Brooks,&nbsp;
+                Romano,&nbsp;
+                Schwartz</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10137, 200303)">Law, Institutions&amp;Development</a>&nbsp;
+                Daniels</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10108, 200303)">Lawyering Ethics</a>&nbsp;
+                Cantrell,&nbsp;
+                Curtis</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10110, 200303)">Legal Practicum</a>&nbsp;
+                Stith</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10140, 200303)">Legislative Advocacy Clinic</a>&nbsp;
+                Geballe,&nbsp;
+                Pottenger</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10111, 200303)">Lowenstein Int'l. Hum. Rights</a>&nbsp;
+                Kahn,&nbsp;
+                Silk</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10147, 200303)">National Security Law</a>&nbsp;
+                Abou el Fadl</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10112, 200303)">Non-Profit Org. Clinic</a>&nbsp;
+                Davis,&nbsp;
+                Lindsay,&nbsp;
+                Simon</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10115, 200303)">Problems in Evidence</a>&nbsp;
+                Damaska,&nbsp;
+                Duke</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(16957, 200303)">Procedure I: Group 1</a>&nbsp;
+                Rachlinski</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(16958, 200303)">Procedure I: Group 2</a>&nbsp;
+                Resnik</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(16955, 200303)">Procedure I: Section A</a>&nbsp;
+                Fiss</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(16956, 200303)">Procedure I: Section B</a>&nbsp;
+                Koh</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10116, 200303)">Prof Resp. and the Legal Prof.</a>&nbsp;
+                Johnstone</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10117, 200303)">Property</a>&nbsp;
+                Rose</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10139, 200303)">Prosecution Externship</a>&nbsp;
+                Meyer,&nbsp;
+                Pottenger</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10118, 200303)">Psychology &amp; Law: Seminar</a>&nbsp;
+                Rachlinski</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10120, 200303)">Public Interest Law Rd. Group</a>&nbsp;
+                Cantrell,&nbsp;
+                Curtis,&nbsp;
+                Resnik</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10121, 200303)">Public Order World Community</a>&nbsp;
+                Reisman</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10087, 200303)">Regulation:Thry,Policy,Reality</a>&nbsp;
+                Levine</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10122, 200303)">Research Methods in Int'l. Law</a>&nbsp;
+                Cohen,&nbsp;
+                Engsberg,&nbsp;
+                Reisman,&nbsp;
+                Wade,&nbsp;
+                Willard</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10142, 200303)">Secured Transactions</a>&nbsp;
+                Brunstad</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10124, 200303)">Securities Regulation I</a>&nbsp;
+                Winter</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10125, 200303)">Sentencing</a>&nbsp;
+                Curtis,&nbsp;
+                Gertner</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10086, 200303)">The Criminal Jury</a>&nbsp;
+                Goldstein</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10123, 200303)">The Rule of Law</a>&nbsp;
+                Deutsch</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(16961, 200303)">Torts I: Group 1</a>&nbsp;
+                Calabresi</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(16962, 200303)">Torts I: Group 2</a>&nbsp;
+                Schuck</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(16959, 200303)">Torts I: Section A</a>&nbsp;
+                Ellickson</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(16960, 200303)">Torts I: Section B</a>&nbsp;
+                Coleman</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10127, 200303)">Trial Practice</a>&nbsp;
+                Wizner</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10128, 200303)">Trusts and Estates</a>&nbsp;
+                Langbein</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10129, 200303)">What Ever Happened toJuryTrial</a>&nbsp;
+                Langbein</td>
+</tr>
+<tr class="content-text">
+<td>&nbsp;&nbsp;</td><td colspan="2" class="content-text" align="left" nowrap="nowrap"><a href="javascript:courseWindow(10130, 200303)">Workshop on Chinese Legal Refo</a>&nbsp;
+                Gewirtz,&nbsp;
+                Hecht,&nbsp;
+                Horsley</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="content-text">Yale Law School Online Course Evaluation<br>
+        Yale University &copy; 2006</p>
+</blockquote>
+</body>
+</html>
