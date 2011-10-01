@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 	$('.eval_link a').live('click', function(e) {
 		var url = $(this).attr('href');
-		$('#lightbox').load(url).fadeIn("slow");
+		$('#lightbox').load(url).fadeIn(800);
 		e.preventDefault();
 	});
 	
