@@ -9,9 +9,11 @@ $(document).ready(function() {
 		return false;
 	 });
 
+	$('#lightbox').hide();
+
 	$('.eval_link a').live('click', function(e) {
 		var url = $(this).attr('href');
-		$('#lightbox').hide().load(url).fadeIn("slow");
+		$('#lightbox').load(url).fadeIn(2000);
 		e.preventDefault();
 	});
 	
