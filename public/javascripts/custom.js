@@ -9,9 +9,9 @@ $(document).ready(function() {
 		return false;
 	 });
 
-	$('.eval_link a').click(function(e) {
+	$('.eval_link a').live('click', function(e) {
 		var url = $(this).attr('href');
-		$('#lightbox').load(url).fadeIn("slow");
+		$('#lightbox').hide().load(url).fadeIn("slow");
 		e.preventDefault();
 	});
 	
