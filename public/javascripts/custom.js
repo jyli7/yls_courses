@@ -23,5 +23,19 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 	
+	$('.calendar_body a img, .eval_link a img').tooltip({
+		predelay:750,
+
+		// use the fade effect instead of the default
+		effect: 'fade',
+
+		// make fadeOutSpeed similar to the browser's default
+		fadeOutSpeed: 100,
+
+		// tweak the position
+		position: "top center",
+		offset:[-3]
+	});
+	
 });
 

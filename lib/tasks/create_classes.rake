@@ -8,7 +8,7 @@ require 'time'
 
   book = Spreadsheet.open '/Users/jimmyli/rails_projects/grocery_helper/public/data/YLS_Classes.xls'
   sheet1 = book.worksheet 'Sheet1'
-
+'''
   name_array = [] # for names
   sheet1.each 2 do |row|
     name_array << row[0] 
@@ -108,7 +108,6 @@ require 'time'
     course.update_attribute :address, cnum_array[count]
     count += 1
   end
-
 '''
   cnum_array = [] # for start times
   sheet1.each 2 do |row|
@@ -153,7 +152,5 @@ require 'time'
     course.update_attribute :end_time, cnum_array[count]
     count += 1
   end
-
-'''
 
 end 

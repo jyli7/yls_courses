@@ -13,7 +13,7 @@ body {font-size:78%;color:#FFFFFF;font-family:"Lucida Sans Unicode", "Lucida Gra
 /* Links */
 
 a {
-  color: #7DEEF2;
+  color: #7FEAFF;
   text-decoration: none;
 }
 
@@ -23,11 +23,12 @@ a:hover {
 }
 
 a:visited {
-  color: #CDBBE8;
+	color: #CCBFFF;
 }
 
 
 div#container {
+	width: 95em;
 	margin:5px 20px 10px 15px;
 }
 
@@ -45,7 +46,7 @@ table#yls{
 
 div#search_form {
 	border:1px solid gray;
-	padding: 8px 8px 8px 0;
+	padding: 8px 8px 8px 5px;
 	margin: 0 0 5px 0;
 	height:95px;
 	background-color:#2D647F;
@@ -55,6 +56,10 @@ div#search_form {
 
 div#name_search div#name_box {	
 	float:left;
+}
+
+div#name_box {
+	margin-right:54px;
 }
 
 div.field_container {
@@ -99,9 +104,15 @@ div#first_row {
 	font-size:115%;
 }
 
-.other_rows {
-	margin:5px 0 0 0;
+.other_rows, .descrip_body {
+	margin:6px 0 0 0;
+	padding-left:5px;
 }
+
+.descrip_body {
+	text-align:justify;
+}
+
 
 hr#border_line {
 	margin-top:0px;
@@ -112,13 +123,21 @@ hr#border_line {
 
 #name_header, .name_body, div#name_search {
 	display:inline-block;
-	width:210px;
+	width:190px;
 	margin: 0 10px 0 0;
-	padding: 0 0 0 5px;
+}
+
+#calendar_header, .calendar_body, #eval_header, .eval_body {
+	display:inline-block;
+	width:20px;
+	margin: 0 0 0 0;
+}
+
+#eval_header, .eval_body {
+	margin-right:3em;
 }
 
 #name_box, #search_button, #course_list_link {
-	padding: 0 0 0 5px;
 }
 
 #number_header, .number_body, div#number_search {
@@ -127,6 +146,7 @@ hr#border_line {
 }
 
 #instructor_header, .instructor_body, div#instructor_search {
+	left:20em;
 	display:inline-block;
 	width:180px;
 	margin: 0 10px 0 0;
@@ -154,23 +174,24 @@ hr#border_line {
 	margin: 0 10px 0 0;
 }
 
-#limitations_header, .limitations_body {
+#limitations_header, .limitations_body, div#limitations_search {
 	display:inline-block;
-	width:140px;
-	margin: 0 0 0 0;
+	width:90px;
+	margin: 0 10px 0 0;
 }
 
-#calendar_header, .calendar_body {
+#exam_header, .exam_body, #exam_search, #paper_search {
 	display:inline-block;
-	margin: 0 12px 0 10px;
-	width:10px;
+	width:90px;
+	margin: 0 15px 0 0;
 }
 
-#show_header {
-	font-size:20px;
-	font-weight:bold;
-	margin-bottom:5px;
+#paper_header, .paper_body, #paper_search {
+	display:inline-block;
+	width:70px;
+	margin: 0 15px 0 0;	
 }
+
 
 /*Lightbox */
 
@@ -204,7 +225,20 @@ hr#border_line {
 	float:right;
 }
 
-.descrip_body {
-	text-align:justify;
-	padding: 3px 0 5px 0;
+#show_header {
+	font-size:20px;
+	font-weight:bold;
+	margin-bottom:5px;
 }
+
+/*Tooltip */
+.tooltip {
+		color:blue;
+		display:none;
+		background-color:#ffa;
+		border:1px solid #cc9;
+		padding:3px;
+		font-size:12px;
+		-moz-box-shadow: 2px 2px 11px #666;
+		-webkit-box-shadow: 2px 2px 11px #666;
+	}

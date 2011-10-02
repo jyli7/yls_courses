@@ -10,41 +10,42 @@
 		<%= form_for @search do |f| %>
 			<div class="field_container">
 				<div id="name_search"><%= f.label :name_like, "Name" %></div>
-				<div id="name_box"><%= f.text_field :name_like, :size => 27 %></div>
+				<div id="name_box"><%= f.text_field :name_like, :size => 40 %></div>
 			</div>
-		
-			<div class="field_container">
-				<div id="number_search"><%= f.label :number_like, "Number" %></div>
-				<div id="number_box"><%= f.text_field :number_like, :size => 7 %></div>
-			</div>
-		
-			<div class="field_container">
+
+			<div class="field_container">				
 				<div id="instructor_search"><%= f.label :instructor_like, "Instructor" %></div>
 				<div id="instructor_box"><%= f.text_field :instructor_like, :size => 23 %></div>
 			</div>
-
-			<div class="field_container">
-				<div id="room_search"><%= f.label :room_like, "Room" %></div>
-				<div id="room_box"><%= f.text_field :room_like, :size => 8 %></div>
-			</div>
-		
-			<div class="field_container">
+			
+			<div class="field_container">		
 				<div id="day_search"><%= f.label :day_like, "Day (e.g. MW)" %></div>
 				<div id="day_box"><%= f.text_field :day_like, :size => 12%></div>
 			</div>
-				
-			<div class="field_container">
-				<div id="units_search"><%= f.label :units_like, "Units" %></div>
-				<div id="units_box"><%= f.select :units_like, ['1', '2', '3', '4'], {:include_blank => true, :selected => :blank}, {:style => 'width:70px'} %></div>
-			</div>
-		
-			<div class="field_container">
+			
+			<div class="field_container">		
 				<div id="time_search"><%= f.label :time_like, "Time" %></div>
 				<div id="time_box"><%= f.text_field :time_like, :size => 10%></div>
 			</div>
-		
-			<div id="limitations_search"><%= f.label :limitations_like, "Limitations" %></div>
-			<div id="limitations_box"><%= f.select :limitations_like, ['Limited', 'Permission', 'LSO'], { :include_blank => true, :selected => :blank } %></div>
+			
+			<div class="field_container">			
+				<div id="units_search"><%= f.label :units_like, "Units" %></div>
+				<div id="units_box"><%= f.select :units_like, ['1', '2', '3', '4'], {:include_blank => true, :selected => :blank}, {:style => 'width:50px'} %></div>
+			</div>
+			
+			<div class="field_container">
+				<div id="limitations_search"><%= f.label :limitations_like, "Limitations" %></div>
+				<div id="limitations_box"><%= f.select :limitations_like, ['Limited', 'Permission', 'LSO'], { :include_blank => true, :selected => :blank}, {:style => 'width:75px'} %></div>
+			</div>
+			
+			<div class="field_container">			
+				<div id="exam_search"><%= f.label :exam_type_like, "Exam?" %></div>
+				<div id="exam_box"><%= f.select :exam_type_like, ['Self-scheduled', 'Scheduled', 'None'], { :include_blank => true, :selected => :blank }, {:style => 'width:65px'} %></div>
+			</div>
+						
+			<div id="paper_search"><%= f.label :paper_type_like, "Paper" %></div>
+			<div id="paper_box"><%= f.select :paper_type_like, ['Required', 'Option'], { :include_blank => true, :selected => :blank }, {:style => 'width:65px'} %></div>
+			
 		<div id="search_button"><%= f.submit "Search" %></div>	
 		<div id="course_list_link"><%= link_to "Full Course List", courses_path%></div>
 		<% end %>	
@@ -55,43 +56,42 @@
 	<div id="course_table">
 		<div id="first_row">
 			<span id="name_header"><%= sort_link @search, :name %></span>
-			<span id="number_header"><%= sort_link @search, :number %></span>
-			<span id="instructor_header"><%= sort_link @search, :instructor %></span>
-			<span id="room_header"><%= sort_link @search, :room %></span>
-			<span id="day_header"><%= sort_link @search, :day %></span>
-			<span id="units_header"><%= sort_link @search, :units %></span>
-			<span id="time_header"><%= sort_link @search, :time %></span>
-			<span id="limitations_header"><%= sort_link @search, :limitations %></span>
 			<span id="calendar_header"></span>
 			<span id="eval_header"></span>
+			<span id="instructor_header"><%= sort_link @search, :instructor %></span>
+			<span id="day_header"><%= sort_link @search, :day %></span>
+			<span id="time_header"><%= sort_link @search, :time %></span>			
+			<span id="units_header"><%= sort_link @search, :units %></span>
+			<span id="limitations_header"><%= sort_link @search, :limitations %></span>
+			<span id="exam_header"><%= sort_link @search, :exam_type, "Exam?"  %></span>
+			<span id="paper_header"><%= sort_link @search, :paper_type, "Paper?" %></span>
 		</div>
 		<hr id="border_line">
 
 		<% for course in @courses %>
-		<div class="other_rows">
-			<span class="name_body"><a class="course_name_click" href='#'><%= course.name %></a></span>
-			<span class="number_body"><%= course.number %></span>
-			<span class="instructor_body"><%= course.instructor %></span>
-			<span class="room_body"><%= course.room %></span>
-			<span class="day_body"><%= course.day %></span>
-			<span class="units_body"><%= course.units %></span>
-			<span class="time_body"><%= course.time %></span>
-			<span class="limitations_body"><%= course.limitations %></span>
-			<span class="calendar_body">
-			    <a href="http://www.google.com/calendar/event?action=TEMPLATE&text=<%= course.name %> &dates=<%= course.start_time %>/<%= course.end_time %>&details=<%= course.name%>%20with%20<%= course.instructor %>&location=<%= course.room %>&trp=false&sprop=&sprop=name:" target="_blank"><img src="/images/gcal.png" width="20" height="20" align="absbottom" border=0></img></a>
-			</span>
-			<% if course.evals.nil? %>
-			<% else %>
-				<span class="eval_link"><%= link_to image_tag("chart_bar.png", :width =>20, :height =>20, :align=>"absbottom", :border =>0), course %></span>
-				<span id="lightbox"></span>
-			<% end %>
-			
-				
-		
-		</div>
-		<div class="descrip_body">
-			<%= course.descrip %>
-		</div>
+			<div class="other_rows">
+				<span class="name_body"><a class="course_name_click" href='#'><%= course.name %></a></span>
+				<span class="calendar_body">
+				    <a href="http://www.google.com/calendar/event?action=TEMPLATE&text=<%= course.name %> &dates=<%= course.start_time %>/<%= course.end_time %>&details=<%= course.name%>%20with%20<%= course.instructor %>&location=<%= course.room %>&trp=false&sprop=&sprop=name:" target="_blank"><img src="/images/gcal.png" width="20" height="20" align="absbottom" border=0 title="Add to calendar"></img></a>
+				</span>
+				<span class="eval_body">
+				<% if course.evals.nil? %>
+				<% else %>
+					<span class="eval_link"><%= link_to image_tag("chart_bar.png", :border=>0, :align=>"absbottom", :title=>"Course evaluations"), course %></span>
+					<span id="lightbox"></span>
+				<% end %>
+				</span>
+				<span class="instructor_body"><%= course.instructor %></span>
+				<span class="day_body"><%= course.day %></span>
+				<span class="time_body"><%= course.time %></span>			
+				<span class="units_body"><%= course.units %></span>
+				<span class="limitations_body"><%= course.limitations %></span>
+				<span class="exam_body"><%= course.exam_type %></span>
+				<span class="paper_body"><%= course.paper_type %></span>				
+			</div>
+			<div class="descrip_body">
+				<%= course.descrip %>
+			</div>
 		<% end %>
 	</div>
 	
