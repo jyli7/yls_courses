@@ -1,8 +1,16 @@
 YlsCourses::Application.routes.draw do
+  devise_for :users
+
+  root :to => 'courses#index'  
+  
+  resources :line_items
+  resources :carts
   resources :searches
   resources :courses
+
+  match '/signup',  :to => 'users#new'
+    
   
-  root :to => 'courses#index'
   
 
   # The priority is based upon order of creation:

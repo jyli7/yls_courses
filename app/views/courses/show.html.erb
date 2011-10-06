@@ -2,16 +2,16 @@
 	<div class="lightbox_front">
 		<span class="lightbox_close"><a href=''>CLOSE [X]</a></span>
 		<div id="show_header"><%= @course.name%></div>
-		<em>Course evaluations:</em>
-		<br>
-		<% if @course.evals.nil? %>
+		<div id="show_eval_header"><em>Course evaluations:</div></em>
+		<% if @course.crn.blank? %>
 			No evaluations found
 		<% else %>
-			<% i = 2 %>
-			<% while i < @course.evals.count %>
-				<a href="https://faculty.yale.edu/lawevals/student/Summary?crn=<%= @course.evals[i-2] %>&termCode=<%=@course.evals[i-1]%>"><%=@course.evals[i]%></a>
+			<% i = 0 %>
+			<% while i < @course.crn.length %>
+				<span class="indiv_eval_link"><a href="https://faculty.yale.edu/lawevals/student/Summary?crn=<%= @course.crn[i] %>&termCode=<%=@course.term_code[i]%>"><%=@course.past_semesters[i]%></a></span>
+				<span class="prof_name"><%=@course.past_instructors[i]%></span>
 				<br>
-				<% i = i+3 %>
+				<% i = i + 1 %>
 			<% end %>
 		<% end %>
 	</div>

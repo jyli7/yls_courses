@@ -1,0 +1,5 @@
+<%= render cart.line_items %>
+
+<%= link_to 'Back to courses', courses_path %>
+<div class="empty_cart"><%= button_to 'Empty cart', cart, :method => :delete,
+:confirm => 'Are you sure?' %></div>

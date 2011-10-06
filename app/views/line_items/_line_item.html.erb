@@ -1,0 +1,11 @@
+<% unless line_item.course.blank? %>
+	<li class="name_body"><%= line_item.course.name %></li>
+	<li class="number_body"><%= line_item.course.number %></li>
+	<li class="instructor_body"><%= line_item.course.instructor %></li>
+	<li class="room_body"><%= line_item.course.room %></li>
+	<li class="day_body"><%=line_item.course.day %></li>
+	<li class="time_body"><%= line_item.course.time %></li>
+	<li class="limitations_body"><%= line_item.course.limitations %></li>
+	<li class="exam_body"><%= line_item.course.exam_type %></li>
+	<li class="paper_body"><%= line_item.course.paper_type %></li>
+<% end %>

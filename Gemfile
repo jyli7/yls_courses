@@ -9,6 +9,8 @@ gem 'hirb'
 gem 'meta_search'
 gem 'hpricot'
 gem 'nokogiri'
+gem 'devise'
+gem 'jquery-rails'
 
 group :production do
   gem 'pg'

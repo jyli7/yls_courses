@@ -7,7 +7,9 @@ class CoursesController < ApplicationController
     @search = Course.search(params[:search])
     @courses = @search.all
     @count = 1
-        
+    @cart = current_cart
+    @line_item = @cart.line_items.build(params[:line_item])
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @courses }

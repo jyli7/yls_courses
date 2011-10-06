@@ -1,9 +1,38 @@
-body {
-  padding-left: 20px;
-  padding-top: 20px;
-  padding-right: 20px;
-  background-color: #1F5168;
+.notice {
+	margin-left:35px;
 }
+
+header {
+	width:100%;
+	overflow:auto;
+}
+
+body {
+	background-color:#1F5168;
+}
+/* nav */
+
+div#nav_bar {
+	width: 95em;
+	margin:10px 20px 0 33px;
+	overflow:auto;
+}
+
+nav {
+	float:right;
+	position:relative;
+	background-color:#2D647F;	
+	padding: 3px;
+}
+
+.nav_item {
+	position:relative;
+	list-style-type: none;
+	display: inline-block;
+	font-size:13px;
+	margin: 0 7px 0 7px;
+}
+
 
 /* Typography */
 
@@ -23,13 +52,19 @@ a:hover {
 }
 
 a:visited {
-	color: #CCBFFF;
+	color: #7FEAFF;
 }
 
+#first_row a:visited {
+	color: #7FEAFF;
+}
 
 div#container {
 	width: 95em;
 	margin:5px 20px 10px 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: #1F5168;
 }
 
 /* Top of Course Index */
@@ -44,13 +79,20 @@ table#yls{
 
 /*Search Form */
 
-div#search_form {
-	border:1px solid gray;
+div#search_container {
 	padding: 8px 8px 8px 5px;
-	margin: 0 0 5px 0;
-	height:95px;
+	margin: 5px 0 5px 0;
+	height:110px;
 	background-color:#2D647F;
 	font-size:105%;
+}
+
+#cart{
+	padding: 0 8px 8px 5px;
+	margin: 5px 0 5px 0;
+	background-color:#2D647F;
+	font-size:105%;
+;
 }
 
 
@@ -81,6 +123,7 @@ div#course_list_link {
 /*horizontal bars */
 
 .zebra {
+	padding:2px 0 2px 0;
 	background-color:#2D647F;
 }
 
@@ -101,7 +144,9 @@ div#course_table {
 
 div#first_row {
 	display:inline-block;
+	width: 82.5em;
 	font-size:115%;
+	border-bottom: 1px dashed white;
 }
 
 .other_rows, .descrip_body {
@@ -121,20 +166,31 @@ hr#border_line {
 	background-color:transparent;
 }
 
+#search_title, #shopping_title {
+	margin: -2px 0 0 0;
+	display:inline-block;
+}
+
+.toggle_link_hide, .toggle_link_show {
+	display:inline-block;
+	float:right;
+}
+
 #name_header, .name_body, div#name_search {
 	display:inline-block;
 	width:190px;
 	margin: 0 10px 0 0;
 }
 
-#calendar_header, .calendar_body, #eval_header, .eval_body {
+#calendar_header, .calendar_body, #eval_header, .eval_body, #cart_header, .cart_body {
 	display:inline-block;
 	width:20px;
 	margin: 0 0 0 0;
 }
 
-#eval_header, .eval_body {
-	margin-right:3em;
+#cart_header, .cart_body{
+	width:30px;
+	margin-right:2em;
 }
 
 #name_box, #search_button, #course_list_link {
@@ -225,12 +281,27 @@ hr#border_line {
 	float:right;
 }
 
+/* show course page */
 #show_header {
 	font-size:20px;
 	font-weight:bold;
 	margin-bottom:5px;
 }
 
+#show_eval_header {
+	font-style:italic;
+	font-size:13px;
+	margin-bottom:1em;
+}
+
+.indiv_eval_link {
+	display:inline-block;
+	width:90px;
+}
+
+.prof_name {
+	display:inline-block;
+}
 /*Tooltip */
 .tooltip {
 		color:blue;
@@ -242,3 +313,14 @@ hr#border_line {
 		-moz-box-shadow: 2px 2px 11px #666;
 		-webkit-box-shadow: 2px 2px 11px #666;
 	}
+
+/* Round corners */
+.round {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}
+
+.empty_cart {
+	margin:4px 0 0 0;
+}
