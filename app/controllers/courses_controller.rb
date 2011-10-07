@@ -7,11 +7,16 @@ class CoursesController < ApplicationController
     @search = Course.search(params[:search])
     @courses = @search.all
     @count = 1
-    @cart = current_cart
-    @line_item = @cart.line_items.build(params[:line_item])
-    
+    if user_signed_in?
+      @user = current_user
+      @cart = @user.cart
+      if @cart 
+        @line_item = @cart.line_items.build(params[:line_item])
+      end 
+    end 
     respond_to do |format|
       format.html # index.html.erb
+      format.js
       format.xml  { render :xml => @courses }
     end
   end

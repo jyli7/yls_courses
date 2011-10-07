@@ -11,12 +11,14 @@ gem 'hpricot'
 gem 'nokogiri'
 gem 'devise'
 gem 'jquery-rails'
+gem 'cancan'
 
 group :production do
   gem 'pg'
 end 
 
 group :development do
+  gem 'ruby-debug19'
   gem 'rspec-rails', '2.6.1'
   gem 'annotate', '2.4.0'
   gem 'faker', '0.3.1'

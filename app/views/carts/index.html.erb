@@ -2,13 +2,16 @@
 
 <table>
   <tr>
-    <th></th>
-    <th></th>
+    <th>ID</th>
+    <th>Email</th>
     <th></th>
   </tr>
 
 <% @carts.each do |cart| %>
   <tr>
+	<td><%= cart.id %></td>
+	<td><%= User.find(cart.user.id).email %></td>
+	<td><%= cart.line_items.count%></td>
     <td><%= link_to 'Show', cart %></td>
     <td><%= link_to 'Edit', edit_cart_path(cart) %></td>
     <td><%= link_to 'Destroy', cart, :confirm => 'Are you sure?', :method => :delete %></td>

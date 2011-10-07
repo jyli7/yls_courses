@@ -1,9 +1,9 @@
 class LineItemsController < ApplicationController
-  before_filter :authenticate_user!
+  load_and_authorize_resource
+  
   # GET /line_items
   # GET /line_items.xml
   def index
-    @line_items = LineItem.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,7 +14,6 @@ class LineItemsController < ApplicationController
   # GET /line_items/1
   # GET /line_items/1.xml
   def show
-    @line_item = LineItem.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,7 +24,6 @@ class LineItemsController < ApplicationController
   # GET /line_items/new
   # GET /line_items/new.xml
   def new
-    @line_item = LineItem.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,22 +33,23 @@ class LineItemsController < ApplicationController
 
   # GET /line_items/1/edit
   def edit
-    @line_item = LineItem.find(params[:id])
   end
 
   # POST /line_items
   # POST /line_items.xml
   def create
-    @cart = current_cart
+    @user = current_user
+    @cart = @user.cart
     @line_item = @cart.line_items.build(params[:line_item]) 
     
     respond_to do |format|
       if @line_item.save
         format.html { redirect_to(root_path, :notice => 'Course added to cart') }
-        format.js
+        format.js { @current_item = @line_item }
         format.xml  { render :xml => @line_item, :status => :created, :location => @line_item }
       else
         format.html { redirect_to(root_path, :notice => 'You\'ve already added that course to your cart')}
+        format.js   { render courses_path } 
         format.xml  { render :xml => @line_item.errors, :status => :unprocessable_entity }
       end
     end
@@ -59,7 +58,6 @@ class LineItemsController < ApplicationController
   # PUT /line_items/1
   # PUT /line_items/1.xml
   def update
-    @line_item = LineItem.find(params[:id])
 
     respond_to do |format|
       if @line_item.update_attributes(params[:line_item])
@@ -75,11 +73,13 @@ class LineItemsController < ApplicationController
   # DELETE /line_items/1
   # DELETE /line_items/1.xml
   def destroy
-    @line_item = LineItem.find(params[:id])
+    @user = current_user
     @line_item.destroy
+    @cart = @user.cart
 
     respond_to do |format|
-      format.html { redirect_to(line_items_url) }
+      format.html { redirect_to(root_path) }
+      format.js
       format.xml  { head :ok }
     end
   end

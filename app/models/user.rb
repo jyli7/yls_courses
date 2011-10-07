@@ -7,5 +7,10 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
   
-  has_many :carts
+  has_one :cart
+  after_create :create_user_cart
+
+  def create_user_cart #create cart immediately upon sign_up
+    create_cart
+  end 
 end

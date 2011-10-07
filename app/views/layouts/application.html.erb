@@ -3,7 +3,9 @@
   <head>
     <title><%= title %></title>
 	<%= javascript_include_tag :all %>
-	<%= render 'layouts/stylesheets'%>
+	<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+	<%= render 'layouts/stylesheets' %>
 	<%= csrf_meta_tag %>
   </head>
   <body>

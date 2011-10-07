@@ -9,19 +9,33 @@ $(document).ready(function() {
 		return false;
 	 });
 	
-	$('.toggle_link_hide').live('click', function(e) {  /*for shopping cart and search box toggling */
+	$('.toggle_link_hide').live('click', function(e) {  /*for search box toggling */
 		$(this).next('div').slideToggle('slow');
 		$(this).replaceWith('<a href=\'\' class=\"toggle_link_show\">Show<img id=\"arrow\" src=\"/images/down_arrow.gif\">');
 		e.preventDefault();
 	 });
 	
-	$('.toggle_link_show').live('click', function(e) {  /*for shopping cart and search box toggling */
+	$('.toggle_link_show').live('click', function(e) {  /*for search box toggling */
 		$(this).next('div').slideToggle('slow');
 		$(this).replaceWith('<a href=\'\' class=\"toggle_link_hide\">Hide<img id=\"arrow\" src=\"/images/up_arrow.gif\">');
 		e.preventDefault();
 	 });
 	
-
+	
+	$('#cart_toggle').live('click', function(e) {  /*for shopping cart and search box toggling */
+		$(this).next('div').toggle('drop');
+		e.preventDefault();
+	 });
+	
+	$('.cart_add').click(function () {
+		$('#sidebar:hidden').show('drop');
+	});
+	
+	$('#hide_cart').click(function () {
+		$('#sidebar').hide('drop');
+		return false;
+	})
+	
 	$('#lightbox').hide();
 
 	$('.eval_link a').live('click', function(e) {
@@ -46,8 +60,7 @@ $(document).ready(function() {
 		fadeOutSpeed: 100,
 
 		// tweak the position
-		position: "top center",
-		offset: [-2]
+		position: 'top center'
 	});
 	
 });

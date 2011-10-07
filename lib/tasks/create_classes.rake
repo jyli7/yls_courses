@@ -1,5 +1,5 @@
-desc "Fetch law classes"
-task :fetch_classes => :environment do 
+desc "Create law classes"
+task :create_classes => :environment do 
 require 'spreadsheet'
 require 'rubygems'
 require 'time'
@@ -73,10 +73,16 @@ require 'time'
     course.update_attribute :room, cnum_array[count]
     count += 1
   end
-
+'''
 
   cnum_array = [] # for units
   sheet1.each 2 do |row|
+    if row[6].class == Float 
+      row[6] = row[6].to_s
+    end 
+    if row[6].length >=3 and row[6][-2..-1] == ".0"
+      row[6].slice!(-2..-1)
+    end 
     cnum_array << row[6] 
   end
 
@@ -85,6 +91,8 @@ require 'time'
     course.update_attribute :units, cnum_array[count]
     count += 1
   end
+  
+'''
 
   cnum_array = [] # for limitations
   sheet1.each 2 do |row|
@@ -108,7 +116,7 @@ require 'time'
     course.update_attribute :address, cnum_array[count]
     count += 1
   end
-'''
+
   cnum_array = [] # for start times
   sheet1.each 2 do |row|
     unless row[9].blank?
@@ -152,5 +160,5 @@ require 'time'
     course.update_attribute :end_time, cnum_array[count]
     count += 1
   end
-
+'''
 end 

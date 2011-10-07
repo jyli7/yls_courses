@@ -1,1 +1,3 @@
 $("#cart").html("<%= escape_javascript(render(@cart)) %>");
+
+$("#current_item").highlightFade({color:'#1752c6',speed:1500, end:'#1b0d33', iterator:'sinusoidal'});

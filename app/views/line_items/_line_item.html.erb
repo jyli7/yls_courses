@@ -1,11 +1,12 @@
 <% unless line_item.course.blank? %>
-	<li class="name_body"><%= line_item.course.name %></li>
-	<li class="number_body"><%= line_item.course.number %></li>
-	<li class="instructor_body"><%= line_item.course.instructor %></li>
-	<li class="room_body"><%= line_item.course.room %></li>
-	<li class="day_body"><%=line_item.course.day %></li>
-	<li class="time_body"><%= line_item.course.time %></li>
-	<li class="limitations_body"><%= line_item.course.limitations %></li>
-	<li class="exam_body"><%= line_item.course.exam_type %></li>
-	<li class="paper_body"><%= line_item.course.paper_type %></li>
+	<% if line_item == @current_item %>
+		<div id = "current_item">
+		<% else %>
+		<div class = "non_current_item">
+	<% end %>
+			<div class="delete_line_item"><%= button_to 'Delete', line_item, {:method => :delete, :remote => true} %></div>
+			<li class="name_body"><%= line_item.course.name %></li>
+			<li class="units_body_cart"><%= line_item.course.units %></li>
+			<br>
+		</div>
 <% end %>

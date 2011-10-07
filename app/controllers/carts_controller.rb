@@ -1,8 +1,9 @@
 class CartsController < ApplicationController
+  load_and_authorize_resource
+  
   # GET /carts
   # GET /carts.xml
   def index
-    @carts = Cart.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,23 +14,16 @@ class CartsController < ApplicationController
   # GET /carts/1
   # GET /carts/1.xml
   def show
-    begin
-      @cart = Cart.find(params[:id])
-    rescue ActiveRecord::RecordNotFound
-      logger.error "Attempt to access invalid cart #{params[:id]}"
-      redirect_to courses_url, :notice => 'Invalid cart'
-    else    
-      respond_to do |format|
-        format.html # show.html.erb
-        format.xml  { render :xml => @cart }
-      end 
-    end
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @cart }
+    end 
   end
 
   # GET /carts/new
   # GET /carts/new.xml
   def new
-    @cart = Cart.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -39,13 +33,12 @@ class CartsController < ApplicationController
 
   # GET /carts/1/edit
   def edit
-    @cart = Cart.find(params[:id])
   end
 
   # POST /carts
   # POST /carts.xml
-  def create
-    @cart = Cart.new(params[:cart])
+  def create    
+    @cart.user = current_user
 
     respond_to do |format|
       if @cart.save
@@ -61,11 +54,17 @@ class CartsController < ApplicationController
   # PUT /carts/1
   # PUT /carts/1.xml
   def update
-    @cart = Cart.find(params[:id])
+    if @cart.line_items
+      @cart.line_items.each do |item|
+        item.destroy
+      end 
+    end 
 
     respond_to do |format|
       if @cart.update_attributes(params[:cart])
-        format.html { redirect_to(@cart, :notice => 'Cart was successfully updated.') }
+        format.html { redirect_to(root_path, :notice => 'Cart emptied.') }
+        debugger
+        format.js
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -77,7 +76,6 @@ class CartsController < ApplicationController
   # DELETE /carts/1
   # DELETE /carts/1.xml
   def destroy
-    @cart = current_cart
     @cart.destroy
 
     respond_to do |format|
