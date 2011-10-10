@@ -1,13 +1,13 @@
 <header>
-	<div id="nav_bar">
-		<nav class="round">
-		    <div class="nav_item"><%= link_to "Home", root_path %></div>
-		    <% if user_signed_in? %>
-			    <div class="nav_item"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></div>
-		  	<% else %>
-		    	<div class="nav_item"><%= link_to "Sign up", new_user_registration_path %></div>
-			 	<div class="nav_item"><%= link_to "Sign in", new_user_session_path %></div>
-		  	<% end %>
-		</nav>
-	</div>
+	<nav class="round">
+	    <div class="nav_item"><%= link_to "Home", root_path %></div>
+	    <% if user_signed_in? %>
+		    <div class="nav_item"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></div>
+	  	<% else %>
+	    	<div class="nav_item"><%= link_to "Sign up", new_user_registration_path %></div>
+		 	<div class="nav_item"><%= link_to "Sign in", new_user_session_path %></div>
+	  	<% end %>
+	</nav>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
 </header>

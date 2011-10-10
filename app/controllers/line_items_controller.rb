@@ -74,6 +74,7 @@ class LineItemsController < ApplicationController
   # DELETE /line_items/1.xml
   def destroy
     @user = current_user
+    @course_id = @line_item.course.id
     @line_item.destroy
     @cart = @user.cart
 

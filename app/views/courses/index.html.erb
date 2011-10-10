@@ -1,15 +1,17 @@
 <div id="container">
+	
+	<!-- Javascripts -->
 	<script type="text/javascript" src="javascripts/custom/custom.js"></script>
 	<script type="text/javascript" src="javascripts/custom/jquery.highlightFade.js"></script>
-	<table width="100%" cellspacing="0" cellpadding="0" border="0" id='yls'>
-		<tr>
-			<th id="yls_header"> YLS Courses: Spring 2012 </th>
-		</tr>
-	</table>
+	
+	<!-- Header -->
+	<h1 id="yls_header"> YLS Courses: Spring 2012 </h1>
+
+	<!-- Shopping Cart -->
 	<% if user_signed_in? %>
 	<a href='' id="cart_toggle"><img id="cart_image" src="/images/cart.png"></a>
 	<div id="sidebar">
-		<h2 id="shopping_title">Your Shopping Cart</h2>
+		<h2 id="shopping_title">Your Course Cart</h2>
 		<a href='' id="hide_cart">Hide [X]</a>
 		<div id="cart" class="round">
 		<% if @cart %>
@@ -20,17 +22,15 @@
 		</div>
 	</div>
 		<% end %>
-	<br>
+	
+	<!-- Search Box -->
 	<h2 id="search_title">Search Classes</h2> <!--Search form -->
 	<a href='' class="toggle_link_hide">Hide<img id="arrow" src="/images/up_arrow.gif" ></a>
 	<div id="search_container" class="round">
-		<div id="search_form">
-			<%= render :partial => 'search_form' %>
-		</div>
+		<%= render :partial => 'search_form' %>
 	</div>
 	<br>
 	<div id="courses_table"> 
-		<%= render :partial => 'course_headers' %> <!--Courses headers -->
 		<div id="courses_body"><%= render :partial => 'courses' %></div> <!--Courses body-->
 	</div>
 </div>

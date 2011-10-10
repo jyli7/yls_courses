@@ -4,10 +4,25 @@ class Course < ActiveRecord::Base
   serialize :past_instructors
   serialize :past_semesters
   
-  has_many :line_item
+  has_many :line_items
   
   before_destroy :ensure_not_referenced_by_any_line_item
   #...
+  
+  def self.tod_array
+    a = []
+    for course in Course.all
+      unless a.include? course.tod or course.tod.nil?
+        a << course.tod
+      end 
+    end
+    last = a.pop
+    first_two = a.first(2)
+    a.slice!(0..1)
+    a.push(first_two[0], first_two[1], last)
+    return a
+  end 
+  
   private
     # ensure that there are no line items referencing this product
     def ensure_not_referenced_by_any_line_item

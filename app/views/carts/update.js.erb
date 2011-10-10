@@ -1,1 +1,10 @@
 $("#cart").html("<%= escape_javascript(render(@cart)) %>");
+
+var ids = new Array();
+
+ids = <%= @course_id_array %>;
+
+for (i in ids)
+{
+	$(".cart_add#" + ids[i]).fadeIn();
+}

@@ -1,0 +1,519 @@
+@import "blueprint/debug";
+
+$back_blue: #1F5168; //background's blue color
+$light_blue: #2D647F;
+$body_font_size: 1em;
+$lightbox_back: rgba(0,0,0,.8);
+
+$mbc: 15px; //margin between columns, e.g. between "name" and "instructor"
+
+$blueprint-grid-width: 35px;
+$blueprint-grid-outer-width: $blueprint-grid-width + $blueprint-grid-margin;
+$blueprint-container-size: $blueprint-grid-outer-width * $blueprint-grid-columns - $blueprint-grid-margin;
+
+/* Mixins */
+
+@mixin both_margins{
+	@include prepend(0.8);
+	@include append(1);
+}
+
+@mixin name_body_width{
+	@include span(4.5);
+}
+
+@mixin icons_width{
+	@include span(2);
+}
+
+@mixin name_search_width{
+	@include span(5.95);
+}
+
+@mixin instructor_width{
+	@include span(3);
+}
+
+@mixin day_width{
+	@include span(1.1);
+}
+
+@mixin time_width{
+	@include span(2.5);
+}
+
+@mixin units_width{
+	@include span(1.5);
+}
+
+@mixin limitations_width{
+	@include span(1.7);
+}
+
+@mixin exam_width{
+	@include span(2.3);
+}
+
+@mixin paper_width{
+	@include span(2);
+}
+
+
+/* Body */
+
+body {
+	@include container;
+	overflow-y:auto;
+	font-size:78%;
+	color:white;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+
+	background-color:$back_blue;
+
+	header {
+		@include both_margins;
+		overflow:auto;
+		background-color:$back_blue;
+	
+		nav {
+			margin:15px 0 5px 0;
+			float:right;
+			position:relative;
+			background-color: $light_blue;	
+			padding: 3px;
+			
+			.nav_item {
+				position:relative;
+				list-style-type: none;
+				display: inline-block;
+				font-size:13px;
+				margin: 0 7px 0 7px;
+			}	
+		}
+	}
+	
+	div#container {
+		@include both_margins;
+		background-color:$back_blue;
+		
+		#yls_header {
+			margin-top:0;
+			margin-bottom:15px;
+			border-bottom: 2px solid #FFFFFF;
+		}
+		
+		#cart_toggle { 
+			right:8px;
+		}
+		
+		#sidebar { 	
+			background-color:$lightbox_back;
+			right:30px;
+			width:30em;
+			padding: 10px 0px 20px 15px;
+			border: 2px solid white;
+			z-index:30;
+			
+			#cart{
+				padding: 0 3px 8px 5px;
+				margin: 5px 0px 5px 0;
+				font-size:100%;
+			}
+			
+		}
+
+		#cart_toggle, #sidebar {
+			position:fixed;
+			top:1.75em;
+		}
+
+		.empty_cart {
+			margin:4px 0 0 0;
+		}
+
+		#hide_cart {
+			display:inline-block;
+			float:right;
+			margin: .25em 1em 0 0;
+		}
+		
+		/* Search form begins */
+		
+		div#search_container {
+			padding: 8px 8px 8px 5px;
+			margin: 5px 0 5px 0;
+			height:110px;
+			background-color:#2D647F;
+			font-size:105%;
+			
+			div.field_container {
+				float:left;
+			}
+			
+			.float_and_margin {
+				float:left;
+				margin-right:$mbc;
+			}
+			
+			#name_search, #search_name_like {	
+				@include name_search_width;
+			}
+			
+			#instructor_search, #search_instructor_like {
+				@include instructor_width;
+			}
+			
+			#day_search, #search_day_like {
+				@include day_width;
+			}
+			
+			#tod_search, #search_tod_like {
+				@include time_width;
+			}
+			
+			#units_search, #search_units_like {
+				@include units_width;
+				margin-right:$mbc + 2px;
+			}
+
+			#limitations_search, #search_limitations_like {
+				@include limitations_width;	
+				margin-right:$mbc + 4px;
+			}
+
+			#exam_search, #search_exam_type_like {
+				@include exam_width;	
+				margin-right:$mbc + 4px;
+			}
+
+			#paper_search, #search_paper_type_like {
+				@include paper_width;	
+			}
+			
+		}
+	}
+}
+
+.icons {
+	@include icons_width;
+	display:inline-block;
+}
+
+div#first_row {
+	padding-left:5px;
+	display:inline-block;
+	@include span(22.1);
+	font-size:115%;
+	border-bottom: 1px dashed white;
+}
+
+/* Header and Body */
+
+#name_header, .name_body {
+	@include name_body_width;
+	display:inline-block;
+}
+
+#icons_header {
+	display:inline-block;
+	@include icons_width;
+}
+
+#instructor_header, .instructor_body {
+	@include instructor_width;
+	display:inline-block;
+	margin-right:$mbc;
+}
+
+#day_header, .day_body {
+	@include day_width;
+	display:inline-block;
+	margin-right:$mbc;
+}
+
+#time_header, .time_body {
+	@include time_width;
+	display:inline-block;
+	margin-right:$mbc;
+}
+
+#units_header, .units_body {
+	@include units_width;
+	display:inline-block;
+	margin-right:$mbc;
+}
+
+#limitations_header, .limitations_body {
+	@include limitations_width;
+	display:inline-block;
+	margin-right:$mbc;
+}
+
+#exam_header, .exam_body {
+	@include exam_width;
+	display:inline-block;
+	margin-right:$mbc;
+}
+
+#paper_header, .paper_body {
+	@include paper_width;
+	display:inline-block;
+	margin-right:$mbc;
+}
+
+
+/* Search Box */
+
+#search_title, #shopping_title {
+	margin: 0px 0 0 0;
+	display:inline-block;
+}
+
+#search_title {
+	font-size:135%;
+}
+
+.notice {
+}
+
+
+
+#search_name_div{
+	border:1px solid white;
+	width:13em;
+}
+		
+
+
+
+
+/* Typography */
+
+html {font-size:100.01%;}
+
+
+/* Links */
+
+a {
+  color: #7FEAFF;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #EAF9F9;
+  text-decoration: underline;
+}
+
+a:visited {
+	color: #7FEAFF;
+}
+
+#first_row a:visited {
+	color: #7FEAFF;
+}
+
+
+
+
+
+table#yls{   
+	font-size:25px;
+	width: 100%;
+	text-align:left;
+	margin-bottom: 20px;
+	border-bottom: 2px solid #FFFFFF;
+}
+
+/*Search Form */
+
+
+
+
+
+div#search_button {
+	position:relative;
+	margin: 5px 0 3px 0;
+}
+
+div#course_list_link {
+	margin: 6px 0 0 0;
+	font-size:$body_font_size;
+}
+
+
+/*horizontal bars */
+
+.zebra {
+	padding:2px 0 2px 0;
+	background-color:$light_blue;
+}
+
+/* Round corners */
+
+.round {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}
+
+/*Course Table */
+
+div#course_table {
+	margin: 10px 0 0 0;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+}
+
+
+.other_rows, .descrip_body {
+	margin:6px 0 0 0;
+	padding-left:5px;
+}
+
+.descrip_body {
+	text-align:justify;
+	display:none
+}
+
+
+hr#border_line {
+	margin-top:0px;
+	height:0.5px;
+	border:1px dashed white;
+	background-color:transparent;
+}
+
+
+.toggle_link_hide, .toggle_link_show {
+	display:inline-block;
+	float:right;
+}
+
+.delete_line_item {
+	display:inline-block;
+}
+
+#current_item, .non_current_item {
+	display:inline-block;
+	width:350px;
+}
+
+.non_current_item:last-child {
+	margin-bottom:-20px;
+}
+
+#units_range_title {
+	border-top:1px solid white;
+	display:inline-block;
+	position:relative;
+	left:53px;
+	width:180px;
+	margin:7px;
+}
+
+#units_range {
+	display:inline-block;
+	border-top:10px;
+	width:55px;
+	border-top:1px solid white;
+	position: relative;
+	left:6.5em;
+}
+
+#units_range_title, #units_range {
+	margin-top:5px;
+	padding-top:3px;
+}
+
+#calendar_header, .calendar_body, #eval_header, .eval_body, #cart_header, .cart_body {
+	display:inline-block;
+	width:20px;
+	margin: 0 0 0 0;
+}
+
+#cart_header, .cart_body{
+	width:30px;
+}
+
+#name_box, #search_button, #course_list_link {
+}
+
+
+
+
+
+.units_body_cart {
+	margin-left:2em;
+	display:inline-block;
+	margin-right:-10px;
+}
+
+
+
+
+
+
+/*Lightbox */
+
+.lightbox_back {
+	position: fixed;
+	background-color:$lightbox_back;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index: 50;
+}
+
+.lightbox_front {
+	padding: 10px;
+	position: relative;
+	background-color:#1F5168;
+	top: 20%;
+	left: 20%;
+	z-index: 60;
+	max-height:50em;
+	overflow:auto;
+	width: 60%;
+	height: 60%;
+	border:5px solid #EFEFEF;
+}
+
+.lightbox_close{
+	font-color:gray;
+	position:relative;
+	float:right;
+}
+
+/* show course page */
+#show_header {
+	font-size:20px;
+	font-weight:bold;
+	margin-bottom:5px;
+}
+
+#show_eval_header {
+	font-style:italic;
+	font-size:13px;
+	margin-bottom:1em;
+}
+
+.indiv_eval_link {
+	display:inline-block;
+	width:90px;
+}
+
+.prof_name {
+	display:inline-block;
+}
+
+img {
+	border:none;
+}
+
+img#arrow {
+	margin-left:3px;
+	margin-top:10px;
+	margin-bottom:-4px;
+}
+
+

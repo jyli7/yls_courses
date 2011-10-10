@@ -12,6 +12,8 @@ gem 'nokogiri'
 gem 'devise'
 gem 'jquery-rails'
 gem 'cancan'
+gem 'sass'
+gem "compass", ">= 0.11.5"
 
 group :production do
   gem 'pg'

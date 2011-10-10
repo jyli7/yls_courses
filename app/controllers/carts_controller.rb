@@ -55,15 +55,18 @@ class CartsController < ApplicationController
   # PUT /carts/1.xml
   def update
     if @cart.line_items
+      @course_id_array = []
       @cart.line_items.each do |item|
+        @course_id_array << item.course.id
         item.destroy
-      end 
+      end
     end 
+    @user = current_user
+    @cart = @user.cart 
 
     respond_to do |format|
       if @cart.update_attributes(params[:cart])
         format.html { redirect_to(root_path, :notice => 'Cart emptied.') }
-        debugger
         format.js
         format.xml  { head :ok }
       else

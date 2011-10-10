@@ -124,17 +124,8 @@ div#search_container {
 }
 
 
-div#name_search div#name_box {	
-	float:left;
-}
-
-div#name_box {
-	margin-right:54px;
-}
-
 div.field_container {
 	float:left;
-	margin-right:3px;
 }
 
 div#search_button {
@@ -184,6 +175,7 @@ div#first_row {
 
 .descrip_body {
 	text-align:justify;
+	display:none
 }
 
 
@@ -217,10 +209,25 @@ hr#border_line {
 	margin-bottom:-20px;
 }
 
-#name_header, .name_body, div#name_search, #units_range_title {
+div#name_search div#name_box {	
+	float:left;
+}
+
+#name_header, .name_body, div#name_search, #units_range_title, #search_name_like {
 	display:inline-block;
-	width:190px;
-	margin: 0 10px 0 0;
+	width:14em;
+	margin: 0 0px 0 0;
+}
+
+#search_name_div{
+	border:1px solid white;
+	width:13em;
+}
+
+.icons {
+	border:1px solid red;
+	display:inline-block;
+	width:7em;
 }
 
 #units_range_title {
@@ -237,7 +244,6 @@ hr#border_line {
 
 #cart_header, .cart_body{
 	width:30px;
-	margin-right:2em;
 }
 
 #name_box, #search_button, #course_list_link {
@@ -251,8 +257,12 @@ hr#border_line {
 #instructor_header, .instructor_body, div#instructor_search {
 	left:20em;
 	display:inline-block;
-	width:180px;
+	width:15em;
 	margin: 0 10px 0 0;
+}
+
+#instructor_name_like {
+	width:15em;
 }
 
 #room_header, .room_body, div#room_search {

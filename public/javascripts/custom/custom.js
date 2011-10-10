@@ -1,12 +1,17 @@
 $(document).ready(function() {
 	
-	$('.other_rows:even').addClass('zebra'); /*horizontal bars in the courses table */
+	$('#sidebar').hide();
+
+	$('.other_rows:even').addClass('zebra'); /*horizontal bars in the courses table */	
 	
-	$('.descrip_body').hide();
+	$('#courses_body').live('change', function() { /*uses 'live' so that javascript applies to html that is inserted */
+		$('.descrip_body').hide();
+		$('.other_rows:even').addClass('zebra'); /*horizontal bars in the courses table */	
+	});
 	
-	$('.course_name_click').click(function() {
+	$('.course_name_click').live('click', function(e) {
 		$(this).closest('div').next().slideToggle('slow');
-		return false;
+		e.preventDefault();
 	 });
 	
 	$('.toggle_link_hide').live('click', function(e) {  /*for search box toggling */
@@ -28,6 +33,7 @@ $(document).ready(function() {
 	 });
 	
 	$('.cart_add').click(function () {
+		$(this).fadeOut();
 		$('#sidebar:hidden').show('drop');
 	});
 	
@@ -48,19 +54,6 @@ $(document).ready(function() {
 		$(this).closest('div.lightbox_back').fadeOut("slow");
 		$('.lightbox').empty();
 		e.preventDefault();
-	});
-	
-	$('.calendar_body a img, .eval_link a img, .cart_add').tooltip({
-		predelay:500,
-
-		// use the fade effect instead of the default
-		effect: 'fade',
-
-		// make fadeOutSpeed similar to the browser's default
-		fadeOutSpeed: 100,
-
-		// tweak the position
-		position: 'top center'
 	});
 	
 });

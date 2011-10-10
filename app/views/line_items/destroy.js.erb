@@ -1,1 +1,11 @@
 $("#cart").html("<%= escape_javascript(render(@cart)) %>");
+
+var id = <%= @course_id %>;
+
+$(".cart_add#" + id).fadeIn();
+
+/*$.each(id, function(key, element) {
+    alert('key: ' + key + '\n' + 'value: ' + element);
+});
+*/
+

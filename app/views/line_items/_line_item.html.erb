@@ -3,7 +3,7 @@
 		<div id = "current_item">
 		<% else %>
 		<div class = "non_current_item">
-	<% end %>
+	<% end %>	
 			<div class="delete_line_item"><%= button_to 'Delete', line_item, {:method => :delete, :remote => true} %></div>
 			<li class="name_body"><%= line_item.course.name %></li>
 			<li class="units_body_cart"><%= line_item.course.units %></li>

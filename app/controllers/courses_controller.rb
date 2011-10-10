@@ -7,13 +7,20 @@ class CoursesController < ApplicationController
     @search = Course.search(params[:search])
     @courses = @search.all
     @count = 1
+    
     if user_signed_in?
       @user = current_user
       @cart = @user.cart
       if @cart 
         @line_item = @cart.line_items.build(params[:line_item])
+        @existing_line_items = @cart.line_items.all  
+        @existing_line_items_courses = []
+        for line_item in @existing_line_items 
+          @existing_line_items_courses << line_item.course
+        end 
       end 
-    end 
+    end
+    
     respond_to do |format|
       format.html # index.html.erb
       format.js

@@ -1,24 +1,40 @@
+<div id="first_row"> 
+	<span id="name_header"><%= sort_link @search, :name %></span>
+	<span id="icons_header"></span>
+	<span id="instructor_header"><%= sort_link @search, :instructor %></span>
+	<span id="day_header"><%= sort_link @search, :day_num, "Day" %></span>
+	<span id="time_header"><%= sort_link @search, :time_num, "Time" %></span>			
+	<span id="units_header"><%= sort_link @search, :units %></span>
+	<span id="limitations_header"><%= sort_link @search, :limitations %></span>
+	<span id="exam_header"><%= sort_link @search, :exam_type, "Exam?"  %></span>
+	<span id="paper_header"><%= sort_link @search, :paper_type, "Paper?" %></span>
+</div>
+
 <% for course in @courses %>
 	<div class="other_rows">
 		<span class="name_body"><a class="course_name_click" href='#'><%= course.name %></a></span>
-		<span class="calendar_body">
-		    <a href="http://www.google.com/calendar/event?action=TEMPLATE&text=<%= course.name %> &dates=<%= course.start_time %>/<%= course.end_time %>&details=<%= course.name%>%20with%20<%= course.instructor %>&location=<%= course.room %>&trp=false&sprop=&sprop=name:" target="_blank"><img src="/images/gcal.png" width="20" height="20" align="absbottom" border=0 title="Add to calendar"></img></a>
-		</span>
-		<span class="eval_body">
-		<% if course.evals.blank? %>
-		<% else %>
-			<span class="eval_link"><%= link_to image_tag("chart_bar.png", :border=>0, :align=>"absbottom", :title=>"Course evaluations"), course %></span>
-			<span id="lightbox"></span>
-		<% end %>
-		</span>
-		<% if user_signed_in? %>
-		<span class="cart_body">
-			<%= form_for(@line_item, :remote => true) do |f| %>
-				<%= f.hidden_field :course_id, :value => course.id %>
-				<span class="cart_add" title="Add to cart"><%= image_submit_tag("cart_add.png", :border=>0, :align=>"absbottom") %></span>
+		<div class="icons">
+			<span class="calendar_body">
+			    <a href="http://www.google.com/calendar/event?action=TEMPLATE&text=<%= course.name %> &dates=<%= course.start_time %>/<%= course.end_time %>&details=<%= course.name%>%20with%20<%= course.instructor %>&location=<%= course.room %>&trp=false&sprop=&sprop=name:" target="_blank"><img src="/images/gcal.png" width="20" height="20" align="absbottom" border=0 title="Add to calendar"></img></a>
+			</span>
+			<span class="eval_body">
+			<% if course.evals.blank? %>
+			<% else %>
+				<span class="eval_link"><%= link_to image_tag("chart_bar.png", :border=>0, :align=>"absbottom", :title=>"Course evaluations"), course %></span>
+				<span id="lightbox"></span>
 			<% end %>
-		</span>
-		<% end %>
+			</span>
+			<% unless @existing_line_items_courses.nil? %>
+			<span class="cart_body">
+				<% if user_signed_in? and not @existing_line_items_courses.include?(course) %>
+					<%= form_for(@line_item, :remote => true) do |f| %>
+						<%= f.hidden_field :course_id, :value => course.id %> 
+						<span class="cart_add" title="Add to cart" id="<%="#{course.id}"%>"><%= image_submit_tag("cart_add.png", :border=>0, :align=>"absbottom") %></span>
+					<% end %>
+				<% end %>
+			</span>
+			<% end %>
+		</div>
 		<span class="instructor_body"><%= course.instructor %></span>
 		<span class="day_body"><%= course.day %></span>
 		<span class="time_body"><%= course.time %></span>			
