@@ -3,8 +3,13 @@
   <head>
     <title><%= title %></title>
 	<%= javascript_include_tag :all %>
-	<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
-	<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-ui-1.8.16.custom.min.js"></script>
+	<script type="text/javascript" src="/shadowbox/shadowbox.js"></script>
+	<script type="text/javascript">
+	Shadowbox.init();
+	</script>
+	<link rel="stylesheet" type="text/css" href="/shadowbox/shadowbox.css">
 	<%= render 'layouts/stylesheets' %>
 	<%= csrf_meta_tag %>
   </head>

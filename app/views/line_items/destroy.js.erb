@@ -1,8 +1,10 @@
 $("#cart").html("<%= escape_javascript(render(@cart)) %>");
-
+/*$(".cart_body#" + id).html("<%= escape_javascript(render(@cart)) %>"); */
 var id = <%= @course_id %>;
+console.log(id);
 
 $(".cart_add#" + id).fadeIn();
+$(".cart_add_hidden#" + id).fadeIn();
 
 /*$.each(id, function(key, element) {
     alert('key: ' + key + '\n' + 'value: ' + element);

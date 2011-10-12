@@ -8,7 +8,7 @@
 		<% else %>
 			<% i = 0 %>
 			<% while i < @course.crn.length %>
-				<span class="indiv_eval_link"><a href="https://faculty.yale.edu/lawevals/student/Summary?crn=<%= @course.crn[i] %>&termCode=<%=@course.term_code[i]%>"><%=@course.past_semesters[i]%></a></span>
+				<span class="indiv_eval_link"><a class="eval_shadow" href="https://faculty.yale.edu/lawevals/student/Summary?crn=<%= @course.crn[i] %>&termCode=<%=@course.term_code[i]%>"><%=@course.past_semesters[i]%></a></span>
 				<span class="prof_name"><%=@course.past_instructors[i]%></span>
 				<br>
 				<% i = i + 1 %>

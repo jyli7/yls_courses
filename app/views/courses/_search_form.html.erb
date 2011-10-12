@@ -39,4 +39,13 @@
 	
 <div id="search_button"><%= f.submit "Search" %></div>	
 <div id="course_list_link"><%= link_to "Full Course List", courses_path, :remote => true %></div>
-<% end %>	
+
+<div id="legend">
+	Legend: 
+	<img id="legend_gcal" src="/images/calendar_add.png"> - Add to calendar </img>
+	| <img id="legend_eval" src="/images/chart_bar.png"> - Course evaluations </img>  
+	<% if user_signed_in? %>
+		| <img id="legend_cart" src="images/cart_add.png"> - Add to cart </img> 
+	<% end %>
+<% end %>
+</div>	

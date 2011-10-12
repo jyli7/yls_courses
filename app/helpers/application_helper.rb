@@ -24,4 +24,12 @@ module ApplicationHelper
     content_tag("div", attributes, &block)
   end
   
+  def hostname
+    if Rails.env.development?
+      return "http://localhost:3000"
+    else 
+      return "http://www.ylscourses.com"
+    end 
+  end 
+  
 end

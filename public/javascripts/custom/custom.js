@@ -2,59 +2,92 @@ $(document).ready(function() {
 	
 	$('#sidebar').hide();
 
-	$('.other_rows:even').addClass('zebra'); /*horizontal bars in the courses table */	
+ 	/*horizontal bars in the courses table */	
+	$('.other_rows:even').addClass('zebra');
 	
 	$('#courses_body').live('change', function() { /*uses 'live' so that javascript applies to html that is inserted */
 		$('.descrip_body').hide();
 		$('.other_rows:even').addClass('zebra'); /*horizontal bars in the courses table */	
 	});
 	
+	
+	/*for toggling course descrip */
 	$('.course_name_click').live('click', function(e) {
 		$(this).closest('div').next().slideToggle('slow');
 		e.preventDefault();
 	 });
 	
-	$('.toggle_link_hide').live('click', function(e) {  /*for search box toggling */
+	/*for search box toggling */
+	$('.toggle_link_hide').live('click', function(e) {  
 		$(this).next('div').slideToggle('slow');
 		$(this).replaceWith('<a href=\'\' class=\"toggle_link_show\">Show<img id=\"arrow\" src=\"/images/down_arrow.gif\">');
 		e.preventDefault();
 	 });
 	
-	$('.toggle_link_show').live('click', function(e) {  /*for search box toggling */
+	$('.toggle_link_show').live('click', function(e) {  
 		$(this).next('div').slideToggle('slow');
 		$(this).replaceWith('<a href=\'\' class=\"toggle_link_hide\">Hide<img id=\"arrow\" src=\"/images/up_arrow.gif\">');
 		e.preventDefault();
 	 });
 	
-	
-	$('#cart_toggle').live('click', function(e) {  /*for shopping cart and search box toggling */
-		$(this).next('div').toggle('drop');
+	/*for shopping cart toggling */
+	$('#cart_toggle').live('click', function(e) {  
+		$('div#sidebar').toggle(500);
 		e.preventDefault();
-	 });
-	
-	$('.cart_add').click(function () {
-		$(this).fadeOut();
-		$('#sidebar:hidden').show('drop');
 	});
 	
+	/* For cart_add button disappear */
+	$('.cart_add').click(function () {
+		$(this).fadeOut();
+		$('div#sidebar').show(500);
+	});
+	
+	/*For hiding the cart */
 	$('#hide_cart').click(function () {
-		$('#sidebar').hide('drop');
+		$('#sidebar').hide(500);
 		return false;
 	})
+	
+	
+	/* For the lightbox */
+	var fade_speed = 500;
 	
 	$('#lightbox').hide();
 
 	$('.eval_link a').live('click', function(e) {
 		var url = $(this).attr('href') + ' .lightbox_back';
-		$('#lightbox').load(url).fadeIn(800);
+		$('#lightbox').load(url).fadeIn(fade_speed);
 		e.preventDefault();
 	});
 	
 	$('.lightbox_close a').live('click', function(e) {
-		$(this).closest('div.lightbox_back').fadeOut("slow");
+		$(this).closest('div.lightbox_back').fadeOut(fade_speed);
 		$('.lightbox').empty();
 		e.preventDefault();
 	});
+		
+	$('.shadow').live('click', function(e) {
+		var url = $(this).attr('href') + ' .lightbox_back';
+		$('.lightbox#small').load(url).fadeIn(fade_speed);
+		e.preventDefault();
+	});
+
 	
+
+	
+	/* For fancy_box that holds course evaluations */
+	
+	$('a.eval_shadow').live('click', function(e) {
+		var url = $(this).attr('href'); // Our URL
+		Shadowbox.open({
+			content:    url,
+			player:     "iframe",
+			height:     600,
+			width:      900,
+			title: 		"Course Evaluation"
+           });
+		e.preventDefault();
+		});
+
 });
 

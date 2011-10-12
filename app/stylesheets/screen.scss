@@ -3,7 +3,7 @@
 $back_blue: #1F5168; //background's blue color
 $light_blue: #2D647F;
 $body_font_size: 1em;
-$lightbox_back: rgba(0,0,0,.8);
+$lightbox_back: rgba(0,0,0,.85);
 
 $mbc: 15px; //margin between columns, e.g. between "name" and "instructor"
 
@@ -19,7 +19,7 @@ $blueprint-container-size: $blueprint-grid-outer-width * $blueprint-grid-columns
 }
 
 @mixin name_body_width{
-	@include span(4.5);
+	@include span(5);
 }
 
 @mixin icons_width{
@@ -31,7 +31,7 @@ $blueprint-container-size: $blueprint-grid-outer-width * $blueprint-grid-columns
 }
 
 @mixin instructor_width{
-	@include span(3);
+	@include span(2.5);
 }
 
 @mixin day_width{
@@ -39,11 +39,11 @@ $blueprint-container-size: $blueprint-grid-outer-width * $blueprint-grid-columns
 }
 
 @mixin time_width{
-	@include span(2.5);
+	@include span(2.4);
 }
 
 @mixin units_width{
-	@include span(1.5);
+	@include span(1);
 }
 
 @mixin limitations_width{
@@ -51,11 +51,28 @@ $blueprint-container-size: $blueprint-grid-outer-width * $blueprint-grid-columns
 }
 
 @mixin exam_width{
-	@include span(2.3);
+	@include span(2.5);
 }
 
 @mixin paper_width{
 	@include span(2);
+}
+/* Nav */
+
+nav {
+	margin:15px 0 5px 0;
+	float:right;
+	position:relative;
+	background-color: $light_blue;	
+	padding: 3px;
+	
+	.nav_item {
+		position:relative;
+		list-style-type: none;
+		display: inline-block;
+		font-size:13px;
+		margin: 0 7px 0 7px;
+	}	
 }
 
 
@@ -64,37 +81,22 @@ $blueprint-container-size: $blueprint-grid-outer-width * $blueprint-grid-columns
 body {
 	@include container;
 	overflow-y:auto;
-	font-size:78%;
+	font-size:77%;
 	color:white;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-
 	background-color:$back_blue;
 
 	header {
 		@include both_margins;
 		overflow:auto;
 		background-color:$back_blue;
-	
-		nav {
-			margin:15px 0 5px 0;
-			float:right;
-			position:relative;
-			background-color: $light_blue;	
-			padding: 3px;
-			
-			.nav_item {
-				position:relative;
-				list-style-type: none;
-				display: inline-block;
-				font-size:13px;
-				margin: 0 7px 0 7px;
-			}	
-		}
+
 	}
 	
 	div#container {
 		@include both_margins;
 		background-color:$back_blue;
+
 		
 		#yls_header {
 			margin-top:0;
@@ -102,13 +104,11 @@ body {
 			border-bottom: 2px solid #FFFFFF;
 		}
 		
-		#cart_toggle { 
-			right:8px;
-		}
-		
 		#sidebar { 	
+			position:fixed;
 			background-color:$lightbox_back;
-			right:30px;
+			right:105px;
+			top:15px;
 			width:30em;
 			padding: 10px 0px 20px 15px;
 			border: 2px solid white;
@@ -122,10 +122,6 @@ body {
 			
 		}
 
-		#cart_toggle, #sidebar {
-			position:fixed;
-			top:1.75em;
-		}
 
 		.empty_cart {
 			margin:4px 0 0 0;
@@ -142,7 +138,7 @@ body {
 		div#search_container {
 			padding: 8px 8px 8px 5px;
 			margin: 5px 0 5px 0;
-			height:110px;
+			height:115px;
 			background-color:#2D647F;
 			font-size:105%;
 			
@@ -161,6 +157,7 @@ body {
 			
 			#instructor_search, #search_instructor_like {
 				@include instructor_width;
+				margin-left:27px;
 			}
 			
 			#day_search, #search_day_like {
@@ -173,12 +170,12 @@ body {
 			
 			#units_search, #search_units_like {
 				@include units_width;
-				margin-right:$mbc + 2px;
+				margin-right:$mbc + 6px;
 			}
 
 			#limitations_search, #search_limitations_like {
 				@include limitations_width;	
-				margin-right:$mbc + 4px;
+				margin-right:$mbc + 16px;
 			}
 
 			#exam_search, #search_exam_type_like {
@@ -194,6 +191,10 @@ body {
 	}
 }
 
+#courses_body {
+	padding-bottom:20px;
+}
+
 .icons {
 	@include icons_width;
 	display:inline-block;
@@ -202,7 +203,7 @@ body {
 div#first_row {
 	padding-left:5px;
 	display:inline-block;
-	@include span(22.1);
+	@include span(21.8);
 	font-size:115%;
 	border-bottom: 1px dashed white;
 }
@@ -211,7 +212,13 @@ div#first_row {
 
 #name_header, .name_body {
 	@include name_body_width;
+	max-height:50px;
 	display:inline-block;
+}
+
+.course_name_click {
+	@include name_body_width;
+	white-space:normal;
 }
 
 #icons_header {
@@ -237,6 +244,10 @@ div#first_row {
 	margin-right:$mbc;
 }
 
+#time_header {
+	margin-right:13px;
+}
+
 #units_header, .units_body {
 	@include units_width;
 	display:inline-block;
@@ -246,7 +257,7 @@ div#first_row {
 #limitations_header, .limitations_body {
 	@include limitations_width;
 	display:inline-block;
-	margin-right:$mbc;
+	margin-right:$mbc + 12px;
 }
 
 #exam_header, .exam_body {
@@ -437,17 +448,15 @@ hr#border_line {
 #name_box, #search_button, #course_list_link {
 }
 
-
-
-
-
 .units_body_cart {
 	margin-left:2em;
 	display:inline-block;
 	margin-right:-10px;
 }
 
-
+.cart_add_hidden {
+	display:none;
+}
 
 
 
@@ -469,12 +478,11 @@ hr#border_line {
 	position: relative;
 	background-color:#1F5168;
 	top: 20%;
-	left: 20%;
+	left: 25%;
 	z-index: 60;
 	max-height:50em;
 	overflow:auto;
-	width: 60%;
-	height: 60%;
+	width: 50%;
 	border:5px solid #EFEFEF;
 }
 
@@ -516,4 +524,46 @@ img#arrow {
 	margin-bottom:-4px;
 }
 
+
+#cart_border {
+	position:fixed;
+	top:15px;
+	right:15px;
+	display:inline-block;
+	background-color: $light_blue;
+	font-size:13px;	
+	padding: 3px 10px 3px 10px;
+	}
+	
+#legend img {
+	vertical-align:top;
+}
+
+#legend {
+	margin: 2px 0 2px 0;
+}
+
+#legend_gcal, #legend_eval, #legend_cart {
+	padding:0 2px 0 8px;
+}
+
+.form_wrapper {
+	padding: 8px 0 10px 25px;
+	margin: 5px 0 0 10px;
+	width:400px;
+	background-color:#2D647F;
+	font-size:105%;
+}
+
+#sign_up{
+	margin-top:0px;
+}
+
+#about {
+	font-size:1.05em;
+}
+
+#contact {
+	font-size:.95em;
+}
 

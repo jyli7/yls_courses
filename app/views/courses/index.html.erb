@@ -9,7 +9,7 @@
 
 	<!-- Shopping Cart -->
 	<% if user_signed_in? %>
-	<a href='' id="cart_toggle"><img id="cart_image" src="/images/cart.png"></a>
+	<div id="cart_border" class="round"><a href='' id="cart_toggle">Show Cart</a></div>
 	<div id="sidebar">
 		<h2 id="shopping_title">Your Course Cart</h2>
 		<a href='' id="hide_cart">Hide [X]</a>
@@ -30,7 +30,8 @@
 		<%= render :partial => 'search_form' %>
 	</div>
 	<br>
-	<div id="courses_table"> 
-		<div id="courses_body"><%= render :partial => 'courses' %></div> <!--Courses body-->
-	</div>
+	
+	<!-- Courses -->
+	<span class="lightbox" id="small"></span> 
+	<div id="courses_body"><%= render :partial => 'courses' %></div> 
 </div>

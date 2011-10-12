@@ -13,11 +13,11 @@ class CoursesController < ApplicationController
       @cart = @user.cart
       if @cart 
         @line_item = @cart.line_items.build(params[:line_item])
-        @existing_line_items = @cart.line_items.all  
-        @existing_line_items_courses = []
-        for line_item in @existing_line_items 
-          @existing_line_items_courses << line_item.course
-        end 
+        @line_items_in_cart = @cart.line_items.all  
+        @courses_in_cart = @line_items_in_cart.inject({}) do |h, line_item|
+          h[line_item.course] = true
+          h
+        end        
       end 
     end
     

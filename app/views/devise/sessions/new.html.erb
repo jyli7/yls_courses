@@ -1,17 +1,25 @@
-<h2>Sign in</h2>
+<div class="lightbox_back">
+	<div class="lightbox_front">
+		<span class="lightbox_close"><a href=''>CLOSE [X]</a></span>
+			<div class="form_wrapper round">
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+			<h2>Sign in</h2>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+			<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+			  <div><%= f.label :email %><br />
+			  <%= f.email_field :email %></div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+			  <div><%= f.label :password %><br />
+			  <%= f.password_field :password %></div>
 
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
+			  <% if devise_mapping.rememberable? -%>
+			    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+			  <% end -%>
 
-<%= render :partial => "devise/shared/links" %>
+			  <div><%= f.submit "Sign in" %></div>
+			<% end %>
+
+			<%= render :partial => "devise/shared/links" %>
+			</div>
+	</div>
+</div>
