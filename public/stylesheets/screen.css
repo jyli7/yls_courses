@@ -410,12 +410,12 @@ div#course_table {
 /* line 400, ../../app/stylesheets/screen.scss */
 .other_rows {
   margin: 6px 0 0 0;
-  padding: 5px 0 5px 5px;
+  padding: 2px 0 2px 5px;
 }
 
 /* line 405, ../../app/stylesheets/screen.scss */
 .descrip_body {
-  margin: 6px 0 0 0;
+  margin: 3px 0 0 0;
   padding: 0 0 2px 5px;
   display: none;
 }
