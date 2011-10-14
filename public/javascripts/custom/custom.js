@@ -10,23 +10,9 @@ $(document).ready(function() {
 		$('.other_rows:even').addClass('zebra'); /*horizontal bars in the courses table */	
 	});
 	
-	
 	/*for toggling course descrip */
 	$('.course_name_click').live('click', function(e) {
 		$(this).closest('div').next().slideToggle('slow');
-		e.preventDefault();
-	 });
-	
-	/*for search box toggling */
-	$('.toggle_link_hide').live('click', function(e) {  
-		$(this).next('div').slideToggle('slow');
-		$(this).replaceWith('<a href=\'\' class=\"toggle_link_show\">Show<img id=\"arrow\" src=\"/images/down_arrow.gif\">');
-		e.preventDefault();
-	 });
-	
-	$('.toggle_link_show').live('click', function(e) {  
-		$(this).next('div').slideToggle('slow');
-		$(this).replaceWith('<a href=\'\' class=\"toggle_link_hide\">Hide<img id=\"arrow\" src=\"/images/up_arrow.gif\">');
 		e.preventDefault();
 	 });
 	
@@ -37,7 +23,7 @@ $(document).ready(function() {
 	});
 	
 	/* For cart_add button disappear */
-	$('.cart_add').click(function () {
+	$('.cart_add').live('click', function () {
 		$(this).fadeOut();
 		$('div#sidebar').show(500);
 	});
@@ -50,13 +36,13 @@ $(document).ready(function() {
 	
 	
 	/* For the lightbox */
-	var fade_speed = 500;
+	var fade_speed = 600;
 	
 	$('#lightbox').hide();
 
 	$('.eval_link a').live('click', function(e) {
 		var url = $(this).attr('href') + ' .lightbox_back';
-		$('#lightbox').load(url).fadeIn(fade_speed);
+		$('#lightbox').load(url).fadeIn(700);
 		e.preventDefault();
 	});
 	
@@ -71,8 +57,6 @@ $(document).ready(function() {
 		$('.lightbox#small').load(url).fadeIn(fade_speed);
 		e.preventDefault();
 	});
-
-	
 
 	
 	/* For fancy_box that holds course evaluations */

@@ -1,4 +1,5 @@
 @import "blueprint/debug";
+@import "compass/reset";
 
 $back_blue: #1F5168; //background's blue color
 $light_blue: #2D647F;
@@ -64,17 +65,33 @@ nav {
 	float:right;
 	position:relative;
 	background-color: $light_blue;	
-	padding: 3px;
 	
 	.nav_item {
 		position:relative;
 		list-style-type: none;
 		display: inline-block;
-		font-size:13px;
 		margin: 0 7px 0 7px;
 	}	
 }
 
+p, li, ul, {
+	text-align:justify;
+	line-height:150%;
+}
+
+h1 {
+	font-size:2.4em;
+	padding-bottom: 3px;
+}
+
+h2 {
+	font-size:1.8em;
+	margin-bottom:10px;
+}
+
+.instructor_body, .time_body {
+	line-height:140%;
+}
 
 /* Body */
 
@@ -83,14 +100,13 @@ body {
 	overflow-y:auto;
 	font-size:77%;
 	color:white;
-	font-family:"Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	background-color:$back_blue;
 
 	header {
 		@include both_margins;
 		overflow:auto;
 		background-color:$back_blue;
-
 	}
 	
 	div#container {
@@ -136,7 +152,7 @@ body {
 		/* Search form begins */
 		
 		div#search_container {
-			padding: 8px 8px 8px 5px;
+			padding: 10px 8px 2px 8px;
 			margin: 5px 0 5px 0;
 			height:115px;
 			background-color:#2D647F;
@@ -201,7 +217,7 @@ body {
 }
 
 div#first_row {
-	padding-left:5px;
+	padding:5px 0 5px 5px;
 	display:inline-block;
 	@include span(21.8);
 	font-size:115%;
@@ -211,10 +227,11 @@ div#first_row {
 /* Header and Body */
 
 #name_header, .name_body {
-	@include name_body_width;
+	width:220px;
 	max-height:50px;
 	display:inline-block;
 }
+
 
 .course_name_click {
 	@include name_body_width;
@@ -227,7 +244,7 @@ div#first_row {
 }
 
 #instructor_header, .instructor_body {
-	@include instructor_width;
+	width:105px;
 	display:inline-block;
 	margin-right:$mbc;
 }
@@ -249,10 +266,11 @@ div#first_row {
 }
 
 #units_header, .units_body {
-	@include units_width;
+	width:45px;
 	display:inline-block;
 	margin-right:$mbc;
 }
+
 
 #limitations_header, .limitations_body {
 	@include limitations_width;
@@ -267,7 +285,7 @@ div#first_row {
 }
 
 #paper_header, .paper_body {
-	@include paper_width;
+	width:60px;
 	display:inline-block;
 	margin-right:$mbc;
 }
@@ -276,8 +294,12 @@ div#first_row {
 /* Search Box */
 
 #search_title, #shopping_title {
-	margin: 0px 0 0 0;
+	margin: 0px 0 4px 0;
 	display:inline-block;
+}
+
+#shopping_title {
+	font-size:1.5em;
 }
 
 #search_title {
@@ -343,11 +365,11 @@ table#yls{
 
 div#search_button {
 	position:relative;
-	margin: 5px 0 3px 0;
+	margin: 8px 0 3px 0;
 }
 
 div#course_list_link {
-	margin: 6px 0 0 0;
+	margin: 10px 0 8px 0;
 	font-size:$body_font_size;
 }
 
@@ -375,14 +397,15 @@ div#course_table {
 }
 
 
-.other_rows, .descrip_body {
+.other_rows {
 	margin:6px 0 0 0;
-	padding-left:5px;
+	padding:5px 0 5px 5px;
 }
 
 .descrip_body {
-	text-align:justify;
-	display:none
+	margin:6px 0 0 0;
+	padding:0 0 2px 5px;
+	display:none;
 }
 
 
@@ -397,6 +420,7 @@ hr#border_line {
 .toggle_link_hide, .toggle_link_show {
 	display:inline-block;
 	float:right;
+	margin-bottom:5px;
 }
 
 .delete_line_item {
@@ -416,9 +440,9 @@ hr#border_line {
 	border-top:1px solid white;
 	display:inline-block;
 	position:relative;
-	left:53px;
+	left:58px;
 	width:180px;
-	margin:7px;
+	margin:7px 0 10px 0;
 }
 
 #units_range {
@@ -427,7 +451,7 @@ hr#border_line {
 	width:55px;
 	border-top:1px solid white;
 	position: relative;
-	left:6.5em;
+	left:90px;
 }
 
 #units_range_title, #units_range {
@@ -445,11 +469,7 @@ hr#border_line {
 	width:30px;
 }
 
-#name_box, #search_button, #course_list_link {
-}
-
 .units_body_cart {
-	margin-left:2em;
 	display:inline-block;
 	margin-right:-10px;
 }
@@ -531,21 +551,61 @@ img#arrow {
 	right:15px;
 	display:inline-block;
 	background-color: $light_blue;
-	font-size:13px;	
-	padding: 3px 10px 3px 10px;
+	padding: 8px;
 	}
+
+nav, #cart_border {
+	padding: 7px;
+	font-size:13px;
+}
 	
 #legend img {
 	vertical-align:top;
 }
 
 #legend {
-	margin: 2px 0 2px 0;
+	margin: 2px 0 0 0;
 }
 
 #legend_gcal, #legend_eval, #legend_cart {
 	padding:0 2px 0 8px;
 }
+
+
+#sign_up{
+	margin-top:0px;
+}
+
+
+
+/*About Page */
+
+#about {
+	font-size:1.05em;
+}
+
+#about_header {
+	margin-bottom:15px;
+}
+
+#about_p {
+	font-size:14px;
+}
+
+#about_wrapper {
+	font-size:13px;
+	padding:8px;
+	
+	li{
+		margin: 15px 0 15px 30px;
+	}
+}
+
+#contact {
+	margin:20px 0 0 0;
+}
+
+/*Sign Up Page*/
 
 .form_wrapper {
 	padding: 8px 0 10px 25px;
@@ -553,17 +613,23 @@ img#arrow {
 	width:400px;
 	background-color:#2D647F;
 	font-size:105%;
+	
+	div {
+		margin: 15px 0 5px 0;
+	}
+	
+	a {
+		display:inline-block;
+		margin-bottom:5px;
+	}
+	
+} 
+
+#sign_up_button {
+	margin: 10px 0 10px 0;
 }
 
-#sign_up{
-	margin-top:0px;
-}
-
-#about {
-	font-size:1.05em;
-}
-
-#contact {
-	font-size:.95em;
+div #sign_in_button {
+	margin: 5px 0 10px 0;
 }
 

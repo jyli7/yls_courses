@@ -2,6 +2,7 @@
 	<div class="lightbox_front">
 		<span class="lightbox_close"><a href=''>CLOSE [X]</a></span>
 			<div class="form_wrapper round">
+				<p class="notice"><%= notice %></p>
 				<h2 id="sign_up">Sign up</h2>
 
 				<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
@@ -16,7 +17,7 @@
 				  <div><%= f.label :password_confirmation %><br />
 				  <%= f.password_field :password_confirmation %></div>
 
-				  <div id="sign_up_shadow"><%= f.submit "Sign up" %></div>
+				  <div id="sign_up_button"><%= f.submit "Sign up" %></div>
 				<% end %>
 			<%= render :partial => "devise/shared/links" %>
 			</div>
