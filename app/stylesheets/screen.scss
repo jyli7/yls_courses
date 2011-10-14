@@ -44,11 +44,11 @@ $blueprint-container-size: $blueprint-grid-outer-width * $blueprint-grid-columns
 }
 
 @mixin units_width{
-	@include span(1);
+	@include span(1.1);
 }
 
 @mixin limitations_width{
-	@include span(1.7);
+	@include span(1.6);
 }
 
 @mixin exam_width{
@@ -633,3 +633,6 @@ div #sign_in_button {
 	margin: 5px 0 10px 0;
 }
 
+.eval_shadow, .prof_name {
+	margin-bottom:5px;
+}

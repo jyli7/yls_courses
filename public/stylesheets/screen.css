@@ -199,12 +199,12 @@ body div#container div#search_container #tod_search, body div#container div#sear
 }
 /* line 187, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #units_search, body div#container div#search_container #search_units_like {
-  width: 35px;
+  width: 39.5px;
   margin-right: 21px;
 }
 /* line 192, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #limitations_search, body div#container div#search_container #search_limitations_like {
-  width: 66.5px;
+  width: 62px;
   margin-right: 31px;
 }
 /* line 197, ../../app/stylesheets/screen.scss */
@@ -292,7 +292,7 @@ div#first_row {
 
 /* line 275, ../../app/stylesheets/screen.scss */
 #limitations_header, .limitations_body {
-  width: 66.5px;
+  width: 62px;
   display: inline-block;
   margin-right: 27px;
 }
@@ -665,4 +665,9 @@ nav, #cart_border {
 /* line 632, ../../app/stylesheets/screen.scss */
 div #sign_in_button {
   margin: 5px 0 10px 0;
+}
+
+/* line 636, ../../app/stylesheets/screen.scss */
+.eval_shadow, .prof_name {
+  margin-bottom: 5px;
 }
