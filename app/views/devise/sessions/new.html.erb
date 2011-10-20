@@ -3,9 +3,11 @@
 		<span class="lightbox_close"><a href=''>CLOSE [X]</a></span>
 			<div class="form_wrapper round">
 				<p class="notice"><%= notice %></p>
-				<h2>Sign in</h2>
-
+				<h2 id="sign_in">Sign in</h2>
+				<p class="alert"><%= alert %></p>
 				<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+				  <%= devise_error_messages! %>
+				  
 				  <div><%= f.label :email %><br />
 				  <%= f.email_field :email %></div>
 

@@ -4,7 +4,7 @@
 $back_blue: #1F5168; //background's blue color
 $light_blue: #2D647F;
 $body_font_size: 1em;
-$lightbox_back: rgba(0,0,0,.85);
+$lightbox_back: rgba(0,0,0,.8);
 
 $mbc: 15px; //margin between columns, e.g. between "name" and "instructor"
 
@@ -97,7 +97,9 @@ h2 {
 
 body {
 	@include container;
+	margin: 0px 0px 0px 30px;
 	overflow-y:auto;
+	overflow-x:auto;
 	font-size:77%;
 	color:white;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -118,6 +120,7 @@ body {
 			margin-top:0;
 			margin-bottom:15px;
 			border-bottom: 2px solid #FFFFFF;
+			font-family: 'Lato', sans-serif;
 		}
 		
 		#sidebar { 	
@@ -307,6 +310,7 @@ div#first_row {
 }
 
 .notice {
+
 }
 
 
@@ -465,6 +469,10 @@ hr#border_line {
 	margin: 0 0 0 0;
 }
 
+.eval_body {
+	margin-right:2px;
+}
+
 #cart_header, .cart_body{
 	width:30px;
 }
@@ -528,6 +536,7 @@ hr#border_line {
 .indiv_eval_link {
 	display:inline-block;
 	width:90px;
+	
 }
 
 .prof_name {
@@ -565,16 +574,21 @@ nav, #cart_border {
 
 #legend {
 	margin: 2px 0 0 0;
+	padding-bottom:10px;
 }
 
 #legend_gcal, #legend_eval, #legend_cart {
-	padding:0 2px 0 8px;
+	position:relative;
+	bottom:5px;
+	padding:0 2px 0px 8px;
+	
 }
 
-
-#sign_up{
+#sign_up, #sign_in{
 	margin-top:0px;
 }
+
+ 
 
 
 
@@ -635,4 +649,10 @@ div #sign_in_button {
 
 .eval_shadow, .prof_name {
 	margin-bottom:5px;
+}
+
+#no_courses {
+	font-style:italic;
+	font-size:105%;
+	margin-left:4px;
 }

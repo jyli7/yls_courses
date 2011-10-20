@@ -11,7 +11,7 @@ class Course < ActiveRecord::Base
   
   def self.tod_array
     a = []
-    for course in Course.all
+    Course.all.each do |course|
       unless a.include? course.tod or course.tod.nil?
         a << course.tod
       end 

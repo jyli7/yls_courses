@@ -10,18 +10,22 @@
 	<span id="paper_header"><%= sort_link @search, :paper_type, "Paper" %></span>
 </div>
 
+<% if @courses.blank? %>
+	<p id="no_courses">No courses found</p>
+<% end %>
+
 <% for course in @courses %>
 	<div class="other_rows">
 		<span class="name_body"><a class="course_name_click" href='#'><%= course.name %></a></span>
 		<span class="icons">
 			<span class="calendar_body">
-			    <a href="http://www.google.com/calendar/event?action=TEMPLATE&text=%5BInsert%20class%20name%20here%5D&dates=20110123T050000Z/20110123T050000Z&details=&location=&trp=false&sprop=&sprop=name:" target="_blank" class="cal_shadow"><img src="/images/calendar_add.png" align="absbottom" border=0 title="Add to calendar" id="add_to_cal"></img></a>
+			    <a href="http://www.google.com/calendar/event?action=TEMPLATE&text=%5BInsert%20class%20name%20here%5D&dates=20110123T050000Z/20110123T050000Z&details=&location=&trp=false&sprop=&sprop=name:" target="_blank" class="cal_shadow"><img src="/images/calendar.png" align="absbottom" border=0 title="Add to calendar" id="add_to_cal" height=17 width=17></img></a>
 			</span>
 			<span class="eval_body">
 			<% if course.evals.blank? %>
 			<% else %>
 				<span class="eval_link">
-				<%= link_to image_tag("chart_bar.png", :border=>0, :align=>"absbottom", :title=>"Course evaluations"), course %></span>
+				<%= link_to image_tag("chart.png", :border=>0, :align=>"absbottom", :title=>"Course evaluations", :height=>20, :width=>20), course %></span>
 				<span id="lightbox"></span>
 			<% end %>
 			</span>
@@ -29,7 +33,7 @@
 				<% if user_signed_in? %>
 					<%= form_for(@line_item, :remote => true) do |f| %>
 						<%= f.hidden_field :course_id, :value => course.id %> 
-						<span class="cart_add<%= '_hidden' if @courses_in_cart.has_key?(course) %>" title="Add to cart" id="<%="#{course.id}"%>"><%= image_submit_tag("cart_add.png", :border=>0, :align=>"absbottom") %></span>
+						<span class="cart_add<%= '_hidden' if @courses_in_cart.has_key?(course) %>" title="Add to cart" id="<%="#{course.id}"%>"><%= image_submit_tag("shopping_cart.png", :border=>0, :align=>"absbottom", :height=>20, :width=>20) %></span>
 					<% end %>
 				<% end %>
 			</span>
