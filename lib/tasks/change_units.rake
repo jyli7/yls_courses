@@ -8,7 +8,6 @@ task :change_units => :environment do
     course.update_attribute :units, 4
   end
   
-  '''
   courses = Course.find_all_by_units("2.0")
   
   for course in courses 
@@ -26,6 +25,5 @@ task :change_units => :environment do
   for course in courses 
     course.update_attribute :units, 3
   end
-  '''
   
 end 

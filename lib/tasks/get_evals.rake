@@ -1,7 +1,7 @@
 desc "Get evaluation link for each class"
 task :get_evals => :environment do
 
-  2011.downto(2008) do |count|
+  2011.downto(2004) do |count|
     file = File.new("course_data/Spring#{count}.html")
     text = file.readlines
     text = text.join('\n')

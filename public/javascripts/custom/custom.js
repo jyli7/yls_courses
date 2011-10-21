@@ -57,7 +57,6 @@ $(document).ready(function() {
 		$('.lightbox#small').load(url).fadeIn(fade_speed);
 		e.preventDefault();
 	});
-
 	
 	/* For fancy_box that holds course evaluations */
 	

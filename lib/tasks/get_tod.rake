@@ -1,4 +1,4 @@
-desc "Get evaluation link for each class"
+desc "Categorize each course's time into 'morning', 'early aft', 'late aft', 'evening'"
 task :get_tod => :environment do
     
   for course in Course.all

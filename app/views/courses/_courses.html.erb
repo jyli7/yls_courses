@@ -22,7 +22,7 @@
 			    <a href="http://www.google.com/calendar/event?action=TEMPLATE&text=%5BInsert%20class%20name%20here%5D&dates=20110123T050000Z/20110123T050000Z&details=&location=&trp=false&sprop=&sprop=name:" target="_blank" class="cal_shadow"><img src="/images/calendar.png" align="absbottom" border=0 title="Add to calendar" id="add_to_cal" height=17 width=17></img></a>
 			</span>
 			<span class="eval_body">
-			<% if course.evals.blank? %>
+			<% if course.crn.blank? %>
 			<% else %>
 				<span class="eval_link">
 				<%= link_to image_tag("chart.png", :border=>0, :align=>"absbottom", :title=>"Course evaluations", :height=>20, :width=>20), course %></span>
