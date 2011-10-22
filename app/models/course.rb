@@ -16,6 +16,7 @@ class Course < ActiveRecord::Base
         a << course.tod
       end 
     end
+    #Just to reorganize the array so that morning comes first and evening comes last
     last = a.pop
     first_two = a.first(2)
     a.slice!(0..1)
