@@ -1,6 +1,6 @@
 class AddDescripToCourse < ActiveRecord::Migration
   def self.up
-    add_column :courses, :descrip, :string
+    add_column :courses, :descrip, :text
   end
 
   def self.down
