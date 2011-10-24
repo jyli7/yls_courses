@@ -22,7 +22,18 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 	
-	/*for toggling between information and evaluation */
+	/*for toggling colors in the info/eval elements in the nav */
+	
+	$('#info_toggle').live('click', function(e) {  
+		$(this).delay(800).css("color", "white");
+		$('#eval_toggle').delay(800).css("color", "#7FEAFF");
+	});
+	
+	$('#eval_toggle').live('click', function(e) {
+		$(this).delay(800).css("color", "white");  
+		$('#info_toggle').delay(800).css("color", "#7FEAFF");
+	});
+		
 	
 	/* For cart_add button disappear */
 	$('.cart_add').live('click', function () {

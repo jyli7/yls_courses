@@ -70,6 +70,13 @@ $blueprint-container-size: $blueprint-grid-outer-width * $blueprint-grid-columns
 @mixin workload_width{
 	@include span(3.75);
 }
+
+@mixin search_form_rating_width{ //width for instructor_quality, classtime_value, workload
+	@include span(3);
+}
+
+
+
 /* Nav */
 
 nav {
@@ -138,7 +145,7 @@ body {
 		#sidebar { 	
 			position:fixed;
 			background-color:$lightbox_back;
-			right:105px;
+			right:140px;
 			top:15px;
 			width:30em;
 			padding: 10px 0px 20px 15px;
@@ -216,6 +223,10 @@ body {
 
 			#paper_search, #search_paper_type_like {
 				@include paper_width;	
+			}
+			
+			#instructor_quality_search, #instructor_quality_gt, #classtime_value_search, #classtime_value_gt, #workload_search, #workload_gt {
+				@include search_form_rating_width;	
 			}
 			
 		}
@@ -404,17 +415,23 @@ table#yls{
 /*Search Form */
 
 
-
-
-
-div#search_button {
-	position:relative;
+#search_button {
 	margin: 8px 0 3px 0;
+	width:50px;
+	height:20px;
+	clear:both;
+	float:left;
 }
 
 div#course_list_link {
-	margin: 10px 0 8px 0;
+	clear:both;
+	padding:5px 0 0 0;
+	margin:5px 0 10px 0;
 	font-size:$body_font_size;
+}
+
+.field_container {
+	height:35px;
 }
 
 
@@ -604,6 +621,12 @@ img#arrow {
 	font-size:13px;
 }
 
+#cart_border {
+	width:110px;
+	text-align:center;
+	padding:5px 0 5px 0;
+}
+
 #eval_toggle_wrapper {
 	top:60px;
 }
@@ -612,19 +635,19 @@ img#arrow {
 	top:90px;
 }
 
-#eval_toggle_cell {
-	padding: 5px 0 10px 0;
+#eval_toggle_td {
+	padding: 10px 0 5px 0;
 	text-align:center;
 }
 
-#info_toggle_cell {
-	padding:10px 0 5px 0;
+#info_toggle_td {
+	padding:5px 0 10px 0;
 	text-align:center;
-	border-top:1px solid white;
+	border-bottom:1px solid white;
 }
 
 nav, #cart_border {
-	padding: 7px;
+	padding: 10px 7px 10px 7px;
 	font-size:13px;
 }
 	

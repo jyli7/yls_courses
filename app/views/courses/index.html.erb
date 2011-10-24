@@ -24,22 +24,18 @@
 		<% end %>
 	
 	<!-- Eval Toggle Button -->
-	<div id="eval_toggle_wrapper" class="round">
-		<table>
-			<tr>
-				<td id="eval_toggle_cell"><%= link_to "Ratings view", courses_path(:toggle => 1), :id => "eval_toggle", :remote => true %></td>
+		<table id="eval_toggle_wrapper" class="round">
+			<tr id="info_toggle_tr">
+				<td id="info_toggle_td"><%= link_to "Information view", courses_path(:toggle => 0), :id => "info_toggle", :remote => true %></td>
 			</tr>
-			<tr>
-				<td id="info_toggle_cell"><%= link_to "Information view", courses_path(:toggle => 0), :id => "info_toggle", :remote => true %></td>
+			<tr id="eval_toggle_tr">
+				<td id="eval_toggle_td"><%= link_to "Ratings view", courses_path(:toggle => 1), :id => "eval_toggle", :remote => true %></td>
 			</tr>
 		</table>
-	</div>
 	
 	<!-- Search Box -->
 	<h2 id="search_title">Search Classes</h2> <!--Search form -->
-	<div id="search_container" class="round">
-		<%= render :partial => 'search_form' %>
-	</div>
+	<div id="search_container" class="round"><%= render :partial => 'search_form' %></div>
 	<br>
 	
 	<!-- Courses -->

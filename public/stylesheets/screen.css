@@ -65,14 +65,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* Mixins */
 /* Nav */
-/* line 75, ../../app/stylesheets/screen.scss */
+/* line 82, ../../app/stylesheets/screen.scss */
 nav {
   margin: 15px 0 5px 0;
   float: right;
   position: relative;
   background-color: #2d647f;
 }
-/* line 81, ../../app/stylesheets/screen.scss */
+/* line 88, ../../app/stylesheets/screen.scss */
 nav .nav_item {
   position: relative;
   list-style-type: none;
@@ -80,31 +80,31 @@ nav .nav_item {
   margin: 0 7px 0 7px;
 }
 
-/* line 89, ../../app/stylesheets/screen.scss */
+/* line 96, ../../app/stylesheets/screen.scss */
 p, li, ul {
   text-align: justify;
   line-height: 150%;
 }
 
-/* line 94, ../../app/stylesheets/screen.scss */
+/* line 101, ../../app/stylesheets/screen.scss */
 h1 {
   font-size: 2.4em;
   padding-bottom: 3px;
 }
 
-/* line 99, ../../app/stylesheets/screen.scss */
+/* line 106, ../../app/stylesheets/screen.scss */
 h2 {
   font-size: 1.8em;
   margin-bottom: 10px;
 }
 
-/* line 104, ../../app/stylesheets/screen.scss */
+/* line 111, ../../app/stylesheets/screen.scss */
 .instructor_body, .time_body {
   line-height: 140%;
 }
 
 /* Body */
-/* line 110, ../../app/stylesheets/screen.scss */
+/* line 117, ../../app/stylesheets/screen.scss */
 body {
   width: 1070px;
   margin: 0 auto;
@@ -118,55 +118,55 @@ body {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   background-color: #1f5168;
 }
-/* line 120, ../../app/stylesheets/screen.scss */
+/* line 127, ../../app/stylesheets/screen.scss */
 body header {
   padding-left: 36px;
   padding-right: 45px;
   overflow: auto;
   background-color: #1f5168;
 }
-/* line 126, ../../app/stylesheets/screen.scss */
+/* line 133, ../../app/stylesheets/screen.scss */
 body div#container {
   padding-left: 36px;
   padding-right: 45px;
   background-color: #1f5168;
   /* Search form begins */
 }
-/* line 131, ../../app/stylesheets/screen.scss */
+/* line 138, ../../app/stylesheets/screen.scss */
 body div#container #yls_header {
   margin-top: 0;
   margin-bottom: 15px;
   border-bottom: 2px solid #FFFFFF;
   font-family: 'Lato', sans-serif;
 }
-/* line 138, ../../app/stylesheets/screen.scss */
+/* line 145, ../../app/stylesheets/screen.scss */
 body div#container #sidebar {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
-  right: 105px;
+  right: 140px;
   top: 15px;
   width: 30em;
   padding: 10px 0px 20px 15px;
   border: 2px solid white;
   z-index: 30;
 }
-/* line 148, ../../app/stylesheets/screen.scss */
+/* line 155, ../../app/stylesheets/screen.scss */
 body div#container #sidebar #cart {
   padding: 0 3px 8px 5px;
   margin: 5px 0px 5px 0;
   font-size: 100%;
 }
-/* line 157, ../../app/stylesheets/screen.scss */
+/* line 164, ../../app/stylesheets/screen.scss */
 body div#container .empty_cart {
   margin: 4px 0 0 0;
 }
-/* line 161, ../../app/stylesheets/screen.scss */
+/* line 168, ../../app/stylesheets/screen.scss */
 body div#container #hide_cart {
   display: inline-block;
   float: right;
   margin: .25em 1em 0 0;
 }
-/* line 169, ../../app/stylesheets/screen.scss */
+/* line 176, ../../app/stylesheets/screen.scss */
 body div#container div#search_container {
   padding: 10px 8px 2px 8px;
   margin: 5px 0 5px 0;
@@ -174,64 +174,68 @@ body div#container div#search_container {
   background-color: #2D647F;
   font-size: 105%;
 }
-/* line 176, ../../app/stylesheets/screen.scss */
+/* line 183, ../../app/stylesheets/screen.scss */
 body div#container div#search_container div.field_container {
   float: left;
 }
-/* line 180, ../../app/stylesheets/screen.scss */
+/* line 187, ../../app/stylesheets/screen.scss */
 body div#container div#search_container .float_and_margin {
   float: left;
   margin-right: 15px;
 }
-/* line 185, ../../app/stylesheets/screen.scss */
+/* line 192, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #name_search, body div#container div#search_container #search_name_like {
   width: 257.75px;
 }
-/* line 189, ../../app/stylesheets/screen.scss */
+/* line 196, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #instructor_search, body div#container div#search_container #search_instructor_like {
   width: 102.5px;
   margin-left: 27px;
 }
-/* line 194, ../../app/stylesheets/screen.scss */
+/* line 201, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #day_search, body div#container div#search_container #search_day_like {
   width: 39.5px;
 }
-/* line 198, ../../app/stylesheets/screen.scss */
+/* line 205, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #tod_search, body div#container div#search_container #search_tod_like {
   width: 98px;
 }
-/* line 202, ../../app/stylesheets/screen.scss */
+/* line 209, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #units_search, body div#container div#search_container #search_units_like {
   width: 39.5px;
   margin-right: 21px;
 }
-/* line 207, ../../app/stylesheets/screen.scss */
+/* line 214, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #limitations_search, body div#container div#search_container #search_limitations_like {
   width: 62px;
   margin-right: 31px;
 }
-/* line 212, ../../app/stylesheets/screen.scss */
+/* line 219, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #exam_search, body div#container div#search_container #search_exam_type_like {
   width: 102.5px;
   margin-right: 19px;
 }
-/* line 217, ../../app/stylesheets/screen.scss */
+/* line 224, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #paper_search, body div#container div#search_container #search_paper_type_like {
   width: 80px;
 }
+/* line 228, ../../app/stylesheets/screen.scss */
+body div#container div#search_container #instructor_quality_search, body div#container div#search_container #instructor_quality_gt, body div#container div#search_container #classtime_value_search, body div#container div#search_container #classtime_value_gt, body div#container div#search_container #workload_search, body div#container div#search_container #workload_gt {
+  width: 125px;
+}
 
-/* line 225, ../../app/stylesheets/screen.scss */
+/* line 236, ../../app/stylesheets/screen.scss */
 #courses_body, #courses_evals_body {
   padding-bottom: 40px;
 }
 
-/* line 229, ../../app/stylesheets/screen.scss */
+/* line 240, ../../app/stylesheets/screen.scss */
 .icons {
   width: 80px;
   display: inline-block;
 }
 
-/* line 234, ../../app/stylesheets/screen.scss */
+/* line 245, ../../app/stylesheets/screen.scss */
 div#first_row {
   padding: 5px 0 5px 5px;
   display: inline-block;
@@ -241,166 +245,166 @@ div#first_row {
 }
 
 /* Header and Body */
-/* line 244, ../../app/stylesheets/screen.scss */
+/* line 255, ../../app/stylesheets/screen.scss */
 #name_header, .name_body {
   width: 220px;
   max-height: 50px;
   display: inline-block;
 }
 
-/* line 251, ../../app/stylesheets/screen.scss */
+/* line 262, ../../app/stylesheets/screen.scss */
 .course_name_click {
   width: 215px;
   white-space: normal;
 }
 
-/* line 256, ../../app/stylesheets/screen.scss */
+/* line 267, ../../app/stylesheets/screen.scss */
 #icons_header {
   display: inline-block;
   width: 80px;
 }
 
-/* line 261, ../../app/stylesheets/screen.scss */
+/* line 272, ../../app/stylesheets/screen.scss */
 #instructor_header, .instructor_body {
   width: 105px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 267, ../../app/stylesheets/screen.scss */
+/* line 278, ../../app/stylesheets/screen.scss */
 #day_header, .day_body {
   width: 39.5px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 273, ../../app/stylesheets/screen.scss */
+/* line 284, ../../app/stylesheets/screen.scss */
 #time_header, .time_body {
   width: 98px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 279, ../../app/stylesheets/screen.scss */
+/* line 290, ../../app/stylesheets/screen.scss */
 #time_header {
   margin-right: 13px;
 }
 
-/* line 283, ../../app/stylesheets/screen.scss */
+/* line 294, ../../app/stylesheets/screen.scss */
 #units_header, .units_body {
   width: 45px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 289, ../../app/stylesheets/screen.scss */
+/* line 300, ../../app/stylesheets/screen.scss */
 #limitations_header, .limitations_body {
   width: 62px;
   display: inline-block;
   margin-right: 27px;
 }
 
-/* line 295, ../../app/stylesheets/screen.scss */
+/* line 306, ../../app/stylesheets/screen.scss */
 #exam_header, .exam_body {
   width: 102.5px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 301, ../../app/stylesheets/screen.scss */
+/* line 312, ../../app/stylesheets/screen.scss */
 #classtime_value_header, .classtime_value_body {
   width: 158.75px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 307, ../../app/stylesheets/screen.scss */
+/* line 318, ../../app/stylesheets/screen.scss */
 #instructor_quality_header, .instructor_quality_body {
   width: 158.75px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 313, ../../app/stylesheets/screen.scss */
+/* line 324, ../../app/stylesheets/screen.scss */
 #workload_header, .workload_body {
   width: 158.75px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 319, ../../app/stylesheets/screen.scss */
+/* line 330, ../../app/stylesheets/screen.scss */
 #paper_header, .paper_body {
   width: 60px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 325, ../../app/stylesheets/screen.scss */
+/* line 336, ../../app/stylesheets/screen.scss */
 .eval_bar {
   background-color: #07003F;
   border: 1px solid white;
   height: 20px;
 }
 
-/* line 331, ../../app/stylesheets/screen.scss */
+/* line 342, ../../app/stylesheets/screen.scss */
 .eval_bar_cell {
   text-align: right;
   padding-right: 4px;
 }
 
 /* Search Box */
-/* line 339, ../../app/stylesheets/screen.scss */
+/* line 350, ../../app/stylesheets/screen.scss */
 #search_title, #shopping_title {
   margin: 0px 0 4px 0;
   display: inline-block;
 }
 
-/* line 344, ../../app/stylesheets/screen.scss */
+/* line 355, ../../app/stylesheets/screen.scss */
 #shopping_title {
   font-size: 1.5em;
 }
 
-/* line 348, ../../app/stylesheets/screen.scss */
+/* line 359, ../../app/stylesheets/screen.scss */
 #search_title {
   font-size: 135%;
 }
 
-/* line 358, ../../app/stylesheets/screen.scss */
+/* line 369, ../../app/stylesheets/screen.scss */
 #search_name_div {
   border: 1px solid white;
   width: 13em;
 }
 
 /* Typography */
-/* line 369, ../../app/stylesheets/screen.scss */
+/* line 380, ../../app/stylesheets/screen.scss */
 html {
   font-size: 100.01%;
 }
 
 /* Links */
-/* line 374, ../../app/stylesheets/screen.scss */
+/* line 385, ../../app/stylesheets/screen.scss */
 a {
   color: #7FEAFF;
   text-decoration: none;
 }
 
-/* line 379, ../../app/stylesheets/screen.scss */
+/* line 390, ../../app/stylesheets/screen.scss */
 a:hover {
   color: #EAF9F9;
   text-decoration: underline;
 }
 
-/* line 384, ../../app/stylesheets/screen.scss */
+/* line 395, ../../app/stylesheets/screen.scss */
 a:visited {
   color: #7FEAFF;
 }
 
-/* line 388, ../../app/stylesheets/screen.scss */
+/* line 399, ../../app/stylesheets/screen.scss */
 #first_row a:visited {
   color: #7FEAFF;
 }
 
-/* line 396, ../../app/stylesheets/screen.scss */
+/* line 407, ../../app/stylesheets/screen.scss */
 table#yls {
   font-size: 25px;
   width: 100%;
@@ -410,27 +414,37 @@ table#yls {
 }
 
 /*Search Form */
-/* line 410, ../../app/stylesheets/screen.scss */
-div#search_button {
-  position: relative;
+/* line 418, ../../app/stylesheets/screen.scss */
+#search_button {
   margin: 8px 0 3px 0;
+  width: 50px;
+  height: 20px;
+  clear: both;
+  float: left;
 }
 
-/* line 415, ../../app/stylesheets/screen.scss */
+/* line 426, ../../app/stylesheets/screen.scss */
 div#course_list_link {
-  margin: 10px 0 8px 0;
+  clear: both;
+  padding: 5px 0 0 0;
+  margin: 5px 0 10px 0;
   font-size: 1em;
 }
 
+/* line 433, ../../app/stylesheets/screen.scss */
+.field_container {
+  height: 35px;
+}
+
 /*horizontal bars */
-/* line 423, ../../app/stylesheets/screen.scss */
+/* line 440, ../../app/stylesheets/screen.scss */
 .zebra {
   padding: 2px 0 2px 0;
   background-color: #2d647f;
 }
 
 /* Round corners */
-/* line 430, ../../app/stylesheets/screen.scss */
+/* line 447, ../../app/stylesheets/screen.scss */
 .round {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -438,26 +452,26 @@ div#course_list_link {
 }
 
 /*Course Table */
-/* line 438, ../../app/stylesheets/screen.scss */
+/* line 455, ../../app/stylesheets/screen.scss */
 div#course_table {
   margin: 10px 0 0 0;
   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 }
 
-/* line 444, ../../app/stylesheets/screen.scss */
+/* line 461, ../../app/stylesheets/screen.scss */
 .other_rows {
   margin: 6px 0 0 0;
   padding: 2px 0 2px 5px;
 }
 
-/* line 449, ../../app/stylesheets/screen.scss */
+/* line 466, ../../app/stylesheets/screen.scss */
 .descrip_body {
   margin: 3px 0 0 0;
   padding: 0 0 2px 5px;
   display: none;
 }
 
-/* line 456, ../../app/stylesheets/screen.scss */
+/* line 473, ../../app/stylesheets/screen.scss */
 hr#border_line {
   margin-top: 0px;
   height: 0.5px;
@@ -465,30 +479,30 @@ hr#border_line {
   background-color: transparent;
 }
 
-/* line 464, ../../app/stylesheets/screen.scss */
+/* line 481, ../../app/stylesheets/screen.scss */
 .toggle_link_hide, .toggle_link_show {
   display: inline-block;
   float: right;
   margin-bottom: 5px;
 }
 
-/* line 470, ../../app/stylesheets/screen.scss */
+/* line 487, ../../app/stylesheets/screen.scss */
 .delete_line_item {
   display: inline-block;
 }
 
-/* line 474, ../../app/stylesheets/screen.scss */
+/* line 491, ../../app/stylesheets/screen.scss */
 #current_item, .non_current_item {
   display: inline-block;
   width: 350px;
 }
 
-/* line 479, ../../app/stylesheets/screen.scss */
+/* line 496, ../../app/stylesheets/screen.scss */
 .non_current_item:last-child {
   margin-bottom: -20px;
 }
 
-/* line 483, ../../app/stylesheets/screen.scss */
+/* line 500, ../../app/stylesheets/screen.scss */
 #units_range_title {
   border-top: 1px solid white;
   display: inline-block;
@@ -498,7 +512,7 @@ hr#border_line {
   margin: 7px 0 10px 0;
 }
 
-/* line 492, ../../app/stylesheets/screen.scss */
+/* line 509, ../../app/stylesheets/screen.scss */
 #units_range {
   display: inline-block;
   border-top: 10px;
@@ -508,42 +522,42 @@ hr#border_line {
   left: 90px;
 }
 
-/* line 501, ../../app/stylesheets/screen.scss */
+/* line 518, ../../app/stylesheets/screen.scss */
 #units_range_title, #units_range {
   margin-top: 5px;
   padding-top: 3px;
 }
 
-/* line 506, ../../app/stylesheets/screen.scss */
+/* line 523, ../../app/stylesheets/screen.scss */
 #calendar_header, .calendar_body, #eval_header, .eval_body, #cart_header, .cart_body {
   display: inline-block;
   width: 20px;
   margin: 0 0 0 0;
 }
 
-/* line 512, ../../app/stylesheets/screen.scss */
+/* line 529, ../../app/stylesheets/screen.scss */
 .eval_body {
   margin-right: 2px;
 }
 
-/* line 516, ../../app/stylesheets/screen.scss */
+/* line 533, ../../app/stylesheets/screen.scss */
 #cart_header, .cart_body {
   width: 30px;
 }
 
-/* line 520, ../../app/stylesheets/screen.scss */
+/* line 537, ../../app/stylesheets/screen.scss */
 .units_body_cart {
   display: inline-block;
   margin-right: -10px;
 }
 
-/* line 525, ../../app/stylesheets/screen.scss */
+/* line 542, ../../app/stylesheets/screen.scss */
 .cart_add_hidden {
   display: none;
 }
 
 /*Lightbox */
-/* line 534, ../../app/stylesheets/screen.scss */
+/* line 551, ../../app/stylesheets/screen.scss */
 .lightbox_back {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
@@ -554,7 +568,7 @@ hr#border_line {
   z-index: 50;
 }
 
-/* line 544, ../../app/stylesheets/screen.scss */
+/* line 561, ../../app/stylesheets/screen.scss */
 .lightbox_front {
   padding: 10px;
   position: relative;
@@ -568,7 +582,7 @@ hr#border_line {
   border: 5px solid #EFEFEF;
 }
 
-/* line 557, ../../app/stylesheets/screen.scss */
+/* line 574, ../../app/stylesheets/screen.scss */
 .lightbox_close {
   font-color: gray;
   position: relative;
@@ -576,44 +590,44 @@ hr#border_line {
 }
 
 /* show course page */
-/* line 564, ../../app/stylesheets/screen.scss */
+/* line 581, ../../app/stylesheets/screen.scss */
 #show_header {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-/* line 570, ../../app/stylesheets/screen.scss */
+/* line 587, ../../app/stylesheets/screen.scss */
 #show_eval_header {
   font-style: italic;
   font-size: 13px;
   margin-bottom: 1em;
 }
 
-/* line 576, ../../app/stylesheets/screen.scss */
+/* line 593, ../../app/stylesheets/screen.scss */
 .indiv_eval_link {
   display: inline-block;
   width: 90px;
 }
 
-/* line 582, ../../app/stylesheets/screen.scss */
+/* line 599, ../../app/stylesheets/screen.scss */
 .prof_name {
   display: inline-block;
 }
 
-/* line 586, ../../app/stylesheets/screen.scss */
+/* line 603, ../../app/stylesheets/screen.scss */
 img {
   border: none;
 }
 
-/* line 590, ../../app/stylesheets/screen.scss */
+/* line 607, ../../app/stylesheets/screen.scss */
 img#arrow {
   margin-left: 3px;
   margin-top: 10px;
   margin-bottom: -4px;
 }
 
-/* line 597, ../../app/stylesheets/screen.scss */
+/* line 614, ../../app/stylesheets/screen.scss */
 #cart_border, #eval_toggle_wrapper, #info_toggle_wrapper {
   position: fixed;
   top: 15px;
@@ -624,91 +638,98 @@ img#arrow {
   font-size: 13px;
 }
 
-/* line 607, ../../app/stylesheets/screen.scss */
+/* line 624, ../../app/stylesheets/screen.scss */
+#cart_border {
+  width: 110px;
+  text-align: center;
+  padding: 5px 0 5px 0;
+}
+
+/* line 630, ../../app/stylesheets/screen.scss */
 #eval_toggle_wrapper {
   top: 60px;
 }
 
-/* line 611, ../../app/stylesheets/screen.scss */
+/* line 634, ../../app/stylesheets/screen.scss */
 #info_toggle_wrapper {
   top: 90px;
 }
 
-/* line 615, ../../app/stylesheets/screen.scss */
-#eval_toggle_cell {
-  padding: 5px 0 10px 0;
-  text-align: center;
-}
-
-/* line 620, ../../app/stylesheets/screen.scss */
-#info_toggle_cell {
+/* line 638, ../../app/stylesheets/screen.scss */
+#eval_toggle_td {
   padding: 10px 0 5px 0;
   text-align: center;
-  border-top: 1px solid white;
 }
 
-/* line 626, ../../app/stylesheets/screen.scss */
+/* line 643, ../../app/stylesheets/screen.scss */
+#info_toggle_td {
+  padding: 5px 0 10px 0;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+
+/* line 649, ../../app/stylesheets/screen.scss */
 nav, #cart_border {
-  padding: 7px;
+  padding: 10px 7px 10px 7px;
   font-size: 13px;
 }
 
-/* line 631, ../../app/stylesheets/screen.scss */
+/* line 654, ../../app/stylesheets/screen.scss */
 #legend img {
   vertical-align: top;
 }
 
-/* line 635, ../../app/stylesheets/screen.scss */
+/* line 658, ../../app/stylesheets/screen.scss */
 #legend {
   margin: 2px 0 0 0;
   padding-bottom: 10px;
 }
 
-/* line 640, ../../app/stylesheets/screen.scss */
+/* line 663, ../../app/stylesheets/screen.scss */
 #legend_gcal, #legend_eval, #legend_cart {
   position: relative;
   bottom: 5px;
   padding: 0 2px 0px 8px;
 }
 
-/* line 647, ../../app/stylesheets/screen.scss */
+/* line 670, ../../app/stylesheets/screen.scss */
 #sign_up, #sign_in {
   margin-top: 0px;
 }
 
 /*About Page */
-/* line 657, ../../app/stylesheets/screen.scss */
+/* line 680, ../../app/stylesheets/screen.scss */
 #about {
   font-size: 1.05em;
 }
 
-/* line 661, ../../app/stylesheets/screen.scss */
+/* line 684, ../../app/stylesheets/screen.scss */
 #about_header {
   margin-bottom: 15px;
 }
 
-/* line 665, ../../app/stylesheets/screen.scss */
+/* line 688, ../../app/stylesheets/screen.scss */
 #about_p {
   font-size: 14px;
 }
 
-/* line 669, ../../app/stylesheets/screen.scss */
+/* line 692, ../../app/stylesheets/screen.scss */
 #about_wrapper {
   font-size: 13px;
   padding: 8px;
 }
-/* line 673, ../../app/stylesheets/screen.scss */
+/* line 696, ../../app/stylesheets/screen.scss */
 #about_wrapper li {
   margin: 15px 0 15px 30px;
 }
 
-/* line 678, ../../app/stylesheets/screen.scss */
+/* line 701, ../../app/stylesheets/screen.scss */
 #contact {
   margin: 20px 0 0 0;
 }
 
 /*Sign Up Page*/
-/* line 684, ../../app/stylesheets/screen.scss */
+/* line 707, ../../app/stylesheets/screen.scss */
 .form_wrapper {
   padding: 8px 0 10px 25px;
   margin: 5px 0 0 10px;
@@ -716,32 +737,32 @@ nav, #cart_border {
   background-color: #2D647F;
   font-size: 105%;
 }
-/* line 691, ../../app/stylesheets/screen.scss */
+/* line 714, ../../app/stylesheets/screen.scss */
 .form_wrapper div {
   margin: 15px 0 5px 0;
 }
-/* line 695, ../../app/stylesheets/screen.scss */
+/* line 718, ../../app/stylesheets/screen.scss */
 .form_wrapper a {
   display: inline-block;
   margin-bottom: 5px;
 }
 
-/* line 702, ../../app/stylesheets/screen.scss */
+/* line 725, ../../app/stylesheets/screen.scss */
 #sign_up_button {
   margin: 10px 0 10px 0;
 }
 
-/* line 706, ../../app/stylesheets/screen.scss */
+/* line 729, ../../app/stylesheets/screen.scss */
 div #sign_in_button {
   margin: 5px 0 10px 0;
 }
 
-/* line 710, ../../app/stylesheets/screen.scss */
+/* line 733, ../../app/stylesheets/screen.scss */
 .eval_shadow, .prof_name {
   margin-bottom: 5px;
 }
 
-/* line 714, ../../app/stylesheets/screen.scss */
+/* line 737, ../../app/stylesheets/screen.scss */
 #no_courses {
   font-style: italic;
   font-size: 105%;
