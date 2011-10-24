@@ -31,6 +31,10 @@
 	<br>
 	
 	<!-- Courses -->
-	<span class="lightbox" id="small"></span> 
-	<div id="courses_body"><%= render :partial => 'courses' %></div> 
+	<span class="lightbox" id="small"></span>
+	<% if @toggle==0%>
+		<div id="courses_body"><%= render :partial => 'courses' %></div> 
+	<% else %>
+		<div id="courses_body"><%= render :partial => 'courses_evals' %></div>
+	<% end %>
 </div>

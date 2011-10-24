@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111023162559) do
+ActiveRecord::Schema.define(:version => 20111024125941) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -59,11 +59,14 @@ ActiveRecord::Schema.define(:version => 20111023162559) do
     t.string   "past_instructors"
     t.string   "past_semesters"
     t.string   "tod"
-    t.boolean  "in_cart",          :default => false
+    t.boolean  "in_cart",            :default => false
     t.integer  "day_num"
     t.integer  "time_num"
     t.string   "units_alt"
     t.text     "descrip"
+    t.float    "instructor_quality"
+    t.float    "classtime_value"
+    t.float    "workload"
   end
 
   create_table "line_items", :force => true do |t|

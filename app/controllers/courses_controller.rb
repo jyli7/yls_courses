@@ -7,7 +7,7 @@ class CoursesController < ApplicationController
     @search = Course.search(params[:search])
     @courses = @search.all
     @count = 1
-    
+    @toggle = 1
     if user_signed_in?
       @user = current_user
       @cart = @user.cart

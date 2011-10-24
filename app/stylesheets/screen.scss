@@ -58,6 +58,18 @@ $blueprint-container-size: $blueprint-grid-outer-width * $blueprint-grid-columns
 @mixin paper_width{
 	@include span(2);
 }
+
+@mixin instructor_quality_width{
+	@include span(3.75);
+}
+
+@mixin classtime_value_width{
+	@include span(3.75);
+}
+
+@mixin workload_width{
+	@include span(3.75);
+}
 /* Nav */
 
 nav {
@@ -274,7 +286,6 @@ div#first_row {
 	margin-right:$mbc;
 }
 
-
 #limitations_header, .limitations_body {
 	@include limitations_width;
 	display:inline-block;
@@ -287,10 +298,39 @@ div#first_row {
 	margin-right:$mbc;
 }
 
+#classtime_value_header, .classtime_value_body {
+	@include classtime_value_width;
+	display:inline-block;
+	margin-right:$mbc;
+}
+
+#instructor_quality_header, .instructor_quality_body {
+	@include instructor_quality_width;
+	display:inline-block;
+	margin-right:$mbc;
+}
+
+#workload_header, .workload_body {
+	@include workload_width;
+	display:inline-block;
+	margin-right:$mbc;
+}
+
 #paper_header, .paper_body {
 	width:60px;
 	display:inline-block;
 	margin-right:$mbc;
+}
+
+.eval_bar {
+	background-color:#340C5F;
+	border:1px solid white;
+	height:20px;
+}
+
+.eval_bar_cell {
+	text-align:right;
+	padding-right:4px;
 }
 
 

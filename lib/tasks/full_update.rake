@@ -417,6 +417,47 @@ task :change_units => :environment do
   
 end
 
+desc "Get higher-level evaluations from unofficial spreadsheet"
+task :get_other_evals => :environment do 
+  
+  require 'spreadsheet'
+  require 'rubygems'
+  require 'time'
+
+  Spreadsheet.client_encoding = 'UTF-8'
+
+  book = Spreadsheet.open '/Users/jimmyli/rails_projects/yls_courses/public/data/class_action_ratings_2.xls'
+  sheet1 = book.worksheet 'Sheet1'
+
+  #Store data from spreadsheet
+  #If spreadsheet names match (some part) of existing names, then attach the additional information
+  count = 0
+  sheet1.each 1 do |row|
+    spreadsheet_course_name_array = row[0].split()
+    spreadsheet_prof_name_array = row[1].split(",")
+    spreadsheet_instructor_quality = row[2]
+    spreadsheet_classtime_value = row[3]
+    spreadsheet_workload = row[4]
+    count += 1
+    Course.all.each do |course|
+      #returns true if a 1 to 1 match between the professor list in the spreadsheet and the professor list in the database
+      prof_match = false
+      spreadsheet_prof_name_array.each do |prof|
+        if course.instructor.include? prof
+          prof_match = true 
+          break
+        end
+      end
+      if course.name.include? spreadsheet_course_name_array[0][1..3] and course.name.include? spreadsheet_course_name_array[-1][1..3] and prof_match
+        course.update_attribute :instructor_quality, spreadsheet_instructor_quality.to_f.round(1)
+        course.update_attribute :classtime_value, spreadsheet_classtime_value.to_f.round(1)
+        course.update_attribute :workload, spreadsheet_workload.to_f.round(1)
+      end 
+    end 
+    
+  end
+end 
+
 task :full_update => [:destroy_all_classes, :fetch_classes, :get_address, :get_evals, :get_descrip, :get_testing, :get_time_num, :get_tod, :change_units, :get_units_alt, :day_sort_fix, :limitations_shorten] do
   puts "Full update complete!"
 end 
