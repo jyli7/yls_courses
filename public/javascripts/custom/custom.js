@@ -22,6 +22,8 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 	
+	/*for toggling between information and evaluation */
+	
 	/* For cart_add button disappear */
 	$('.cart_add').live('click', function () {
 		$(this).fadeOut();

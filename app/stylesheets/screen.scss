@@ -222,7 +222,7 @@ body {
 	}
 }
 
-#courses_body {
+#courses_body, #courses_evals_body {
 	padding-bottom:40px;
 }
 
@@ -323,7 +323,7 @@ div#first_row {
 }
 
 .eval_bar {
-	background-color:#340C5F;
+	background-color:#07003F;
 	border:1px solid white;
 	height:20px;
 }
@@ -594,14 +594,34 @@ img#arrow {
 }
 
 
-#cart_border {
+#cart_border, #eval_toggle_wrapper, #info_toggle_wrapper {
 	position:fixed;
 	top:15px;
 	right:15px;
 	display:inline-block;
 	background-color: $light_blue;
 	padding: 8px;
-	}
+	font-size:13px;
+}
+
+#eval_toggle_wrapper {
+	top:60px;
+}
+
+#info_toggle_wrapper {
+	top:90px;
+}
+
+#eval_toggle_cell {
+	padding: 5px 0 10px 0;
+	text-align:center;
+}
+
+#info_toggle_cell {
+	padding:10px 0 5px 0;
+	text-align:center;
+	border-top:1px solid white;
+}
 
 nav, #cart_border {
 	padding: 7px;

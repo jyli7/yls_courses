@@ -7,7 +7,6 @@ class Course < ActiveRecord::Base
   has_many :line_items, :dependent => :destroy
   
   before_destroy :ensure_not_referenced_by_any_line_item
-  #...
   
   def self.tod_array
     a = []

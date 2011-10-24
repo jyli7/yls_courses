@@ -221,7 +221,7 @@ body div#container div#search_container #paper_search, body div#container div#se
 }
 
 /* line 225, ../../app/stylesheets/screen.scss */
-#courses_body {
+#courses_body, #courses_evals_body {
   padding-bottom: 40px;
 }
 
@@ -337,7 +337,7 @@ div#first_row {
 
 /* line 325, ../../app/stylesheets/screen.scss */
 .eval_bar {
-  background-color: #340C5F;
+  background-color: #07003F;
   border: 1px solid white;
   height: 20px;
 }
@@ -614,77 +614,101 @@ img#arrow {
 }
 
 /* line 597, ../../app/stylesheets/screen.scss */
-#cart_border {
+#cart_border, #eval_toggle_wrapper, #info_toggle_wrapper {
   position: fixed;
   top: 15px;
   right: 15px;
   display: inline-block;
   background-color: #2d647f;
   padding: 8px;
+  font-size: 13px;
 }
 
-/* line 606, ../../app/stylesheets/screen.scss */
+/* line 607, ../../app/stylesheets/screen.scss */
+#eval_toggle_wrapper {
+  top: 60px;
+}
+
+/* line 611, ../../app/stylesheets/screen.scss */
+#info_toggle_wrapper {
+  top: 90px;
+}
+
+/* line 615, ../../app/stylesheets/screen.scss */
+#eval_toggle_cell {
+  padding: 5px 0 10px 0;
+  text-align: center;
+}
+
+/* line 620, ../../app/stylesheets/screen.scss */
+#info_toggle_cell {
+  padding: 10px 0 5px 0;
+  text-align: center;
+  border-top: 1px solid white;
+}
+
+/* line 626, ../../app/stylesheets/screen.scss */
 nav, #cart_border {
   padding: 7px;
   font-size: 13px;
 }
 
-/* line 611, ../../app/stylesheets/screen.scss */
+/* line 631, ../../app/stylesheets/screen.scss */
 #legend img {
   vertical-align: top;
 }
 
-/* line 615, ../../app/stylesheets/screen.scss */
+/* line 635, ../../app/stylesheets/screen.scss */
 #legend {
   margin: 2px 0 0 0;
   padding-bottom: 10px;
 }
 
-/* line 620, ../../app/stylesheets/screen.scss */
+/* line 640, ../../app/stylesheets/screen.scss */
 #legend_gcal, #legend_eval, #legend_cart {
   position: relative;
   bottom: 5px;
   padding: 0 2px 0px 8px;
 }
 
-/* line 627, ../../app/stylesheets/screen.scss */
+/* line 647, ../../app/stylesheets/screen.scss */
 #sign_up, #sign_in {
   margin-top: 0px;
 }
 
 /*About Page */
-/* line 637, ../../app/stylesheets/screen.scss */
+/* line 657, ../../app/stylesheets/screen.scss */
 #about {
   font-size: 1.05em;
 }
 
-/* line 641, ../../app/stylesheets/screen.scss */
+/* line 661, ../../app/stylesheets/screen.scss */
 #about_header {
   margin-bottom: 15px;
 }
 
-/* line 645, ../../app/stylesheets/screen.scss */
+/* line 665, ../../app/stylesheets/screen.scss */
 #about_p {
   font-size: 14px;
 }
 
-/* line 649, ../../app/stylesheets/screen.scss */
+/* line 669, ../../app/stylesheets/screen.scss */
 #about_wrapper {
   font-size: 13px;
   padding: 8px;
 }
-/* line 653, ../../app/stylesheets/screen.scss */
+/* line 673, ../../app/stylesheets/screen.scss */
 #about_wrapper li {
   margin: 15px 0 15px 30px;
 }
 
-/* line 658, ../../app/stylesheets/screen.scss */
+/* line 678, ../../app/stylesheets/screen.scss */
 #contact {
   margin: 20px 0 0 0;
 }
 
 /*Sign Up Page*/
-/* line 664, ../../app/stylesheets/screen.scss */
+/* line 684, ../../app/stylesheets/screen.scss */
 .form_wrapper {
   padding: 8px 0 10px 25px;
   margin: 5px 0 0 10px;
@@ -692,32 +716,32 @@ nav, #cart_border {
   background-color: #2D647F;
   font-size: 105%;
 }
-/* line 671, ../../app/stylesheets/screen.scss */
+/* line 691, ../../app/stylesheets/screen.scss */
 .form_wrapper div {
   margin: 15px 0 5px 0;
 }
-/* line 675, ../../app/stylesheets/screen.scss */
+/* line 695, ../../app/stylesheets/screen.scss */
 .form_wrapper a {
   display: inline-block;
   margin-bottom: 5px;
 }
 
-/* line 682, ../../app/stylesheets/screen.scss */
+/* line 702, ../../app/stylesheets/screen.scss */
 #sign_up_button {
   margin: 10px 0 10px 0;
 }
 
-/* line 686, ../../app/stylesheets/screen.scss */
+/* line 706, ../../app/stylesheets/screen.scss */
 div #sign_in_button {
   margin: 5px 0 10px 0;
 }
 
-/* line 690, ../../app/stylesheets/screen.scss */
+/* line 710, ../../app/stylesheets/screen.scss */
 .eval_shadow, .prof_name {
   margin-bottom: 5px;
 }
 
-/* line 694, ../../app/stylesheets/screen.scss */
+/* line 714, ../../app/stylesheets/screen.scss */
 #no_courses {
   font-style: italic;
   font-size: 105%;

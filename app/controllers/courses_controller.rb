@@ -6,8 +6,12 @@ class CoursesController < ApplicationController
   def index
     @search = Course.search(params[:search])
     @courses = @search.all
-    @count = 1
-    @toggle = 1
+    if params[:toggle] == "0" or params[:toggle] == "1"
+      @toggle = params[:toggle]
+    else 
+      @toggle = "0"
+    end 
+    
     if user_signed_in?
       @user = current_user
       @cart = @user.cart

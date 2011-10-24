@@ -9,7 +9,7 @@
 
 	<!-- Shopping Cart -->
 	<% if user_signed_in? %>
-	<div id="cart_border" class="round"><a href='' id="cart_toggle">Show Cart</a></div>
+	<div id="cart_border" class="round"><a href='' id="cart_toggle">Show cart</a></div>
 	<div id="sidebar">
 		<h2 id="shopping_title">Your Course Cart</h2>
 		<a href='' id="hide_cart">Hide [X]</a>
@@ -23,6 +23,18 @@
 	</div>
 		<% end %>
 	
+	<!-- Eval Toggle Button -->
+	<div id="eval_toggle_wrapper" class="round">
+		<table>
+			<tr>
+				<td id="eval_toggle_cell"><%= link_to "Ratings view", courses_path(:toggle => 1), :id => "eval_toggle", :remote => true %></td>
+			</tr>
+			<tr>
+				<td id="info_toggle_cell"><%= link_to "Information view", courses_path(:toggle => 0), :id => "info_toggle", :remote => true %></td>
+			</tr>
+		</table>
+	</div>
+	
 	<!-- Search Box -->
 	<h2 id="search_title">Search Classes</h2> <!--Search form -->
 	<div id="search_container" class="round">
@@ -32,9 +44,5 @@
 	
 	<!-- Courses -->
 	<span class="lightbox" id="small"></span>
-	<% if @toggle==0%>
-		<div id="courses_body"><%= render :partial => 'courses' %></div> 
-	<% else %>
-		<div id="courses_body"><%= render :partial => 'courses_evals' %></div>
-	<% end %>
+	<div id="courses_body"><%= render :partial => 'courses' %></div> 
 </div>

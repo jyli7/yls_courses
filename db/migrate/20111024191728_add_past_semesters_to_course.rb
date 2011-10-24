@@ -1,6 +1,6 @@
 class AddPastSemestersToCourse < ActiveRecord::Migration
   def self.up
-    add_column :courses, :past_semesters, :string
+    add_column :courses, :past_semesters, :text
   end
 
   def self.down

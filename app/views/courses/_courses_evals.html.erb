@@ -56,7 +56,7 @@
 		</span>
 		<% end %>
 
-		<% unless course.classtime_value.blank? %>		
+		<% unless course.workload.blank? %>		
 		<span class="workload_body">
 			<table class="eval_bar" width=<%=(course.workload * 15)%> >
 				<tr>

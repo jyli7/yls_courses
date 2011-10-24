@@ -1,5 +1,9 @@
 desc "Destroy all classes to prepare for update"
 task :destroy_all_classes => :environment do 
+  LineItem.all.each do |l|
+    l.destroy
+  end
+  
   Course.all.each do |c| 
     c.destroy
   end 
@@ -80,7 +84,6 @@ task :fetch_classes => :environment do
     count += 1
   end
 
-
   temp_array = [] # for room
   sheet1.each 2 do |row|
     temp_array << row[5] 
@@ -113,6 +116,12 @@ task :fetch_classes => :environment do
   for course in Course.all
     course.update_attribute :limitations, temp_array[count]
     count += 1
+  end
+  
+  Course.all.each do |c|
+    if c.name.blank?
+      c.destroy
+    end
   end
 end 
 
@@ -458,6 +467,6 @@ task :get_other_evals => :environment do
   end
 end 
 
-task :full_update => [:destroy_all_classes, :fetch_classes, :get_address, :get_evals, :get_descrip, :get_testing, :get_time_num, :get_tod, :change_units, :get_units_alt, :day_sort_fix, :limitations_shorten] do
+task :full_update => [:destroy_all_classes, :fetch_classes, :get_address, :get_evals, :get_descrip, :get_testing, :get_time_num, :get_tod, :change_units, :get_units_alt, :day_sort_fix, :limitations_shorten, :get_other_evals] do
   puts "Full update complete!"
 end 
