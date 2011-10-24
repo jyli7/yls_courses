@@ -10,8 +10,8 @@
 		<span id="exam_header"><%= sort_link @search, :exam_type, "Exam"  %></span>
 		<span id="paper_header"><%= sort_link @search, :paper_type, "Paper" %></span>
 	<% else %> <!-- For eval view -->
-		<span id="instructor_quality_header"><%= sort_link @search, :instructor_quality, "Instructor Quality" %></span>			
 		<span id="classtime_value_header"><%= sort_link @search, :classtime_value, "Classtime Value" %></span>
+		<span id="instructor_quality_header"><%= sort_link @search, :instructor_quality, "Instructor Quality" %></span>		
 		<span id="workload_header"><%= sort_link @search, :workload, "Workload" %></span>
 	<% end %>
 </div>
@@ -55,16 +55,7 @@
 			<span class="exam_body"><%= course.exam_type %></span>
 			<span class="paper_body"><%= course.paper_type %></span>
 		<% else %> <!-- For eval view -->
-			<% unless course.instructor_quality.blank? %>
-				<span class="instructor_quality_body">
-					<table class="eval_bar" width=<%=(course.instructor_quality * 15)%> >
-						<tr>
-							<td class="eval_bar_cell"><%= course.instructor_quality %></td>
-						</tr>
-					</table>
-				</span>
-			<% end %>
-
+			
 			<% unless course.classtime_value.blank? %>
 			<span class="classtime_value_body">
 				<table class="eval_bar" width=<%=(course.classtime_value * 15)%> >
@@ -74,7 +65,18 @@
 				</table>
 			</span>
 			<% end %>
-
+			
+			
+			<% unless course.instructor_quality.blank? %>
+				<span class="instructor_quality_body">
+					<table class="eval_bar" width=<%=(course.instructor_quality * 15)%> >
+						<tr>
+							<td class="eval_bar_cell"><%= course.instructor_quality %></td>
+						</tr>
+					</table>
+				</span>
+			<% end %>
+			
 			<% unless course.workload.blank? %>		
 			<span class="workload_body">
 				<table class="eval_bar" width=<%=(course.workload * 15)%> >

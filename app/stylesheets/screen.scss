@@ -72,7 +72,7 @@ $blueprint-container-size: $blueprint-grid-outer-width * $blueprint-grid-columns
 }
 
 @mixin search_form_rating_width{ //width for instructor_quality, classtime_value, workload
-	@include span(3);
+	@include span(3.75);
 }
 
 
