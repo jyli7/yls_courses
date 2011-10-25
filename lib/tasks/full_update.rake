@@ -161,8 +161,9 @@ task :get_evals => :environment do
     text = file.readlines
     text = text.join('\n')
 
-    for course in Course.all    
-      eval = /\(([0-9]+), ([0-9]+)\)">#{course.name}<\/a>&nbsp;([^<]+)/m.match text
+    for course in Course.all
+      #      eval = /\(([0-9]+), ([0-9]+)\)">#{course.name}<\/a>&nbsp;([^<]+)/m.match text    
+      eval = /\(([0-9]+), ([0-9]+)\)">#{course.name[0..2]}.*#{course.name[-3..-1]}<\/a>&nbsp;([^<]+)/m.match text
       if eval
         eval_a = [eval[1], eval[2], eval[3]]
 
@@ -204,7 +205,7 @@ task :get_evals => :environment do
     text = text.join('\n')
 
     for course in Course.all    
-      eval = /\(([0-9]+), ([0-9]+)\)">#{course.name}<\/a>&nbsp;([^<]+)/m.match text
+      eval = /\(([0-9]+), ([0-9]+)\)">#{course.name[0..2]}.*#{course.name[-3..-1]}<\/a>&nbsp;([^<]+)/m.match text
       if eval
         eval_a = [eval[1], eval[2], eval[3]]
 

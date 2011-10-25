@@ -1,18 +1,24 @@
+<% if @toggle == "0" %>
+	<span id= "courses_info_view">
+<% else %>
+	<span id= "courses_eval_view">
+<% end %>
+
 <div id="first_row"> 
-	<span id="name_header"><%= sort_link @search, :name, "Course Name" %></span>
+	<span id="name_header"><%= sort_link @search, :name, "Course Name", {:toggle=>@toggle}, :remote => true %></span>
 	<span id="icons_header"></span>
-	<span id="instructor_header"><%= sort_link @search, :instructor %></span>
+	<span id="instructor_header"><%= sort_link @search, :instructor, {:toggle=>@toggle}, :remote => true %></span>
 	<% if @toggle == "0" %> <!-- For info view -->
-		<span id="day_header"><%= sort_link @search, :day_num, "Day" %></span>
-		<span id="time_header"><%= sort_link @search, :time_num, "Time" %></span>			
-		<span id="units_header"><%= sort_link @search, :units_alt, "Units" %></span>
-		<span id="limitations_header"><%= sort_link @search, :limitations %></span>
-		<span id="exam_header"><%= sort_link @search, :exam_type, "Exam"  %></span>
-		<span id="paper_header"><%= sort_link @search, :paper_type, "Paper" %></span>
+		<span id="day_header"><%= sort_link @search, :day_num, "Day", {:toggle=>@toggle}, :remote => true %></span>
+		<span id="time_header"><%= sort_link @search, :time_num, "Time", {:toggle=>@toggle}, :remote => true %></span>			
+		<span id="units_header"><%= sort_link @search, :units_alt, "Units", {:toggle=>@toggle}, :remote => true %></span>
+		<span id="limitations_header"><%= sort_link @search, :limitations,  {:toggle=>@toggle}, :remote => true  %></span>
+		<span id="exam_header"><%= sort_link @search, :exam_type, "Exam",  {:toggle=>@toggle}, :remote => true   %></span>
+		<span id="paper_header"><%= sort_link @search, :paper_type, "Paper",  {:toggle=>@toggle}, :remote => true  %></span>
 	<% else %> <!-- For eval view -->
-		<span id="classtime_value_header"><%= sort_link @search, :classtime_value, "Classtime Value" %></span>
-		<span id="instructor_quality_header"><%= sort_link @search, :instructor_quality, "Instructor Quality" %></span>		
-		<span id="workload_header"><%= sort_link @search, :workload, "Workload" %></span>
+		<span id="classtime_value_header"><%= sort_link @search, :classtime_value, "Classtime Value",  {:toggle=>@toggle}, :remote => true  %></span>
+		<span id="instructor_quality_header"><%= sort_link @search, :instructor_quality, "Instructor Quality",  {:toggle=>@toggle}, :remote => true  %></span>		
+		<span id="workload_header"><%= sort_link @search, :workload, "Workload",  {:toggle=>@toggle}, :remote => true %></span>
 	<% end %>
 </div>
 
@@ -92,3 +98,4 @@
 		<%= course.descrip %>
 	</p>
 <% end %>
+</span>

@@ -34,7 +34,6 @@ $(document).ready(function() {
 		$('#info_toggle').delay(800).css("color", "#7FEAFF");
 	});
 		
-	
 	/* For cart_add button disappear */
 	$('.cart_add').live('click', function () {
 		$(this).fadeOut();

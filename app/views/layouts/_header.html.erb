@@ -1,4 +1,7 @@
 <header>
+	<% if user_signed_in? %>
+		<div id="hello_message">You are signed in</div>
+	<% end %>
 	<nav class="round">
 	    <div class="nav_item"><%= link_to "Home", root_path %></div>
 		<div class="nav_item"><%= link_to "About", '/about', :class => "shadow" %></div>

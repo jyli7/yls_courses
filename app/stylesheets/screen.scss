@@ -112,6 +112,18 @@ h2 {
 	line-height:140%;
 }
 
+#hello_message {
+	position:relative;
+	display:inline-block;
+	width:100px;
+	top:23px;
+	left:690px;
+}
+
+.on_page_color {
+	color:white;
+}
+
 /* Body */
 
 body {
@@ -186,6 +198,7 @@ body {
 			
 			.float_and_margin {
 				float:left;
+				margin-bottom:3px;
 				margin-right:$mbc;
 			}
 			
@@ -225,10 +238,13 @@ body {
 				@include paper_width;	
 			}
 			
-			#instructor_quality_search, #instructor_quality_gt, #classtime_value_search, #classtime_value_gt, #workload_search, #workload_gt {
+			#instructor_quality_search, #classtime_value_search, #workload_search {
 				@include search_form_rating_width;	
 			}
-			
+
+			#search_classtime_value_gt, #search_workload_lt, #search_instructor_quality_gt {
+				width:18px;
+			}
 		}
 	}
 }
@@ -334,8 +350,9 @@ div#first_row {
 }
 
 .eval_bar {
-	background-color:#07003F;
-	border:1px solid white;
+	background-color:#00225F;
+	border:1px solid #7FEAFF;
+	font: #7FEAFF;
 	height:20px;
 }
 
@@ -512,7 +529,7 @@ hr#border_line {
 	width:55px;
 	border-top:1px solid white;
 	position: relative;
-	left:90px;
+	left:98px;
 }
 
 #units_range_title, #units_range {
@@ -543,8 +560,12 @@ hr#border_line {
 	display:none;
 }
 
-
-
+.gt_or_lt_sign {
+	display:inline-block;
+	float:left;
+	margin:7px 7px 0 0;
+	font-size:90%;
+}
 
 /*Lightbox */
 
@@ -647,7 +668,7 @@ img#arrow {
 }
 
 nav, #cart_border {
-	padding: 10px 7px 10px 7px;
+	padding: 8px 6px 8px 6px;
 	font-size:13px;
 }
 	

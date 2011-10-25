@@ -42,23 +42,23 @@
 	
 		<div class="field_container">		
 			<div id="classtime_value_search" class="float_and_margin"><%= f.label :classtime_value_gt, "Classtime Value" %></div>
-			<div><%= f.select :classtime_value_gt, ['Greater than...', '9', '8', '7', '6', '5'], { :class=>"float_and_margin"} %></div>
+			<div> <div class="gt_or_lt_sign"> Greater than </div> <%= f.text_field :classtime_value_gt, :class=>"float_and_margin", :value=>"0" %></div>
 		</div>
 		
 		<div class="field_container">		
 			<div id="instructor_quality_search" class="float_and_margin"><%= f.label :instructor_quality_gt, "Instructor Quality" %></div>
-			<div><%= f.select :instructor_quality_gt, ['Greater than...', '9', '8', '7', '6', '5'], { :class=>"float_and_margin"} %></div>
+			<div> <div class="gt_or_lt_sign"> Greater than </div> <%= f.text_field :instructor_quality_gt, :class=>"float_and_margin", :value=>"0" %></div>
 		</div>
 		
 		<div class="field_container">		
-			<div id="workload_search" class="float_and_margin"><%= f.label :workload_gt, "Workload" %></div>
-			<div><%= f.select :workload_gt, ['Greater than...', '9', '8', '7', '6', '5'], { :class=>"float_and_margin"} %></div>
+			<div id="workload_search" class="float_and_margin"><%= f.label :workload_lt, "Workload" %></div>
+			<div> <div class="gt_or_lt_sign"> Less than </div> <%= f.text_field :workload_lt, :class=>"float_and_margin", :value=>"10" %></div>
 		</div>
 	<% end %>
 
 <%= hidden_field_tag :toggle, @toggle %>
 <div id="search_button"><%= f.submit "Search", :remote => true %></div>
-<div id="course_list_link"><%= link_to "Full Course List", courses_path, :remote => true %></div>
+<div id="course_list_link"><%= link_to "Reset search and courses", courses_path(:toggle=>@toggle), :remote => true %></div>
 
 <div id="legend">
 	Legend: 
