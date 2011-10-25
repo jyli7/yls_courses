@@ -3,10 +3,10 @@ var courses = $("<%= escape_javascript(render :partial => 'courses') %>");
 courses.hide();
 $("#courses_body").append(courses);
 
-//Determine the set height of the existing courses view so that we can reset it later
+var temp_fixed_height = $("#courses_body").height(); 
 
 //Fix the courses_body height to the current height, so that it does not collapse when you remove its contents
-$("#courses_body").css("height", function () { $("#courses_body").height(); });
+$("#courses_body").css("height", temp_fixed_height);
 
 //Fade out the first view, fadein the second, then remove the first from the DOM
 $("#courses_body").children(":first-child").fadeOut(function() {
@@ -17,9 +17,9 @@ $("#courses_body").children(":first-child").fadeOut(function() {
 });
 
 //Reset the height of courses_body to auto-height
-$("#courses_body").css("height", '');
+//$("#courses_body").css("height", '');
 
-//Fade in search container 
+//Fade in search container
 $("#search_container").delay(400).html("<%= escape_javascript(render :partial => 'search_form') %>").fadeIn("slow");
 
 //Re-add zebra stripes to courses_body 

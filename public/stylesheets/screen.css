@@ -107,9 +107,9 @@ h2 {
 #hello_message {
   position: relative;
   display: inline-block;
-  width: 100px;
+  float: right;
+  margin-right: 10px;
   top: 23px;
-  left: 690px;
 }
 
 /* line 123, ../../app/stylesheets/screen.scss */
@@ -700,64 +700,65 @@ img#arrow {
 nav, #cart_border {
   padding: 8px 6px 8px 6px;
   font-size: 13px;
+  float: right;
 }
 
-/* line 675, ../../app/stylesheets/screen.scss */
+/* line 676, ../../app/stylesheets/screen.scss */
 #legend img {
   vertical-align: top;
 }
 
-/* line 679, ../../app/stylesheets/screen.scss */
+/* line 680, ../../app/stylesheets/screen.scss */
 #legend {
   margin: 2px 0 0 0;
   padding-bottom: 10px;
 }
 
-/* line 684, ../../app/stylesheets/screen.scss */
+/* line 685, ../../app/stylesheets/screen.scss */
 #legend_gcal, #legend_eval, #legend_cart {
   position: relative;
   bottom: 5px;
   padding: 0 2px 0px 8px;
 }
 
-/* line 691, ../../app/stylesheets/screen.scss */
+/* line 692, ../../app/stylesheets/screen.scss */
 #sign_up, #sign_in {
   margin-top: 0px;
 }
 
 /*About Page */
-/* line 701, ../../app/stylesheets/screen.scss */
+/* line 702, ../../app/stylesheets/screen.scss */
 #about {
   font-size: 1.05em;
 }
 
-/* line 705, ../../app/stylesheets/screen.scss */
+/* line 706, ../../app/stylesheets/screen.scss */
 #about_header {
   margin-bottom: 15px;
 }
 
-/* line 709, ../../app/stylesheets/screen.scss */
+/* line 710, ../../app/stylesheets/screen.scss */
 #about_p {
   font-size: 14px;
 }
 
-/* line 713, ../../app/stylesheets/screen.scss */
+/* line 714, ../../app/stylesheets/screen.scss */
 #about_wrapper {
   font-size: 13px;
   padding: 8px;
 }
-/* line 717, ../../app/stylesheets/screen.scss */
+/* line 718, ../../app/stylesheets/screen.scss */
 #about_wrapper li {
   margin: 15px 0 15px 30px;
 }
 
-/* line 722, ../../app/stylesheets/screen.scss */
+/* line 723, ../../app/stylesheets/screen.scss */
 #contact {
   margin: 20px 0 0 0;
 }
 
 /*Sign Up Page*/
-/* line 728, ../../app/stylesheets/screen.scss */
+/* line 729, ../../app/stylesheets/screen.scss */
 .form_wrapper {
   padding: 8px 0 10px 25px;
   margin: 5px 0 0 10px;
@@ -765,32 +766,32 @@ nav, #cart_border {
   background-color: #2D647F;
   font-size: 105%;
 }
-/* line 735, ../../app/stylesheets/screen.scss */
+/* line 736, ../../app/stylesheets/screen.scss */
 .form_wrapper div {
   margin: 15px 0 5px 0;
 }
-/* line 739, ../../app/stylesheets/screen.scss */
+/* line 740, ../../app/stylesheets/screen.scss */
 .form_wrapper a {
   display: inline-block;
   margin-bottom: 5px;
 }
 
-/* line 746, ../../app/stylesheets/screen.scss */
+/* line 747, ../../app/stylesheets/screen.scss */
 #sign_up_button {
   margin: 10px 0 10px 0;
 }
 
-/* line 750, ../../app/stylesheets/screen.scss */
+/* line 751, ../../app/stylesheets/screen.scss */
 div #sign_in_button {
   margin: 5px 0 10px 0;
 }
 
-/* line 754, ../../app/stylesheets/screen.scss */
+/* line 755, ../../app/stylesheets/screen.scss */
 .eval_shadow, .prof_name {
   margin-bottom: 5px;
 }
 
-/* line 758, ../../app/stylesheets/screen.scss */
+/* line 759, ../../app/stylesheets/screen.scss */
 #no_courses {
   font-style: italic;
   font-size: 105%;

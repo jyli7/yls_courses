@@ -115,9 +115,9 @@ h2 {
 #hello_message {
 	position:relative;
 	display:inline-block;
-	width:100px;
+	float:right;
+	margin-right:10px;
 	top:23px;
-	left:690px;
 }
 
 .on_page_color {
@@ -670,6 +670,7 @@ img#arrow {
 nav, #cart_border {
 	padding: 8px 6px 8px 6px;
 	font-size:13px;
+	float:right;
 }
 	
 #legend img {
