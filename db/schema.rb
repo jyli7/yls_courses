@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111024191728) do
+ActiveRecord::Schema.define(:version => 20111025194714) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(:version => 20111024191728) do
     t.float    "workload"
     t.text     "past_instructors"
     t.text     "past_semesters"
+    t.string   "enrollment"
   end
 
   create_table "line_items", :force => true do |t|

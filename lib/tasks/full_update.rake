@@ -290,6 +290,20 @@ task :get_testing => :environment do
   end
 end
 
+#This rake is unfinished. Need to write the right regular expression. It is also NOT part of full update.
+desc "Get test or paper options for each class" 
+task :get_enrollment => :environment do
+
+  for course in Course.all  
+    r = /enrollment.*limited to (\w*)|enrollment.*capped at (\w*)/i
+    m = course.descrip.match r
+    course.update_attribute :enrollment, m[1] unless m[1].blank?
+    if m[1].blank? and not m[2].blank?
+      course.update_attribute :enrollment, m[2]
+    end
+  end 
+end
+
 desc "Get a time_num for each time, to be used for future sorting"
 task :get_time_num => :environment do
 

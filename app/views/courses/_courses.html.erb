@@ -26,6 +26,8 @@
 	<p id="no_courses">No courses found</p>
 <% end %>
 
+<div id="below_first_row">
+
 <% for course in @courses %>
 	<div class="other_rows">		
 		<span class="name_body"><a class="course_name_click" href='#'><%= course.name %></a></span>
@@ -98,4 +100,5 @@
 		<%= course.descrip %>
 	</p>
 <% end %>
+</div>
 </span>

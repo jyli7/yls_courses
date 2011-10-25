@@ -183,182 +183,183 @@ body div#container #hide_cart {
 /* line 188, ../../app/stylesheets/screen.scss */
 body div#container div#search_container {
   padding: 10px 8px 2px 8px;
-  margin: 5px 0 5px 0;
-  height: 115px;
+  margin: 10px 0 0 0;
   background-color: #2D647F;
   font-size: 105%;
 }
-/* line 195, ../../app/stylesheets/screen.scss */
+/* line 194, ../../app/stylesheets/screen.scss */
 body div#container div#search_container div.field_container {
   float: left;
 }
-/* line 199, ../../app/stylesheets/screen.scss */
+/* line 198, ../../app/stylesheets/screen.scss */
 body div#container div#search_container .float_and_margin {
   float: left;
   margin-bottom: 3px;
   margin-right: 15px;
 }
-/* line 205, ../../app/stylesheets/screen.scss */
+/* line 204, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #name_search, body div#container div#search_container #search_name_like {
   width: 257.75px;
 }
-/* line 209, ../../app/stylesheets/screen.scss */
+/* line 208, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #instructor_search, body div#container div#search_container #search_instructor_like {
   width: 102.5px;
   margin-left: 27px;
 }
-/* line 214, ../../app/stylesheets/screen.scss */
+/* line 213, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #day_search, body div#container div#search_container #search_day_like {
   width: 39.5px;
 }
-/* line 218, ../../app/stylesheets/screen.scss */
+/* line 217, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #tod_search, body div#container div#search_container #search_tod_like {
   width: 98px;
 }
-/* line 222, ../../app/stylesheets/screen.scss */
+/* line 221, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #units_search, body div#container div#search_container #search_units_like {
   width: 39.5px;
   margin-right: 21px;
 }
-/* line 227, ../../app/stylesheets/screen.scss */
+/* line 226, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #limitations_search, body div#container div#search_container #search_limitations_like {
   width: 62px;
   margin-right: 31px;
 }
-/* line 232, ../../app/stylesheets/screen.scss */
+/* line 231, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #exam_search, body div#container div#search_container #search_exam_type_like {
   width: 102.5px;
   margin-right: 19px;
 }
-/* line 237, ../../app/stylesheets/screen.scss */
+/* line 236, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #paper_search, body div#container div#search_container #search_paper_type_like {
   width: 80px;
 }
-/* line 241, ../../app/stylesheets/screen.scss */
+/* line 240, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #instructor_quality_search, body div#container div#search_container #classtime_value_search, body div#container div#search_container #workload_search {
   width: 158.75px;
 }
-/* line 245, ../../app/stylesheets/screen.scss */
+/* line 244, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #search_classtime_value_gt, body div#container div#search_container #search_workload_lt, body div#container div#search_container #search_instructor_quality_gt {
   width: 18px;
 }
 
-/* line 252, ../../app/stylesheets/screen.scss */
+/* line 251, ../../app/stylesheets/screen.scss */
 #courses_body, #courses_evals_body {
   padding-bottom: 40px;
+  margin-top: 10px;
+  width: 1005px;
 }
 
-/* line 256, ../../app/stylesheets/screen.scss */
+/* line 257, ../../app/stylesheets/screen.scss */
 .icons {
   width: 80px;
   display: inline-block;
 }
 
-/* line 261, ../../app/stylesheets/screen.scss */
+/* line 262, ../../app/stylesheets/screen.scss */
 div#first_row {
   padding: 5px 0 5px 5px;
   display: inline-block;
-  width: 971px;
+  width: 984px;
   font-size: 115%;
-  border-bottom: 1px dashed white;
+  border-bottom: 2px solid white;
 }
 
 /* Header and Body */
-/* line 271, ../../app/stylesheets/screen.scss */
+/* line 272, ../../app/stylesheets/screen.scss */
 #name_header, .name_body {
   width: 220px;
   max-height: 50px;
   display: inline-block;
 }
 
-/* line 278, ../../app/stylesheets/screen.scss */
+/* line 279, ../../app/stylesheets/screen.scss */
 .course_name_click {
   width: 215px;
   white-space: normal;
 }
 
-/* line 283, ../../app/stylesheets/screen.scss */
+/* line 284, ../../app/stylesheets/screen.scss */
 #icons_header {
   display: inline-block;
   width: 80px;
 }
 
-/* line 288, ../../app/stylesheets/screen.scss */
+/* line 289, ../../app/stylesheets/screen.scss */
 #instructor_header, .instructor_body {
   width: 105px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 294, ../../app/stylesheets/screen.scss */
+/* line 295, ../../app/stylesheets/screen.scss */
 #day_header, .day_body {
   width: 39.5px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 300, ../../app/stylesheets/screen.scss */
+/* line 301, ../../app/stylesheets/screen.scss */
 #time_header, .time_body {
   width: 98px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 306, ../../app/stylesheets/screen.scss */
+/* line 307, ../../app/stylesheets/screen.scss */
 #time_header {
   margin-right: 13px;
 }
 
-/* line 310, ../../app/stylesheets/screen.scss */
+/* line 311, ../../app/stylesheets/screen.scss */
 #units_header, .units_body {
   width: 45px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 316, ../../app/stylesheets/screen.scss */
+/* line 317, ../../app/stylesheets/screen.scss */
 #limitations_header, .limitations_body {
   width: 62px;
   display: inline-block;
   margin-right: 27px;
 }
 
-/* line 322, ../../app/stylesheets/screen.scss */
+/* line 323, ../../app/stylesheets/screen.scss */
 #exam_header, .exam_body {
   width: 102.5px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 328, ../../app/stylesheets/screen.scss */
+/* line 329, ../../app/stylesheets/screen.scss */
 #classtime_value_header, .classtime_value_body {
   width: 158.75px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 334, ../../app/stylesheets/screen.scss */
+/* line 335, ../../app/stylesheets/screen.scss */
 #instructor_quality_header, .instructor_quality_body {
   width: 158.75px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 340, ../../app/stylesheets/screen.scss */
+/* line 341, ../../app/stylesheets/screen.scss */
 #workload_header, .workload_body {
   width: 158.75px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 346, ../../app/stylesheets/screen.scss */
+/* line 347, ../../app/stylesheets/screen.scss */
 #paper_header, .paper_body {
   width: 60px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 352, ../../app/stylesheets/screen.scss */
+/* line 353, ../../app/stylesheets/screen.scss */
 .eval_bar {
   background-color: #00225F;
   border: 1px solid #7FEAFF;
@@ -366,65 +367,71 @@ div#first_row {
   height: 20px;
 }
 
-/* line 359, ../../app/stylesheets/screen.scss */
+/* line 360, ../../app/stylesheets/screen.scss */
 .eval_bar_cell {
   text-align: right;
   padding-right: 4px;
 }
 
 /* Search Box */
-/* line 367, ../../app/stylesheets/screen.scss */
+/* line 368, ../../app/stylesheets/screen.scss */
 #search_title, #shopping_title {
-  margin: 0px 0 4px 0;
   display: inline-block;
+  margin: 0 0 0 0;
 }
 
-/* line 372, ../../app/stylesheets/screen.scss */
+/* line 373, ../../app/stylesheets/screen.scss */
 #shopping_title {
   font-size: 1.5em;
 }
 
-/* line 376, ../../app/stylesheets/screen.scss */
+/* line 377, ../../app/stylesheets/screen.scss */
 #search_title {
   font-size: 135%;
 }
 
-/* line 386, ../../app/stylesheets/screen.scss */
+/* line 387, ../../app/stylesheets/screen.scss */
 #search_name_div {
   border: 1px solid white;
   width: 13em;
 }
 
+/* line 392, ../../app/stylesheets/screen.scss */
+#below_first_row {
+  height: 650px;
+  overflow: auto;
+}
+
 /* Typography */
-/* line 397, ../../app/stylesheets/screen.scss */
+/* line 401, ../../app/stylesheets/screen.scss */
 html {
   font-size: 100.01%;
 }
 
 /* Links */
-/* line 402, ../../app/stylesheets/screen.scss */
+/* line 406, ../../app/stylesheets/screen.scss */
 a {
   color: #7FEAFF;
   text-decoration: none;
 }
 
-/* line 407, ../../app/stylesheets/screen.scss */
+/* line 411, ../../app/stylesheets/screen.scss */
 a:hover {
   color: #EAF9F9;
   text-decoration: underline;
 }
 
-/* line 412, ../../app/stylesheets/screen.scss */
+/* line 416, ../../app/stylesheets/screen.scss */
 a:visited {
   color: #7FEAFF;
 }
 
-/* line 416, ../../app/stylesheets/screen.scss */
+/* line 420, ../../app/stylesheets/screen.scss */
 #first_row a:visited {
   color: #7FEAFF;
 }
 
-/* line 424, ../../app/stylesheets/screen.scss */
+/* line 428, ../../app/stylesheets/screen.scss */
 table#yls {
   font-size: 25px;
   width: 100%;
@@ -434,7 +441,7 @@ table#yls {
 }
 
 /*Search Form */
-/* line 435, ../../app/stylesheets/screen.scss */
+/* line 439, ../../app/stylesheets/screen.scss */
 #search_button {
   margin: 8px 0 3px 0;
   width: 50px;
@@ -443,28 +450,29 @@ table#yls {
   float: left;
 }
 
-/* line 443, ../../app/stylesheets/screen.scss */
+/* line 447, ../../app/stylesheets/screen.scss */
 div#course_list_link {
+  display: inline-block;
   clear: both;
   padding: 5px 0 0 0;
-  margin: 5px 0 10px 0;
+  margin: 8px 0 15px 15px;
   font-size: 1em;
 }
 
-/* line 450, ../../app/stylesheets/screen.scss */
+/* line 455, ../../app/stylesheets/screen.scss */
 .field_container {
   height: 35px;
 }
 
 /*horizontal bars */
-/* line 457, ../../app/stylesheets/screen.scss */
+/* line 462, ../../app/stylesheets/screen.scss */
 .zebra {
   padding: 2px 0 2px 0;
   background-color: #2d647f;
 }
 
 /* Round corners */
-/* line 464, ../../app/stylesheets/screen.scss */
+/* line 469, ../../app/stylesheets/screen.scss */
 .round {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -472,26 +480,26 @@ div#course_list_link {
 }
 
 /*Course Table */
-/* line 472, ../../app/stylesheets/screen.scss */
+/* line 477, ../../app/stylesheets/screen.scss */
 div#course_table {
   margin: 10px 0 0 0;
   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 }
 
-/* line 478, ../../app/stylesheets/screen.scss */
+/* line 483, ../../app/stylesheets/screen.scss */
 .other_rows {
   margin: 6px 0 0 0;
   padding: 2px 0 2px 5px;
 }
 
-/* line 483, ../../app/stylesheets/screen.scss */
+/* line 488, ../../app/stylesheets/screen.scss */
 .descrip_body {
   margin: 3px 0 0 0;
   padding: 0 0 2px 5px;
   display: none;
 }
 
-/* line 490, ../../app/stylesheets/screen.scss */
+/* line 495, ../../app/stylesheets/screen.scss */
 hr#border_line {
   margin-top: 0px;
   height: 0.5px;
@@ -499,30 +507,30 @@ hr#border_line {
   background-color: transparent;
 }
 
-/* line 498, ../../app/stylesheets/screen.scss */
+/* line 503, ../../app/stylesheets/screen.scss */
 .toggle_link_hide, .toggle_link_show {
   display: inline-block;
   float: right;
   margin-bottom: 5px;
 }
 
-/* line 504, ../../app/stylesheets/screen.scss */
+/* line 509, ../../app/stylesheets/screen.scss */
 .delete_line_item {
   display: inline-block;
 }
 
-/* line 508, ../../app/stylesheets/screen.scss */
+/* line 513, ../../app/stylesheets/screen.scss */
 #current_item, .non_current_item {
   display: inline-block;
   width: 350px;
 }
 
-/* line 513, ../../app/stylesheets/screen.scss */
+/* line 518, ../../app/stylesheets/screen.scss */
 .non_current_item:last-child {
   margin-bottom: -20px;
 }
 
-/* line 517, ../../app/stylesheets/screen.scss */
+/* line 522, ../../app/stylesheets/screen.scss */
 #units_range_title {
   border-top: 1px solid white;
   display: inline-block;
@@ -532,7 +540,7 @@ hr#border_line {
   margin: 7px 0 10px 0;
 }
 
-/* line 526, ../../app/stylesheets/screen.scss */
+/* line 531, ../../app/stylesheets/screen.scss */
 #units_range {
   display: inline-block;
   border-top: 10px;
@@ -542,41 +550,41 @@ hr#border_line {
   left: 98px;
 }
 
-/* line 535, ../../app/stylesheets/screen.scss */
+/* line 540, ../../app/stylesheets/screen.scss */
 #units_range_title, #units_range {
   margin-top: 5px;
   padding-top: 3px;
 }
 
-/* line 540, ../../app/stylesheets/screen.scss */
+/* line 545, ../../app/stylesheets/screen.scss */
 #calendar_header, .calendar_body, #eval_header, .eval_body, #cart_header, .cart_body {
   display: inline-block;
   width: 20px;
   margin: 0 0 0 0;
 }
 
-/* line 546, ../../app/stylesheets/screen.scss */
+/* line 551, ../../app/stylesheets/screen.scss */
 .eval_body {
   margin-right: 2px;
 }
 
-/* line 550, ../../app/stylesheets/screen.scss */
+/* line 555, ../../app/stylesheets/screen.scss */
 #cart_header, .cart_body {
   width: 30px;
 }
 
-/* line 554, ../../app/stylesheets/screen.scss */
+/* line 559, ../../app/stylesheets/screen.scss */
 .units_body_cart {
   display: inline-block;
   margin-right: -10px;
 }
 
-/* line 559, ../../app/stylesheets/screen.scss */
+/* line 564, ../../app/stylesheets/screen.scss */
 .cart_add_hidden {
   display: none;
 }
 
-/* line 563, ../../app/stylesheets/screen.scss */
+/* line 568, ../../app/stylesheets/screen.scss */
 .gt_or_lt_sign {
   display: inline-block;
   float: left;
@@ -585,7 +593,7 @@ hr#border_line {
 }
 
 /*Lightbox */
-/* line 572, ../../app/stylesheets/screen.scss */
+/* line 577, ../../app/stylesheets/screen.scss */
 .lightbox_back {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
@@ -596,7 +604,7 @@ hr#border_line {
   z-index: 50;
 }
 
-/* line 582, ../../app/stylesheets/screen.scss */
+/* line 587, ../../app/stylesheets/screen.scss */
 .lightbox_front {
   padding: 10px;
   position: relative;
@@ -610,7 +618,7 @@ hr#border_line {
   border: 5px solid #EFEFEF;
 }
 
-/* line 595, ../../app/stylesheets/screen.scss */
+/* line 600, ../../app/stylesheets/screen.scss */
 .lightbox_close {
   font-color: gray;
   position: relative;
@@ -618,44 +626,44 @@ hr#border_line {
 }
 
 /* show course page */
-/* line 602, ../../app/stylesheets/screen.scss */
+/* line 607, ../../app/stylesheets/screen.scss */
 #show_header {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-/* line 608, ../../app/stylesheets/screen.scss */
+/* line 613, ../../app/stylesheets/screen.scss */
 #show_eval_header {
   font-style: italic;
   font-size: 13px;
   margin-bottom: 1em;
 }
 
-/* line 614, ../../app/stylesheets/screen.scss */
+/* line 619, ../../app/stylesheets/screen.scss */
 .indiv_eval_link {
   display: inline-block;
   width: 90px;
 }
 
-/* line 620, ../../app/stylesheets/screen.scss */
+/* line 625, ../../app/stylesheets/screen.scss */
 .prof_name {
   display: inline-block;
 }
 
-/* line 624, ../../app/stylesheets/screen.scss */
+/* line 629, ../../app/stylesheets/screen.scss */
 img {
   border: none;
 }
 
-/* line 628, ../../app/stylesheets/screen.scss */
+/* line 633, ../../app/stylesheets/screen.scss */
 img#arrow {
   margin-left: 3px;
   margin-top: 10px;
   margin-bottom: -4px;
 }
 
-/* line 635, ../../app/stylesheets/screen.scss */
+/* line 640, ../../app/stylesheets/screen.scss */
 #cart_border, #eval_toggle_wrapper, #info_toggle_wrapper {
   position: fixed;
   top: 15px;
@@ -666,99 +674,99 @@ img#arrow {
   font-size: 13px;
 }
 
-/* line 645, ../../app/stylesheets/screen.scss */
+/* line 650, ../../app/stylesheets/screen.scss */
 #cart_border {
   width: 110px;
   text-align: center;
   padding: 5px 0 5px 0;
 }
 
-/* line 651, ../../app/stylesheets/screen.scss */
+/* line 656, ../../app/stylesheets/screen.scss */
 #eval_toggle_wrapper {
   top: 60px;
 }
 
-/* line 655, ../../app/stylesheets/screen.scss */
+/* line 660, ../../app/stylesheets/screen.scss */
 #info_toggle_wrapper {
   top: 90px;
 }
 
-/* line 659, ../../app/stylesheets/screen.scss */
+/* line 664, ../../app/stylesheets/screen.scss */
 #eval_toggle_td {
   padding: 10px 0 5px 0;
   text-align: center;
 }
 
-/* line 664, ../../app/stylesheets/screen.scss */
+/* line 669, ../../app/stylesheets/screen.scss */
 #info_toggle_td {
   padding: 5px 0 10px 0;
   text-align: center;
   border-bottom: 1px solid white;
 }
 
-/* line 670, ../../app/stylesheets/screen.scss */
+/* line 675, ../../app/stylesheets/screen.scss */
 nav, #cart_border {
   padding: 8px 6px 8px 6px;
   font-size: 13px;
   float: right;
 }
 
-/* line 676, ../../app/stylesheets/screen.scss */
+/* line 681, ../../app/stylesheets/screen.scss */
 #legend img {
   vertical-align: top;
 }
 
-/* line 680, ../../app/stylesheets/screen.scss */
+/* line 685, ../../app/stylesheets/screen.scss */
 #legend {
   margin: 2px 0 0 0;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 
-/* line 685, ../../app/stylesheets/screen.scss */
+/* line 690, ../../app/stylesheets/screen.scss */
 #legend_gcal, #legend_eval, #legend_cart {
   position: relative;
   bottom: 5px;
   padding: 0 2px 0px 8px;
 }
 
-/* line 692, ../../app/stylesheets/screen.scss */
+/* line 697, ../../app/stylesheets/screen.scss */
 #sign_up, #sign_in {
   margin-top: 0px;
 }
 
 /*About Page */
-/* line 702, ../../app/stylesheets/screen.scss */
+/* line 707, ../../app/stylesheets/screen.scss */
 #about {
   font-size: 1.05em;
 }
 
-/* line 706, ../../app/stylesheets/screen.scss */
+/* line 711, ../../app/stylesheets/screen.scss */
 #about_header {
   margin-bottom: 15px;
 }
 
-/* line 710, ../../app/stylesheets/screen.scss */
+/* line 715, ../../app/stylesheets/screen.scss */
 #about_p {
   font-size: 14px;
 }
 
-/* line 714, ../../app/stylesheets/screen.scss */
+/* line 719, ../../app/stylesheets/screen.scss */
 #about_wrapper {
   font-size: 13px;
   padding: 8px;
 }
-/* line 718, ../../app/stylesheets/screen.scss */
+/* line 723, ../../app/stylesheets/screen.scss */
 #about_wrapper li {
   margin: 15px 0 15px 30px;
 }
 
-/* line 723, ../../app/stylesheets/screen.scss */
+/* line 728, ../../app/stylesheets/screen.scss */
 #contact {
   margin: 20px 0 0 0;
 }
 
 /*Sign Up Page*/
-/* line 729, ../../app/stylesheets/screen.scss */
+/* line 734, ../../app/stylesheets/screen.scss */
 .form_wrapper {
   padding: 8px 0 10px 25px;
   margin: 5px 0 0 10px;
@@ -766,34 +774,49 @@ nav, #cart_border {
   background-color: #2D647F;
   font-size: 105%;
 }
-/* line 736, ../../app/stylesheets/screen.scss */
+/* line 741, ../../app/stylesheets/screen.scss */
 .form_wrapper div {
   margin: 15px 0 5px 0;
 }
-/* line 740, ../../app/stylesheets/screen.scss */
+/* line 745, ../../app/stylesheets/screen.scss */
 .form_wrapper a {
   display: inline-block;
   margin-bottom: 5px;
 }
 
-/* line 747, ../../app/stylesheets/screen.scss */
+/* line 752, ../../app/stylesheets/screen.scss */
 #sign_up_button {
   margin: 10px 0 10px 0;
 }
 
-/* line 751, ../../app/stylesheets/screen.scss */
+/* line 756, ../../app/stylesheets/screen.scss */
 div #sign_in_button {
   margin: 5px 0 10px 0;
 }
 
-/* line 755, ../../app/stylesheets/screen.scss */
+/* line 760, ../../app/stylesheets/screen.scss */
 .eval_shadow, .prof_name {
   margin-bottom: 5px;
 }
 
-/* line 759, ../../app/stylesheets/screen.scss */
+/* line 764, ../../app/stylesheets/screen.scss */
 #no_courses {
   font-style: italic;
   font-size: 105%;
   margin-left: 4px;
+}
+
+/* line 770, ../../app/stylesheets/screen.scss */
+.hide_search, #show_search {
+  display: inline-block;
+  position: relative;
+  left: 825px;
+}
+
+/* line 776, ../../app/stylesheets/screen.scss */
+.hide_search_img {
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  margin-left: -3px;
 }

@@ -187,8 +187,7 @@ body {
 		
 		div#search_container {
 			padding: 10px 8px 2px 8px;
-			margin: 5px 0 5px 0;
-			height:115px;
+			margin: 10px 0 0 0;
 			background-color:#2D647F;
 			font-size:105%;
 			
@@ -251,6 +250,8 @@ body {
 
 #courses_body, #courses_evals_body {
 	padding-bottom:40px;
+	margin-top:10px;
+	width:1005px;
 }
 
 .icons {
@@ -261,9 +262,9 @@ body {
 div#first_row {
 	padding:5px 0 5px 5px;
 	display:inline-block;
-	@include span(21.8);
+	width:984px;
 	font-size:115%;
-	border-bottom: 1px dashed white;
+	border-bottom: 2px solid white;
 }
 
 /* Header and Body */
@@ -365,8 +366,8 @@ div#first_row {
 /* Search Box */
 
 #search_title, #shopping_title {
-	margin: 0px 0 4px 0;
 	display:inline-block;
+	margin:0 0 0 0;
 }
 
 #shopping_title {
@@ -388,7 +389,10 @@ div#first_row {
 	width:13em;
 }
 		
-
+#below_first_row {
+	height:650px;
+	overflow:auto;
+}
 
 
 
@@ -441,9 +445,10 @@ table#yls{
 }
 
 div#course_list_link {
+	display:inline-block;
 	clear:both;
 	padding:5px 0 0 0;
-	margin:5px 0 10px 0;
+	margin:8px 0 15px 15px;
 	font-size:$body_font_size;
 }
 
@@ -679,7 +684,7 @@ nav, #cart_border {
 
 #legend {
 	margin: 2px 0 0 0;
-	padding-bottom:10px;
+	padding-bottom:5px;
 }
 
 #legend_gcal, #legend_eval, #legend_cart {
@@ -760,4 +765,17 @@ div #sign_in_button {
 	font-style:italic;
 	font-size:105%;
 	margin-left:4px;
+}
+
+.hide_search, #show_search {
+	display:inline-block;
+	position:relative;
+	left:825px;
+}
+
+.hide_search_img {
+	display:inline-block;
+	position:relative;
+	top:3px;
+	margin-left:-3px;
 }

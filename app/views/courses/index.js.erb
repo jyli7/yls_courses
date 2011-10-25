@@ -3,9 +3,8 @@ var courses = $("<%= escape_javascript(render :partial => 'courses') %>");
 courses.hide();
 $("#courses_body").append(courses);
 
-var temp_fixed_height = $("#courses_body").height(); 
-
 //Fix the courses_body height to the current height, so that it does not collapse when you remove its contents
+var temp_fixed_height = $("#courses_body").height(); 
 $("#courses_body").css("height", temp_fixed_height);
 
 //Fade out the first view, fadein the second, then remove the first from the DOM

@@ -58,7 +58,7 @@
 
 <%= hidden_field_tag :toggle, @toggle %>
 <div id="search_button"><%= f.submit "Search", :remote => true %></div>
-<div id="course_list_link"><%= link_to "Reset search and courses", courses_path(:toggle=>@toggle), :remote => true %></div>
+<div id="course_list_link">| <%= link_to "Reset search and courses", courses_path(:toggle=>@toggle), :remote => true %></div>
 
 <div id="legend">
 	Legend: 

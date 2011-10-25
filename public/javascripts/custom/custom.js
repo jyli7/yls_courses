@@ -9,7 +9,7 @@ $(document).ready(function() {
 		$('.descrip_body').hide();
 		$('.other_rows:even').addClass('zebra'); /*horizontal bars in the courses table */	
 	});
-	
+		
 	/*for toggling course descrip */
 	$('.course_name_click').live('click', function(e) {
 		$(this).closest('div').next().slideToggle('slow');
@@ -21,6 +21,19 @@ $(document).ready(function() {
 		$('div#sidebar').toggle(500);
 		e.preventDefault();
 	});
+		
+	/*for search box toggling */
+	$('.hide_search:first').hide();
+	
+	$('.hide_search:visible').live('click', function(e) {
+		var current_label = $(this); 
+		$('#search_container').slideToggle(300, function() {
+			var the_other_label = $('.hide_search:hidden');
+			current_label.hide();
+			the_other_label.show();
+		});
+		e.preventDefault();
+	})
 	
 	/*for toggling colors in the info/eval elements in the nav */
 	
@@ -45,6 +58,9 @@ $(document).ready(function() {
 		$('#sidebar').hide(500);
 		return false;
 	})
+	
+	$(window).scrollTop();
+	
 	
 	
 	/* For the lightbox */
