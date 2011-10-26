@@ -1,22 +1,20 @@
 //Append the other courses view to the existing courses view
 var courses = $("<%= escape_javascript(render :partial => 'courses') %>");
 courses.hide();
-$("#courses_body").append(courses);
+$("#courses_body").append(courses); //tack on the evals section after the info section.
 
 //Fix the courses_body height to the current height, so that it does not collapse when you remove its contents
 var temp_fixed_height = $("#courses_body").height(); 
 $("#courses_body").css("height", temp_fixed_height);
 
-//Fade out the first view, fadein the second, then remove the first from the DOM
+//Fade out the info section, fade in the evals section, then remove the info from the DOM
 $("#courses_body").children(":first-child").fadeOut(function() {
-	var that = this;
+	var that = $(this);
 	courses.fadeIn('slow', function() {
-		$(that).remove();
+		that.remove();
+		$("#courses_body").css("height", ''); //change the height back to auto-height
 	});
 });
-
-//Reset the height of courses_body to auto-height
-//$("#courses_body").css("height", '');
 
 //Fade in search container
 $("#search_container").delay(400).html("<%= escape_javascript(render :partial => 'search_form') %>").fadeIn("slow");

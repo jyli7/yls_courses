@@ -251,7 +251,6 @@ body {
 #courses_body, #courses_evals_body {
 	padding-bottom:40px;
 	margin-top:10px;
-	width:1005px;
 }
 
 .icons {
@@ -390,8 +389,7 @@ div#first_row {
 }
 		
 #below_first_row {
-	height:650px;
-	overflow:auto;
+
 }
 
 
@@ -431,6 +429,17 @@ table#yls{
 	text-align:left;
 	margin-bottom: 20px;
 	border-bottom: 2px solid #FFFFFF;
+}
+
+#logo {
+	height:50px;
+	position:relative;
+	right:10px;
+}
+
+#logo_wrapper {
+	border-bottom:2px solid white;
+	margin-bottom:14px;
 }
 
 /*Search Form */
