@@ -7,4 +7,8 @@ class PagesController < ApplicationController
     @faq = "About"
   end
   
+  def cal
+  end
+  
+  
 end

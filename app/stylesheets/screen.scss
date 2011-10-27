@@ -1,16 +1,20 @@
 @import "blueprint/debug";
+@import "blueprint/grid";
 @import "compass/reset";
 
 $back_blue: #1F5168; //background's blue color
 $light_blue: #2D647F;
+$font_blue: #7FEAFF;
 $body_font_size: 1em;
 $lightbox_back: rgba(0,0,0,.8);
 
 $mbc: 15px; //margin between columns, e.g. between "name" and "instructor"
 
 $blueprint-grid-width: 35px;
+$blueprint-grid-margin: 10px;
 $blueprint-grid-outer-width: $blueprint-grid-width + $blueprint-grid-margin;
 $blueprint-container-size: $blueprint-grid-outer-width * $blueprint-grid-columns - $blueprint-grid-margin;
+
 
 /* Mixins */
 
@@ -74,8 +78,6 @@ $blueprint-container-size: $blueprint-grid-outer-width * $blueprint-grid-columns
 @mixin search_form_rating_width{ //width for instructor_quality, classtime_value, workload
 	@include span(3.75);
 }
-
-
 
 /* Nav */
 
@@ -789,3 +791,74 @@ div #sign_in_button {
 	top:3px;
 	margin-left:-3px;
 }
+
+/* Calendar */
+
+#cal_wrapper {
+	height: span(14);
+	width: 950px;
+	background-color:#2D647F;
+	padding:0 10px 0 10px;
+}
+
+#cal_header {
+	background-color:$light_blue;
+	clear:both;
+	overflow:auto;
+	padding:15px 0 15px 0;
+	width:890px;
+	float:right;
+}
+
+.day {
+	float:left;
+	text-align:center;
+	color:white;
+	font-size:150%;
+	margin-right:$blueprint-grid-margin;
+}
+
+
+.day#friday{
+	margin-right:0px;
+}
+
+#hour_header_wrapper {
+	width:span(1.1);
+	float:left;
+	margin-left:5px;
+	margin-top:2px;
+}
+
+#week_hour_rows{
+	float:right;
+}
+
+.day_hour_rows{
+	float:right;
+}
+
+
+.hour_header {
+	padding:0px 0 30px 0;
+}
+
+.hour_header#hour_8 {
+	padding:40px 0 30px 0;
+}
+
+.hour {	
+	height:41px;
+	border-top:1px solid white;
+	margin-left:9px;
+	margin-right:1px;	
+}
+
+.day, .hour {
+	width:span(4);
+}
+
+.first_hour {
+	margin-top:35px;
+}
+

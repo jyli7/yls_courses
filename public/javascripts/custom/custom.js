@@ -59,6 +59,7 @@ $(document).ready(function() {
 		return false;
 	});
 		
+	/*Lock the courses header */	
 	$(window).scroll(function() {
 		var doc_position = $(document).scrollTop();
 		if (doc_position >=279) {
@@ -81,11 +82,8 @@ $(document).ready(function() {
 			$('#below_first_row').css({
 				'position' : '',
 				'top' : ''
-			});
-			
-		}
-		
-		
+			});	
+		}	
 	});
 	
 	/* For the lightbox */
