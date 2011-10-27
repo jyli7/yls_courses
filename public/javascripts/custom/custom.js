@@ -57,11 +57,36 @@ $(document).ready(function() {
 	$('#hide_cart').click(function () {
 		$('#sidebar').hide(500);
 		return false;
-	})
-	
-	$(window).scrollTop();
-	
-	
+	});
+		
+	$(window).scroll(function() {
+		var doc_position = $(document).scrollTop();
+		if (doc_position >=279) {
+			$('#first_row').css({
+				'position' : 'fixed',
+				'top' : '0px',
+				'z-index' : '50'
+			});
+			$('#below_first_row').css({
+				'position' : 'relative',
+				'top' : '32px'
+			});
+			
+		}
+		if (doc_position <=279) {
+			$('#first_row').css({
+				'position' : '',
+				'top' : ''
+			});
+			$('#below_first_row').css({
+				'position' : '',
+				'top' : ''
+			});
+			
+		}
+		
+		
+	});
 	
 	/* For the lightbox */
 	var fade_speed = 600;
@@ -77,6 +102,7 @@ $(document).ready(function() {
 	$('.lightbox_close a').live('click', function(e) {
 		$(this).closest('div.lightbox_back').fadeOut(fade_speed);
 		$('.lightbox').empty();
+		//if the document's path is users/sign_in, then return to index upon click. Otherwise, prevent default. 
 		e.preventDefault();
 	});
 		

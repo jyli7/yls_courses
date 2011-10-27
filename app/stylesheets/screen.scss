@@ -264,6 +264,8 @@ div#first_row {
 	width:984px;
 	font-size:115%;
 	border-bottom: 2px solid white;
+	background-color:#1F5168;
+	z-index:50;
 }
 
 /* Header and Body */
@@ -389,7 +391,6 @@ div#first_row {
 }
 		
 #below_first_row {
-
 }
 
 
@@ -432,7 +433,7 @@ table#yls{
 }
 
 #logo {
-	height:50px;
+	height:45px;
 	position:relative;
 	right:10px;
 }
@@ -649,7 +650,7 @@ img#arrow {
 #cart_border, #eval_toggle_wrapper, #info_toggle_wrapper {
 	position:fixed;
 	top:15px;
-	right:15px;
+	left:1080px;
 	display:inline-block;
 	background-color: $light_blue;
 	padding: 8px;
