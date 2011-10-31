@@ -1,0 +1,26 @@
+$('#cal_wrapper').html("<%= escape_javascript(render :partial => 'main_cal') %>");
+
+var id = 0; //used to give each class div a unique id 
+<% @result_array.each do |mini_arr| %>
+	var marked = '<div class="marked" id=' + id + '></div>';
+	$("#<%= mini_arr[1] %>").append(marked); //place div in right position, based on course start time
+	var height = ("<%= mini_arr[2].to_i %>")*6.5-3;
+	var top_num = ("<%= mini_arr[3].to_i %>")*6.5;
+	var count =  $('#<%= mini_arr[1] %>').children().length; //count the number of divs already in the time block
+	var width = $('#'+id).width()/(count) - 10;
+	$("#<%= mini_arr[1] %>").children().css({ //change div height, based on course minutes start time and course length
+		'height': height, //each div is 42px long. Each segment, therefore, is 7px long. 
+		'width': width,
+		'position': 'relative',
+		'top': top_num,
+		'opacity': .5,
+		'float': 'left',
+		'margin-right':'3px',
+		'padding':'2px',
+		'font-size': '85%',
+		'color': 'black'
+	});
+	$('#'+id).append("<%= mini_arr[0] %>"); //insert name into div
+	id += 1;
+<% end %>
+

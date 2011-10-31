@@ -142,6 +142,7 @@ body {
 		@include both_margins;
 		overflow:auto;
 		background-color:$back_blue;
+		padding-top:12px;
 	}
 	
 	div#container {
@@ -159,14 +160,14 @@ body {
 		#sidebar { 	
 			position:fixed;
 			background-color:$lightbox_back;
-			right:140px;
-			top:15px;
+			left:690px;
+			top:27px;
 			width:30em;
 			padding: 10px 0px 20px 15px;
 			border: 2px solid white;
-			z-index:30;
+			z-index:100;
 			
-			#cart{
+			#cart, #see_calendar{
 				padding: 0 3px 8px 5px;
 				margin: 5px 0px 5px 0;
 				font-size:100%;
@@ -609,6 +610,21 @@ hr#border_line {
 	border:5px solid #EFEFEF;
 }
 
+.cal_lightbox_front {
+	padding: 10px;
+	position: relative;
+	background-color:#1F5168;
+	top: 3%;
+	left: 10%;
+	z-index: 60;
+	max-height:50em;
+	overflow:auto;
+	width: 85%;
+	bottom:10%;
+	border:5px solid #EFEFEF;
+}
+
+
 .lightbox_close{
 	font-color:gray;
 	position:relative;
@@ -649,9 +665,8 @@ img#arrow {
 }
 
 
-#cart_border, #eval_toggle_wrapper, #info_toggle_wrapper {
+#cart_border, #eval_toggle_wrapper, #info_toggle_wrapper, #see_calendar {
 	position:fixed;
-	top:15px;
 	left:1080px;
 	display:inline-block;
 	background-color: $light_blue;
@@ -659,18 +674,23 @@ img#arrow {
 	font-size:13px;
 }
 
-#cart_border {
+#cart_border, #see_calendar {
 	width:110px;
 	text-align:center;
 	padding:5px 0 5px 0;
+	top:27px;
 }
 
 #eval_toggle_wrapper {
-	top:60px;
+	top:72px;
 }
 
 #info_toggle_wrapper {
-	top:90px;
+	top:72px;
+}
+
+#see_calendar {
+	top:160px;
 }
 
 #eval_toggle_td {
@@ -684,7 +704,7 @@ img#arrow {
 	border-bottom:1px solid white;
 }
 
-nav, #cart_border {
+nav, #cart_border, #see_calendar {
 	padding: 8px 6px 8px 6px;
 	font-size:13px;
 	float:right;
@@ -795,9 +815,10 @@ div #sign_in_button {
 /* Calendar */
 
 #cal_wrapper {
-	height: span(14);
-	width: 950px;
+	height: 590px;
+	width: 970px;
 	background-color:#2D647F;
+	margin-top:5px;
 	padding:0 10px 0 10px;
 }
 
@@ -805,7 +826,7 @@ div #sign_in_button {
 	background-color:$light_blue;
 	clear:both;
 	overflow:auto;
-	padding:15px 0 15px 0;
+	padding:10px 0 15px 0;
 	width:890px;
 	float:right;
 }
@@ -824,7 +845,7 @@ div #sign_in_button {
 }
 
 #hour_header_wrapper {
-	width:span(1.1);
+	width:65px;
 	float:left;
 	margin-left:5px;
 	margin-top:2px;
@@ -840,18 +861,27 @@ div #sign_in_button {
 
 
 .hour_header {
-	padding:0px 0 30px 0;
+	padding:0px 0 28px 0;
 }
 
 .hour_header#hour_8 {
-	padding:40px 0 30px 0;
+	padding:37px 0 30px 0;
+}
+
+.hour_header#hour_9 {
+	padding:0px 0 5px 0;
 }
 
 .hour {	
-	height:41px;
+	height:39px;
 	border-top:1px solid white;
 	margin-left:9px;
 	margin-right:1px;	
+	z-index:20;
+}
+
+#M8_PM, #T8_PM, #W8_PM, #Th8_PM, #F8_PM {
+	border-bottom:1px solid white;
 }
 
 .day, .hour {
@@ -860,5 +890,11 @@ div #sign_in_button {
 
 .first_hour {
 	margin-top:35px;
+}
+
+.marked {
+	height:84px;
+	background-color:white;
+	z-index:30;
 }
 

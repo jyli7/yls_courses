@@ -21,6 +21,7 @@
 		</div>
 	</div>
 		<% end %>
+	<div id="see_calendar" class="round"><%= link_to "Show calendar", '/cal', :id=>"cal_toggle", :remote => true %></div>
 	
 	<!-- Eval Toggle Button -->
 		<table id="eval_toggle_wrapper" class="round">
@@ -49,4 +50,5 @@
 	<!-- Courses -->
 	<span class="lightbox" id="small"></span>
 	<div id="courses_body"><%= render :partial => 'courses' %></div> 
+	
 </div>

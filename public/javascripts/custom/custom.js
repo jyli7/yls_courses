@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	
+		
 	$('#sidebar').hide();
 
  	/*horizontal bars in the courses table */	
@@ -97,6 +97,28 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 	
+	$('#cal_toggle').live('click', function(e) {
+		var url = $(this).attr('href') + ' .lightbox_back';
+		$('#lightbox').load(url).fadeIn(700);
+		e.preventDefault();
+	});
+	
+	//HOOK UP AUTO CLICK
+/*	
+	$('#cal_classes_load').bind('click', function () {
+		window.location.href = this.href;
+		return false;
+	});
+	
+	$('#cal_classes_load').trigger('click');
+	
+
+	$('#cal_toggle').live('click', function(e){
+		$('#cal_classes_load').trigger('click');
+		e.preventDefault(); //auto-click the calendar link the moment the user clicks the cal_toggle link
+	});
+
+*/	
 	$('.lightbox_close a').live('click', function(e) {
 		$(this).closest('div.lightbox_back').fadeOut(fade_speed);
 		$('.lightbox').empty();
@@ -110,6 +132,10 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 	
+	/* For the calendar */
+/*PLACEHOLDER FUNCTION */
+
+
 	/* For fancy_box that holds course evaluations */
 	
 	$('a.eval_shadow').live('click', function(e) {

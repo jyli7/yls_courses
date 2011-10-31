@@ -1,29 +1,15 @@
-<div id="cal_wrapper">
-	<div id="cal_header">
-		<div class="day" id="monday">Monday</div>
-		<div class="day">Tuesday</div>
-		<div class="day">Wednesday</div>
-		<div class="day">Thursday</div>
-		<div class="day" id="friday">Friday</div>
-	</div>
-	<div id="hour_header_wrapper">
-			<div class="hour_header" id="hour_8">8 AM </div>
-		<% for i in (9..12) %>
-			<div class="hour_header"><%=i%> AM</div>
-		<% end %>
-		<% for i in (1..9) %>
-			<div class="hour_header"><%=i%> PM</div>
-		<% end %>
-	</div>
-	<div id="week_hour_rows">
-		<% for i in ['m', 't', 'w', 'th', 'fr']%>
-			<div class="day_hour_rows">
-				<div class="hour" class="first_hour"></div>
-			<% for i in (2..14)%>
-				<div class="hour"></div>
-			<% end %>
-			</div>
-		<% end %>
-	</div>
+<!-- Javascripts -->
+	<script type="text/javascript" src="javascripts/custom/custom.js"></script>
 
+<div class="lightbox_back">
+	<div class="cal_lightbox_front">
+		<span class="lightbox_close"><a href=''>CLOSE [X]</a></span>
+
+		<%= link_to "Load classes into calendar", "/cal", :id=> "cal_classes_load", :remote => true %>
+		<br>
+
+		<div id="cal_wrapper" class="round">
+			<%= render :partial => 'main_cal' %>
+		</div>
+	</div>
 </div>

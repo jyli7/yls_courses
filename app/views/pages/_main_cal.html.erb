@@ -1,0 +1,30 @@
+<div id="cal_header">
+	<div class="day" id="monday">Monday</div>
+	<div class="day">Tuesday</div>
+	<div class="day">Wednesday</div>
+	<div class="day">Thursday</div>
+	<div class="day" id="friday">Friday</div>
+</div>
+<div id="hour_header_wrapper">
+		<div class="hour_header" id="hour_8">8 AM </div>
+	<% for i in (9..12) %>
+		<div class="hour_header"><%=i%> AM</div>
+	<% end %>
+	<% for i in (1..9) %>
+		<% if i == 9 %>
+			<div class="hour_header" id="hour_9"><%=i%> PM</div>
+		<% else %>
+			<div class="hour_header"><%=i%> PM</div>
+		<% end %>
+	<% end %>
+</div>
+<div id="week_hour_rows">
+	<% for i in ['F', 'Th', 'W', 'T', 'M'] %>
+		<div class="day_hour_rows">
+		<% for j in ['8', '9', '10','11','12','1','2','3','4','5','6','7','8_PM'] %>
+				<div class="hour" id="<%= i %><%= j %>">					
+				</div>
+		<% end %>
+		</div>
+	<% end %>
+</div>
