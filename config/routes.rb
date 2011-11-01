@@ -11,7 +11,6 @@ YlsCourses::Application.routes.draw do
   match '/signup',  :to => 'users#new'
   match '/about',  :to => 'pages#about'
   match '/faq',  :to => 'pages#faq'
-  match '/cal',  :to => 'pages#cal'
 
 
   # The priority is based upon order of creation:

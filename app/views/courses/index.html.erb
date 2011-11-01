@@ -21,7 +21,7 @@
 		</div>
 	</div>
 		<% end %>
-	<div id="see_calendar" class="round"><%= link_to "Show calendar", '/cal', :id=>"cal_toggle" %></div>
+	<div id="see_calendar" class="round"><%= link_to "Show calendar", courses_path(:cal_on => 1), :id=>"cal_toggle", :remote => true %></div>
 	
 	<!-- Eval Toggle Button -->
 		<table id="eval_toggle_wrapper" class="round">
@@ -50,5 +50,23 @@
 	<!-- Courses -->
 	<span class="lightbox" id="small"></span>
 	<div id="courses_body"><%= render :partial => 'courses' %></div> 
+	
+	<!-- Cal -->
+	<div id="courses_cal">
+		<div class="lightbox_back">
+			<div class="cal_lightbox_front">
+				<span class="cal_lightbox_close"><a href=''>CLOSE [X]</a></span>
+
+				<%= link_to "Load classes into calendar", "/cal", :id=> "cal_classes_load", :remote => true %>
+				<br>
+				<%= @result_array %>
+
+				<div id="cal_wrapper" class="round">
+					<%= render :partial => 'courses_main_cal' %>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 	
 </div>

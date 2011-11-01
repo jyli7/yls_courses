@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	
+	$('#courses_cal').hide();
 		
 	$('#sidebar').hide();
 
@@ -96,35 +98,20 @@ $(document).ready(function() {
 		$('#lightbox').load(url).fadeIn(700);
 		e.preventDefault();
 	});
-	
-	$('#cal_toggle').live('click', function(e) {
-		var url = $(this).attr('href') + ' .lightbox_back';
-		$('#lightbox').load(url).fadeIn(900);
-		e.preventDefault();
-	});
-	
-	//HOOK UP AUTO CLICK
-/*	
-	$('#cal_classes_load').bind('click', function () {
-		window.location.href = this.href;
-		return false;
-	});
-	
-	$('#cal_classes_load').trigger('click');
-	
 
-	$('#cal_toggle').live('click', function(e){
-		$('#cal_classes_load').trigger('click');
-		e.preventDefault(); //auto-click the calendar link the moment the user clicks the cal_toggle link
-	});
-
-*/	
+	/*Lightbox close for evals */
 	$('.lightbox_close a').live('click', function(e) {
 		$(this).closest('div.lightbox_back').fadeOut(fade_speed);
 		$('.lightbox').empty();
 		//if the document's path is users/sign_in, then return to index upon click. Otherwise, prevent default. 
 		e.preventDefault();
 	});
+	
+	/*Lightbox close for calendar */
+	$('.cal_lightbox_close a').live('click', function(e) {
+		$('#courses_cal').fadeOut(fade_speed);
+		e.preventDefault();
+	});	
 		
 	$('.shadow').live('click', function(e) {
 		var url = $(this).attr('href') + ' .lightbox_back';

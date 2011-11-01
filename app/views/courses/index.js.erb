@@ -1,23 +1,60 @@
-//Append the other courses view to the existing courses view
-var courses = $("<%= escape_javascript(render :partial => 'courses') %>");
-courses.hide();
-$("#courses_body").append(courses); //tack on the evals section after the info section.
+<% if @cal_on == 0 %>
+	//Append the other courses view to the existing courses view
+	var courses = $("<%= escape_javascript(render :partial => 'courses') %>");
+	courses.hide();
+	$("#courses_body").append(courses); //tack on the evals section after the info section.
 
-//Fix the courses_body height to the current height, so that it does not collapse when you remove its contents
-var temp_fixed_height = $("#courses_body").height(); 
-$("#courses_body").css("height", temp_fixed_height);
+	//Fix the courses_body height to the current height, so that it does not collapse when you remove its contents
+	var temp_fixed_height = $("#courses_body").height(); 
+	$("#courses_body").css("height", temp_fixed_height);
 
-//Fade out the info section, fade in the evals section, then remove the info from the DOM
-$("#courses_body").children(":first-child").fadeOut(function() {
-	var that = $(this);
-	courses.fadeIn('slow', function() {
-		that.remove();
-		$("#courses_body").css("height", ''); //change the height back to auto-height
+	//Fade out the info section, fade in the evals section, then remove the info from the DOM
+	$("#courses_body").children(":first-child").fadeOut(function() {
+		var that = $(this);
+		courses.fadeIn('slow', function() {
+			that.remove();
+			$("#courses_body").css("height", ''); //change the height back to auto-height
+		});
 	});
-});
 
-//Fade in search container
-$("#search_container").delay(400).html("<%= escape_javascript(render :partial => 'search_form') %>").fadeIn("slow");
+	//Fade in search container
+	$("#search_container").delay(400).html("<%= escape_javascript(render :partial => 'search_form') %>").fadeIn("slow");
 
-//Re-add zebra stripes to courses_body 
-$('.other_rows:even').addClass('zebra');
+	//Re-add zebra stripes to courses_body 
+	$('.other_rows:even').addClass('zebra');
+<% end %>	
+
+<% if @cal_on == 1 %>
+//For the calendar
+	$('#cal_wrapper').html("<%= escape_javascript(render :partial => 'courses_main_cal') %>");
+	var id = 0; //used to give each class div a unique id 
+	<% @result_array.each do |mini_arr| %>
+		var marked = '<div class="marked" id=' + id + '></div>';
+		$("#<%= mini_arr[1] %>").append(marked); //place div in right position, based on course start time
+		var height = ("<%= mini_arr[2].to_i %>")*6.5-3;
+		var top_num = ("<%= mini_arr[3].to_i %>")*6.5;
+		var count =  $('#<%= mini_arr[1] %>').children().length; //count the number of divs already in the time block
+		if($('#<%= mini_arr[1] %>').prev().children().length >= 1 || $('#<%= mini_arr[1] %>').next().children().length >= 1 ){  //AND SOMETHING ELSE
+			count += 1;
+		}
+		var width = $('#'+id).width()/(count) - 10; //decrease width, based on number of divs already in time block
+		$("#<%= mini_arr[1] %>").children().css({ //change div height, based on course minutes start time and course length
+			'height': height, //each div is 42px long. Each segment, therefore, is 7px long. 
+			'width': width,
+			'position': 'relative',
+			'top': top_num,
+			'opacity': .8,
+			'border': '1px solid black',
+			'float': 'left',
+			'margin-right':'3px',
+			'padding':'2px',
+			'font-size': '85%',
+			'color': 'black',
+			'word-wrap': 'break-word'
+		});
+		$('#'+id).append("<%= mini_arr[0] %>"); //insert name into div
+		id += 1;
+	<% end %>
+$('#courses_cal').fadeIn();	
+<%= @cal_on = 0 %>
+<% end %>	
