@@ -7,18 +7,23 @@ var id = 0; //used to give each class div a unique id
 	var height = ("<%= mini_arr[2].to_i %>")*6.5-3;
 	var top_num = ("<%= mini_arr[3].to_i %>")*6.5;
 	var count =  $('#<%= mini_arr[1] %>').children().length; //count the number of divs already in the time block
-	var width = $('#'+id).width()/(count) - 10;
+	if($('#<%= mini_arr[1] %>').prev().children().length >= 1 || $('#<%= mini_arr[1] %>').next().children().length >= 1 ){  //AND SOMETHING ELSE
+		count += 1;
+	}
+	var width = $('#'+id).width()/(count) - 10; //decrease width, based on number of divs already in time block
 	$("#<%= mini_arr[1] %>").children().css({ //change div height, based on course minutes start time and course length
 		'height': height, //each div is 42px long. Each segment, therefore, is 7px long. 
 		'width': width,
 		'position': 'relative',
 		'top': top_num,
-		'opacity': .5,
+		'opacity': .8,
+		'border': '1px solid black',
 		'float': 'left',
 		'margin-right':'3px',
 		'padding':'2px',
 		'font-size': '85%',
-		'color': 'black'
+		'color': 'black',
+		'word-wrap': 'break-word'
 	});
 	$('#'+id).append("<%= mini_arr[0] %>"); //insert name into div
 	id += 1;

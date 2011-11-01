@@ -7,6 +7,7 @@
 
 		<%= link_to "Load classes into calendar", "/cal", :id=> "cal_classes_load", :remote => true %>
 		<br>
+		<%= @result_array %>
 
 		<div id="cal_wrapper" class="round">
 			<%= render :partial => 'main_cal' %>

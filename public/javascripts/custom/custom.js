@@ -99,7 +99,7 @@ $(document).ready(function() {
 	
 	$('#cal_toggle').live('click', function(e) {
 		var url = $(this).attr('href') + ' .lightbox_back';
-		$('#lightbox').load(url).fadeIn(700);
+		$('#lightbox').load(url).fadeIn(900);
 		e.preventDefault();
 	});
 	
