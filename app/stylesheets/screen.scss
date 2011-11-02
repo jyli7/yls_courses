@@ -160,12 +160,22 @@ body {
 		#sidebar { 	
 			position:fixed;
 			background-color:$lightbox_back;
-			left:690px;
+			left:685px;
 			top:27px;
 			width:30em;
 			padding: 10px 0px 20px 15px;
 			border: 2px solid white;
 			z-index:100;
+		
+		#sidebar_inner_wrapper_2 {
+			position:relative;
+		}
+		
+		#sidebar_inner_wrapper_1 {
+			position:absolute;
+		}
+		
+		
 			
 			#cart, #see_calendar{
 				padding: 0 3px 8px 5px;
@@ -896,5 +906,10 @@ div #sign_in_button {
 	height:84px;
 	background-color:white;
 	z-index:30;
+}
+
+#cal_header_div {
+	margin-bottom:2px;
+	font-size:135%;
 }
 

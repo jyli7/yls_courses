@@ -26,7 +26,7 @@ class CoursesController < ApplicationController
     end
     
     #everything that follows is for the calendar
-    if params[:cal_on] == "1"
+    if params[:cal_on] == "1" #'1' is for calendar view --> triggers a different part of index.js.erb
       @cal_on = 1
     else 
       @cal_on = 0
@@ -34,7 +34,7 @@ class CoursesController < ApplicationController
     
     if @cal_on == 1
       @line_items = LineItem.all
-      @info = {} #hash structure is {:name => [[days], [start_hour, start_segment] class_length]}
+      @info = {} #hash structure is {:name => [[days], [start_hour, start_segment], class_length, time]}
       unless @line_items.blank? #if there are no line items, don't show a calendar 
         #cycle through the line items
         @line_items.each do |item| 
@@ -94,6 +94,7 @@ class CoursesController < ApplicationController
             times_array.each do |t|
               @info[name] << time_values(t)
             end
+            @info[name] << times_array
           end
         end 
       end 
@@ -106,14 +107,20 @@ class CoursesController < ApplicationController
         @info[key][0].each do |day|
           temp_array = []
           temp_array << key
-          if @info[key].length == 3 and count == 1 #if we're on the second day, and the days have different times
+          if @info[key].length == 4 and count == 1 #if we're on the second day, and the days have different times
             temp_array << day + @info[key][2][0] # e.g. M4
             temp_array << @info[key][2][2] # e.g. 11
             temp_array << @info[key][2][1] # e.g. 1
+            temp_array << @info[key][3][1] # e.g. "3:10p - 5:00p"
           else
             temp_array << day + @info[key][1][0] # e.g. M4
             temp_array << @info[key][1][2] # e.g. 11
             temp_array << @info[key][1][1] # e.g. 1
+            if @info[key].length == 4 and count == 0 #if we're on the first day, and the days have different times
+              temp_array << @info[key][3][0] # e.g. "3:10p - 5:00p"
+            else
+              temp_array << @info[key][2][0] # e.g. "3:10p - 5:00p"
+            end 
           end
           @result_array << temp_array
           count += 1

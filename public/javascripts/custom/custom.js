@@ -19,8 +19,8 @@ $(document).ready(function() {
 	 });
 	
 	/*for shopping cart toggling */
-	$('#cart_toggle').live('click', function(e) {  
-		$('div#sidebar').toggle(500);
+	$('#cart_toggle').click(function(e) {  
+		$('div#sidebar').toggle('slide', {direction:'right'});
 		e.preventDefault();
 	});
 		
@@ -39,12 +39,12 @@ $(document).ready(function() {
 	
 	/*for toggling colors in the info/eval elements in the nav */
 	
-	$('#info_toggle').live('click', function(e) {  
+	$('#info_toggle').click( function(e) {  
 		$(this).delay(800).css("color", "white");
 		$('#eval_toggle').delay(800).css("color", "#7FEAFF");
 	});
 	
-	$('#eval_toggle').live('click', function(e) {
+	$('#eval_toggle').click( function(e) {
 		$(this).delay(800).css("color", "white");  
 		$('#info_toggle').delay(800).css("color", "#7FEAFF");
 	});
@@ -57,7 +57,7 @@ $(document).ready(function() {
 	
 	/*For hiding the cart */
 	$('#hide_cart').click(function () {
-		$('#sidebar').hide(500);
+		$('#sidebar').toggle('slide', {direction:'right'});
 		return false;
 	});
 		
@@ -118,10 +118,6 @@ $(document).ready(function() {
 		$('.lightbox#small').load(url).fadeIn(fade_speed);
 		e.preventDefault();
 	});
-	
-	/* For the calendar */
-/*PLACEHOLDER FUNCTION */
-
 
 	/* For fancy_box that holds course evaluations */
 	

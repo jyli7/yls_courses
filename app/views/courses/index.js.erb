@@ -28,6 +28,7 @@
 //For the calendar
 	$('#cal_wrapper').html("<%= escape_javascript(render :partial => 'courses_main_cal') %>");
 	var id = 0; //used to give each class div a unique id 
+	console.log("<%= @result_array %>");
 	<% @result_array.each do |mini_arr| %>
 		var marked = '<div class="marked" id=' + id + '></div>';
 		$("#<%= mini_arr[1] %>").append(marked); //place div in right position, based on course start time
@@ -52,7 +53,9 @@
 			'color': 'black',
 			'word-wrap': 'break-word'
 		});
+		console.log("<%= mini_arr[4] %>");
 		$('#'+id).append("<%= mini_arr[0] %>"); //insert name into div
+		$('#'+id).append("<br><%= mini_arr[4] %>"); //insert time into div
 		id += 1;
 	<% end %>
 $('#courses_cal').fadeIn();	
