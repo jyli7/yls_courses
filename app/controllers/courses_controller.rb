@@ -33,11 +33,10 @@ class CoursesController < ApplicationController
     end 
     
     if @cal_on == 1
-      @line_items = LineItem.all
       @info = {} #hash structure is {:name => [[days], [start_hour, start_segment], class_length, time]}
-      unless @line_items.blank? #if there are no line items, don't show a calendar 
+      unless @line_items_in_cart.blank? #if there are no line items, don't show a calendar 
         #cycle through the line items
-        @line_items.each do |item| 
+        @line_items_in_cart.each do |item|
           unless item.course.day.blank? #some courses are clinics and don't meet at a time. don't try to show these. 
             name = item.course.name
             days = item.course.day 

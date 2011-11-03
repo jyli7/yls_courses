@@ -7,6 +7,6 @@
 	<div id='units_range'><%= cart.lower_bound %> - <%= cart.upper_bound %></div>
 <% end %>
 <br>
-<%= link_to 'Back to courses', courses_path %>
+<%= link_to "Show calendar", courses_path(:cal_on => 1), :class=>"cal_toggle", :remote => true %>
 <div class="empty_cart"><%= button_to 'Empty cart', cart, {:method => :put, :remote => true,
 :confirm => 'Are you sure?'} %></div>

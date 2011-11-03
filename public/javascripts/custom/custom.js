@@ -1,8 +1,4 @@
 $(document).ready(function() {
-	
-	$('#courses_cal').hide();
-		
-	$('#sidebar').hide();
 
  	/*horizontal bars in the courses table */	
 	$('.other_rows:even').addClass('zebra');
@@ -19,7 +15,7 @@ $(document).ready(function() {
 	 });
 	
 	/*for shopping cart toggling */
-	$('#cart_toggle').click(function(e) {  
+	$('.cart_toggle').click(function(e) {  
 		$('div#sidebar').toggle('slide', {direction:'right'});
 		e.preventDefault();
 	});

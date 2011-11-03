@@ -8,8 +8,8 @@
 	<div id="logo_wrapper"><img src="/images/logo_cent_goth.png" id="logo"></div>
 	<!-- Shopping Cart -->
 	<% if user_signed_in? %>
-	<div id="cart_border" class="round"><a href='' id="cart_toggle">Show cart</a></div>
-	<div id="sidebar">
+	<div id="cart_border" class="round"><a href='' class="cart_toggle">Show cart</a></div>
+	<div id="sidebar" style="display:none;">
 		<h2 id="shopping_title">Your Course Cart</h2>
 		<a href='' id="hide_cart">Hide [X]</a>
 		<div id="cart" class="round">
@@ -21,7 +21,9 @@
 		</div>
 	</div>
 		<% end %>
-	<div id="see_calendar" class="round"><%= link_to "Show calendar", courses_path(:cal_on => 1), :id=>"cal_toggle", :remote => true %></div>
+	<% if user_signed_in? %>
+		<div id="see_calendar" class="round"><%= link_to "Show calendar", courses_path(:cal_on => 1), :class=>"cal_toggle", :remote => true %></div>
+	<% end %>
 	
 	<!-- Eval Toggle Button -->
 		<table id="eval_toggle_wrapper" class="round">
@@ -52,18 +54,22 @@
 	<div id="courses_body"><%= render :partial => 'courses' %></div> 
 	
 	<!-- Cal -->
-	<div id="courses_cal">
+	<% if user_signed_in? %>
+	<div id="courses_cal" style="display:none;">
 		<div class="lightbox_back">
 			<div class="cal_lightbox_front">
-				<span class="cal_lightbox_close"><a href=''>CLOSE [X]</a></span>
+				<span class="cal_lightbox_close"><a href='' id="close_cal">CLOSE [X]</a></span>
 
-				<div id="cal_header_div">Course Calendar</div>
+				<div id="cal_header_div">Course Calendar</div> |
+				<%= link_to "Refresh calendar", courses_path(:cal_on=>1), :id=> "cal_classes_refresh", :remote => true %> |
+				<a href='' class="cart_toggle">Show cart</a>
 				<div id="cal_wrapper" class="round">
 					<%= render :partial => 'courses_main_cal' %>
 				</div>
 			</div>
 		</div>
 	</div>
+	<% end %>
 	
 	
 </div>

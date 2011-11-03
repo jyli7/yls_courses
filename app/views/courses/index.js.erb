@@ -29,35 +29,65 @@
 	$('#cal_wrapper').html("<%= escape_javascript(render :partial => 'courses_main_cal') %>");
 	var id = 0; //used to give each class div a unique id 
 	console.log("<%= @result_array %>");
+	
+	//Run through the result_arrays to place the courses on the calendar, and to set all properties but width
 	<% @result_array.each do |mini_arr| %>
 		var marked = '<div class="marked" id=' + id + '></div>';
-		$("#<%= mini_arr[1] %>").append(marked); //place div in right position, based on course start time
+		
+		//place div in right position, based on course start time
+		//this works because the [1] indx on the each result_array corresponds to the ids of preset divs on the calendar
+		$("#<%= mini_arr[1] %>").append(marked); 
+		
+		//set parameters for the course div (to be used below)
 		var height = ("<%= mini_arr[2].to_i %>")*6.5-3;
 		var top_num = ("<%= mini_arr[3].to_i %>")*6.5;
-		var count =  $('#<%= mini_arr[1] %>').children().length; //count the number of divs already in the time block
-		if($('#<%= mini_arr[1] %>').prev().children().length >= 1 || $('#<%= mini_arr[1] %>').next().children().length >= 1 ){  //AND SOMETHING ELSE
-			count += 1;
-		}
-		var width = $('#'+id).width()/(count) - 10; //decrease width, based on number of divs already in time block
-		$("#<%= mini_arr[1] %>").children().css({ //change div height, based on course minutes start time and course length
-			'height': height, //each div is 42px long. Each segment, therefore, is 7px long. 
-			'width': width,
+
+		$("#<%= mini_arr[1] %>").find('#'+id).css({ //change div height, based on course minutes start time and course length
+			'height': height, //each course div is 42px long. Each segment, therefore, is 7px long. 
 			'position': 'relative',
 			'top': top_num,
 			'opacity': .8,
-			'border': '1px solid black',
+			'border': '1px solid white',
 			'float': 'left',
 			'margin-right':'3px',
 			'padding':'2px',
 			'font-size': '85%',
-			'color': 'black',
+			'color': 'white',
 			'word-wrap': 'break-word'
 		});
-		console.log("<%= mini_arr[4] %>");
-		$('#'+id).append("<%= mini_arr[0] %>"); //insert name into div
-		$('#'+id).append("<br><%= mini_arr[4] %>"); //insert time into div
+		$('#'+id).append("<%= mini_arr[0] %>"); //insert name into course div
+		$('#'+id).append("<br><span display='inline-block'><%= mini_arr[4] %></span>"); //insert time into course div
+		id += 1; //increment the idea for the next class div
+	<% end %>
+	
+	id = 0
+	//Run through all the courses again so we adjust the width *after* all divs have been placed on the calendar
+	<% @result_array.each do |mini_arr| %>
+		//count the number of divs already in the time block
+		var count =  $('#<%= mini_arr[1] %>').children().length; 
+	
+		//see if there are already divs in the previous blocks or in the succeeding blocks
+		if($('#<%= mini_arr[1] %>').prev().children().length >= 1){
+			count += $('#<%= mini_arr[1] %>').prev().children().length;
+		}
+		if($('#<%= mini_arr[1] %>').next().children().length >= 1) {
+			count += $('#<%= mini_arr[1] %>').next().children().length;
+		} 
+		var width = 170/(count) - 10; //decrease width, based on number of divs already in time block
+	
+		$("#<%= mini_arr[1] %>").find('#'+id).css({
+			'width': width,
+		});
+		
+		//if the count is too high (i.e. the width is too small), remove the course name and time and use tooltips
+		if(count >=3) {
+			$('#'+id).html("<%= mini_arr[0][0..-8] %>..."); //replace HTML with shortened course name
+		}
+		//ADD TOOLTIP HERE
+		//$('#'+id).TOOLTIP
 		id += 1;
 	<% end %>
+	
 $('#courses_cal').fadeIn();	
 <%= @cal_on = 0 %>
 <% end %>	
