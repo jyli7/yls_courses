@@ -160,7 +160,7 @@ body {
 		#sidebar { 	
 			position:fixed;
 			background-color:$lightbox_back;
-			left:685px;
+			left:670px;
 			top:27px;
 			width:30em;
 			padding: 10px 0px 20px 15px;
@@ -450,7 +450,7 @@ table#yls{
 	height:45px;
 	position:relative;
 	right:10px;
-	margin-bottom:1px;
+	margin-bottom:3px;
 }
 
 #logo_wrapper {
@@ -964,8 +964,7 @@ div #sign_in_button {
 
 #close_cal {
 	display:inline-block;
-	position:relative;
-	right:32px;
+	float:right;
 }
 
 .tooltip {
@@ -981,5 +980,5 @@ div #sign_in_button {
 	display:inline-block;
 	float:right;
 	position:relative;
-	margin-right:36px;
+	margin-right:5px;
 }

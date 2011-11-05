@@ -158,7 +158,7 @@ body div#container #yls_header {
 body div#container #sidebar {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
-  left: 685px;
+  left: 670px;
   top: 27px;
   width: 30em;
   padding: 10px 0px 20px 15px;
@@ -450,7 +450,7 @@ table#yls {
   height: 45px;
   position: relative;
   right: 10px;
-  margin-bottom: 1px;
+  margin-bottom: 3px;
 }
 
 /* line 456, ../../app/stylesheets/screen.scss */
@@ -1019,11 +1019,10 @@ div #sign_in_button {
 /* line 965, ../../app/stylesheets/screen.scss */
 #close_cal {
   display: inline-block;
-  position: relative;
-  right: 32px;
+  float: right;
 }
 
-/* line 971, ../../app/stylesheets/screen.scss */
+/* line 970, ../../app/stylesheets/screen.scss */
 .tooltip {
   display: none;
   font-size: 12px;
@@ -1033,10 +1032,10 @@ div #sign_in_button {
   color: #fff;
 }
 
-/* line 980, ../../app/stylesheets/screen.scss */
+/* line 979, ../../app/stylesheets/screen.scss */
 #cal_cart_toggle {
   display: inline-block;
   float: right;
   position: relative;
-  margin-right: 36px;
+  margin-right: 5px;
 }

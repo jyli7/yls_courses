@@ -41,7 +41,7 @@ $(document).ready(function() {
 		$('#fix_cart').hide();
 		$('#bar').hide();
 		$('#sidebar').css({
-			'left': '685px', 
+			'left': '670px', 
 			'top': '27px',
 			'position': 'fixed',
 			'cursor':'auto'
