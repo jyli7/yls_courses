@@ -5,9 +5,10 @@ $(document).ready(function() {
 		
 	$('#free_cart').live('click', function(e) {
 		var position_free = $('#sidebar').position();
+		var top = $(document).scrollTop() + position_free.top;
 		$('#sidebar').css({
 			'left': position_free.left, 
-			'top': position_free.top,
+			'top': top,
 			'position': 'absolute'
 		});
 		$('#sidebar').draggable({disabled: false});
@@ -19,10 +20,12 @@ $(document).ready(function() {
 	
 	$('#fix_cart').live('click', function(e) {
 		var position_fix = $('#sidebar').position();
+		var top = position_fix.top - $(document).scrollTop();
 		$('#sidebar').css({
 			'left': position_fix.left, 
-			'top': position_fix.top,
-			'position': 'fixed'
+			'top': top,
+			'position': 'fixed',
+			'z-index': '60px'
 		});
 		$('#sidebar').draggable({ disabled: true});
 		$('#sidebar').css('cursor', 'auto');
