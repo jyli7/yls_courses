@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	
+	/*For freeing and fixing the cart */
 	$('#free_cart, #fix_cart, #bar').hide();
 		
 	$('#free_cart').live('click', function(e) {

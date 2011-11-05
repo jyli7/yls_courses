@@ -40,14 +40,14 @@
 				<span id="lightbox"></span>
 			<% end %>
 			</span>
+			<% if user_signed_in? %>			
 			<span class="cart_body">
-				<% if user_signed_in? %>
 					<%= form_for(@line_item, :remote => true) do |f| %>
 						<%= f.hidden_field :course_id, :value => course.id %> 
 						<span class="cart_add<%= '_hidden' if @courses_in_cart.has_key?(course) %>" title="Add to cart" id="<%="#{course.id}"%>"><%= image_submit_tag("shopping_cart.png", :border=>0, :align=>"absbottom", :height=>20, :width=>20) %></span>
 					<% end %>
-				<% end %>
 			</span>
+			<% end %>
 		</span>
 		
 		<span class="instructor_body"><%= course.instructor %></span>

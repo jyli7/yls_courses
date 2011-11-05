@@ -28,7 +28,7 @@ $blueprint-container-size: $blueprint-grid-outer-width * $blueprint-grid-columns
 }
 
 @mixin icons_width{
-	@include span(2);
+	@include span(1.7);
 }
 
 @mixin name_search_width{
@@ -215,7 +215,8 @@ body {
 			}
 			
 			#name_search, #search_name_like {	
-				width:245px;
+				width:200px;
+				margin-right:45px;
 			}
 			
 			#instructor_search, #search_instructor_like {
