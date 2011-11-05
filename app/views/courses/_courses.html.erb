@@ -12,13 +12,13 @@
 		<span id="day_header"><%= sort_link @search, :day_num, "Day", {:toggle=>@toggle}, :remote => true %></span>
 		<span id="time_header"><%= sort_link @search, :time_num, "Time", {:toggle=>@toggle}, :remote => true %></span>			
 		<span id="units_header"><%= sort_link @search, :units_alt, "Units", {:toggle=>@toggle}, :remote => true %></span>
-		<span id="limitations_header"><%= sort_link @search, :limitations,  {:toggle=>@toggle}, :remote => true  %></span>
-		<span id="exam_header"><%= sort_link @search, :exam_type, "Exam",  {:toggle=>@toggle}, :remote => true   %></span>
-		<span id="paper_header"><%= sort_link @search, :paper_type, "Paper",  {:toggle=>@toggle}, :remote => true  %></span>
+		<span id="limitations_header"><%= sort_link @search, :limitations,  {:default_order => :desc, :toggle=>@toggle}, :remote => true  %></span>
+		<span id="exam_header"><%= sort_link @search, :exam_type, "Exam",  {:default_order => :desc, :toggle=>@toggle}, :remote => true   %></span>
+		<span id="paper_header"><%= sort_link @search, :paper_type, "Paper",  {:default_order => :desc, :toggle=>@toggle}, :remote => true  %></span>
 	<% else %> <!-- For eval view -->
-		<span id="classtime_value_header"><%= sort_link @search, :classtime_value, "Classtime Value",  {:toggle=>@toggle}, :remote => true  %></span>
-		<span id="instructor_quality_header"><%= sort_link @search, :instructor_quality, "Instructor Quality",  {:toggle=>@toggle}, :remote => true  %></span>		
-		<span id="workload_header"><%= sort_link @search, :workload, "Workload",  {:toggle=>@toggle}, :remote => true %></span>
+		<span id="classtime_value_header"><%= sort_link @search, :classtime_value, "Classtime Value",  {:default_order => :desc, :toggle=>@toggle},  :remote => true  %></span>
+		<span id="instructor_quality_header"><%= sort_link @search, :instructor_quality, "Instructor Quality",  {:default_order => :desc, :toggle=>@toggle}, :remote => true  %></span>		
+		<span id="workload_header"><%= sort_link @search, :workload, "Workload",  {:default_order => :asc, :toggle=>@toggle}, :remote => true %></span>
 	<% end %>
 </div>
 
@@ -32,9 +32,6 @@
 	<div class="other_rows">		
 		<span class="name_body"><a class="course_name_click" href='#'><%= course.name %></a></span>
 		<span class="icons">
-			<span class="calendar_body">
-			    <a href="http://www.google.com/calendar/event?action=TEMPLATE&text=%5BInsert%20class%20name%20here%5D&dates=20110123T050000Z/20110123T050000Z&details=&location=&trp=false&sprop=&sprop=name:" target="_blank" class="cal_shadow"><img src="/images/calendar.png" align="absbottom" border=0 title="Add to calendar" id="add_to_cal" height=17 width=17></img></a>
-			</span>
 			<span class="eval_body">
 			<% if course.crn.blank? %>
 			<% else %>

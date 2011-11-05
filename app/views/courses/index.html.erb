@@ -5,12 +5,15 @@
 	<script type="text/javascript" src="javascripts/custom/jquery.highlightFade.js"></script>
 	
 	<!-- Header -->
-	<div id="logo_wrapper"><img src="/images/logo_cent_goth.png" id="logo"></div>
+	<div id="logo_wrapper"><img src="/images/logo_cent_goth.png" id="logo" title="test"></div>
 	<!-- Shopping Cart -->
 	<% if user_signed_in? %>
 	<div id="cart_border" class="round"><a href='' class="cart_toggle">Show cart</a></div>
-	<div id="sidebar" style="display:none;">
-		<h2 id="shopping_title">Your Course Cart</h2>
+	<div id="sidebar" style="display:none;" class="round">
+		<h2 id="shopping_title">Your Course Cart</h2> 
+		<span id="bar"> | </span>
+		<a href='' id="free_cart" style:"display:none">Free cart from screen</a>
+		<a href='' id="fix_cart" style:"display:none">Re-fix cart to screen</a>
 		<a href='' id="hide_cart">Hide [X]</a>
 		<div id="cart" class="round">
 		<% if @cart %>
@@ -59,10 +62,9 @@
 		<div class="lightbox_back">
 			<div class="cal_lightbox_front">
 				<span class="cal_lightbox_close"><a href='' id="close_cal">CLOSE [X]</a></span>
-
 				<div id="cal_header_div">Course Calendar</div> |
-				<%= link_to "Refresh calendar", courses_path(:cal_on=>1), :id=> "cal_classes_refresh", :remote => true %> |
-				<a href='' class="cart_toggle">Show cart</a>
+				<%= link_to "Refresh calendar", courses_path(:cal_on=>1), :id=> "cal_classes_refresh", :remote => true %> 
+				<span id="cal_cart_toggle"><a href='' class="cart_toggle" id="cal_cart">SHOW CART</a> | </span>
 				<div id="cal_wrapper" class="round">
 					<%= render :partial => 'courses_main_cal' %>
 				</div>

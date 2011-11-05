@@ -215,7 +215,7 @@ body {
 			}
 			
 			#name_search, #search_name_like {	
-				@include name_search_width;
+				width:245px;
 			}
 			
 			#instructor_search, #search_instructor_like {
@@ -224,7 +224,7 @@ body {
 			}
 			
 			#day_search, #search_day_like {
-				@include day_width;
+				width:45px;
 			}
 			
 			#tod_search, #search_tod_like {
@@ -232,7 +232,7 @@ body {
 			}
 			
 			#units_search, #search_units_like {
-				@include units_width;
+				width:47.5px;
 				margin-right:$mbc + 6px;
 			}
 
@@ -284,7 +284,7 @@ div#first_row {
 /* Header and Body */
 
 #name_header, .name_body {
-	width:220px;
+	width:210px;
 	max-height:50px;
 	display:inline-block;
 }
@@ -307,7 +307,7 @@ div#first_row {
 }
 
 #day_header, .day_body {
-	@include day_width;
+	width:45px;
 	display:inline-block;
 	margin-right:$mbc;
 }
@@ -449,6 +449,7 @@ table#yls{
 	height:45px;
 	position:relative;
 	right:10px;
+	margin-bottom:1px;
 }
 
 #logo_wrapper {
@@ -557,7 +558,7 @@ hr#border_line {
 	width:55px;
 	border-top:1px solid white;
 	position: relative;
-	left:98px;
+	left:88px;
 }
 
 #units_range_title, #units_range {
@@ -631,6 +632,19 @@ hr#border_line {
 	overflow:auto;
 	width: 83%;
 	bottom:10%;
+	border:5px solid #EFEFEF;
+}
+
+.faq_lightbox_front {
+	padding: 10px;
+	position: relative;
+	background-color:#1F5168;
+	top: 18%;
+	left: 10%;
+	z-index: 60;
+	max-height:50em;
+	overflow:auto;
+	width: 75%;
 	border:5px solid #EFEFEF;
 }
 
@@ -742,15 +756,13 @@ nav, #cart_border, #see_calendar {
 
  
 
-
-
 /*About Page */
 
 #about {
 	font-size:1.05em;
 }
 
-#about_header {
+#about_header, #faq_header {
 	margin-bottom:15px;
 }
 
@@ -758,13 +770,28 @@ nav, #cart_border, #see_calendar {
 	font-size:14px;
 }
 
-#about_wrapper {
+#about_wrapper, #faq_wrapper {
 	font-size:13px;
 	padding:8px;
 	
 	li{
 		margin: 15px 0 15px 30px;
 	}
+}
+
+#faq_wrapper div {
+	margin: 5px 0 5px 0px;
+	padding: 5px 0px 5px 5px;
+}
+
+.faq_q {
+	font-size:110%;
+	margin-bottom:13px;
+}
+
+.faq_a {
+	margin-bottom:13px;
+	line-height:18px;
 }
 
 #contact {
@@ -904,7 +931,7 @@ div #sign_in_button {
 
 .marked {
 	height:84px;
-	background-color:#00151F;
+	background-color:#00374F;
 	z-index:30;
 	border:1px solid white;
 	float:left;
@@ -924,14 +951,34 @@ div #sign_in_button {
 #cal_refresh {
 }
 
+.class_name, .for_tooltip {
+	font-size:105%;
+}
+
 .class_time {
+	font-size:95%;
+	margin-top:2px;
 	display:inline-block;
-	font-size:150%;
 }
 
 #close_cal {
 	display:inline-block;
 	position:relative;
-	right:9px;
+	right:32px;
 }
 
+.tooltip {
+	display:none;
+	font-size:12px;
+	height:70px;
+	width:160px;
+	padding:25px;
+	color:#fff;	
+}
+
+#cal_cart_toggle {
+	display:inline-block;
+	float:right;
+	position:relative;
+	margin-right:36px;
+}

@@ -1,5 +1,67 @@
 $(document).ready(function() {
+	
+	$('#free_cart, #fix_cart, #bar').hide();
+		
+	$('#free_cart').live('click', function(e) {
+		var position_free = $('#sidebar').position();
+		$('#sidebar').css({
+			'left': position_free.left, 
+			'top': position_free.top,
+			'position': 'absolute'
+		});
+		$('#sidebar').draggable({disabled: false});
+		$('#sidebar').css('cursor', 'move');
+		$(this).hide();
+		$('#fix_cart').show();
+		e.preventDefault();
+	});
+	
+	$('#fix_cart').live('click', function(e) {
+		var position_fix = $('#sidebar').position();
+		$('#sidebar').css({
+			'left': position_fix.left, 
+			'top': position_fix.top,
+			'position': 'fixed'
+		});
+		$('#sidebar').draggable({ disabled: true});
+		$('#sidebar').css('cursor', 'auto');
+		$(this).hide();
+		$('#free_cart').show();
+		e.preventDefault();
+	})
+	
+	$('.cal_toggle').click(function() {
+		$('#free_cart').show();
+		$('#bar').show();
+	});
+	
+	$('#close_cal').click(function() {
+		$('#free_cart').hide();
+		$('#fix_cart').hide();
+		$('#bar').hide();
+		$('#sidebar').css({
+			'left': '685px', 
+			'top': '27px',
+			'position': 'fixed',
+			'cursor':'auto'
+		});
+		$('#sidebar').draggable({disabled: false});
+	});
 
+	$('.faq_a').hide();
+	$('.faq_a:first').show();
+	
+	$('.faq_q').click(function(e) {
+		$(this).next('.faq_a').slideToggle();
+		$(this).next('.faq_a').siblings('.faq_a').slideUp();
+		e.preventDefault();
+	 });
+
+	
+//	$('#accordion').accordion();
+	
+	$('.for_tooltip').tooltip();
+	
  	/*horizontal bars in the courses table */	
 	$('.other_rows:even').addClass('zebra');
 	
@@ -48,7 +110,9 @@ $(document).ready(function() {
 	/* For cart_add button disappear */
 	$('.cart_add').live('click', function () {
 		$(this).fadeOut();
-		$('div#sidebar').show(500);
+		if($('div#sidebar').attr('style') === 'display:none;') {
+			$('div#sidebar').show('slide', {direction:'right'});
+		}
 	});
 	
 	/*For hiding the cart */
