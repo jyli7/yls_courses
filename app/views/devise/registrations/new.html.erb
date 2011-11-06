@@ -5,7 +5,7 @@
 				<p class="notice"><%= notice %></p>
 				<h2 id="sign_up">Sign up</h2>
 				<p class="alert"><%= alert %></p>
-				<div id="assurance_msg">Your email is for registration/sign-in purposes only, and will not be used in any other way. (We wont't send a confirmation e-mail, even)</div> 
+				<div class="assurance_msg">Your email is for registration/sign-in purposes only, and will not be used in any other way.</div>
 				<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 				  <%= devise_error_messages! %>
 				  <div><%= f.label :email %><br />
@@ -16,7 +16,6 @@
 
 				  <div><%= f.label :password_confirmation %><br />
 				  <%= f.password_field :password_confirmation %></div>
-
 				  <div id="sign_up_button"><%= f.submit "Sign up" %></div>
 				<% end %>
 			<%= render :partial => "devise/shared/links" %>

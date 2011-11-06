@@ -4,7 +4,7 @@
 <% if cart.lower_bound == cart.upper_bound %>
 	<div id='units_range'><%= cart.lower_bound %></div>
 <% else %>
-	<div id='units_range'><%= cart.lower_bound %> - <%= cart.upper_bound %></div>
+	<div id='units_range'><%= cart.lower_bound %>-<%= cart.upper_bound %></div>
 <% end %>
 <br>
 <%= link_to "See calendar view", courses_path(:cal_on => 1), :class=>"cal_toggle", :remote => true %>

@@ -126,7 +126,7 @@ h2 {
 	right:300px;
 }
 
-#assurance_msg {
+.assurance_msg {
 	width:300px;
 	font-size:90%;
 }
@@ -557,7 +557,7 @@ hr#border_line {
 	border-top:1px solid white;
 	display:inline-block;
 	position:relative;
-	left:58px;
+	left:70px;
 	width:180px;
 	margin:7px 0 10px 0;
 }
@@ -568,7 +568,7 @@ hr#border_line {
 	width:55px;
 	border-top:1px solid white;
 	position: relative;
-	left:88px;
+	left:100px;
 }
 
 #units_range_title, #units_range {
@@ -656,6 +656,11 @@ hr#border_line {
 	width: 75%;
 	border:5px solid #EFEFEF;
 	z-index: 70;
+}
+
+#about_lightbox_front {
+	left: 15%;
+	width: 65%;
 }
 
 

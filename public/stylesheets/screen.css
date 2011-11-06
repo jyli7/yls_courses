@@ -118,7 +118,7 @@ h2 {
 }
 
 /* line 129, ../../app/stylesheets/screen.scss */
-#assurance_msg {
+.assurance_msg {
   width: 300px;
   font-size: 90%;
 }
@@ -565,7 +565,7 @@ hr#border_line {
   border-top: 1px solid white;
   display: inline-block;
   position: relative;
-  left: 58px;
+  left: 70px;
   width: 180px;
   margin: 7px 0 10px 0;
 }
@@ -577,7 +577,7 @@ hr#border_line {
   width: 55px;
   border-top: 1px solid white;
   position: relative;
-  left: 88px;
+  left: 100px;
 }
 
 /* line 574, ../../app/stylesheets/screen.scss */
@@ -677,7 +677,13 @@ hr#border_line {
   z-index: 70;
 }
 
-/* line 662, ../../app/stylesheets/screen.scss */
+/* line 661, ../../app/stylesheets/screen.scss */
+#about_lightbox_front {
+  left: 15%;
+  width: 65%;
+}
+
+/* line 667, ../../app/stylesheets/screen.scss */
 .cal_lightbox_close, .lightbox_close {
   font-color: gray;
   position: relative;
@@ -685,44 +691,44 @@ hr#border_line {
 }
 
 /* show course page */
-/* line 669, ../../app/stylesheets/screen.scss */
+/* line 674, ../../app/stylesheets/screen.scss */
 #show_header {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-/* line 675, ../../app/stylesheets/screen.scss */
+/* line 680, ../../app/stylesheets/screen.scss */
 #show_eval_header {
   font-style: italic;
   font-size: 13px;
   margin-bottom: 1em;
 }
 
-/* line 681, ../../app/stylesheets/screen.scss */
+/* line 686, ../../app/stylesheets/screen.scss */
 .indiv_eval_link {
   display: inline-block;
   width: 90px;
 }
 
-/* line 687, ../../app/stylesheets/screen.scss */
+/* line 692, ../../app/stylesheets/screen.scss */
 .prof_name {
   display: inline-block;
 }
 
-/* line 691, ../../app/stylesheets/screen.scss */
+/* line 696, ../../app/stylesheets/screen.scss */
 img {
   border: none;
 }
 
-/* line 695, ../../app/stylesheets/screen.scss */
+/* line 700, ../../app/stylesheets/screen.scss */
 img#arrow {
   margin-left: 3px;
   margin-top: 10px;
   margin-bottom: -4px;
 }
 
-/* line 702, ../../app/stylesheets/screen.scss */
+/* line 707, ../../app/stylesheets/screen.scss */
 #cart_border, #eval_toggle_wrapper, #info_toggle_wrapper, #see_calendar {
   position: fixed;
   left: 1080px;
@@ -732,7 +738,7 @@ img#arrow {
   font-size: 13px;
 }
 
-/* line 711, ../../app/stylesheets/screen.scss */
+/* line 716, ../../app/stylesheets/screen.scss */
 #cart_border, #see_calendar {
   width: 110px;
   text-align: center;
@@ -740,115 +746,115 @@ img#arrow {
   top: 27px;
 }
 
-/* line 718, ../../app/stylesheets/screen.scss */
+/* line 723, ../../app/stylesheets/screen.scss */
 #eval_toggle_wrapper {
   top: 72px;
 }
 
-/* line 722, ../../app/stylesheets/screen.scss */
+/* line 727, ../../app/stylesheets/screen.scss */
 #info_toggle_wrapper {
   top: 72px;
 }
 
-/* line 726, ../../app/stylesheets/screen.scss */
+/* line 731, ../../app/stylesheets/screen.scss */
 #see_calendar {
   top: 160px;
 }
 
-/* line 730, ../../app/stylesheets/screen.scss */
+/* line 735, ../../app/stylesheets/screen.scss */
 #eval_toggle_td {
   padding: 10px 0 5px 0;
   text-align: center;
 }
 
-/* line 735, ../../app/stylesheets/screen.scss */
+/* line 740, ../../app/stylesheets/screen.scss */
 #info_toggle_td {
   padding: 5px 0 10px 0;
   text-align: center;
   border-bottom: 1px solid white;
 }
 
-/* line 741, ../../app/stylesheets/screen.scss */
+/* line 746, ../../app/stylesheets/screen.scss */
 nav, #cart_border, #see_calendar {
   padding: 8px 6px 8px 6px;
   font-size: 13px;
   float: right;
 }
 
-/* line 747, ../../app/stylesheets/screen.scss */
+/* line 752, ../../app/stylesheets/screen.scss */
 #legend img {
   vertical-align: top;
 }
 
-/* line 751, ../../app/stylesheets/screen.scss */
+/* line 756, ../../app/stylesheets/screen.scss */
 #legend {
   margin: 2px 0 0 0;
   padding-bottom: 5px;
 }
 
-/* line 756, ../../app/stylesheets/screen.scss */
+/* line 761, ../../app/stylesheets/screen.scss */
 #legend_gcal, #legend_eval, #legend_cart {
   position: relative;
   bottom: 5px;
   padding: 0 2px 0px 8px;
 }
 
-/* line 763, ../../app/stylesheets/screen.scss */
+/* line 768, ../../app/stylesheets/screen.scss */
 #sign_up, #sign_in {
   margin-top: 0px;
 }
 
 /*About Page */
-/* line 771, ../../app/stylesheets/screen.scss */
+/* line 776, ../../app/stylesheets/screen.scss */
 #about {
   font-size: 1.05em;
 }
 
-/* line 775, ../../app/stylesheets/screen.scss */
+/* line 780, ../../app/stylesheets/screen.scss */
 #about_header, #faq_header {
   margin-bottom: 15px;
 }
 
-/* line 779, ../../app/stylesheets/screen.scss */
+/* line 784, ../../app/stylesheets/screen.scss */
 #about_p {
   font-size: 14px;
 }
 
-/* line 783, ../../app/stylesheets/screen.scss */
+/* line 788, ../../app/stylesheets/screen.scss */
 #about_wrapper, #faq_wrapper {
   font-size: 13px;
   padding: 8px;
 }
-/* line 787, ../../app/stylesheets/screen.scss */
+/* line 792, ../../app/stylesheets/screen.scss */
 #about_wrapper li, #faq_wrapper li {
   margin: 15px 0 15px 30px;
 }
 
-/* line 792, ../../app/stylesheets/screen.scss */
+/* line 797, ../../app/stylesheets/screen.scss */
 #faq_wrapper div {
   margin: 5px 0 5px 0px;
   padding: 5px 0px 5px 5px;
 }
 
-/* line 797, ../../app/stylesheets/screen.scss */
+/* line 802, ../../app/stylesheets/screen.scss */
 .faq_q {
   font-size: 110%;
   margin-bottom: 13px;
 }
 
-/* line 802, ../../app/stylesheets/screen.scss */
+/* line 807, ../../app/stylesheets/screen.scss */
 .faq_a {
   margin-bottom: 13px;
   line-height: 18px;
 }
 
-/* line 807, ../../app/stylesheets/screen.scss */
+/* line 812, ../../app/stylesheets/screen.scss */
 #contact {
   margin: 20px 0 0 0;
 }
 
 /*Sign Up Page*/
-/* line 813, ../../app/stylesheets/screen.scss */
+/* line 818, ../../app/stylesheets/screen.scss */
 .form_wrapper {
   padding: 8px 0 10px 25px;
   margin: 5px 0 0 10px;
@@ -856,46 +862,46 @@ nav, #cart_border, #see_calendar {
   background-color: #2D647F;
   font-size: 105%;
 }
-/* line 820, ../../app/stylesheets/screen.scss */
+/* line 825, ../../app/stylesheets/screen.scss */
 .form_wrapper div {
   margin: 15px 0 5px 0;
 }
-/* line 824, ../../app/stylesheets/screen.scss */
+/* line 829, ../../app/stylesheets/screen.scss */
 .form_wrapper a {
   display: inline-block;
   margin-bottom: 5px;
 }
 
-/* line 831, ../../app/stylesheets/screen.scss */
+/* line 836, ../../app/stylesheets/screen.scss */
 #sign_up_button {
   margin: 10px 0 10px 0;
 }
 
-/* line 835, ../../app/stylesheets/screen.scss */
+/* line 840, ../../app/stylesheets/screen.scss */
 div #sign_in_button {
   margin: 5px 0 10px 0;
 }
 
-/* line 839, ../../app/stylesheets/screen.scss */
+/* line 844, ../../app/stylesheets/screen.scss */
 .eval_shadow, .prof_name {
   margin-bottom: 5px;
 }
 
-/* line 843, ../../app/stylesheets/screen.scss */
+/* line 848, ../../app/stylesheets/screen.scss */
 #no_courses {
   font-style: italic;
   font-size: 105%;
   margin-left: 4px;
 }
 
-/* line 849, ../../app/stylesheets/screen.scss */
+/* line 854, ../../app/stylesheets/screen.scss */
 .hide_search, #show_search {
   display: inline-block;
   position: relative;
   left: 705px;
 }
 
-/* line 855, ../../app/stylesheets/screen.scss */
+/* line 860, ../../app/stylesheets/screen.scss */
 .hide_search_img {
   display: inline-block;
   position: relative;
@@ -904,7 +910,7 @@ div #sign_in_button {
 }
 
 /* Calendar */
-/* line 864, ../../app/stylesheets/screen.scss */
+/* line 869, ../../app/stylesheets/screen.scss */
 #cal_wrapper {
   height: 582px;
   width: 970px;
@@ -913,7 +919,7 @@ div #sign_in_button {
   padding: 0 10px 0 10px;
 }
 
-/* line 872, ../../app/stylesheets/screen.scss */
+/* line 877, ../../app/stylesheets/screen.scss */
 #cal_header {
   background-color: #2d647f;
   clear: both;
@@ -923,7 +929,7 @@ div #sign_in_button {
   float: right;
 }
 
-/* line 881, ../../app/stylesheets/screen.scss */
+/* line 886, ../../app/stylesheets/screen.scss */
 .day {
   float: left;
   text-align: center;
@@ -932,12 +938,12 @@ div #sign_in_button {
   margin-right: 10px;
 }
 
-/* line 890, ../../app/stylesheets/screen.scss */
+/* line 895, ../../app/stylesheets/screen.scss */
 .day#friday {
   margin-right: 0px;
 }
 
-/* line 894, ../../app/stylesheets/screen.scss */
+/* line 899, ../../app/stylesheets/screen.scss */
 #hour_header_wrapper {
   width: 65px;
   float: left;
@@ -945,32 +951,32 @@ div #sign_in_button {
   margin-top: 2px;
 }
 
-/* line 901, ../../app/stylesheets/screen.scss */
+/* line 906, ../../app/stylesheets/screen.scss */
 #week_hour_rows {
   float: right;
 }
 
-/* line 905, ../../app/stylesheets/screen.scss */
+/* line 910, ../../app/stylesheets/screen.scss */
 .day_hour_rows {
   float: right;
 }
 
-/* line 910, ../../app/stylesheets/screen.scss */
+/* line 915, ../../app/stylesheets/screen.scss */
 .hour_header {
   padding: 0px 0 28px 0;
 }
 
-/* line 914, ../../app/stylesheets/screen.scss */
+/* line 919, ../../app/stylesheets/screen.scss */
 .hour_header#hour_8 {
   padding: 36px 0 30px 0;
 }
 
-/* line 918, ../../app/stylesheets/screen.scss */
+/* line 923, ../../app/stylesheets/screen.scss */
 .hour_header#hour_9 {
   padding: 0px 0 0px 0;
 }
 
-/* line 922, ../../app/stylesheets/screen.scss */
+/* line 927, ../../app/stylesheets/screen.scss */
 .hour {
   height: 39px;
   border-top: 1px solid white;
@@ -979,22 +985,22 @@ div #sign_in_button {
   z-index: 20;
 }
 
-/* line 930, ../../app/stylesheets/screen.scss */
+/* line 935, ../../app/stylesheets/screen.scss */
 #M8_PM, #T8_PM, #W8_PM, #Th8_PM, #F8_PM {
   border-bottom: 1px solid white;
 }
 
-/* line 934, ../../app/stylesheets/screen.scss */
+/* line 939, ../../app/stylesheets/screen.scss */
 .day, .hour {
   width: 170px;
 }
 
-/* line 938, ../../app/stylesheets/screen.scss */
+/* line 943, ../../app/stylesheets/screen.scss */
 .first_hour {
   margin-top: 35px;
 }
 
-/* line 942, ../../app/stylesheets/screen.scss */
+/* line 947, ../../app/stylesheets/screen.scss */
 .marked {
   height: 84px;
   background-color: #00374F;
@@ -1008,32 +1014,32 @@ div #sign_in_button {
   word-wrap: break-word;
 }
 
-/* line 955, ../../app/stylesheets/screen.scss */
+/* line 960, ../../app/stylesheets/screen.scss */
 #cal_header_div {
   margin-bottom: 2px;
   font-size: 135%;
   display: inline-block;
 }
 
-/* line 964, ../../app/stylesheets/screen.scss */
+/* line 969, ../../app/stylesheets/screen.scss */
 .class_name, .for_tooltip {
   font-size: 105%;
 }
 
-/* line 968, ../../app/stylesheets/screen.scss */
+/* line 973, ../../app/stylesheets/screen.scss */
 .class_time {
   font-size: 95%;
   margin-top: 2px;
   display: inline-block;
 }
 
-/* line 974, ../../app/stylesheets/screen.scss */
+/* line 979, ../../app/stylesheets/screen.scss */
 #close_cal {
   display: inline-block;
   float: right;
 }
 
-/* line 979, ../../app/stylesheets/screen.scss */
+/* line 984, ../../app/stylesheets/screen.scss */
 #cal_cart_toggle {
   display: inline-block;
   float: right;
@@ -1041,7 +1047,7 @@ div #sign_in_button {
   margin-right: 5px;
 }
 
-/* line 987, ../../app/stylesheets/screen.scss */
+/* line 992, ../../app/stylesheets/screen.scss */
 .tooltip {
   display: none;
   font-size: 12px;
