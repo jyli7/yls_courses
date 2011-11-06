@@ -114,12 +114,21 @@ h2 {
 	line-height:140%;
 }
 
-#hello_message {
+.hello_message {
 	position: relative;
 	display: inline-block;
 	float: right;
 	bottom:25px;
 	right:245px;
+}
+
+#sign_in_for_cart {
+	right:300px;
+}
+
+#assurance_msg {
+	width:300px;
+	font-size:90%;
 }
 
 .on_page_color {

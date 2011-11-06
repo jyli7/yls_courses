@@ -6,9 +6,9 @@
 
 	<!-- Signed in message -->
 	<% if user_signed_in? %>
-		<div id="hello_message"><%= @user.email %> is signed in</div>
+		<div class="hello_message"><%= @user.email %> is signed in</div>
 	<% else %>
-		<div id="hello_message">Please sign in to access cart</div>
+		<div class="hello_message" id="sign_in_for_cart">Please sign in to access cart</div>
 	<% end %>
 	
 	<!-- Header -->

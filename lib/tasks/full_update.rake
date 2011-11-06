@@ -162,8 +162,7 @@ task :get_evals => :environment do
     text = text.join('\n')
 
     for course in Course.all
-      #      eval = /\(([0-9]+), ([0-9]+)\)">#{course.name}<\/a>&nbsp;([^<]+)/m.match text    
-      eval = /\(([0-9]+), ([0-9]+)\)">#{course.name[0..2]}.*#{course.name[-3..-1]}<\/a>&nbsp;([^<]+)/m.match text
+      eval = /\(([0-9]+), ([0-9]+)\)">#{course.name[0..2]}[\w\s;&.]*#{course.name[-2..-1]}<\/a>&nbsp;([^<]+)/m.match text
       if eval
         eval_a = [eval[1], eval[2], eval[3]]
 
@@ -178,7 +177,8 @@ task :get_evals => :environment do
         else
           course.term_code << eval_a[1]
         end
-
+        
+        #format the matched string so that it fits the format of the url
         if eval_a[2]
           eval_a[2].strip!.sub!(/\\n\s*/, '').gsub!(/,&nbsp;\s*\\n\s*/, ', ')
         end   
@@ -205,7 +205,7 @@ task :get_evals => :environment do
     text = text.join('\n')
 
     for course in Course.all    
-      eval = /\(([0-9]+), ([0-9]+)\)">#{course.name[0..2]}.*#{course.name[-3..-1]}<\/a>&nbsp;([^<]+)/m.match text
+      eval = /\(([0-9]+), ([0-9]+)\)">#{course.name[0..2]}[\w\s;&.]*#{course.name[-2..-1]}<\/a>&nbsp;([^<]+)/m.match text
       if eval
         eval_a = [eval[1], eval[2], eval[3]]
 
