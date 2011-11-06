@@ -279,7 +279,7 @@ div#first_row {
 	font-size:115%;
 	border-bottom: 2px solid white;
 	background-color:#1F5168;
-	z-index:50;
+	z-index:10;
 }
 
 /* Header and Body */
@@ -606,7 +606,7 @@ hr#border_line {
 	left:0;
 	width:100%;
 	height:100%;
-	z-index: 50;
+	z-index: 70;
 }
 
 .lightbox_front {
@@ -615,7 +615,7 @@ hr#border_line {
 	background-color:#1F5168;
 	top: 20%;
 	left: 25%;
-	z-index: 60;
+	z-index: 70;
 	max-height:50em;
 	overflow:auto;
 	width: 50%;
@@ -628,7 +628,7 @@ hr#border_line {
 	background-color:#1F5168;
 	top: 3%;
 	left: 5%;
-	z-index: 60;
+	z-index: 70;
 	max-height:50em;
 	overflow:auto;
 	width: 83%;
@@ -642,11 +642,11 @@ hr#border_line {
 	background-color:#1F5168;
 	top: 18%;
 	left: 10%;
-	z-index: 60;
 	max-height:50em;
 	overflow:auto;
 	width: 75%;
 	border:5px solid #EFEFEF;
+	z-index: 70;
 }
 
 
@@ -840,7 +840,7 @@ div #sign_in_button {
 .hide_search, #show_search {
 	display:inline-block;
 	position:relative;
-	left:825px;
+	left:705px;
 }
 
 .hide_search_img {
@@ -853,7 +853,7 @@ div #sign_in_button {
 /* Calendar */
 
 #cal_wrapper {
-	height: 590px;
+	height: 582px;
 	width: 970px;
 	background-color:#2D647F;
 	margin-top:5px;
@@ -907,7 +907,7 @@ div #sign_in_button {
 }
 
 .hour_header#hour_9 {
-	padding:0px 0 5px 0;
+	padding:0px 0 0px 0;
 }
 
 .hour {	
@@ -967,6 +967,14 @@ div #sign_in_button {
 	float:right;
 }
 
+#cal_cart_toggle {
+	display:inline-block;
+	float:right;
+	position:relative;
+	margin-right:5px;
+}
+
+
 .tooltip {
 	display:none;
 	font-size:12px;
@@ -974,11 +982,4 @@ div #sign_in_button {
 	width:160px;
 	padding:25px;
 	color:#fff;	
-}
-
-#cal_cart_toggle {
-	display:inline-block;
-	float:right;
-	position:relative;
-	margin-right:5px;
 }

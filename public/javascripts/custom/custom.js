@@ -1,5 +1,7 @@
 $(document).ready(function() {
-	
+
+	$('.for_tooltip').tooltip();
+
 	/*For freeing and fixing the cart */
 	$('#free_cart, #fix_cart, #bar').hide();
 		
@@ -34,9 +36,13 @@ $(document).ready(function() {
 		e.preventDefault();
 	})
 	
+	/*For tying the show_click and hide_click options to the calendar */
+	
 	$('.cal_toggle').click(function() {
-		$('#free_cart').show();
-		$('#bar').show();
+		setTimeout(function() {
+			$('#free_cart').show();
+			$('#bar').show();			
+		}, 1000);
 	});
 	
 	$('#close_cal').click(function() {
@@ -51,20 +57,6 @@ $(document).ready(function() {
 		});
 		$('#sidebar').draggable({disabled: false});
 	});
-
-	$('.faq_a').hide();
-	$('.faq_a:first').show();
-	
-	$('.faq_q').click(function(e) {
-		$(this).next('.faq_a').slideToggle();
-		$(this).next('.faq_a').siblings('.faq_a').slideUp();
-		e.preventDefault();
-	 });
-
-	
-//	$('#accordion').accordion();
-	
-	$('.for_tooltip').tooltip();
 	
  	/*horizontal bars in the courses table */	
 	$('.other_rows:even').addClass('zebra');
@@ -125,7 +117,7 @@ $(document).ready(function() {
 		return false;
 	});
 		
-	/*Lock the courses header */	
+	/*For locking the courses header */	
 	$(window).scroll(function() {
 		var doc_position = $(document).scrollTop();
 		if (doc_position >=279) {
@@ -179,10 +171,32 @@ $(document).ready(function() {
 		
 	$('.shadow').live('click', function(e) {
 		var url = $(this).attr('href') + ' .lightbox_back';
-		$('.lightbox#small').load(url).fadeIn(fade_speed);
+		$('.lightbox#small').load(url).fadeIn(fade_speed);		
 		e.preventDefault();
 	});
 
+	$('.faq_lightbox_front').change(function() {
+		$('.faq_a').hide();
+		$('.faq_a:first').show();
+		$('.faq_q').click(function(e) {
+			$(this).next('.faq_a').slideToggle();
+			$(this).next('.faq_a').siblings('.faq_a').slideUp();
+			e.preventDefault();
+		});			
+	})
+
+/*	$('.shadow#faq').click(function() {
+		setTimeout(function() {
+			$('.faq_a').hide();
+			$('.faq_a:first').show();
+			$('.faq_q').click(function(e) {
+				$(this).next('.faq_a').slideToggle();
+				$(this).next('.faq_a').siblings('.faq_a').slideUp();
+				e.preventDefault();
+			});	
+		}, 300);
+	});
+*/	
 	/* For fancy_box that holds course evaluations */
 	
 	$('a.eval_shadow').live('click', function(e) {
@@ -194,6 +208,13 @@ $(document).ready(function() {
 			width:      900,
 			title: 		"Course Evaluation"
            });
+		var nav_clone = $('#sb-nav').clone();
+		$('#sb-nav').remove();
+		$('#sb-title').prepend(nav_clone);
+		$('#sb-nav').css({
+			'position' : 'relative',
+			'top' : '5px'
+		});
 		e.preventDefault();
 		});
 

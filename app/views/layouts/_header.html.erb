@@ -2,7 +2,7 @@
 	<nav class="round">
 	    <div class="nav_item"><%= link_to "Home", root_path %></div>
 		<div class="nav_item"><%= link_to "About", '/about', :class => "shadow" %></div>
-		<div class="nav_item"><%= link_to "FAQ", '/faq', :class => "shadow" %></div>
+		<div class="nav_item"><%= link_to "FAQ", '/faq', :class => "shadow", :id => "faq" %></div>
 	    <% if user_signed_in? %>
 		    <div class="nav_item"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></div>
 	  	<% else %>
@@ -11,7 +11,7 @@
 	  	<% end %>
 	</nav>
 	<% if user_signed_in? %>
-		<div id="hello_message">You are signed in</div>
+		<div id="hello_message"><%= @user.email %> is signed in</div>
 	<% else %>
 		<div id="hello_message">Please sign in to access cart</div>
 	<% end %>

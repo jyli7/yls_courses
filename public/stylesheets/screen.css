@@ -272,7 +272,7 @@ div#first_row {
   font-size: 115%;
   border-bottom: 2px solid white;
   background-color: #1F5168;
-  z-index: 50;
+  z-index: 10;
 }
 
 /* Header and Body */
@@ -620,7 +620,7 @@ hr#border_line {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 50;
+  z-index: 70;
 }
 
 /* line 612, ../../app/stylesheets/screen.scss */
@@ -630,7 +630,7 @@ hr#border_line {
   background-color: #1F5168;
   top: 20%;
   left: 25%;
-  z-index: 60;
+  z-index: 70;
   max-height: 50em;
   overflow: auto;
   width: 50%;
@@ -644,7 +644,7 @@ hr#border_line {
   background-color: #1F5168;
   top: 3%;
   left: 5%;
-  z-index: 60;
+  z-index: 70;
   max-height: 50em;
   overflow: auto;
   width: 83%;
@@ -659,11 +659,11 @@ hr#border_line {
   background-color: #1F5168;
   top: 18%;
   left: 10%;
-  z-index: 60;
   max-height: 50em;
   overflow: auto;
   width: 75%;
   border: 5px solid #EFEFEF;
+  z-index: 70;
 }
 
 /* line 653, ../../app/stylesheets/screen.scss */
@@ -881,7 +881,7 @@ div #sign_in_button {
 .hide_search, #show_search {
   display: inline-block;
   position: relative;
-  left: 825px;
+  left: 705px;
 }
 
 /* line 846, ../../app/stylesheets/screen.scss */
@@ -895,7 +895,7 @@ div #sign_in_button {
 /* Calendar */
 /* line 855, ../../app/stylesheets/screen.scss */
 #cal_wrapper {
-  height: 590px;
+  height: 582px;
   width: 970px;
   background-color: #2D647F;
   margin-top: 5px;
@@ -956,7 +956,7 @@ div #sign_in_button {
 
 /* line 909, ../../app/stylesheets/screen.scss */
 .hour_header#hour_9 {
-  padding: 0px 0 5px 0;
+  padding: 0px 0 0px 0;
 }
 
 /* line 913, ../../app/stylesheets/screen.scss */
@@ -1023,6 +1023,14 @@ div #sign_in_button {
 }
 
 /* line 970, ../../app/stylesheets/screen.scss */
+#cal_cart_toggle {
+  display: inline-block;
+  float: right;
+  position: relative;
+  margin-right: 5px;
+}
+
+/* line 978, ../../app/stylesheets/screen.scss */
 .tooltip {
   display: none;
   font-size: 12px;
@@ -1030,12 +1038,4 @@ div #sign_in_button {
   width: 160px;
   padding: 25px;
   color: #fff;
-}
-
-/* line 979, ../../app/stylesheets/screen.scss */
-#cal_cart_toggle {
-  display: inline-block;
-  float: right;
-  position: relative;
-  margin-right: 5px;
 }
