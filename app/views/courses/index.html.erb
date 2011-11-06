@@ -3,11 +3,20 @@
 	<!-- Javascripts -->
 	<script type="text/javascript" src="javascripts/custom/custom.js"></script>
 	<script type="text/javascript" src="javascripts/custom/jquery.highlightFade.js"></script>
+
+	<!-- Signed in message -->
+	<% if user_signed_in? %>
+		<div id="hello_message"><%= @user.email %> is signed in</div>
+	<% else %>
+		<div id="hello_message">Please sign in to access cart</div>
+	<% end %>
 	
 	<!-- Header -->
 	<div id="logo_wrapper"><img src="/images/logo_cent_goth.png" id="logo" title="test"></div>
+
+
 	<!-- Shopping Cart -->
-	<% if user_signed_in? %>
+	<% if user_signed_in? %>	
 	<div id="cart_border" class="round"><a href='' class="cart_toggle">Show cart</a></div>
 	<div id="sidebar" style="display:none;" class="round">
 		<h2 id="shopping_title">Your Course Cart</h2> 

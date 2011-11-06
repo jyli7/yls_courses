@@ -10,9 +10,4 @@
 		 	<div class="nav_item"><%= link_to "Sign in", new_user_session_path, :class => "shadow" %></div>
 	  	<% end %>
 	</nav>
-	<% if user_signed_in? %>
-		<div id="hello_message"><%= @user.email %> is signed in</div>
-	<% else %>
-		<div id="hello_message">Please sign in to access cart</div>
-	<% end %>
 </header>
