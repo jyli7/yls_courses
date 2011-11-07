@@ -1,7 +1,7 @@
 <%= form_for(@search, :remote=> true) do |f| %>
 	<div class="field_container">
 		<div id="name_search" class="float_and_margin"><%= f.label :name_like, "Name" %></div>
-		<div><%= f.text_field :name_like, :class=>"float_and_margin" %></div>
+		<div><%= f.text_field :name_like, :class=>"float_and_margin", :id=>"name_input" %></div>
 	</div>
 	
 	<div class="field_container">				

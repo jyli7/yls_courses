@@ -162,7 +162,30 @@ task :get_evals => :environment do
     text = text.join('\n')
 
     for course in Course.all
-      eval = /\(([0-9]+), ([0-9]+)\)">#{course.name[0..2]}[\w\s;&.]*#{course.name[-2..-1]}<\/a>&nbsp;([^<]+)/m.match text
+      #to grab the first two letters of the second word
+      if course.name.include? " "
+        space_index = course.name.index(" ")
+        middle_str = course.name[space_index+1..space_index+2]
+      elsif course.name.include? "&"
+        space_index = course.name.index("&")
+        middle_str = course.name[space_index+1..space_index+2]
+      else 
+        middle_str = ""
+      end 
+ 
+      #to grab the first two letters of the third word
+      if not middle_str.blank? and (course.name.count " ") > 2
+          second_space_index = course.name.index(" ", space_index+1)
+          third_str = course.name[(second_space_index+1)]
+      else 
+        third_str = ""
+      end 
+      
+      if course.name == "Adv Landlord/Tenant Clinic"
+        puts course.name, course.name[0..2], middle_str, third_str, course.name[-1]
+      end 
+
+      eval = /\(([0-9]+), ([0-9]+)\)">#{course.name[0..2]}[^"]*#{middle_str}[^"]*#{third_str}[^"]*#{course.name[-1]}<\/a>&nbsp;([^<]+)/m.match text
       if eval
         eval_a = [eval[1], eval[2], eval[3]]
 
@@ -204,8 +227,27 @@ task :get_evals => :environment do
     text = file.readlines
     text = text.join('\n')
 
-    for course in Course.all    
-      eval = /\(([0-9]+), ([0-9]+)\)">#{course.name[0..2]}[\w\s;&.]*#{course.name[-2..-1]}<\/a>&nbsp;([^<]+)/m.match text
+    for course in Course.all
+      #to grab the first two letters of the second word
+      if course.name.include? " "
+        space_index = course.name.index(" ")
+        middle_str = course.name[space_index+1..space_index+2]
+      elsif course.name.include? "&"
+        space_index = course.name.index("&")
+        middle_str = course.name[space_index+1..space_index+2]
+      else 
+        middle_str = ""
+      end 
+ 
+      #to grab the first two letters of the third word
+      if not middle_str.blank? and (course.name.count " ") > 2
+          second_space_index = course.name.index(" ", space_index+1)
+          third_str = course.name[second_space_index+1]
+      else 
+        third_str = ""
+      end 
+      
+      eval = /\(([0-9]+), ([0-9]+)\)">#{course.name[0..2]}[^"]*#{middle_str}[^"]*#{third_str}[^"]*#{course.name[-1]}<\/a>&nbsp;([^<]+)/m.match text
       if eval
         eval_a = [eval[1], eval[2], eval[3]]
 
@@ -341,11 +383,9 @@ task :get_tod => :environment do
     end 
 
     colon_location = t.index(':') #determine the number of digits before :
-    print course.name, colon_location
 
     if colon_location == 1 #if course time has only 1 digit before the colon, e.g. (1:00)
       i = t[0].to_i
-      puts course.name
       if i >= 8 and i < 10
         course.update_attribute :tod, 'Morning (before 12)'
       elsif i >= 1 and i < 4

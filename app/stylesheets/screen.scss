@@ -299,7 +299,6 @@ div#first_row {
 	display:inline-block;
 }
 
-
 .course_name_click {
 	@include name_body_width;
 	white-space:normal;
@@ -547,6 +546,7 @@ hr#border_line {
 #current_item, .non_current_item {
 	display:inline-block;
 	width:350px;
+	margin-bottom:1px;
 }
 
 .non_current_item:last-child {
