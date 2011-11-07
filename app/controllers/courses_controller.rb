@@ -48,10 +48,8 @@ class CoursesController < ApplicationController
             if days.include? "h" #if one day is Thursday ("Th")
               if days.length == 2
                 @info[name] << ["Th"]
-              elsif days[0..1] == "TT"
-                @info[name] << ["T", "Th"]
-              elsif days[-1] == "F"
-                @info[name] << ["Th", "F"]  
+              else 
+                @info[name] << ["#{days[0]}", "Th"]
               end 
             else
               if days.length == 2
