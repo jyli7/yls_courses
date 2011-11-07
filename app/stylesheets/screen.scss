@@ -224,13 +224,12 @@ body {
 			}
 			
 			#name_search, #search_name_like {	
-				width:200px;
-				margin-right:45px;
+				width:205px;
+				margin-right:70px;
 			}
 			
 			#instructor_search, #search_instructor_like {
 				@include instructor_width;
-				margin-left:27px;
 			}
 			
 			#day_search, #search_day_like {
@@ -469,7 +468,7 @@ table#yls{
 /*Search Form */
 
 
-#search_button {
+.search_button {
 	margin: 8px 0 3px 0;
 	width:50px;
 	height:20px;
@@ -477,7 +476,7 @@ table#yls{
 	float:left;
 }
 
-div#course_list_link {
+div.course_list_link {
 	display:inline-block;
 	clear:both;
 	padding:5px 0 0 0;
@@ -996,4 +995,8 @@ div #sign_in_button {
 	width:160px;
 	padding:25px;
 	color:#fff;	
+}
+
+.default_text {
+	color:gray;
 }

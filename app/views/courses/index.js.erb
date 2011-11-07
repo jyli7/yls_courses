@@ -1,3 +1,4 @@
+//For toggling between information view and ratings view
 <% if @cal_on == 0 %>
 	//Append the other courses view to the existing courses view
 	var courses = $("<%= escape_javascript(render :partial => 'courses') %>");
@@ -24,6 +25,7 @@
 	$('.other_rows:even').addClass('zebra');
 <% end %>	
 
+//For bringing up the calendar 
 <% if @cal_on == 1 %>
 //For the calendar
 	$('#cal_wrapper').html("<%= escape_javascript(render :partial => 'courses_main_cal') %>");

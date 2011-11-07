@@ -420,6 +420,17 @@ task :get_units_alt => :environment do
   end 
 end 
 
+desc "Create a workload_alt so that blanks show up as greater than 10"
+task :get_workload_alt => :environment do
+  for course in Course.all
+    if course.workload.blank?
+      course.update_attribute :workload_alt, 11.0
+    else 
+      course.update_attribute :workload_alt, course.workload
+    end 
+  end 
+end   
+
 desc "Get a day_num, so that sort is based on days of week, not alphabet"
 task :day_sort_fix => :environment do
   days = ['M', 'T', 'W', 'Th', 'F']
@@ -522,6 +533,6 @@ task :get_other_evals => :environment do
   end
 end 
 
-task :full_update => [:destroy_all_classes, :fetch_classes, :get_address, :get_evals, :get_descrip, :get_testing, :get_time_num, :get_tod, :change_units, :get_units_alt, :day_sort_fix, :limitations_shorten, :get_other_evals] do
+task :full_update => [:destroy_all_classes, :fetch_classes, :get_address, :get_evals, :get_descrip, :get_testing, :get_time_num, :get_tod, :change_units, :get_units_alt, :get_workload_alt, :day_sort_fix, :limitations_shorten, :get_other_evals] do
   puts "Full update complete!"
 end 

@@ -219,63 +219,62 @@ body div#container div#search_container .float_and_margin {
 }
 /* line 226, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #name_search, body div#container div#search_container #search_name_like {
-  width: 200px;
-  margin-right: 45px;
+  width: 205px;
+  margin-right: 70px;
 }
 /* line 231, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #instructor_search, body div#container div#search_container #search_instructor_like {
   width: 102.5px;
-  margin-left: 27px;
 }
-/* line 236, ../../app/stylesheets/screen.scss */
+/* line 235, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #day_search, body div#container div#search_container #search_day_like {
   width: 45px;
 }
-/* line 240, ../../app/stylesheets/screen.scss */
+/* line 239, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #tod_search, body div#container div#search_container #search_tod_like {
   width: 98px;
 }
-/* line 244, ../../app/stylesheets/screen.scss */
+/* line 243, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #units_search, body div#container div#search_container #search_units_like {
   width: 47.5px;
   margin-right: 21px;
 }
-/* line 249, ../../app/stylesheets/screen.scss */
+/* line 248, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #limitations_search, body div#container div#search_container #search_limitations_like {
   width: 62px;
   margin-right: 31px;
 }
-/* line 254, ../../app/stylesheets/screen.scss */
+/* line 253, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #exam_search, body div#container div#search_container #search_exam_type_like {
   width: 102.5px;
   margin-right: 19px;
 }
-/* line 259, ../../app/stylesheets/screen.scss */
+/* line 258, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #paper_search, body div#container div#search_container #search_paper_type_like {
   width: 80px;
 }
-/* line 263, ../../app/stylesheets/screen.scss */
+/* line 262, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #instructor_quality_search, body div#container div#search_container #classtime_value_search, body div#container div#search_container #workload_search {
   width: 158.75px;
 }
-/* line 267, ../../app/stylesheets/screen.scss */
+/* line 266, ../../app/stylesheets/screen.scss */
 body div#container div#search_container #search_classtime_value_gt, body div#container div#search_container #search_workload_lt, body div#container div#search_container #search_instructor_quality_gt {
   width: 18px;
 }
 
-/* line 274, ../../app/stylesheets/screen.scss */
+/* line 273, ../../app/stylesheets/screen.scss */
 #courses_body, #courses_evals_body {
   padding-bottom: 40px;
   margin-top: 10px;
 }
 
-/* line 279, ../../app/stylesheets/screen.scss */
+/* line 278, ../../app/stylesheets/screen.scss */
 .icons {
   width: 66.5px;
   display: inline-block;
 }
 
-/* line 284, ../../app/stylesheets/screen.scss */
+/* line 283, ../../app/stylesheets/screen.scss */
 div#first_row {
   padding: 5px 0 5px 5px;
   display: inline-block;
@@ -287,101 +286,101 @@ div#first_row {
 }
 
 /* Header and Body */
-/* line 296, ../../app/stylesheets/screen.scss */
+/* line 295, ../../app/stylesheets/screen.scss */
 #name_header, .name_body {
   width: 210px;
   max-height: 50px;
   display: inline-block;
 }
 
-/* line 302, ../../app/stylesheets/screen.scss */
+/* line 301, ../../app/stylesheets/screen.scss */
 .course_name_click {
   width: 215px;
   white-space: normal;
 }
 
-/* line 307, ../../app/stylesheets/screen.scss */
+/* line 306, ../../app/stylesheets/screen.scss */
 #icons_header {
   display: inline-block;
   width: 66.5px;
 }
 
-/* line 312, ../../app/stylesheets/screen.scss */
+/* line 311, ../../app/stylesheets/screen.scss */
 #instructor_header, .instructor_body {
   width: 105px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 318, ../../app/stylesheets/screen.scss */
+/* line 317, ../../app/stylesheets/screen.scss */
 #day_header, .day_body {
   width: 45px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 324, ../../app/stylesheets/screen.scss */
+/* line 323, ../../app/stylesheets/screen.scss */
 #time_header, .time_body {
   width: 98px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 330, ../../app/stylesheets/screen.scss */
+/* line 329, ../../app/stylesheets/screen.scss */
 #time_header {
   margin-right: 13px;
 }
 
-/* line 334, ../../app/stylesheets/screen.scss */
+/* line 333, ../../app/stylesheets/screen.scss */
 #units_header, .units_body {
   width: 45px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 340, ../../app/stylesheets/screen.scss */
+/* line 339, ../../app/stylesheets/screen.scss */
 #limitations_header, .limitations_body {
   width: 62px;
   display: inline-block;
   margin-right: 27px;
 }
 
-/* line 346, ../../app/stylesheets/screen.scss */
+/* line 345, ../../app/stylesheets/screen.scss */
 #exam_header, .exam_body {
   width: 102.5px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 352, ../../app/stylesheets/screen.scss */
+/* line 351, ../../app/stylesheets/screen.scss */
 #classtime_value_header, .classtime_value_body {
   width: 158.75px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 358, ../../app/stylesheets/screen.scss */
+/* line 357, ../../app/stylesheets/screen.scss */
 #instructor_quality_header, .instructor_quality_body {
   width: 158.75px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 364, ../../app/stylesheets/screen.scss */
+/* line 363, ../../app/stylesheets/screen.scss */
 #workload_header, .workload_body {
   width: 158.75px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 370, ../../app/stylesheets/screen.scss */
+/* line 369, ../../app/stylesheets/screen.scss */
 #paper_header, .paper_body {
   width: 60px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 376, ../../app/stylesheets/screen.scss */
+/* line 375, ../../app/stylesheets/screen.scss */
 .eval_bar {
   background-color: #00225F;
   border: 1px solid #7FEAFF;
@@ -389,65 +388,65 @@ div#first_row {
   height: 20px;
 }
 
-/* line 383, ../../app/stylesheets/screen.scss */
+/* line 382, ../../app/stylesheets/screen.scss */
 .eval_bar_cell {
   text-align: right;
   padding-right: 4px;
 }
 
 /* Search Box */
-/* line 391, ../../app/stylesheets/screen.scss */
+/* line 390, ../../app/stylesheets/screen.scss */
 #search_title, #shopping_title {
   display: inline-block;
   margin: 0 0 0 0;
 }
 
-/* line 396, ../../app/stylesheets/screen.scss */
+/* line 395, ../../app/stylesheets/screen.scss */
 #shopping_title {
   font-size: 1.5em;
 }
 
-/* line 400, ../../app/stylesheets/screen.scss */
+/* line 399, ../../app/stylesheets/screen.scss */
 #search_title {
   font-size: 135%;
 }
 
-/* line 410, ../../app/stylesheets/screen.scss */
+/* line 409, ../../app/stylesheets/screen.scss */
 #search_name_div {
   border: 1px solid white;
   width: 13em;
 }
 
 /* Typography */
-/* line 422, ../../app/stylesheets/screen.scss */
+/* line 421, ../../app/stylesheets/screen.scss */
 html {
   font-size: 100.01%;
 }
 
 /* Links */
-/* line 427, ../../app/stylesheets/screen.scss */
+/* line 426, ../../app/stylesheets/screen.scss */
 a {
   color: #7FEAFF;
   text-decoration: none;
 }
 
-/* line 432, ../../app/stylesheets/screen.scss */
+/* line 431, ../../app/stylesheets/screen.scss */
 a:hover {
   color: #EAF9F9;
   text-decoration: underline;
 }
 
-/* line 437, ../../app/stylesheets/screen.scss */
+/* line 436, ../../app/stylesheets/screen.scss */
 a:visited {
   color: #7FEAFF;
 }
 
-/* line 441, ../../app/stylesheets/screen.scss */
+/* line 440, ../../app/stylesheets/screen.scss */
 #first_row a:visited {
   color: #7FEAFF;
 }
 
-/* line 449, ../../app/stylesheets/screen.scss */
+/* line 448, ../../app/stylesheets/screen.scss */
 table#yls {
   font-size: 25px;
   width: 100%;
@@ -456,7 +455,7 @@ table#yls {
   border-bottom: 2px solid #FFFFFF;
 }
 
-/* line 457, ../../app/stylesheets/screen.scss */
+/* line 456, ../../app/stylesheets/screen.scss */
 #logo {
   height: 45px;
   position: relative;
@@ -464,15 +463,15 @@ table#yls {
   margin-bottom: 3px;
 }
 
-/* line 464, ../../app/stylesheets/screen.scss */
+/* line 463, ../../app/stylesheets/screen.scss */
 #logo_wrapper {
   border-bottom: 2px solid white;
   margin-bottom: 14px;
 }
 
 /*Search Form */
-/* line 472, ../../app/stylesheets/screen.scss */
-#search_button {
+/* line 471, ../../app/stylesheets/screen.scss */
+.search_button {
   margin: 8px 0 3px 0;
   width: 50px;
   height: 20px;
@@ -480,8 +479,8 @@ table#yls {
   float: left;
 }
 
-/* line 480, ../../app/stylesheets/screen.scss */
-div#course_list_link {
+/* line 479, ../../app/stylesheets/screen.scss */
+div.course_list_link {
   display: inline-block;
   clear: both;
   padding: 5px 0 0 0;
@@ -489,20 +488,20 @@ div#course_list_link {
   font-size: 1em;
 }
 
-/* line 488, ../../app/stylesheets/screen.scss */
+/* line 487, ../../app/stylesheets/screen.scss */
 .field_container {
   height: 35px;
 }
 
 /*horizontal bars */
-/* line 495, ../../app/stylesheets/screen.scss */
+/* line 494, ../../app/stylesheets/screen.scss */
 .zebra {
   padding: 2px 0 2px 0;
   background-color: #2d647f;
 }
 
 /* Round corners */
-/* line 502, ../../app/stylesheets/screen.scss */
+/* line 501, ../../app/stylesheets/screen.scss */
 .round {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -510,26 +509,26 @@ div#course_list_link {
 }
 
 /*Course Table */
-/* line 510, ../../app/stylesheets/screen.scss */
+/* line 509, ../../app/stylesheets/screen.scss */
 div#course_table {
   margin: 10px 0 0 0;
   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 }
 
-/* line 516, ../../app/stylesheets/screen.scss */
+/* line 515, ../../app/stylesheets/screen.scss */
 .other_rows {
   margin: 6px 0 0 0;
   padding: 2px 0 2px 5px;
 }
 
-/* line 521, ../../app/stylesheets/screen.scss */
+/* line 520, ../../app/stylesheets/screen.scss */
 .descrip_body {
   margin: 3px 0 0 0;
   padding: 0 0 2px 5px;
   display: none;
 }
 
-/* line 528, ../../app/stylesheets/screen.scss */
+/* line 527, ../../app/stylesheets/screen.scss */
 hr#border_line {
   margin-top: 0px;
   height: 0.5px;
@@ -537,31 +536,31 @@ hr#border_line {
   background-color: transparent;
 }
 
-/* line 536, ../../app/stylesheets/screen.scss */
+/* line 535, ../../app/stylesheets/screen.scss */
 .toggle_link_hide, .toggle_link_show {
   display: inline-block;
   float: right;
   margin-bottom: 5px;
 }
 
-/* line 542, ../../app/stylesheets/screen.scss */
+/* line 541, ../../app/stylesheets/screen.scss */
 .delete_line_item {
   display: inline-block;
 }
 
-/* line 546, ../../app/stylesheets/screen.scss */
+/* line 545, ../../app/stylesheets/screen.scss */
 #current_item, .non_current_item {
   display: inline-block;
   width: 350px;
   margin-bottom: 1px;
 }
 
-/* line 552, ../../app/stylesheets/screen.scss */
+/* line 551, ../../app/stylesheets/screen.scss */
 .non_current_item:last-child {
   margin-bottom: -20px;
 }
 
-/* line 556, ../../app/stylesheets/screen.scss */
+/* line 555, ../../app/stylesheets/screen.scss */
 #units_range_title {
   border-top: 1px solid white;
   display: inline-block;
@@ -571,7 +570,7 @@ hr#border_line {
   margin: 7px 0 10px 0;
 }
 
-/* line 565, ../../app/stylesheets/screen.scss */
+/* line 564, ../../app/stylesheets/screen.scss */
 #units_range {
   display: inline-block;
   border-top: 10px;
@@ -581,41 +580,41 @@ hr#border_line {
   left: 100px;
 }
 
-/* line 574, ../../app/stylesheets/screen.scss */
+/* line 573, ../../app/stylesheets/screen.scss */
 #units_range_title, #units_range {
   margin-top: 5px;
   padding-top: 3px;
 }
 
-/* line 579, ../../app/stylesheets/screen.scss */
+/* line 578, ../../app/stylesheets/screen.scss */
 #calendar_header, .calendar_body, #eval_header, .eval_body, #cart_header, .cart_body {
   display: inline-block;
   width: 20px;
   margin: 0 0 0 0;
 }
 
-/* line 585, ../../app/stylesheets/screen.scss */
+/* line 584, ../../app/stylesheets/screen.scss */
 .eval_body {
   margin-right: 2px;
 }
 
-/* line 589, ../../app/stylesheets/screen.scss */
+/* line 588, ../../app/stylesheets/screen.scss */
 #cart_header, .cart_body {
   width: 30px;
 }
 
-/* line 593, ../../app/stylesheets/screen.scss */
+/* line 592, ../../app/stylesheets/screen.scss */
 .units_body_cart {
   display: inline-block;
   margin-right: -10px;
 }
 
-/* line 598, ../../app/stylesheets/screen.scss */
+/* line 597, ../../app/stylesheets/screen.scss */
 .cart_add_hidden {
   display: none;
 }
 
-/* line 602, ../../app/stylesheets/screen.scss */
+/* line 601, ../../app/stylesheets/screen.scss */
 .gt_or_lt_sign {
   display: inline-block;
   float: left;
@@ -624,7 +623,7 @@ hr#border_line {
 }
 
 /*Lightbox */
-/* line 611, ../../app/stylesheets/screen.scss */
+/* line 610, ../../app/stylesheets/screen.scss */
 .lightbox_back {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
@@ -635,7 +634,7 @@ hr#border_line {
   z-index: 70;
 }
 
-/* line 621, ../../app/stylesheets/screen.scss */
+/* line 620, ../../app/stylesheets/screen.scss */
 .lightbox_front {
   padding: 10px;
   position: relative;
@@ -649,7 +648,7 @@ hr#border_line {
   border: 5px solid #EFEFEF;
 }
 
-/* line 634, ../../app/stylesheets/screen.scss */
+/* line 633, ../../app/stylesheets/screen.scss */
 .cal_lightbox_front {
   padding: 10px;
   position: relative;
@@ -664,7 +663,7 @@ hr#border_line {
   border: 5px solid #EFEFEF;
 }
 
-/* line 648, ../../app/stylesheets/screen.scss */
+/* line 647, ../../app/stylesheets/screen.scss */
 .faq_lightbox_front {
   padding: 10px;
   position: relative;
@@ -678,13 +677,13 @@ hr#border_line {
   z-index: 70;
 }
 
-/* line 661, ../../app/stylesheets/screen.scss */
+/* line 660, ../../app/stylesheets/screen.scss */
 #about_lightbox_front {
   left: 15%;
   width: 65%;
 }
 
-/* line 667, ../../app/stylesheets/screen.scss */
+/* line 666, ../../app/stylesheets/screen.scss */
 .cal_lightbox_close, .lightbox_close {
   font-color: gray;
   position: relative;
@@ -692,44 +691,44 @@ hr#border_line {
 }
 
 /* show course page */
-/* line 674, ../../app/stylesheets/screen.scss */
+/* line 673, ../../app/stylesheets/screen.scss */
 #show_header {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-/* line 680, ../../app/stylesheets/screen.scss */
+/* line 679, ../../app/stylesheets/screen.scss */
 #show_eval_header {
   font-style: italic;
   font-size: 13px;
   margin-bottom: 1em;
 }
 
-/* line 686, ../../app/stylesheets/screen.scss */
+/* line 685, ../../app/stylesheets/screen.scss */
 .indiv_eval_link {
   display: inline-block;
   width: 90px;
 }
 
-/* line 692, ../../app/stylesheets/screen.scss */
+/* line 691, ../../app/stylesheets/screen.scss */
 .prof_name {
   display: inline-block;
 }
 
-/* line 696, ../../app/stylesheets/screen.scss */
+/* line 695, ../../app/stylesheets/screen.scss */
 img {
   border: none;
 }
 
-/* line 700, ../../app/stylesheets/screen.scss */
+/* line 699, ../../app/stylesheets/screen.scss */
 img#arrow {
   margin-left: 3px;
   margin-top: 10px;
   margin-bottom: -4px;
 }
 
-/* line 707, ../../app/stylesheets/screen.scss */
+/* line 706, ../../app/stylesheets/screen.scss */
 #cart_border, #eval_toggle_wrapper, #info_toggle_wrapper, #see_calendar {
   position: fixed;
   left: 1080px;
@@ -739,7 +738,7 @@ img#arrow {
   font-size: 13px;
 }
 
-/* line 716, ../../app/stylesheets/screen.scss */
+/* line 715, ../../app/stylesheets/screen.scss */
 #cart_border, #see_calendar {
   width: 110px;
   text-align: center;
@@ -747,115 +746,115 @@ img#arrow {
   top: 27px;
 }
 
-/* line 723, ../../app/stylesheets/screen.scss */
+/* line 722, ../../app/stylesheets/screen.scss */
 #eval_toggle_wrapper {
   top: 72px;
 }
 
-/* line 727, ../../app/stylesheets/screen.scss */
+/* line 726, ../../app/stylesheets/screen.scss */
 #info_toggle_wrapper {
   top: 72px;
 }
 
-/* line 731, ../../app/stylesheets/screen.scss */
+/* line 730, ../../app/stylesheets/screen.scss */
 #see_calendar {
   top: 160px;
 }
 
-/* line 735, ../../app/stylesheets/screen.scss */
+/* line 734, ../../app/stylesheets/screen.scss */
 #eval_toggle_td {
   padding: 10px 0 5px 0;
   text-align: center;
 }
 
-/* line 740, ../../app/stylesheets/screen.scss */
+/* line 739, ../../app/stylesheets/screen.scss */
 #info_toggle_td {
   padding: 5px 0 10px 0;
   text-align: center;
   border-bottom: 1px solid white;
 }
 
-/* line 746, ../../app/stylesheets/screen.scss */
+/* line 745, ../../app/stylesheets/screen.scss */
 nav, #cart_border, #see_calendar {
   padding: 8px 6px 8px 6px;
   font-size: 13px;
   float: right;
 }
 
-/* line 752, ../../app/stylesheets/screen.scss */
+/* line 751, ../../app/stylesheets/screen.scss */
 #legend img {
   vertical-align: top;
 }
 
-/* line 756, ../../app/stylesheets/screen.scss */
+/* line 755, ../../app/stylesheets/screen.scss */
 #legend {
   margin: 2px 0 0 0;
   padding-bottom: 5px;
 }
 
-/* line 761, ../../app/stylesheets/screen.scss */
+/* line 760, ../../app/stylesheets/screen.scss */
 #legend_gcal, #legend_eval, #legend_cart {
   position: relative;
   bottom: 5px;
   padding: 0 2px 0px 8px;
 }
 
-/* line 768, ../../app/stylesheets/screen.scss */
+/* line 767, ../../app/stylesheets/screen.scss */
 #sign_up, #sign_in {
   margin-top: 0px;
 }
 
 /*About Page */
-/* line 776, ../../app/stylesheets/screen.scss */
+/* line 775, ../../app/stylesheets/screen.scss */
 #about {
   font-size: 1.05em;
 }
 
-/* line 780, ../../app/stylesheets/screen.scss */
+/* line 779, ../../app/stylesheets/screen.scss */
 #about_header, #faq_header {
   margin-bottom: 15px;
 }
 
-/* line 784, ../../app/stylesheets/screen.scss */
+/* line 783, ../../app/stylesheets/screen.scss */
 #about_p {
   font-size: 14px;
 }
 
-/* line 788, ../../app/stylesheets/screen.scss */
+/* line 787, ../../app/stylesheets/screen.scss */
 #about_wrapper, #faq_wrapper {
   font-size: 13px;
   padding: 8px;
 }
-/* line 792, ../../app/stylesheets/screen.scss */
+/* line 791, ../../app/stylesheets/screen.scss */
 #about_wrapper li, #faq_wrapper li {
   margin: 15px 0 15px 30px;
 }
 
-/* line 797, ../../app/stylesheets/screen.scss */
+/* line 796, ../../app/stylesheets/screen.scss */
 #faq_wrapper div {
   margin: 5px 0 5px 0px;
   padding: 5px 0px 5px 5px;
 }
 
-/* line 802, ../../app/stylesheets/screen.scss */
+/* line 801, ../../app/stylesheets/screen.scss */
 .faq_q {
   font-size: 110%;
   margin-bottom: 13px;
 }
 
-/* line 807, ../../app/stylesheets/screen.scss */
+/* line 806, ../../app/stylesheets/screen.scss */
 .faq_a {
   margin-bottom: 13px;
   line-height: 18px;
 }
 
-/* line 812, ../../app/stylesheets/screen.scss */
+/* line 811, ../../app/stylesheets/screen.scss */
 #contact {
   margin: 20px 0 0 0;
 }
 
 /*Sign Up Page*/
-/* line 818, ../../app/stylesheets/screen.scss */
+/* line 817, ../../app/stylesheets/screen.scss */
 .form_wrapper {
   padding: 8px 0 10px 25px;
   margin: 5px 0 0 10px;
@@ -863,46 +862,46 @@ nav, #cart_border, #see_calendar {
   background-color: #2D647F;
   font-size: 105%;
 }
-/* line 825, ../../app/stylesheets/screen.scss */
+/* line 824, ../../app/stylesheets/screen.scss */
 .form_wrapper div {
   margin: 15px 0 5px 0;
 }
-/* line 829, ../../app/stylesheets/screen.scss */
+/* line 828, ../../app/stylesheets/screen.scss */
 .form_wrapper a {
   display: inline-block;
   margin-bottom: 5px;
 }
 
-/* line 836, ../../app/stylesheets/screen.scss */
+/* line 835, ../../app/stylesheets/screen.scss */
 #sign_up_button {
   margin: 10px 0 10px 0;
 }
 
-/* line 840, ../../app/stylesheets/screen.scss */
+/* line 839, ../../app/stylesheets/screen.scss */
 div #sign_in_button {
   margin: 5px 0 10px 0;
 }
 
-/* line 844, ../../app/stylesheets/screen.scss */
+/* line 843, ../../app/stylesheets/screen.scss */
 .eval_shadow, .prof_name {
   margin-bottom: 5px;
 }
 
-/* line 848, ../../app/stylesheets/screen.scss */
+/* line 847, ../../app/stylesheets/screen.scss */
 #no_courses {
   font-style: italic;
   font-size: 105%;
   margin-left: 4px;
 }
 
-/* line 854, ../../app/stylesheets/screen.scss */
+/* line 853, ../../app/stylesheets/screen.scss */
 .hide_search, #show_search {
   display: inline-block;
   position: relative;
   left: 705px;
 }
 
-/* line 860, ../../app/stylesheets/screen.scss */
+/* line 859, ../../app/stylesheets/screen.scss */
 .hide_search_img {
   display: inline-block;
   position: relative;
@@ -911,7 +910,7 @@ div #sign_in_button {
 }
 
 /* Calendar */
-/* line 869, ../../app/stylesheets/screen.scss */
+/* line 868, ../../app/stylesheets/screen.scss */
 #cal_wrapper {
   height: 582px;
   width: 970px;
@@ -920,7 +919,7 @@ div #sign_in_button {
   padding: 0 10px 0 10px;
 }
 
-/* line 877, ../../app/stylesheets/screen.scss */
+/* line 876, ../../app/stylesheets/screen.scss */
 #cal_header {
   background-color: #2d647f;
   clear: both;
@@ -930,7 +929,7 @@ div #sign_in_button {
   float: right;
 }
 
-/* line 886, ../../app/stylesheets/screen.scss */
+/* line 885, ../../app/stylesheets/screen.scss */
 .day {
   float: left;
   text-align: center;
@@ -939,12 +938,12 @@ div #sign_in_button {
   margin-right: 10px;
 }
 
-/* line 895, ../../app/stylesheets/screen.scss */
+/* line 894, ../../app/stylesheets/screen.scss */
 .day#friday {
   margin-right: 0px;
 }
 
-/* line 899, ../../app/stylesheets/screen.scss */
+/* line 898, ../../app/stylesheets/screen.scss */
 #hour_header_wrapper {
   width: 65px;
   float: left;
@@ -952,32 +951,32 @@ div #sign_in_button {
   margin-top: 2px;
 }
 
-/* line 906, ../../app/stylesheets/screen.scss */
+/* line 905, ../../app/stylesheets/screen.scss */
 #week_hour_rows {
   float: right;
 }
 
-/* line 910, ../../app/stylesheets/screen.scss */
+/* line 909, ../../app/stylesheets/screen.scss */
 .day_hour_rows {
   float: right;
 }
 
-/* line 915, ../../app/stylesheets/screen.scss */
+/* line 914, ../../app/stylesheets/screen.scss */
 .hour_header {
   padding: 0px 0 28px 0;
 }
 
-/* line 919, ../../app/stylesheets/screen.scss */
+/* line 918, ../../app/stylesheets/screen.scss */
 .hour_header#hour_8 {
   padding: 36px 0 30px 0;
 }
 
-/* line 923, ../../app/stylesheets/screen.scss */
+/* line 922, ../../app/stylesheets/screen.scss */
 .hour_header#hour_9 {
   padding: 0px 0 0px 0;
 }
 
-/* line 927, ../../app/stylesheets/screen.scss */
+/* line 926, ../../app/stylesheets/screen.scss */
 .hour {
   height: 39px;
   border-top: 1px solid white;
@@ -986,22 +985,22 @@ div #sign_in_button {
   z-index: 20;
 }
 
-/* line 935, ../../app/stylesheets/screen.scss */
+/* line 934, ../../app/stylesheets/screen.scss */
 #M8_PM, #T8_PM, #W8_PM, #Th8_PM, #F8_PM {
   border-bottom: 1px solid white;
 }
 
-/* line 939, ../../app/stylesheets/screen.scss */
+/* line 938, ../../app/stylesheets/screen.scss */
 .day, .hour {
   width: 170px;
 }
 
-/* line 943, ../../app/stylesheets/screen.scss */
+/* line 942, ../../app/stylesheets/screen.scss */
 .first_hour {
   margin-top: 35px;
 }
 
-/* line 947, ../../app/stylesheets/screen.scss */
+/* line 946, ../../app/stylesheets/screen.scss */
 .marked {
   height: 84px;
   background-color: #00374F;
@@ -1015,32 +1014,32 @@ div #sign_in_button {
   word-wrap: break-word;
 }
 
-/* line 960, ../../app/stylesheets/screen.scss */
+/* line 959, ../../app/stylesheets/screen.scss */
 #cal_header_div {
   margin-bottom: 2px;
   font-size: 135%;
   display: inline-block;
 }
 
-/* line 969, ../../app/stylesheets/screen.scss */
+/* line 968, ../../app/stylesheets/screen.scss */
 .class_name, .for_tooltip {
   font-size: 105%;
 }
 
-/* line 973, ../../app/stylesheets/screen.scss */
+/* line 972, ../../app/stylesheets/screen.scss */
 .class_time {
   font-size: 95%;
   margin-top: 2px;
   display: inline-block;
 }
 
-/* line 979, ../../app/stylesheets/screen.scss */
+/* line 978, ../../app/stylesheets/screen.scss */
 #close_cal {
   display: inline-block;
   float: right;
 }
 
-/* line 984, ../../app/stylesheets/screen.scss */
+/* line 983, ../../app/stylesheets/screen.scss */
 #cal_cart_toggle {
   display: inline-block;
   float: right;
@@ -1048,7 +1047,7 @@ div #sign_in_button {
   margin-right: 5px;
 }
 
-/* line 992, ../../app/stylesheets/screen.scss */
+/* line 991, ../../app/stylesheets/screen.scss */
 .tooltip {
   display: none;
   font-size: 12px;
@@ -1056,4 +1055,9 @@ div #sign_in_button {
   width: 160px;
   padding: 25px;
   color: #fff;
+}
+
+/* line 1000, ../../app/stylesheets/screen.scss */
+.default_text {
+  color: gray;
 }

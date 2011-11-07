@@ -1,6 +1,28 @@
 $(document).ready(function() {
 
 	$('.for_tooltip').tooltip();
+	
+	/*For saving the search values after the search*/
+	$('.search_submit').live('click', function() {
+		var temp = $('#search_classtime_value_gt').val();
+		alert("hello");
+		console.log(temp);
+	});
+	
+	$('.course_search').load(function() {
+		$('#search_classtime_value_gt').attr('value', temp);
+	})
+	
+	/*For setting the cool default text focus/blur */
+	
+	$('.default_text').live('focus', function(){
+		$(this).val('');
+	});
+
+	$('.default_text').live('blur', function(){
+		if ($(this).val() === '') 
+			$(this).val($(this).attr('alt'));
+	});
 
 	/*For freeing and fixing the cart */
 	$('#free_cart, #fix_cart, #bar').hide();

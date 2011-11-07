@@ -6,6 +6,7 @@ class CoursesController < ApplicationController
   def index
     @search = Course.search(params[:search])
     @courses = @search.all
+    #toggle 0 corresponds to information view, 1 for ratings view
     if params[:toggle] == "0" or params[:toggle] == "1"
       @toggle = params[:toggle]
     else 
@@ -52,7 +53,7 @@ class CoursesController < ApplicationController
                 @info[name] << ["#{days[0]}", "Th"]
               end 
             else
-              if days.length == 2
+              if days.length >= 2              
                 @info[name] << [days[0], days[1]] #if class does not meet on Thursday, but meets twice a week
               else 
                 @info[name] << [days] #if class meets just once a week
