@@ -5,7 +5,7 @@ class CoursesController < ApplicationController
   # GET /courses.xml
   def index
     @search = Course.search(params[:search])
-    @courses = @search.all
+    @courses = @search.order("name asc").all
     #toggle 0 corresponds to information view, 1 for ratings view
     if params[:toggle] == "0" or params[:toggle] == "1"
       @toggle = params[:toggle]
