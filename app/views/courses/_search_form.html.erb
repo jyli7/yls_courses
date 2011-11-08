@@ -12,7 +12,7 @@
 	<% if @toggle == "0" %>	
 		<div class="field_container">		
 			<div id="day_search" class="float_and_margin"><%= f.label :day_like, "Day" %></div>
-			<div><%= f.text_field :day_like, :class=>"float_and_margin" %></div>
+			<div><%= f.text_field :day_like, :class=>"float_and_margin", :title => "e.g. MW" %></div>
 		</div>
 
 		<div class="field_container">			

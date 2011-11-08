@@ -1,6 +1,9 @@
 $(document).ready(function() {
 
-	$('.for_tooltip').tooltip();
+	$('#search_day_like').tipTip({
+	});
+	
+	$('#sidebar').hide();
 	
 	/*For saving the search values after the search*/
 	$('.search_submit').live('click', function() {
@@ -128,7 +131,7 @@ $(document).ready(function() {
 	/* For cart_add button disappear */
 	$('.cart_add').live('click', function () {
 		$(this).fadeOut();
-		if($('div#sidebar').attr('style') === 'display:none;') {
+		if($('div#sidebar').attr('style') === 'display: none; ') {
 			$('div#sidebar').show('slide', {direction:'right'});
 		}
 	});

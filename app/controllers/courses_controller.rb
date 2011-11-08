@@ -43,6 +43,8 @@ class CoursesController < ApplicationController
             days = item.course.day 
             time = item.course.time
             id = item.course.id
+            # room = item.course.room unless item.course.room.blank?
+            # room = "" if item.course.room.blank?
         
             @info[name] = [] #for the array value for the name key
                 
@@ -98,7 +100,7 @@ class CoursesController < ApplicationController
       end 
       
       #create a single array, composed of smaller arrays, that feeds into the view 
-      #Examples of component arrays: [Admin, M4, 11, 1], [Antitrust, T2, 11, 1]
+      #Examples of component arrays: [Admin, M4, 11, 1, SLB], [Antitrust, T2, 11, 1, SLB]
       @result_array = []
       @info.each_key do |key|
         count = 0 #just to keep track of which day we're on

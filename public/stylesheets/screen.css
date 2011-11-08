@@ -1022,7 +1022,7 @@ div #sign_in_button {
 }
 
 /* line 968, ../../app/stylesheets/screen.scss */
-.class_name, .for_tooltip {
+.class_name {
   font-size: 105%;
 }
 
