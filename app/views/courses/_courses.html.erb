@@ -16,8 +16,8 @@
 		<span id="exam_header"><%= sort_link @search, :exam_type, "Exam",  {:default_order => :desc, :toggle=>@toggle}, :remote => true   %></span>
 		<span id="paper_header"><%= sort_link @search, :paper_type, "Paper",  {:default_order => :desc, :toggle=>@toggle}, :remote => true  %></span>
 	<% else %> <!-- For eval view -->
-		<span id="classtime_value_header"><%= sort_link @search, :classtime_value, "Classtime Value", {:default_order => :desc, :toggle=>@toggle},  :remote => true  %></span>
-		<span id="instructor_quality_header"><%= sort_link @search, :instructor_quality, "Instructor Quality", {:default_order => :desc, :toggle=>@toggle}, :remote => true  %></span>		
+		<span id="classtime_value_header"><%= sort_link @search, :classtime_value_alt, "Classtime Value", {:default_order => :desc, :toggle=>@toggle},  :remote => true  %></span>
+		<span id="instructor_quality_header"><%= sort_link @search, :instructor_quality_alt, "Instructor Quality", {:default_order => :desc, :toggle=>@toggle}, :remote => true  %></span>		
 		<span id="workload_header"><%= sort_link @search, :workload_alt, "Workload",  {:default_order => :asc, :toggle=>@toggle}, :remote => true %></span>
 	<% end %>
 </div>
