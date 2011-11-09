@@ -758,7 +758,7 @@ img#arrow {
 
 /* line 730, ../../app/stylesheets/screen.scss */
 #see_calendar {
-  top: 160px;
+  top: 70px;
 }
 
 /* line 734, ../../app/stylesheets/screen.scss */
@@ -769,92 +769,91 @@ img#arrow {
 
 /* line 739, ../../app/stylesheets/screen.scss */
 #info_toggle_td {
-  padding: 5px 0 10px 0;
+  padding: 5px 0 5px 0;
   text-align: center;
-  border-bottom: 1px solid white;
 }
 
-/* line 745, ../../app/stylesheets/screen.scss */
-nav, #cart_border, #see_calendar {
+/* line 744, ../../app/stylesheets/screen.scss */
+nav, #cart_border, #eval_toggle_wrapper, #see_calendar {
   padding: 8px 6px 8px 6px;
   font-size: 13px;
   float: right;
 }
 
-/* line 751, ../../app/stylesheets/screen.scss */
+/* line 750, ../../app/stylesheets/screen.scss */
 #legend img {
   vertical-align: top;
 }
 
-/* line 755, ../../app/stylesheets/screen.scss */
+/* line 754, ../../app/stylesheets/screen.scss */
 #legend {
   margin: 2px 0 0 0;
   padding-bottom: 5px;
 }
 
-/* line 760, ../../app/stylesheets/screen.scss */
+/* line 759, ../../app/stylesheets/screen.scss */
 #legend_gcal, #legend_eval, #legend_cart {
   position: relative;
   bottom: 5px;
   padding: 0 2px 0px 8px;
 }
 
-/* line 767, ../../app/stylesheets/screen.scss */
+/* line 766, ../../app/stylesheets/screen.scss */
 #sign_up, #sign_in {
   margin-top: 0px;
 }
 
 /*About Page */
-/* line 775, ../../app/stylesheets/screen.scss */
+/* line 774, ../../app/stylesheets/screen.scss */
 #about {
   font-size: 1.05em;
 }
 
-/* line 779, ../../app/stylesheets/screen.scss */
+/* line 778, ../../app/stylesheets/screen.scss */
 #about_header, #faq_header {
   margin-bottom: 15px;
 }
 
-/* line 783, ../../app/stylesheets/screen.scss */
+/* line 782, ../../app/stylesheets/screen.scss */
 #about_p {
   font-size: 14px;
 }
 
-/* line 787, ../../app/stylesheets/screen.scss */
+/* line 786, ../../app/stylesheets/screen.scss */
 #about_wrapper, #faq_wrapper {
   font-size: 13px;
   padding: 8px;
 }
-/* line 791, ../../app/stylesheets/screen.scss */
+/* line 790, ../../app/stylesheets/screen.scss */
 #about_wrapper li, #faq_wrapper li {
   margin: 15px 0 15px 30px;
 }
 
-/* line 796, ../../app/stylesheets/screen.scss */
+/* line 795, ../../app/stylesheets/screen.scss */
 #faq_wrapper div {
   margin: 5px 0 5px 0px;
   padding: 5px 0px 5px 5px;
 }
 
-/* line 801, ../../app/stylesheets/screen.scss */
+/* line 800, ../../app/stylesheets/screen.scss */
 .faq_q {
   font-size: 110%;
   margin-bottom: 13px;
 }
 
-/* line 806, ../../app/stylesheets/screen.scss */
+/* line 805, ../../app/stylesheets/screen.scss */
 .faq_a {
   margin-bottom: 13px;
   line-height: 18px;
 }
 
-/* line 811, ../../app/stylesheets/screen.scss */
+/* line 810, ../../app/stylesheets/screen.scss */
 #contact {
   margin: 20px 0 0 0;
 }
 
 /*Sign Up Page*/
-/* line 817, ../../app/stylesheets/screen.scss */
+/* line 816, ../../app/stylesheets/screen.scss */
 .form_wrapper {
   padding: 8px 0 10px 25px;
   margin: 5px 0 0 10px;
@@ -862,46 +861,46 @@ nav, #cart_border, #see_calendar {
   background-color: #2D647F;
   font-size: 105%;
 }
-/* line 824, ../../app/stylesheets/screen.scss */
+/* line 823, ../../app/stylesheets/screen.scss */
 .form_wrapper div {
   margin: 15px 0 5px 0;
 }
-/* line 828, ../../app/stylesheets/screen.scss */
+/* line 827, ../../app/stylesheets/screen.scss */
 .form_wrapper a {
   display: inline-block;
   margin-bottom: 5px;
 }
 
-/* line 835, ../../app/stylesheets/screen.scss */
+/* line 834, ../../app/stylesheets/screen.scss */
 #sign_up_button {
   margin: 10px 0 10px 0;
 }
 
-/* line 839, ../../app/stylesheets/screen.scss */
+/* line 838, ../../app/stylesheets/screen.scss */
 div #sign_in_button {
   margin: 5px 0 10px 0;
 }
 
-/* line 843, ../../app/stylesheets/screen.scss */
+/* line 842, ../../app/stylesheets/screen.scss */
 .eval_shadow, .prof_name {
   margin-bottom: 5px;
 }
 
-/* line 847, ../../app/stylesheets/screen.scss */
+/* line 846, ../../app/stylesheets/screen.scss */
 #no_courses {
   font-style: italic;
   font-size: 105%;
   margin-left: 4px;
 }
 
-/* line 853, ../../app/stylesheets/screen.scss */
+/* line 852, ../../app/stylesheets/screen.scss */
 .hide_search, #show_search {
   display: inline-block;
   position: relative;
   left: 705px;
 }
 
-/* line 859, ../../app/stylesheets/screen.scss */
+/* line 858, ../../app/stylesheets/screen.scss */
 .hide_search_img {
   display: inline-block;
   position: relative;
@@ -910,7 +909,7 @@ div #sign_in_button {
 }
 
 /* Calendar */
-/* line 868, ../../app/stylesheets/screen.scss */
+/* line 867, ../../app/stylesheets/screen.scss */
 #cal_wrapper {
   height: 582px;
   width: 970px;
@@ -919,7 +918,7 @@ div #sign_in_button {
   padding: 0 10px 0 10px;
 }
 
-/* line 876, ../../app/stylesheets/screen.scss */
+/* line 875, ../../app/stylesheets/screen.scss */
 #cal_header {
   background-color: #2d647f;
   clear: both;
@@ -929,7 +928,7 @@ div #sign_in_button {
   float: right;
 }
 
-/* line 885, ../../app/stylesheets/screen.scss */
+/* line 884, ../../app/stylesheets/screen.scss */
 .day {
   float: left;
   text-align: center;
@@ -938,12 +937,12 @@ div #sign_in_button {
   margin-right: 10px;
 }
 
-/* line 894, ../../app/stylesheets/screen.scss */
+/* line 893, ../../app/stylesheets/screen.scss */
 .day#friday {
   margin-right: 0px;
 }
 
-/* line 898, ../../app/stylesheets/screen.scss */
+/* line 897, ../../app/stylesheets/screen.scss */
 #hour_header_wrapper {
   width: 65px;
   float: left;
@@ -951,32 +950,32 @@ div #sign_in_button {
   margin-top: 2px;
 }
 
-/* line 905, ../../app/stylesheets/screen.scss */
+/* line 904, ../../app/stylesheets/screen.scss */
 #week_hour_rows {
   float: right;
 }
 
-/* line 909, ../../app/stylesheets/screen.scss */
+/* line 908, ../../app/stylesheets/screen.scss */
 .day_hour_rows {
   float: right;
 }
 
-/* line 914, ../../app/stylesheets/screen.scss */
+/* line 913, ../../app/stylesheets/screen.scss */
 .hour_header {
   padding: 0px 0 28px 0;
 }
 
-/* line 918, ../../app/stylesheets/screen.scss */
+/* line 917, ../../app/stylesheets/screen.scss */
 .hour_header#hour_8 {
   padding: 36px 0 30px 0;
 }
 
-/* line 922, ../../app/stylesheets/screen.scss */
+/* line 921, ../../app/stylesheets/screen.scss */
 .hour_header#hour_9 {
   padding: 0px 0 0px 0;
 }
 
-/* line 926, ../../app/stylesheets/screen.scss */
+/* line 925, ../../app/stylesheets/screen.scss */
 .hour {
   height: 39px;
   border-top: 1px solid white;
@@ -985,22 +984,22 @@ div #sign_in_button {
   z-index: 20;
 }
 
-/* line 934, ../../app/stylesheets/screen.scss */
+/* line 933, ../../app/stylesheets/screen.scss */
 #M8_PM, #T8_PM, #W8_PM, #Th8_PM, #F8_PM {
   border-bottom: 1px solid white;
 }
 
-/* line 938, ../../app/stylesheets/screen.scss */
+/* line 937, ../../app/stylesheets/screen.scss */
 .day, .hour {
   width: 170px;
 }
 
-/* line 942, ../../app/stylesheets/screen.scss */
+/* line 941, ../../app/stylesheets/screen.scss */
 .first_hour {
   margin-top: 35px;
 }
 
-/* line 946, ../../app/stylesheets/screen.scss */
+/* line 945, ../../app/stylesheets/screen.scss */
 .marked {
   height: 84px;
   background-color: #00374F;
@@ -1014,32 +1013,32 @@ div #sign_in_button {
   word-wrap: break-word;
 }
 
-/* line 959, ../../app/stylesheets/screen.scss */
+/* line 958, ../../app/stylesheets/screen.scss */
 #cal_header_div {
   margin-bottom: 2px;
   font-size: 135%;
   display: inline-block;
 }
 
-/* line 968, ../../app/stylesheets/screen.scss */
+/* line 967, ../../app/stylesheets/screen.scss */
 .class_name {
   font-size: 105%;
 }
 
-/* line 972, ../../app/stylesheets/screen.scss */
+/* line 971, ../../app/stylesheets/screen.scss */
 .class_time {
   font-size: 95%;
   margin-top: 2px;
   display: inline-block;
 }
 
-/* line 978, ../../app/stylesheets/screen.scss */
+/* line 977, ../../app/stylesheets/screen.scss */
 #close_cal {
   display: inline-block;
   float: right;
 }
 
-/* line 983, ../../app/stylesheets/screen.scss */
+/* line 982, ../../app/stylesheets/screen.scss */
 #cal_cart_toggle {
   display: inline-block;
   float: right;
@@ -1047,7 +1046,7 @@ div #sign_in_button {
   margin-right: 5px;
 }
 
-/* line 991, ../../app/stylesheets/screen.scss */
+/* line 990, ../../app/stylesheets/screen.scss */
 .tooltip {
   display: none;
   font-size: 12px;
@@ -1057,7 +1056,7 @@ div #sign_in_button {
   color: #fff;
 }
 
-/* line 1000, ../../app/stylesheets/screen.scss */
+/* line 999, ../../app/stylesheets/screen.scss */
 .default_text {
   color: gray;
 }

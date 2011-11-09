@@ -8,8 +8,6 @@ $(document).ready(function() {
 	/*For saving the search values after the search*/
 	$('.search_submit').live('click', function() {
 		var temp = $('#search_classtime_value_gt').val();
-		alert("hello");
-		console.log(temp);
 	});
 	
 	$('.course_search').load(function() {
@@ -116,18 +114,6 @@ $(document).ready(function() {
 		e.preventDefault();
 	})
 	
-	/*for toggling colors in the info/eval elements in the nav */
-	
-	$('#info_toggle').click( function(e) {  
-		$(this).delay(800).css("color", "white");
-		$('#eval_toggle').delay(800).css("color", "#7FEAFF");
-	});
-	
-	$('#eval_toggle').click( function(e) {
-		$(this).delay(800).css("color", "white");  
-		$('#info_toggle').delay(800).css("color", "#7FEAFF");
-	});
-		
 	/* For cart_add button disappear */
 	$('.cart_add').live('click', function () {
 		$(this).fadeOut();
@@ -210,18 +196,7 @@ $(document).ready(function() {
 		});			
 	})
 
-/*	$('.shadow#faq').click(function() {
-		setTimeout(function() {
-			$('.faq_a').hide();
-			$('.faq_a:first').show();
-			$('.faq_q').click(function(e) {
-				$(this).next('.faq_a').slideToggle();
-				$(this).next('.faq_a').siblings('.faq_a').slideUp();
-				e.preventDefault();
-			});	
-		}, 300);
-	});
-*/	
+
 	/* For fancy_box that holds course evaluations */
 	
 	$('a.eval_shadow').live('click', function(e) {
