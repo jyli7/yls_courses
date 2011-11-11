@@ -1,7 +1,10 @@
 $(document).ready(function() {
-
-	$('#search_day_like').tipTip({
-	});
+	
+	// $('#name_input').autocomplete({
+	// 	source: ["abc", "bdd", "cdee"]
+	// });	
+	// 
+	// $('#search_day_like').tipTip();
 	
 	$('#sidebar').hide();
 	
@@ -179,23 +182,20 @@ $(document).ready(function() {
 		$('#courses_cal').fadeOut(fade_speed);
 		e.preventDefault();
 	});	
+	
+	/*Lightbox open for anything in 'shadow' class */
 		
 	$('.shadow').live('click', function(e) {
 		var url = $(this).attr('href') + ' .lightbox_back';
-		$('.lightbox#small').load(url).fadeIn(fade_speed);		
+		$('.lightbox#small').load(url) .fadeIn(fade_speed, function() {
+			$('.faq_a:first').show();
+			$('.faq_q').click(function(e) {
+				$(this).next('.faq_a').slideToggle('slow');
+				$(this).next('.faq_a').siblings('.faq_a').slideUp();
+				});
+		});
 		e.preventDefault();
-	});
-
-	$('.faq_lightbox_front').change(function() {
-		$('.faq_a').hide();
-		$('.faq_a:first').show();
-		$('.faq_q').click(function(e) {
-			$(this).next('.faq_a').slideToggle();
-			$(this).next('.faq_a').siblings('.faq_a').slideUp();
-			e.preventDefault();
-		});			
-	})
-
+	});			
 
 	/* For fancy_box that holds course evaluations */
 	
