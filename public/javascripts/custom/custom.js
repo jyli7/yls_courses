@@ -1,9 +1,5 @@
 $(document).ready(function() {
-	
-	$('#name_input').autocomplete({
-		source: ["abc", "bdd", "cdee"]
-	});	
-	
+		
 	$('#search_day_like').tipTip();
 	
 	$('#sidebar').hide();

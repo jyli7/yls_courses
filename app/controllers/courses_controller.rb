@@ -6,6 +6,8 @@ class CoursesController < ApplicationController
   def index
     @search = Course.search(params[:search])
     @courses = @search.order("name asc").all
+    #form an array of course names for the autocomplete function
+    @course_names = @courses.map {|a| a.name}
     
     if user_signed_in?
       @user = current_user
