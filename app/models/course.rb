@@ -23,6 +23,14 @@ class Course < ActiveRecord::Base
     return a
   end 
   
+  def self.names
+    names = []
+    Course.all.each do |course|
+      names << course.name
+    end
+    return names
+  end 
+  
   private
     # ensure that there are no line items referencing this product
     def ensure_not_referenced_by_any_line_item

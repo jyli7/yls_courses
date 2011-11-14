@@ -8,6 +8,7 @@ class CoursesController < ApplicationController
     @courses = @search.order("name asc").all
     #form an array of course names for the autocomplete function
     @course_names = @courses.map {|a| a.name}
+    @instructor_names = @courses.map {|a| a.instructor}
     
     if user_signed_in?
       @user = current_user
