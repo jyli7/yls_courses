@@ -4,100 +4,98 @@
 	<span id= "courses_eval_view">
 <% end %>
 
-<div id="courses_container">
-	<div id="first_row"> 
-		<span id="name_header"><%= sort_link @search, :name, "Course Name", {:toggle=>@toggle}, :remote => true %></span>
-		<span id="icons_header"></span>
-		<span id="instructor_header"><%= sort_link @search, :instructor, {:toggle=>@toggle}, :remote => true %></span>
+<div id="first_row"> 
+	<span id="name_header"><%= sort_link @search, :name, "Course Name", {:toggle=>@toggle}, :remote => true %></span>
+	<span id="icons_header"></span>
+	<span id="instructor_header"><%= sort_link @search, :instructor, {:toggle=>@toggle}, :remote => true %></span>
+	<% if @toggle == "0" %> <!-- For info view -->
+		<span id="day_header"><%= sort_link @search, :day_num, "Day", {:toggle=>@toggle}, :remote => true %></span>
+		<span id="time_header"><%= sort_link @search, :time_num, "Time", {:toggle=>@toggle}, :remote => true %></span>			
+		<span id="units_header"><%= sort_link @search, :units_alt, "Units", {:toggle=>@toggle}, :remote => true %></span>
+		<span id="limitations_header"><%= sort_link @search, :limitations,  {:default_order => :desc, :toggle=>@toggle}, :remote => true  %></span>
+		<span id="exam_header"><%= sort_link @search, :exam_type, "Exam",  {:default_order => :desc, :toggle=>@toggle}, :remote => true   %></span>
+		<span id="paper_header"><%= sort_link @search, :paper_type, "Paper",  {:default_order => :desc, :toggle=>@toggle}, :remote => true  %></span>
+	<% else %> <!-- For eval view -->
+		<span id="classtime_value_header"><%= sort_link @search, :classtime_value_alt, "Classtime Value", {:default_order => :desc, :toggle=>@toggle},  :remote => true  %></span>
+		<span id="instructor_quality_header"><%= sort_link @search, :instructor_quality_alt, "Instructor Quality", {:default_order => :desc, :toggle=>@toggle}, :remote => true  %></span>		
+		<span id="workload_header"><%= sort_link @search, :workload_alt, "Workload",  {:default_order => :asc, :toggle=>@toggle}, :remote => true %></span>
+	<% end %>
+</div>
+
+<% if @courses.blank? %>
+	<p id="no_courses">No courses found</p>
+<% end %>
+
+<div id="below_first_row">
+
+<% for course in @courses %>
+	<div class="other_rows">		
+		<span class="name_body"><a class="course_name_click" href='#'><%= course.name %></a></span>
+		<span class="icons">
+			<span class="eval_body">
+			<% if course.crn.blank? %>
+			<% else %>
+				<span class="eval_link">
+				<%= link_to image_tag("chart.png", :border=>0, :align=>"absbottom", :title=>"Course evaluations", :height=>20, :width=>20), course %></span>
+				<span id="lightbox"></span>
+			<% end %>
+			</span>
+			<% if user_signed_in? %>			
+			<span class="cart_body">
+					<%= form_for(@line_item, :remote => true) do |f| %>
+						<%= f.hidden_field :course_id, :value => course.id %> 
+						<span class="cart_add<%= '_hidden' if @courses_in_cart.has_key?(course) %>" title="Add to cart" id="<%="#{course.id}"%>"><%= image_submit_tag("shopping_cart.png", :border=>0, :align=>"absbottom", :height=>20, :width=>20) %></span>
+					<% end %>
+			</span>
+			<% end %>
+		</span>
+
+		<span class="instructor_body"><%= course.instructor %></span>
+
 		<% if @toggle == "0" %> <!-- For info view -->
-			<span id="day_header"><%= sort_link @search, :day_num, "Day", {:toggle=>@toggle}, :remote => true %></span>
-			<span id="time_header"><%= sort_link @search, :time_num, "Time", {:toggle=>@toggle}, :remote => true %></span>			
-			<span id="units_header"><%= sort_link @search, :units_alt, "Units", {:toggle=>@toggle}, :remote => true %></span>
-			<span id="limitations_header"><%= sort_link @search, :limitations,  {:default_order => :desc, :toggle=>@toggle}, :remote => true  %></span>
-			<span id="exam_header"><%= sort_link @search, :exam_type, "Exam",  {:default_order => :desc, :toggle=>@toggle}, :remote => true   %></span>
-			<span id="paper_header"><%= sort_link @search, :paper_type, "Paper",  {:default_order => :desc, :toggle=>@toggle}, :remote => true  %></span>
+			<span class="day_body"><%= course.day %></span>
+			<span class="time_body"><%= course.time %></span>			
+			<span class="units_body"><%= course.units_alt %></span>
+			<span class="limitations_body"><%= course.limitations %></span>
+			<span class="exam_body"><%= course.exam_type %></span>
+			<span class="paper_body"><%= course.paper_type %></span>
+
 		<% else %> <!-- For eval view -->
-			<span id="classtime_value_header"><%= sort_link @search, :classtime_value_alt, "Classtime Value", {:default_order => :desc, :toggle=>@toggle},  :remote => true  %></span>
-			<span id="instructor_quality_header"><%= sort_link @search, :instructor_quality_alt, "Instructor Quality", {:default_order => :desc, :toggle=>@toggle}, :remote => true  %></span>		
-			<span id="workload_header"><%= sort_link @search, :workload_alt, "Workload",  {:default_order => :asc, :toggle=>@toggle}, :remote => true %></span>
+
+			<% unless course.classtime_value.blank? %>
+			<span class="classtime_value_body">
+				<table class="eval_bar" width=<%=(course.classtime_value * 15)%> >
+					<tr>
+						<td class="eval_bar_cell"><%= course.classtime_value %></td>
+					</tr>
+				</table>
+			</span>
+			<% end %>
+
+
+			<% unless course.instructor_quality.blank? %>
+				<span class="instructor_quality_body">
+					<table class="eval_bar" width=<%=(course.instructor_quality * 15)%> >
+						<tr>
+							<td class="eval_bar_cell"><%= course.instructor_quality %></td>
+						</tr>
+					</table>
+				</span>
+			<% end %>
+
+			<% unless course.workload.blank? %>		
+			<span class="workload_body">
+				<table class="eval_bar" width=<%=(course.workload * 15)%> >
+					<tr>
+						<td class="eval_bar_cell"><%= course.workload %></td>
+					</tr>
+				</table>
+			</span>
+			<% end %>
 		<% end %>
 	</div>
-
-	<% if @courses.blank? %>
-		<p id="no_courses">No courses found</p>
-	<% end %>
-
-	<div id="below_first_row">
-
-	<% for course in @courses %>
-		<div class="other_rows">		
-			<span class="name_body"><a class="course_name_click" href='#'><%= course.name %></a></span>
-			<span class="icons">
-				<span class="eval_body">
-				<% if course.crn.blank? %>
-				<% else %>
-					<span class="eval_link">
-					<%= link_to image_tag("chart.png", :border=>0, :align=>"absbottom", :title=>"Course evaluations", :height=>20, :width=>20), course %></span>
-					<span id="lightbox"></span>
-				<% end %>
-				</span>
-				<% if user_signed_in? %>			
-				<span class="cart_body">
-						<%= form_for(@line_item, :remote => true) do |f| %>
-							<%= f.hidden_field :course_id, :value => course.id %> 
-							<span class="cart_add<%= '_hidden' if @courses_in_cart.has_key?(course) %>" title="Add to cart" id="<%="#{course.id}"%>"><%= image_submit_tag("shopping_cart.png", :border=>0, :align=>"absbottom", :height=>20, :width=>20) %></span>
-						<% end %>
-				</span>
-				<% end %>
-			</span>
-
-			<span class="instructor_body"><%= course.instructor %></span>
-
-			<% if @toggle == "0" %> <!-- For info view -->
-				<span class="day_body"><%= course.day %></span>
-				<span class="time_body"><%= course.time %></span>			
-				<span class="units_body"><%= course.units_alt %></span>
-				<span class="limitations_body"><%= course.limitations %></span>
-				<span class="exam_body"><%= course.exam_type %></span>
-				<span class="paper_body"><%= course.paper_type %></span>
-
-			<% else %> <!-- For eval view -->
-
-				<% unless course.classtime_value.blank? %>
-				<span class="classtime_value_body">
-					<table class="eval_bar" width=<%=(course.classtime_value * 15)%> >
-						<tr>
-							<td class="eval_bar_cell"><%= course.classtime_value %></td>
-						</tr>
-					</table>
-				</span>
-				<% end %>
-
-
-				<% unless course.instructor_quality.blank? %>
-					<span class="instructor_quality_body">
-						<table class="eval_bar" width=<%=(course.instructor_quality * 15)%> >
-							<tr>
-								<td class="eval_bar_cell"><%= course.instructor_quality %></td>
-							</tr>
-						</table>
-					</span>
-				<% end %>
-
-				<% unless course.workload.blank? %>		
-				<span class="workload_body">
-					<table class="eval_bar" width=<%=(course.workload * 15)%> >
-						<tr>
-							<td class="eval_bar_cell"><%= course.workload %></td>
-						</tr>
-					</table>
-				</span>
-				<% end %>
-			<% end %>
-		</div>
-		<p class="descrip_body">
-			<%= course.descrip %>
-		</p>
-	<% end %>
-	</div>
+	<p class="descrip_body">
+		<%= course.descrip %>
+	</p>
+<% end %>
 </div>
