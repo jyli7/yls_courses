@@ -9,7 +9,7 @@
 				<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 				  <%= devise_error_messages! %>
 				  <div><%= f.label :email %><br />
-				  <%= f.email_field :email, :value => "e.g. jane.doe@yale.edu", :alt => "e.g. jane.doe@yale.edu", :class => "default_text" %></div>
+				  <%= f.email_field :email, :value => "Requires @yale.edu address", :alt => "e.g. jane.doe@yale.edu", :class => "default_text" %></div>
 				  <div><%= f.label :password %><br />
 				  <%= f.password_field :password %></div>
 

@@ -2,8 +2,8 @@
 	
 	<!-- Javascripts -->
 	<script type="text/javascript" src="javascripts/custom/custom.js"></script>
-	<script type="text/javascript" src="javascripts/custom/jquery.highlightFade.js"></script>
 	<script type="text/javascript">
+	//for the autocomplete
 		$(document).ready(function() {
 			$('#name_input').autocomplete({
 				source: <%= raw(@course_names.to_json) %>, delay:100
@@ -47,7 +47,24 @@
 	<% if user_signed_in? %>
 		<div id="see_calendar" class="round"><%= link_to "Show calendar", courses_path(:cal_on => 1), :class=>"cal_toggle", :remote => true %></div>
 	<% end %>
-		
+
+	<!-- Eval Toggle Button -->
+		<table id="eval_toggle_wrapper" class="round">
+			<tr id="info_toggle_tr">
+				<% if @toggle == "0" %> <!-- Information view in white, ratings view in blue -->
+				<td id="info_toggle_td"><%= link_to "Information view", courses_path(:toggle => 0), :id => "info_toggle", :class => "on_page_color", :remote => true %></td>
+			</tr>
+			<tr id="eval_toggle_tr">
+				<td id="eval_toggle_td"><%= link_to "Ratings view", courses_path(:toggle => 1), :id => "eval_toggle", :remote => true %></td>
+				<% elsif @toggle == "1" %> <!-- Information view in blue, ratings view in white -->
+					<td id="info_toggle_td"><%= link_to "Information view", courses_path(:toggle => 0), :id => "info_toggle", :remote => true %></td>
+				</tr>
+				<tr id="eval_toggle_tr">
+					<td id="eval_toggle_td"><%= link_to "Ratings view", courses_path(:toggle => 1), :id => "eval_toggle", :class => "on_page_color", :remote => true %></td>
+				<% end %>
+			</tr>
+		</table>
+				
 	<!-- Search Box -->
 	<h2 id="search_title">Search Classes (Spring 2012)</h2> <!--Search form -->
 	<a href='' class="hide_search">Show <img src="/images/bullet_arrow_down.png" class="hide_search_img"></a>

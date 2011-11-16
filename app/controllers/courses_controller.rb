@@ -6,9 +6,24 @@ class CoursesController < ApplicationController
   def index
     @search = Course.search(params[:search])
     @courses = @search.order("name asc").all
+    
+    #toggle 0 corresponds to information view, 1 for ratings view
+    if params[:toggle] == "0" or params[:toggle] == "1"
+      @toggle = params[:toggle]
+    else 
+      @toggle = "0"
+    end
+    
     #form an array of course names for the autocomplete function
     @course_names = @courses.map {|a| a.name}
     @instructor_names = @courses.map {|a| a.instructor}
+    
+    #for retaining search results
+    @tod_results = params[:search] == nil ? :blank : params[:search][:tod_like]
+    @units_results = params[:search] == nil ? :blank : params[:search][:units_like]
+    @limitations_results = params[:search] == nil ? :blank : params[:search][:limitations_like]
+    @exam_results = params[:search] == nil ? :blank : params[:search][:exam_type_like]
+    @paper_results = params[:search] == nil ? :blank : params[:search][:paper_type_like]
     
     if user_signed_in?
       @user = current_user
@@ -31,7 +46,7 @@ class CoursesController < ApplicationController
     end 
     
     if @cal_on == 1
-      @info = {} #hash structure is {:name => [[days], [start_hour, start_segment], class_length, time]}
+      @info = {} #hash structure is {:name => [[days], [start_hour, start_segment], class_length, time, room]}
       unless @line_items_in_cart.blank? #if there are no line items, don't show a calendar 
         #cycle through the line items
         @line_items_in_cart.each do |item|
@@ -40,9 +55,9 @@ class CoursesController < ApplicationController
             days = item.course.day 
             time = item.course.time
             id = item.course.id
-            # room = item.course.room unless item.course.room.blank?
-            # room = "" if item.course.room.blank?
-        
+            room = item.course.room unless item.course.room.blank?
+            room = "No room" if item.course.room.blank?
+            
             @info[name] = [] #for the array value for the name key
                 
             if days.include? "h" #if one day is Thursday ("Th")
@@ -57,7 +72,7 @@ class CoursesController < ApplicationController
               else 
                 @info[name] << [days] #if class meets just once a week
               end
-            end  
+            end
         
             def time_values(time) #returns an arrray with start hour, start minutes (segments past the hour), length
               hours_array = ['8','9','10','11','12','1','2','3','4','5','6','7','8']
@@ -92,6 +107,7 @@ class CoursesController < ApplicationController
               @info[name] << time_values(t)
             end
             @info[name] << times_array
+            @info[name] << [room]
           end
         end 
       end 
@@ -101,23 +117,28 @@ class CoursesController < ApplicationController
       @result_array = []
       @info.each_key do |key|
         count = 0 #just to keep track of which day we're on
+        #loop through each day in the first sub-array of the @info[key] array
         @info[key][0].each do |day|
           temp_array = []
+          #add course_name to temp_array
           temp_array << key
-          if @info[key].length == 4 and count == 1 #if we're on the second day, and the days have different times
+          if @info[key].length == 5 and count == 1 #if we're on the second day, and the days have different times
             temp_array << day + @info[key][2][0] # e.g. M4
             temp_array << @info[key][2][2] # e.g. 11
             temp_array << @info[key][2][1] # e.g. 1
             temp_array << @info[key][3][1] # e.g. "3:10p - 5:00p"
+            temp_array << @info[key][4][0] # e.g. "SLB"
           else
             temp_array << day + @info[key][1][0] # e.g. M4
             temp_array << @info[key][1][2] # e.g. 11
             temp_array << @info[key][1][1] # e.g. 1
-            if @info[key].length == 4 and count == 0 #if we're on the first day, and the days have different times
+            if @info[key].length == 5 and count == 0 #if we're on the first day, and the days have different times
               temp_array << @info[key][3][0] # e.g. "3:10p - 5:00p"
-            else
+              temp_array << @info[key][4][0] # e.g. "SLB"
+            else #if the days do not have different times
               temp_array << @info[key][2][0] # e.g. "3:10p - 5:00p"
-            end 
+              temp_array << @info[key][3][0] # e.g. "SLB"
+            end
           end
           @result_array << temp_array
           count += 1

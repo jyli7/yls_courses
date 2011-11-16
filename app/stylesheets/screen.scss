@@ -157,6 +157,7 @@ body {
 	div#container {
 		@include both_margins;
 		background-color:$back_blue;
+		padding-bottom:50px;
 
 		
 		#yls_header {
@@ -399,12 +400,6 @@ div#first_row {
 #search_title {
 	font-size:135%;
 }
-
-.notice {
-
-}
-
-
 
 #search_name_div{
 	border:1px solid white;
@@ -739,6 +734,7 @@ img#arrow {
 #info_toggle_td {
 	padding:5px 0 5px 0;
 	text-align:center;
+	border-bottom:1px solid white;
 }
 
 nav, #cart_border, #eval_toggle_wrapper, #see_calendar {
@@ -962,9 +958,6 @@ div #sign_in_button {
 	display:inline-block;
 }
 
-#cal_refresh {
-}
-
 .class_name {
 	font-size:105%;
 }
@@ -1000,4 +993,3 @@ div #sign_in_button {
 .default_text {
 	color:gray;
 }
-

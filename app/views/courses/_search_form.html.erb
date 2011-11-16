@@ -16,26 +16,26 @@
 
 	<div class="field_container">			
 		<div id="tod_search" class="float_and_margin"><%= f.label :tod_like, "Start time" %></div>
-		<div><%= f.select :tod_like, Course.tod_array, {:include_blank => true, :selected => :blank, :class=>"float_and_margin"} %></div>
+		<div><%= f.select :tod_like, Course.tod_array, {:include_blank => true, :selected => @tod_results, :class=>"float_and_margin"} %></div>
 	</div>
 
 	<div class="field_container">			
 		<div id="units_search" class="float_and_margin"><%= f.label :units_like, "Units" %></div>
-		<div><%= f.select :units_like, ['1', '2', '3', '4'], {:include_blank => true, :selected => :blank, :class=>"float_and_margin"} %></div>
+		<div><%= f.select :units_like, ['1', '2', '3', '4'], {:include_blank => true, :selected => @units_results, :class=>"float_and_margin"} %></div>
 	</div>
 
 	<div class="field_container">
 		<div id="limitations_search" class="float_and_margin"><%= f.label :limitations_like, "Limitations" %></div>
-		<div><%= f.select :limitations_like, ['Limited', 'Permission', 'LSO'], { :include_blank => true, :selected => :blank, :class=>"float_and_margin"} %></div>
+		<div><%= f.select :limitations_like, ['Limited', 'Permission', 'LSO'], { :include_blank => true, :selected => @limitations_results, :class=>"float_and_margin"} %></div>
 	</div>
 
 	<div class="field_container">			
 		<div id="exam_search" class="float_and_margin"><%= f.label :exam_type_like, "Exam?" %></div>
-		<div><%= f.select :exam_type_like, ['Self-scheduled', 'Scheduled', 'None'], { :include_blank => true, :selected => :blank, :class=>"float_and_margin"} %></div>
+		<div><%= f.select :exam_type_like, ['Self-scheduled', 'Scheduled', 'None'], { :include_blank => true, :selected => @exam_results, :class=>"float_and_margin"} %></div>
 	</div>
 		
 	<div id="paper_search" class="float_and_margin"><%= f.label :paper_type_like, "Paper" %></div>
-	<div><%= f.select :paper_type_like, ['Required', 'Option'], { :include_blank => true, :selected => :blank, :class=>"float_and_margin"} %></div>
+	<div><%= f.select :paper_type_like, ['Required', 'Option'], { :include_blank => true, :selected => @paper_results, :class=>"float_and_margin"} %></div>
 	
 <div class="search_button"><%= f.submit "Search", :remote => true, :class=>"search_submit", :id=>'' %></div>
 <div class="course_list_link">| <%= link_to "Reset search and courses", :remote => true %></div>

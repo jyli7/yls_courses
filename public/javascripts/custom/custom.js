@@ -1,22 +1,25 @@
 $(document).ready(function() {
-		
+	
+	/* Tooltip for day search */	
 	$('#search_day_like').tipTip();
 	
+	/* For hiding the sidebar at the beginning */
 	$('#sidebar').hide();
 	
 	/*For saving the search values after the search*/
-	$('.search_submit').live('click', function() {
-		var temp = $('#search_classtime_value_gt').val();
-	});
+	// $('.search_submit').live('click', function() {
+	// 	var temp = $('#search_classtime_value_gt').val();
+	// });
+	// 
+	// $('.course_search').load(function() {
+	// 	$('#search_classtime_value_gt').attr('value', temp);
+	// })
 	
-	$('.course_search').load(function() {
-		$('#search_classtime_value_gt').attr('value', temp);
-	})
-	
-	/*For setting the cool default text focus/blur */
+	/*For setting the default text focus/blur (used in sign on page) */
 	
 	$('.default_text').live('focus', function(){
 		$(this).val('');
+		$(this).css('color', 'black');
 	});
 
 	$('.default_text').live('blur', function(){
@@ -24,7 +27,7 @@ $(document).ready(function() {
 			$(this).val($(this).attr('alt'));
 	});
 
-	/*For freeing and fixing the cart */
+	/*For freeing and fixing the cart (within the calendar) */
 	$('#free_cart, #fix_cart, #bar').hide();
 		
 	$('#free_cart').live('click', function(e) {
@@ -58,7 +61,7 @@ $(document).ready(function() {
 		e.preventDefault();
 	})
 	
-	/*For tying the show_click and hide_click options to the calendar */
+	/*For tying the free_cart and hide_cart options to the calendar */
 	
 	$('.cal_toggle').click(function() {
 		setTimeout(function() {
@@ -112,11 +115,24 @@ $(document).ready(function() {
 		});
 		e.preventDefault();
 	})
-	
+
+	/*for toggling colors in the info/eval elements in the nav */
+
+	$('#info_toggle').click( function(e) {  
+		$(this).delay(800).css("color", "white");
+		$('#eval_toggle').delay(800).css("color", "#7FEAFF");
+	});
+
+	$('#eval_toggle').click( function(e) {
+		$(this).delay(800).css("color", "white");  
+		$('#info_toggle').delay(800).css("color", "#7FEAFF");
+	});
+		
 	/* For cart_add button disappear */
 	$('.cart_add').live('click', function () {
 		$(this).fadeOut();
-		if($('div#sidebar').attr('style') === 'display: none; ') {
+		//if the sidebar is hidden, show it
+		if($('div#sidebar').attr('style').indexOf('display: none; ') !== -1) {
 			$('div#sidebar').show('slide', {direction:'right'});
 		}
 	});

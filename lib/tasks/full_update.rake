@@ -156,13 +156,29 @@ end
 desc "Get evaluation link for each class"
 task :get_evals => :environment do
 
+  #delete evals first
+  for course in Course.all 
+    unless course.crn.nil?
+      course.update_attribute :crn, nil
+    end 
+    unless course.term_code.nil?
+      course.update_attribute :term_code, nil
+    end
+    unless course.past_instructors.nil?
+      course.update_attribute :past_instructors, nil
+    end
+    unless course.past_semesters.nil?
+      course.update_attribute :past_semesters, nil
+    end
+  end 
+
   2011.downto(2004) do |count|
     file = File.new("course_data/Spring#{count}.html")
     text = file.readlines
     text = text.join('\n')
 
     for course in Course.all
-      #to grab the first two letters of the second word
+      #to grab the first two letters of the second word (if it exists)
       if course.name.include? " "
         space_index = course.name.index(" ")
         middle_str = course.name[space_index+1..space_index+2]
@@ -173,18 +189,22 @@ task :get_evals => :environment do
         middle_str = ""
       end 
  
-      #to grab the first two letters of the third word
-      if not middle_str.blank? and (course.name.count " ") > 2
+      #to grab the first two letters of the third word (if it exists)
+      if not middle_str.blank? and (course.name.count " ") >= 2
           second_space_index = course.name.index(" ", space_index+1)
-          third_str = course.name[(second_space_index+1)]
+          if course.name[second_space_index+1] == "&"
+            third_str = course.name[second_space_index+1]
+          else 
+            third_str = course.name[(second_space_index+1..second_space_index+2)]
+          end 
       else 
         third_str = ""
       end 
       
-      if course.name == "Adv Landlord/Tenant Clinic"
-        puts course.name, course.name[0..2], middle_str, third_str, course.name[-1]
-      end 
-
+      if course.name.include? "Law, Econ"
+        puts course.name, middle_str, third_str, course.name[-1]
+      end
+      
       eval = /\(([0-9]+), ([0-9]+)\)">#{course.name[0..2]}[^"]*#{middle_str}[^"]*#{third_str}[^"]*#{course.name[-1]}<\/a>&nbsp;([^<]+)/m.match text
       if eval
         eval_a = [eval[1], eval[2], eval[3]]
@@ -228,7 +248,7 @@ task :get_evals => :environment do
     text = text.join('\n')
 
     for course in Course.all
-      #to grab the first two letters of the second word
+      #to grab the first two letters of the second word (if it exists)
       if course.name.include? " "
         space_index = course.name.index(" ")
         middle_str = course.name[space_index+1..space_index+2]
@@ -239,10 +259,10 @@ task :get_evals => :environment do
         middle_str = ""
       end 
  
-      #to grab the first two letters of the third word
-      if not middle_str.blank? and (course.name.count " ") > 2
+      #to grab the first two letters of the third word (if it exists)
+      if not middle_str.blank? and (course.name.count " ") >= 2
           second_space_index = course.name.index(" ", space_index+1)
-          third_str = course.name[second_space_index+1]
+          third_str = course.name[(second_space_index+1..second_space_index+2)]
       else 
         third_str = ""
       end 
@@ -442,8 +462,6 @@ task :get_ratings_alt => :environment do
     end
   end  
 end
-
-
 
 desc "Get a day_num, so that sort is based on days of week, not alphabet"
 task :day_sort_fix => :environment do

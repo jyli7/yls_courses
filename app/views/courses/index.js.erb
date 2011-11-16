@@ -30,7 +30,6 @@
 //For the calendar
 	$('#cal_wrapper').html("<%= escape_javascript(render :partial => 'courses_main_cal') %>");
 	var id = 0; //used to give each class div a unique id 
-	console.log("<%= @result_array %>");
 	
 	//Run through the result_arrays to place the courses on the calendar, and to set all properties but width
 	<% @result_array.each do |mini_arr| %>
@@ -58,6 +57,7 @@
 		});
 		$('#'+id).append("<span class='class_name'><%= mini_arr[0] %></span>"); //insert name into course div
 		$('#'+id).append("<br><span class='class_time'><%= mini_arr[4] %></span>"); //insert time into course div
+		$('#'+id).append("<br><span class='class_time'><%= mini_arr[5] %></span>"); //insert room into course div
 		id += 1; //increment the idea for the next class div
 	<% end %>
 	
