@@ -15,6 +15,14 @@
 		courses.fadeIn('slow', function() {
 			that.remove();
 			$("#courses_body").css("height", ''); //change the height back to auto-height
+			//set autocomplete again
+			$('#name_input').autocomplete({
+				source: <%= raw(@course_names.to_json) %>, delay:100
+			});
+			
+			$('#search_instructor_like').autocomplete({
+				source: <%= raw(@instructor_names.to_json) %>, delay:100
+			});			
 		});
 	});
 

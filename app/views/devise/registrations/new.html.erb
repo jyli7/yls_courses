@@ -4,12 +4,12 @@
 			<div class="form_wrapper round">
 				<p class="notice"><%= notice %></p>
 				<h2 id="sign_up">Sign up</h2>
-				<p class="alert"><%= alert %></p>
+				<div class="alert"><%= alert %></div>
 				<div class="assurance_msg">Your email is for registration/sign-in purposes only, and will not be shared or used in any other way.</div>
 				<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 				  <%= devise_error_messages! %>
 				  <div><%= f.label :email %><br />
-				  <%= f.email_field :email, :value => "Requires @yale.edu address", :alt => "e.g. jane.doe@yale.edu", :class => "default_text" %></div>
+				  <%= f.email_field :email, :value => "Enter a @yale.edu address", :alt => "e.g. jane.doe@yale.edu", :class => "default_text" %></div>
 				  <div><%= f.label :password %><br />
 				  <%= f.password_field :password %></div>
 

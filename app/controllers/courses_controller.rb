@@ -15,8 +15,8 @@ class CoursesController < ApplicationController
     end
     
     #form an array of course names for the autocomplete function
-    @course_names = @courses.map {|a| a.name}
-    @instructor_names = @courses.map {|a| a.instructor}
+    @course_names = Course.all.map {|a| a.name}
+    @instructor_names = Course.all.map {|a| a.instructor}
     
     #for retaining search results
     @tod_results = params[:search] == nil ? :blank : params[:search][:tod_like]

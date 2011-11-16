@@ -61,37 +61,33 @@
 			<span class="paper_body"><%= course.paper_type %></span>
 
 		<% else %> <!-- For eval view -->
+		<div class="eval_super_container">
 
 			<% unless course.classtime_value.blank? %>
-			<span class="classtime_value_body">
-				<table class="eval_bar" width=<%=(course.classtime_value * 15)%> >
-					<tr>
-						<td class="eval_bar_cell"><%= course.classtime_value %></td>
-					</tr>
-				</table>
-			</span>
+			<div class="eval_container_bar"> 
+				<div class="eval_bar" style="width:<%=(course.classtime_value * 15)%>px">
+					<%= course.classtime_value %>
+				</div>
+			</div>
 			<% end %>
-
 
 			<% unless course.instructor_quality.blank? %>
-				<span class="instructor_quality_body">
-					<table class="eval_bar" width=<%=(course.instructor_quality * 15)%> >
-						<tr>
-							<td class="eval_bar_cell"><%= course.instructor_quality %></td>
-						</tr>
-					</table>
-				</span>
+				<div class="eval_container_bar"> 
+					<div class="eval_bar" style="width:<%=(course.instructor_quality * 15)%>px">
+						<%= course.instructor_quality %>
+					</div>
+				</div>
 			<% end %>
-
+			
 			<% unless course.workload.blank? %>		
-			<span class="workload_body">
-				<table class="eval_bar" width=<%=(course.workload * 15)%> >
-					<tr>
-						<td class="eval_bar_cell"><%= course.workload %></td>
-					</tr>
-				</table>
-			</span>
+				<div class="eval_container_bar" id="eval_bar_workload">
+					<div class="eval_bar" height="100px" style="width:<%=(course.workload * 15)%>px">
+						<%= course.workload %>
+					</div>
+				</div>
 			<% end %>
+			
+		</div>
 		<% end %>
 	</div>
 	<p class="descrip_body">

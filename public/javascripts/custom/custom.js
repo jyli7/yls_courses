@@ -6,15 +6,6 @@ $(document).ready(function() {
 	/* For hiding the sidebar at the beginning */
 	$('#sidebar').hide();
 	
-	/*For saving the search values after the search*/
-	// $('.search_submit').live('click', function() {
-	// 	var temp = $('#search_classtime_value_gt').val();
-	// });
-	// 
-	// $('.course_search').load(function() {
-	// 	$('#search_classtime_value_gt').attr('value', temp);
-	// })
-	
 	/*For setting the default text focus/blur (used in sign on page) */
 	
 	$('.default_text').live('focus', function(){
