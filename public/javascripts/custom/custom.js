@@ -23,10 +23,9 @@ $(document).ready(function() {
 		
 	$('#free_cart').live('click', function(e) {
 		var position_free = $('#sidebar').position();
-		var top = $(document).scrollTop() + position_free.top;
 		$('#sidebar').css({
 			'left': position_free.left, 
-			'top': top,
+			'top': position_free.top,
 			'position': 'absolute'
 		});
 		$('#sidebar').draggable({disabled: false});
@@ -38,14 +37,16 @@ $(document).ready(function() {
 	
 	$('#fix_cart').live('click', function(e) {
 		var position_fix = $('#sidebar').position();
-		var top = position_fix.top - $(document).scrollTop();
+		var cart_top_fix = position_fix.top - $(document).scrollTop();
 		$('#sidebar').css({
 			'left': position_fix.left, 
-			'top': top,
+			'top': cart_top_fix,
 			'position': 'fixed',
-			'z-index': '60px'
+			'z-index': '120',
+			//set opacity to 1 to counteract the automatic reduction in opacity set by disabling the draggability
+			'opacity': '1'
 		});
-		$('#sidebar').draggable({ disabled: true});
+		$('#sidebar').draggable({ disabled: true });
 		$('#sidebar').css('cursor', 'auto');
 		$(this).hide();
 		$('#free_cart').show();

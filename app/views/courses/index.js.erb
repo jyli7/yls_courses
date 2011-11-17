@@ -46,7 +46,6 @@
 //For the calendar
 	$('#cal_wrapper').html("<%= escape_javascript(render :partial => 'courses_main_cal') %>");
 	var id = 0; //used to give each class div a unique id 
-	console.log("<%= @result_array %>");
 
 	//Run through the result_arrays to place the courses on the calendar, and to set all properties but width
 	<% @result_array.each do |mini_arr| %>
