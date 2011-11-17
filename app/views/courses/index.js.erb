@@ -34,6 +34,9 @@
 	//Fade in search container
 	$("#search_container").delay(400).html("<%= escape_javascript(render :partial => 'search_form') %>").fadeIn("slow");
 	
+	//Reload eval_toggle_wrapper
+	$("#eval_toggle_wrapper").delay(400).html("<%= escape_javascript(render :partial => 'eval_toggle_wrapper') %>").show();
+	
 	//Re-add zebra stripes to courses_body 
 	$('.other_rows:even').addClass('zebra');
 <% end %>	
