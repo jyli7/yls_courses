@@ -5,16 +5,10 @@ class CoursesController < ApplicationController
   # GET /courses.xml
   def index
     @search = Course.search(params[:search])
-    
-    puts "SEARCH!!!", params[:search].inspect
-    
-    if params[:search] != nil
-      @last_search = params[:search]
-    end
-    
-    puts "LAST_SEARCH", @last_search.inspect
     #don't trust the database to order the courses alphabetically
     @courses = @search.order("name asc").all
+    
+    @old_toggle = @toggle 
     
     #toggle 0 corresponds to information view, 1 for ratings view
     if params[:toggle] == "0" or params[:toggle] == "1"
@@ -23,6 +17,12 @@ class CoursesController < ApplicationController
       @toggle = "0"
     end
     
+    @toggle_changed = false
+    
+    if @old_toggle != nil and @toggle != @old_toggle
+      @toggle_changed = true
+    end
+      
     #form an array of course names for the autocomplete function
     @course_names = Course.all.map {|a| a.name}
     @instructor_names = Course.all.map {|a| a.instructor}

@@ -200,11 +200,7 @@ task :get_evals => :environment do
       else 
         third_str = ""
       end 
-      
-      if course.name.include? "Law, Econ"
-        puts course.name, middle_str, third_str, course.name[-1]
-      end
-      
+            
       eval = /\(([0-9]+), ([0-9]+)\)">#{course.name[0..2]}[^"]*#{middle_str}[^"]*#{third_str}[^"]*#{course.name[-1]}<\/a>&nbsp;([^<]+)/m.match text
       if eval
         eval_a = [eval[1], eval[2], eval[3]]
@@ -577,6 +573,6 @@ task :get_other_evals => :environment do
   end
 end 
 
-task :full_update => [:destroy_all_classes, :fetch_classes, :get_address, :get_evals, :get_descrip, :get_testing, :get_time_num, :get_tod, :change_units, :get_units_alt, :get_ratings_alt, :day_sort_fix, :limitations_shorten, :get_other_evals] do
+task :full_update => [:destroy_all_classes, :fetch_classes, :get_address, :get_evals, :get_descrip, :get_testing, :get_time_num, :get_tod, :change_units, :get_units_alt, :day_sort_fix, :limitations_shorten, :get_other_evals, :get_ratings_alt] do
   puts "Full update complete!"
 end 

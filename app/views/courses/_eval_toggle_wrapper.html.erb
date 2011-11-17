@@ -4,7 +4,7 @@
 </tr>
 <tr id="eval_toggle_tr">
 	<td id="eval_toggle_td"><%= link_to "Ratings view", courses_path(:toggle => 1, :search => params[:search]), :id => "eval_toggle", :remote => true %></td>
-	
+
 	<% elsif @toggle == "1" %> <!-- Information view in blue, ratings view in white -->
 		<td id="info_toggle_td"><%= link_to "Information view", courses_path(:toggle => 0, :search => params[:search]), :id => "info_toggle", :remote => true %></td>
 	</tr>
