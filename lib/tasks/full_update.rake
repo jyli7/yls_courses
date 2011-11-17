@@ -533,9 +533,22 @@ task :get_other_evals => :environment do
 
   Spreadsheet.client_encoding = 'UTF-8'
 
-  book = Spreadsheet.open '/Users/jimmyli/rails_projects/yls_courses/public/data/class_action_ratings_2.xls'
+  book = Spreadsheet.open '/Users/jimmyli/rails_projects/yls_courses/public/data/class_action_ratings_formatted.xls'
   sheet1 = book.worksheet 'Sheet1'
-
+  
+  for course in Course.all 
+    unless course.instructor_quality.nil?
+      course.update_attribute :instructor_quality, nil
+    end 
+    unless course.classtime_value.nil?
+      course.update_attribute :classtime_value, nil
+    end 
+    unless course.workload.nil?
+      course.update_attribute :workload, nil
+    end
+  end 
+  
+  
   #Store data from spreadsheet
   #If spreadsheet names match (some part) of existing names, then attach the additional information
   count = 0

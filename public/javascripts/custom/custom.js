@@ -1,8 +1,5 @@
 $(document).ready(function() {
 	
-	/* Tooltip for day search */	
-	$('#search_day_like').tipTip();
-	
 	/* For hiding the sidebar at the beginning */
 	$('#sidebar').hide();
 	

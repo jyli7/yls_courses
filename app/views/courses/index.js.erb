@@ -15,14 +15,19 @@
 		courses.fadeIn('slow', function() {
 			that.remove();
 			$("#courses_body").css("height", ''); //change the height back to auto-height
+			
 			//set autocomplete again
 			$('#name_input').autocomplete({
 				source: <%= raw(@course_names.to_json) %>, delay:100
 			});
-			
+
 			$('#search_instructor_like').autocomplete({
 				source: <%= raw(@instructor_names.to_json) %>, delay:100
-			});			
+			});
+
+			//set tooltips again
+			$('#search_day_like, .above_0, .below_10').tipTip();		
+			
 		});
 	});
 
@@ -38,15 +43,16 @@
 //For the calendar
 	$('#cal_wrapper').html("<%= escape_javascript(render :partial => 'courses_main_cal') %>");
 	var id = 0; //used to give each class div a unique id 
-	
+	console.log("<%= @result_array %>");
+
 	//Run through the result_arrays to place the courses on the calendar, and to set all properties but width
 	<% @result_array.each do |mini_arr| %>
 		var marked = '<div class="marked" id=' + id + '></div>';
-		
+
 		//place div in right position, based on course start time
 		//this works because the [1] indx on the each result_array corresponds to the ids of preset divs on the calendar
 		$("#<%= mini_arr[1] %>").append(marked); 
-		
+
 		//set parameters for the course div (to be used below)
 		var height = ("<%= mini_arr[2].to_i %>")*6.5-3;
 		var top_num = ("<%= mini_arr[3].to_i %>")*6.5;
@@ -65,16 +71,15 @@
 		});
 		$('#'+id).append("<span class='class_name'><%= mini_arr[0] %></span>"); //insert name into course div
 		$('#'+id).append("<br><span class='class_time'><%= mini_arr[4] %></span>"); //insert time into course div
-		$('#'+id).append("<br><span class='class_time'><%= mini_arr[5] %></span>"); //insert room into course div
 		id += 1; //increment the idea for the next class div
 	<% end %>
-	
+
 	id = 0
 	//Run through all the courses again so we adjust the width *after* all divs have been placed on the calendar
 	<% @result_array.each do |mini_arr| %>
 		//count the number of divs already in the time block
 		var count =  $('#<%= mini_arr[1] %>').children().length; 
-	
+
 		//see if there are already divs in the previous blocks or in the succeeding blocks
 		if($('#<%= mini_arr[1] %>').prev().children().length >= 1){
 			count += $('#<%= mini_arr[1] %>').prev().children().length;
@@ -86,18 +91,18 @@
 		if(count >= 2){
 			width -= 1+count
 		}
-	
+
 		$("#<%= mini_arr[1] %>").find('#'+id).css({
 			'width': width,
 		});
-		
+
 		//if the count is too high (i.e. the width is too small), remove the course name and time and use tooltips
 		if(count >=3) {
 			$('#'+id).html("<span class='for_tooltip' title='<%=mini_arr[0] %> <%= mini_arr[4] %>'><%= mini_arr[0][0..-5]%></span><br>..."); //replace HTML with shortened course name
 		}
 		id += 1;
 	<% end %>
-	
+
 $('#courses_cal').fadeIn();	
 
 //Tooltip for classes with shortened widths
@@ -106,4 +111,4 @@ $('.for_tooltip').tipTip({
 });
 
 <%= @cal_on = 0 %>
-<% end %>	
+<% end %>

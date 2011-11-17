@@ -5,6 +5,8 @@ class CoursesController < ApplicationController
   # GET /courses.xml
   def index
     @search = Course.search(params[:search])
+        
+    #don't trust the database to order the courses alphabetically
     @courses = @search.order("name asc").all
     
     #toggle 0 corresponds to information view, 1 for ratings view
