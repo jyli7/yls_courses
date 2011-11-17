@@ -548,7 +548,6 @@ task :get_other_evals => :environment do
     end
   end 
   
-  
   #Store data from spreadsheet
   #If spreadsheet names match (some part) of existing names, then attach the additional information
   count = 0

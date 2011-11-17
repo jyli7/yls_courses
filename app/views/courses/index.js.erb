@@ -1,4 +1,4 @@
-//For toggling between information view and ratings view
+//Everything that follows is for showing the courses, after you click on show ratings or show information
 <% if @cal_on == 0 %>
 	//Append the other courses view to the existing courses view
 	var courses = $("<%= escape_javascript(render :partial => 'courses') %>");
@@ -33,12 +33,15 @@
 
 	//Fade in search container
 	$("#search_container").delay(400).html("<%= escape_javascript(render :partial => 'search_form') %>").fadeIn("slow");
-
+	
+	//Reload eval_toggle_wrapper
+	$("#eval_toggle_wrapper").delay(400).html("<%= escape_javascript(render :partial => 'eval_toggle_wrapper') %>").show();
+	
 	//Re-add zebra stripes to courses_body 
 	$('.other_rows:even').addClass('zebra');
 <% end %>	
 
-//For bringing up the calendar 
+//Everything that follows is for bringing up the calendar
 <% if @cal_on == 1 %>
 //For the calendar
 	$('#cal_wrapper').html("<%= escape_javascript(render :partial => 'courses_main_cal') %>");

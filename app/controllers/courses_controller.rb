@@ -5,7 +5,14 @@ class CoursesController < ApplicationController
   # GET /courses.xml
   def index
     @search = Course.search(params[:search])
-        
+    
+    puts "SEARCH!!!", params[:search].inspect
+    
+    if params[:search] != nil
+      @last_search = params[:search]
+    end
+    
+    puts "LAST_SEARCH", @last_search.inspect
     #don't trust the database to order the courses alphabetically
     @courses = @search.order("name asc").all
     
