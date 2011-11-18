@@ -193,13 +193,7 @@ $(document).ready(function() {
 		
 	$('.shadow').live('click', function(e) {
 		var url = $(this).attr('href') + ' .lightbox_back';
-		$('.lightbox#small').load(url) .fadeIn(fade_speed, function() {
-			$('.faq_a:first').show();
-			$('.faq_q').click(function(e) {
-				$(this).next('.faq_a').slideToggle('slow');
-				$(this).next('.faq_a').siblings('.faq_a').slideUp();
-				});
-		});
+		$('.lightbox#small').load(url).fadeIn(fade_speed);
 		e.preventDefault();
 	});			
 
@@ -222,7 +216,22 @@ $(document).ready(function() {
 			'top' : '5px'
 		});
 		e.preventDefault();
-		});
-
+	});
+	
+	/*If user is not signed in, flash pop up when they click on ratings view */
+	
+	$('#eval_not_signed_in').live('click', function() {
+		alert("You must sign in with a yale.edu email to access ratings view");
+		return false;
+	});
+	
+	$('.about_ratings_switch').live('click', function() {
+		$that = $(this);
+		$('.lightbox_front').fadeOut('normal', function() {
+			var url = $that.attr('href') + ' .lightbox_back';
+			$('.lightbox#small').load(url).fadeIn(fade_speed);			
+		}); 
+		return false;
+	});
 });
 
