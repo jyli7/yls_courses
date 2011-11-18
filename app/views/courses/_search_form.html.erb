@@ -58,7 +58,8 @@
 <% end %>
 <%= hidden_field_tag :toggle, @toggle %>	
 <div class="search_button"><%= f.submit "Search", :remote => true, :class=>"search_submit", :id=>'' %></div>
-<div class="course_list_link">| <%= link_to "Reset search and courses", :remote => true %></div>
+<div class="course_list_link">| <%= link_to "Reset search and courses", courses_path(:filter_by_cart => "0"), :remote => true %></div>
+<div class="course_list_link">| <%= link_to "Filter by courses in cart", courses_path(:filter_by_cart => "1"), :remote => true %></div>
 
 <div id="legend">
 	Legend: 
