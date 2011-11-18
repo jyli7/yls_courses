@@ -226,7 +226,7 @@ body {
 			
 			#name_search, #search_name_like {	
 				width:205px;
-				margin-right:70px;
+				margin-right:75px;
 			}
 			
 			#instructor_search, #search_instructor_like {
@@ -353,12 +353,14 @@ div#first_row {
 	@include classtime_value_width;
 	display:inline-block;
 	margin-right:$mbc;
+	margin-left:32px;
 }
 
 #instructor_quality_header, .instructor_quality_body {
 	@include instructor_quality_width;
 	display:inline-block;
 	margin-right:$mbc;
+	margin-left:4px;
 }
 
 #workload_header, .workload_body {
@@ -386,8 +388,7 @@ div#first_row {
 .eval_super_container {
 	overflow:auto;
 	float:right;
-	width:576px;
-	
+	margin-right:11px;
 }
 
 .eval_bar {
@@ -1023,4 +1024,10 @@ div #sign_in_button {
 	color:gray;
 }
 
+.ct_container {
+	margin-left:40px;
+}
 
+.iq_container {
+	margin-left:8px;
+}

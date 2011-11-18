@@ -100,7 +100,7 @@
 
 		//if the count is too high (i.e. the width is too small), remove the course name and time and use tooltips
 		if(count >=3) {
-			$('#'+id).html("<span class='for_tooltip' title='<%=mini_arr[0] %> <%= mini_arr[4] %>'><%= mini_arr[0][0..-5]%></span><br>..."); //replace HTML with shortened course name
+			$('#'+id).html("<span class='for_tooltip' title='<%=mini_arr[0] %> <%= mini_arr[4] %>'><%= mini_arr[0][0..-3]%></span><br>..."); //replace HTML with shortened course name
 		}
 		id += 1;
 	<% end %>

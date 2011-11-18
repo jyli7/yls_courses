@@ -558,16 +558,18 @@ task :get_other_evals => :environment do
       #returns true if a 1 to 1 match between the professor list in the spreadsheet and the professor list in the database
       prof_match = false
       spreadsheet_prof_name_array.each do |prof|
-        if course.instructor.include? prof
+        if course.instructor.include? prof[0..2]
           prof_match = true 
           break
         end
       end
+      count = 0
       if course.name.include? spreadsheet_course_name_array[0][1..3] and course.name.include? spreadsheet_course_name_array[-1][1..3] and prof_match
         course.update_attribute :instructor_quality, spreadsheet_instructor_quality.to_f.round(1)
         course.update_attribute :classtime_value, spreadsheet_classtime_value.to_f.round(1)
         course.update_attribute :workload, spreadsheet_workload.to_f.round(1)
-      end 
+        puts count++
+      end
     end 
     
   end
