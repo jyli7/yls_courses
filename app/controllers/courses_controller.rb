@@ -8,7 +8,7 @@ class CoursesController < ApplicationController
 
     #don't trust the database to order the courses alphabetically
     @courses = @search.order("name asc").all
-    
+        
     #toggle 0 corresponds to information view, 1 for ratings view
     if params[:toggle] == "0" or params[:toggle] == "1"
       @toggle = params[:toggle]
@@ -32,9 +32,9 @@ class CoursesController < ApplicationController
     if user_signed_in?
       @user = current_user
       @cart = @user.cart
-      if @cart 
+      if @cart
         @line_item = @cart.line_items.build(params[:line_item])
-        @line_items_in_cart = @cart.line_items.all  
+        @line_items_in_cart = @cart.line_items.all
         @courses_in_cart = @line_items_in_cart.inject({}) do |h, line_item|
           h[line_item.course] = true
           h

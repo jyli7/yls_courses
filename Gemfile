@@ -26,6 +26,7 @@ group :development do
   gem 'faker', '0.3.1'
   gem "nifty-generators"
   gem 'sqlite3', '1.3.3'
+  gem 'mailcatcher'
 end
 
 group :test do
