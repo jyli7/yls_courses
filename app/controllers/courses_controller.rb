@@ -5,9 +5,27 @@ class CoursesController < ApplicationController
   # GET /courses.xml
   def index
     @search = Course.search(params[:search])
-
-    #don't trust the database to order the courses alphabetically
-    @courses = @search.order("name asc").all
+    
+    #for creating line items in the cart
+    if user_signed_in?
+      @user = current_user
+      @cart = @user.cart
+      if @cart
+        @line_item = @cart.line_items.build(params[:line_item])
+        @line_items_in_cart = @cart.line_items.all
+        @courses_in_cart = @line_items_in_cart.inject({}) do |h, line_item|
+          h[line_item.course] = true
+          h
+        end        
+      end
+    end
+    
+    #present all courses, or just present courses in cart
+    if params[:filter_by_cart] == "1"
+      @courses = @cart.line_items.all.map {|line_item| line_item.course}
+    else 
+      @courses = @search.order("name asc").all
+    end 
         
     #toggle 0 corresponds to information view, 1 for ratings view
     if params[:toggle] == "0" or params[:toggle] == "1"
@@ -27,21 +45,7 @@ class CoursesController < ApplicationController
     @limitations_results = params[:search] == nil ? :blank : params[:search][:limitations_like]
     @exam_results = params[:search] == nil ? :blank : params[:search][:exam_type_like]
     @paper_results = params[:search] == nil ? :blank : params[:search][:paper_type_like]
-    
-    #for creating line items in the cart
-    if user_signed_in?
-      @user = current_user
-      @cart = @user.cart
-      if @cart
-        @line_item = @cart.line_items.build(params[:line_item])
-        @line_items_in_cart = @cart.line_items.all
-        @courses_in_cart = @line_items_in_cart.inject({}) do |h, line_item|
-          h[line_item.course] = true
-          h
-        end        
-      end 
-    end
-    
+        
     #everything that follows is for the calendar
     if params[:cal_on] == "1" #'1' is for calendar view --> triggers a different part of index.js.erb
       @cal_on = 1
