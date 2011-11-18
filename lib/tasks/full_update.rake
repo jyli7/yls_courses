@@ -563,12 +563,10 @@ task :get_other_evals => :environment do
           break
         end
       end
-      count = 0
       if course.name.include? spreadsheet_course_name_array[0][1..3] and course.name.include? spreadsheet_course_name_array[-1][1..3] and prof_match
         course.update_attribute :instructor_quality, spreadsheet_instructor_quality.to_f.round(1)
         course.update_attribute :classtime_value, spreadsheet_classtime_value.to_f.round(1)
         course.update_attribute :workload, spreadsheet_workload.to_f.round(1)
-        puts count++
       end
     end 
     

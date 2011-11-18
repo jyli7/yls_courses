@@ -10,6 +10,7 @@ YlsCourses::Application.routes.draw do
 
   match '/signup',  :to => 'users#new'
   match '/about',  :to => 'pages#about'
+  match '/about_ratings',  :to => 'pages#about_ratings'
   match '/faq',  :to => 'pages#faq'
 
 

@@ -20,6 +20,8 @@ $(document).ready(function() {
 
 	/*For freeing and fixing the cart (within the calendar) */
 	$('#free_cart, #fix_cart, #bar').hide();
+	
+	$('#sidebar').draggable({disabled: true});
 		
 	$('#free_cart').live('click', function(e) {
 		var position_free = $('#sidebar').position();
