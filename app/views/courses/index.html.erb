@@ -73,7 +73,7 @@
 	<% if user_signed_in? %>
 	<div id="courses_cal" style="display:none;">
 		<div class="lightbox_back">
-			<div class="cal_lightbox_front">
+			<div class="lightbox_front cal_lightbox_front">
 				<span class="cal_lightbox_close"><a href='' id="close_cal">CLOSE [X]</a></span>
 				<div id="cal_header_div">Course Calendar</div> |
 				<%= link_to "Refresh calendar", courses_path(:cal_on=>1), :id=> "cal_classes_refresh", :remote => true %> 

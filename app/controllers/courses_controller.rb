@@ -5,10 +5,9 @@ class CoursesController < ApplicationController
   # GET /courses.xml
   def index
     @search = Course.search(params[:search])
+
     #don't trust the database to order the courses alphabetically
     @courses = @search.order("name asc").all
-    
-    @old_toggle = @toggle 
     
     #toggle 0 corresponds to information view, 1 for ratings view
     if params[:toggle] == "0" or params[:toggle] == "1"
@@ -16,16 +15,11 @@ class CoursesController < ApplicationController
     else 
       @toggle = "0"
     end
-    
-    @toggle_changed = false
-    
-    if @old_toggle != nil and @toggle != @old_toggle
-      @toggle_changed = true
-    end
-      
+          
     #form an array of course names for the autocomplete function
     @course_names = Course.all.map {|a| a.name}
     @instructor_names = Course.all.map {|a| a.instructor}
+    @instructor_names.uniq!
     
     #for retaining search results
     @tod_results = params[:search] == nil ? :blank : params[:search][:tod_like]
@@ -34,6 +28,7 @@ class CoursesController < ApplicationController
     @exam_results = params[:search] == nil ? :blank : params[:search][:exam_type_like]
     @paper_results = params[:search] == nil ? :blank : params[:search][:paper_type_like]
     
+    #for creating line items in the cart
     if user_signed_in?
       @user = current_user
       @cart = @user.cart
