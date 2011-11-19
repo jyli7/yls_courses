@@ -131,6 +131,11 @@ h2 {
 	font-size:90%;
 }
 
+#signup_msg {
+	font-size:90%;
+	padding-bottom:3px;
+}
+
 .on_page_color {
 	color:white;
 }
@@ -376,7 +381,7 @@ div#first_row {
 }
 
 .eval_container_bar {
-	background-color:white;
+	background-color:#E5E5E5;
 	border:1px solid black;
 	font: #7FEAFF;
 	height:20px;
@@ -394,7 +399,7 @@ div#first_row {
 .eval_bar {
 	display:inline-block;
 	color:white;
-	background-color:#00334F;
+	background-color:#406FA3;
 	height:17px;
 	padding:3px 5px 0 0;
 	text-align:right;
