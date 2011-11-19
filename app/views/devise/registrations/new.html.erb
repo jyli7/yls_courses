@@ -16,6 +16,7 @@
 				  <div><%= f.label :password_confirmation %><br />
 				  <%= f.password_field :password_confirmation %></div>
 				  <div id="sign_up_button"><%= f.submit "Sign up" %></div>
+				<div class="assurance_msg">You will receive a confirmation email upon sign up.</div>
 				<% end %>
 			<%= render :partial => "devise/shared/links" %>
 			</div>
