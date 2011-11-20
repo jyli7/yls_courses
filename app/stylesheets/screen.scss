@@ -381,7 +381,6 @@ div#first_row {
 }
 
 .eval_container_bar {
-	background-color:#E5E5E5;
 	border:1px solid black;
 	font: #7FEAFF;
 	height:20px;
@@ -401,8 +400,9 @@ div#first_row {
 	color:white;
 	background-color:#406FA3;
 	height:17px;
-	padding:3px 5px 0 0;
+	padding:3px 5px 0 0px;
 	text-align:right;
+	border-right:1px solid black;
 	
 }
 .eval_bar_cell {
