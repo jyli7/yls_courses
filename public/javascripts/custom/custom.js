@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	
 	/* Tooltips */	
-	$('#search_day_like, .above_0, .below_10').tipTip();
+	$('#search_day_like').tipTip();
 	
 	/* For hiding the sidebar at the beginning */
 	$('#sidebar').hide();
