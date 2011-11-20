@@ -9,7 +9,10 @@ class CoursesController < ApplicationController
     #for creating line items in the cart
     if user_signed_in?
       @user = current_user
+      # @courses_in_cart = @user.courses_in_cart
+      # @line_items_in_cart = @user.line_items_in_cart
       @cart = @user.cart
+      
       if @cart
         @line_item = @cart.line_items.build(params[:line_item])
         @line_items_in_cart = @cart.line_items.all

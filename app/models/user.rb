@@ -13,4 +13,5 @@ class User < ActiveRecord::Base
   def create_user_cart #create cart immediately upon sign_up
     create_cart
   end
+
 end

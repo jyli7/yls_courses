@@ -391,7 +391,6 @@ div#first_row {
 
 /* line 383, ../../app/stylesheets/screen.scss */
 .eval_container_bar {
-  background-color: #E5E5E5;
   border: 1px solid black;
   font: #7FEAFF;
   height: 20px;
@@ -400,21 +399,22 @@ div#first_row {
   margin-right: 21px;
 }
 
-/* line 393, ../../app/stylesheets/screen.scss */
+/* line 392, ../../app/stylesheets/screen.scss */
 .eval_super_container {
   overflow: auto;
   float: right;
   margin-right: 11px;
 }
 
-/* line 399, ../../app/stylesheets/screen.scss */
+/* line 398, ../../app/stylesheets/screen.scss */
 .eval_bar {
   display: inline-block;
   color: white;
   background-color: #406FA3;
   height: 17px;
-  padding: 3px 5px 0 0;
+  padding: 3px 5px 0 0px;
   text-align: right;
+  border-right: 1px solid black;
 }
 
 /* line 408, ../../app/stylesheets/screen.scss */

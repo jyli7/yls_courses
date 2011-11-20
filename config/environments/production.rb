@@ -57,5 +57,4 @@ YlsCourses::Application.configure do
     :user_name => ENV['EMAIL_USER'],
     :password => ENV['EMAIL_PASSWORD']
   }
-
 end
