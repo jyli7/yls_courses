@@ -114,7 +114,7 @@ $(document).ready(function() {
 
 	$('#info_toggle').click( function(e) {  
 		$(this).delay(800).css("color", "white");
-		$('#eval_toggle').delay(800).css("color", "#7FEAFF");
+		$('#eval_toggle').delay(800).css("color", '#7FEAFF');
 	});
 
 	$('#eval_toggle').click( function(e) {

@@ -462,7 +462,7 @@ a {
 
 /* line 452, ../../app/stylesheets/screen.scss */
 a:hover {
-  color: #EAF9F9;
+  color: #B3EBEF;
   text-decoration: underline;
 }
 
@@ -473,10 +473,10 @@ a:visited {
 
 /* line 461, ../../app/stylesheets/screen.scss */
 #first_row a:visited {
-  color: #7FEAFF;
+  color: #AFF9FF;
 }
 
-/* line 469, ../../app/stylesheets/screen.scss */
+/* line 466, ../../app/stylesheets/screen.scss */
 table#yls {
   font-size: 25px;
   width: 100%;
@@ -485,7 +485,7 @@ table#yls {
   border-bottom: 2px solid #FFFFFF;
 }
 
-/* line 477, ../../app/stylesheets/screen.scss */
+/* line 474, ../../app/stylesheets/screen.scss */
 #logo {
   height: 45px;
   position: relative;
@@ -493,14 +493,14 @@ table#yls {
   margin-bottom: 3px;
 }
 
-/* line 484, ../../app/stylesheets/screen.scss */
+/* line 481, ../../app/stylesheets/screen.scss */
 #logo_wrapper {
   border-bottom: 2px solid white;
   margin-bottom: 14px;
 }
 
 /*Search Form */
-/* line 492, ../../app/stylesheets/screen.scss */
+/* line 489, ../../app/stylesheets/screen.scss */
 .search_button {
   margin: 8px 5px 3px 0;
   width: 50px;
@@ -509,7 +509,7 @@ table#yls {
   float: left;
 }
 
-/* line 500, ../../app/stylesheets/screen.scss */
+/* line 497, ../../app/stylesheets/screen.scss */
 div.course_list_link {
   display: inline-block;
   clear: both;
@@ -518,20 +518,20 @@ div.course_list_link {
   font-size: 1em;
 }
 
-/* line 508, ../../app/stylesheets/screen.scss */
+/* line 505, ../../app/stylesheets/screen.scss */
 .field_container {
   height: 35px;
 }
 
 /*horizontal bars */
-/* line 515, ../../app/stylesheets/screen.scss */
+/* line 512, ../../app/stylesheets/screen.scss */
 .zebra {
   padding: 2px 0 2px 0;
   background-color: #2d647f;
 }
 
 /* Round corners */
-/* line 522, ../../app/stylesheets/screen.scss */
+/* line 519, ../../app/stylesheets/screen.scss */
 .round {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -539,26 +539,26 @@ div.course_list_link {
 }
 
 /*Course Table */
-/* line 530, ../../app/stylesheets/screen.scss */
+/* line 527, ../../app/stylesheets/screen.scss */
 div#course_table {
   margin: 10px 0 0 0;
   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 }
 
-/* line 536, ../../app/stylesheets/screen.scss */
+/* line 533, ../../app/stylesheets/screen.scss */
 .other_rows {
   margin: 5px 0 3px 0;
   padding: 2px 0 2px 5px;
 }
 
-/* line 541, ../../app/stylesheets/screen.scss */
+/* line 538, ../../app/stylesheets/screen.scss */
 .descrip_body {
   margin: 3px 0 0 0;
   padding: 0 0 2px 5px;
   display: none;
 }
 
-/* line 548, ../../app/stylesheets/screen.scss */
+/* line 545, ../../app/stylesheets/screen.scss */
 hr#border_line {
   margin-top: 0px;
   height: 0.5px;
@@ -566,32 +566,32 @@ hr#border_line {
   background-color: transparent;
 }
 
-/* line 556, ../../app/stylesheets/screen.scss */
+/* line 553, ../../app/stylesheets/screen.scss */
 .toggle_link_hide, .toggle_link_show {
   display: inline-block;
   float: right;
   margin-bottom: 5px;
 }
 
-/* line 562, ../../app/stylesheets/screen.scss */
+/* line 559, ../../app/stylesheets/screen.scss */
 .delete_line_item {
   display: inline-block;
   margin-right: 10px;
 }
 
-/* line 567, ../../app/stylesheets/screen.scss */
+/* line 564, ../../app/stylesheets/screen.scss */
 #current_item, .non_current_item {
   display: inline-block;
   width: 350px;
   margin-bottom: 1px;
 }
 
-/* line 573, ../../app/stylesheets/screen.scss */
+/* line 570, ../../app/stylesheets/screen.scss */
 .non_current_item:last-child {
   margin-bottom: -20px;
 }
 
-/* line 577, ../../app/stylesheets/screen.scss */
+/* line 574, ../../app/stylesheets/screen.scss */
 #units_range_title {
   border-top: 1px solid white;
   display: inline-block;
@@ -601,7 +601,7 @@ hr#border_line {
   margin: 7px 0 10px 0;
 }
 
-/* line 586, ../../app/stylesheets/screen.scss */
+/* line 583, ../../app/stylesheets/screen.scss */
 #units_range {
   display: inline-block;
   border-top: 10px;
@@ -611,41 +611,41 @@ hr#border_line {
   left: 90px;
 }
 
-/* line 595, ../../app/stylesheets/screen.scss */
+/* line 592, ../../app/stylesheets/screen.scss */
 #units_range_title, #units_range {
   margin-top: 5px;
   padding-top: 3px;
 }
 
-/* line 600, ../../app/stylesheets/screen.scss */
+/* line 597, ../../app/stylesheets/screen.scss */
 #calendar_header, .calendar_body, #eval_header, .eval_body, #cart_header, .cart_body {
   display: inline-block;
   width: 20px;
   margin: 0 0 0 0;
 }
 
-/* line 606, ../../app/stylesheets/screen.scss */
+/* line 603, ../../app/stylesheets/screen.scss */
 .eval_body {
   margin-right: 2px;
 }
 
-/* line 610, ../../app/stylesheets/screen.scss */
+/* line 607, ../../app/stylesheets/screen.scss */
 #cart_header, .cart_body {
   width: 30px;
 }
 
-/* line 614, ../../app/stylesheets/screen.scss */
+/* line 611, ../../app/stylesheets/screen.scss */
 .units_body_cart {
   display: inline-block;
   margin-right: -10px;
 }
 
-/* line 619, ../../app/stylesheets/screen.scss */
+/* line 616, ../../app/stylesheets/screen.scss */
 .cart_add_hidden {
   display: none;
 }
 
-/* line 623, ../../app/stylesheets/screen.scss */
+/* line 620, ../../app/stylesheets/screen.scss */
 .gt_or_lt_sign {
   display: inline-block;
   float: left;
@@ -654,7 +654,7 @@ hr#border_line {
 }
 
 /*Lightbox */
-/* line 632, ../../app/stylesheets/screen.scss */
+/* line 629, ../../app/stylesheets/screen.scss */
 .lightbox_back {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
@@ -665,7 +665,7 @@ hr#border_line {
   z-index: 70;
 }
 
-/* line 642, ../../app/stylesheets/screen.scss */
+/* line 639, ../../app/stylesheets/screen.scss */
 .lightbox_front {
   padding: 10px;
   position: relative;
@@ -679,13 +679,13 @@ hr#border_line {
   border: 5px solid #EFEFEF;
 }
 
-/* line 655, ../../app/stylesheets/screen.scss */
+/* line 652, ../../app/stylesheets/screen.scss */
 #about_ratings_lightbox_front {
   top: 15%;
   width: 75%;
 }
 
-/* line 660, ../../app/stylesheets/screen.scss */
+/* line 657, ../../app/stylesheets/screen.scss */
 .cal_lightbox_front {
   padding: 10px;
   position: relative;
@@ -699,7 +699,7 @@ hr#border_line {
   border: 5px solid #EFEFEF;
 }
 
-/* line 673, ../../app/stylesheets/screen.scss */
+/* line 670, ../../app/stylesheets/screen.scss */
 .faq_lightbox_front {
   padding: 10px;
   position: relative;
@@ -712,13 +712,13 @@ hr#border_line {
   z-index: 70;
 }
 
-/* line 685, ../../app/stylesheets/screen.scss */
+/* line 682, ../../app/stylesheets/screen.scss */
 #about_lightbox_front {
   width: 65%;
   top: 21%;
 }
 
-/* line 690, ../../app/stylesheets/screen.scss */
+/* line 687, ../../app/stylesheets/screen.scss */
 .cal_lightbox_close, .lightbox_close {
   font-color: gray;
   position: relative;
@@ -726,44 +726,44 @@ hr#border_line {
 }
 
 /* show course page */
-/* line 697, ../../app/stylesheets/screen.scss */
+/* line 694, ../../app/stylesheets/screen.scss */
 #show_header {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-/* line 703, ../../app/stylesheets/screen.scss */
+/* line 700, ../../app/stylesheets/screen.scss */
 #show_eval_header {
   font-style: italic;
   font-size: 13px;
   margin-bottom: 1em;
 }
 
-/* line 709, ../../app/stylesheets/screen.scss */
+/* line 706, ../../app/stylesheets/screen.scss */
 .indiv_eval_link {
   display: inline-block;
   width: 90px;
 }
 
-/* line 715, ../../app/stylesheets/screen.scss */
+/* line 712, ../../app/stylesheets/screen.scss */
 .prof_name {
   display: inline-block;
 }
 
-/* line 719, ../../app/stylesheets/screen.scss */
+/* line 716, ../../app/stylesheets/screen.scss */
 img {
   border: none;
 }
 
-/* line 723, ../../app/stylesheets/screen.scss */
+/* line 720, ../../app/stylesheets/screen.scss */
 img#arrow {
   margin-left: 3px;
   margin-top: 10px;
   margin-bottom: -4px;
 }
 
-/* line 730, ../../app/stylesheets/screen.scss */
+/* line 727, ../../app/stylesheets/screen.scss */
 #cart_border, #eval_toggle_wrapper, #eval_toggle_wrapper_faux, #info_toggle_wrapper, #see_calendar {
   position: fixed;
   left: 1080px;
@@ -773,7 +773,7 @@ img#arrow {
   font-size: 13px;
 }
 
-/* line 739, ../../app/stylesheets/screen.scss */
+/* line 736, ../../app/stylesheets/screen.scss */
 #cart_border, #see_calendar {
   width: 110px;
   text-align: center;
@@ -781,126 +781,126 @@ img#arrow {
   top: 27px;
 }
 
-/* line 746, ../../app/stylesheets/screen.scss */
+/* line 743, ../../app/stylesheets/screen.scss */
 #eval_toggle_wrapper {
   top: 72px;
 }
 
-/* line 750, ../../app/stylesheets/screen.scss */
+/* line 747, ../../app/stylesheets/screen.scss */
 #info_toggle_wrapper {
   top: 72px;
 }
 
-/* line 754, ../../app/stylesheets/screen.scss */
+/* line 751, ../../app/stylesheets/screen.scss */
 #see_calendar {
   top: 160px;
 }
 
-/* line 758, ../../app/stylesheets/screen.scss */
+/* line 755, ../../app/stylesheets/screen.scss */
 #eval_toggle_td {
   padding: 10px 0 5px 0;
   text-align: center;
 }
 
-/* line 763, ../../app/stylesheets/screen.scss */
+/* line 760, ../../app/stylesheets/screen.scss */
 #info_toggle_td {
   padding: 5px 0 10px 0;
   text-align: center;
   border-bottom: 1px solid white;
 }
 
-/* line 769, ../../app/stylesheets/screen.scss */
+/* line 766, ../../app/stylesheets/screen.scss */
 nav, #cart_border, #eval_toggle_wrapper, #eval_toggle_wrapper_faux, #see_calendar {
   padding: 8px 6px 8px 6px;
   font-size: 13px;
   float: right;
 }
 
-/* line 775, ../../app/stylesheets/screen.scss */
+/* line 772, ../../app/stylesheets/screen.scss */
 #eval_toggle_wrapper, #eval_toggle_wrapper_faux {
   padding: 8px;
 }
 
-/* line 779, ../../app/stylesheets/screen.scss */
+/* line 776, ../../app/stylesheets/screen.scss */
 #eval_toggle_wrapper_faux {
   padding: 8px 10px;
   top: 27px;
 }
 
-/* line 784, ../../app/stylesheets/screen.scss */
+/* line 781, ../../app/stylesheets/screen.scss */
 #legend img {
   vertical-align: top;
 }
 
-/* line 788, ../../app/stylesheets/screen.scss */
+/* line 785, ../../app/stylesheets/screen.scss */
 #legend {
   margin: 2px 0 0 0;
   padding-bottom: 5px;
 }
 
-/* line 793, ../../app/stylesheets/screen.scss */
+/* line 790, ../../app/stylesheets/screen.scss */
 #legend_gcal, #legend_eval, #legend_cart {
   position: relative;
   bottom: 5px;
   padding: 0 2px 0px 3px;
 }
 
-/* line 800, ../../app/stylesheets/screen.scss */
+/* line 797, ../../app/stylesheets/screen.scss */
 #sign_up, #sign_in {
   margin-top: 0px;
 }
 
 /*About Page */
-/* line 808, ../../app/stylesheets/screen.scss */
+/* line 805, ../../app/stylesheets/screen.scss */
 #about {
   font-size: 1.05em;
 }
 
-/* line 812, ../../app/stylesheets/screen.scss */
+/* line 809, ../../app/stylesheets/screen.scss */
 #about_header, #faq_header {
   margin-bottom: 15px;
 }
 
-/* line 816, ../../app/stylesheets/screen.scss */
+/* line 813, ../../app/stylesheets/screen.scss */
 #about_p {
   font-size: 14px;
 }
 
-/* line 820, ../../app/stylesheets/screen.scss */
+/* line 817, ../../app/stylesheets/screen.scss */
 #about_wrapper, #faq_wrapper {
   font-size: 13px;
   padding: 8px;
 }
-/* line 824, ../../app/stylesheets/screen.scss */
+/* line 821, ../../app/stylesheets/screen.scss */
 #about_wrapper li, #faq_wrapper li {
   margin: 15px 0 15px 30px;
 }
 
-/* line 829, ../../app/stylesheets/screen.scss */
+/* line 826, ../../app/stylesheets/screen.scss */
 #faq_wrapper div {
   margin: 5px 0 5px 0px;
   padding: 5px 0px 5px 5px;
 }
 
-/* line 834, ../../app/stylesheets/screen.scss */
+/* line 831, ../../app/stylesheets/screen.scss */
 .faq_q {
   font-size: 110%;
   margin-bottom: 13px;
 }
 
-/* line 839, ../../app/stylesheets/screen.scss */
+/* line 836, ../../app/stylesheets/screen.scss */
 .faq_a {
   margin-bottom: 13px;
   line-height: 18px;
 }
 
-/* line 844, ../../app/stylesheets/screen.scss */
+/* line 841, ../../app/stylesheets/screen.scss */
 #contact {
   margin: 20px 0 0 0;
 }
 
 /*Sign Up Page*/
-/* line 850, ../../app/stylesheets/screen.scss */
+/* line 847, ../../app/stylesheets/screen.scss */
 .form_wrapper {
   padding: 8px 0 10px 25px;
   margin: 5px 0 0 10px;
@@ -908,51 +908,51 @@ nav, #cart_border, #eval_toggle_wrapper, #eval_toggle_wrapper_faux, #see_calenda
   background-color: #2D647F;
   font-size: 105%;
 }
-/* line 857, ../../app/stylesheets/screen.scss */
+/* line 854, ../../app/stylesheets/screen.scss */
 .form_wrapper div {
   margin: 15px 0 5px 0;
 }
-/* line 861, ../../app/stylesheets/screen.scss */
+/* line 858, ../../app/stylesheets/screen.scss */
 .form_wrapper .field_with_errors {
   position: relative;
   margin: -6px 0px 0px 0px;
 }
-/* line 866, ../../app/stylesheets/screen.scss */
+/* line 863, ../../app/stylesheets/screen.scss */
 .form_wrapper a {
   display: inline-block;
   margin-bottom: 5px;
 }
 
-/* line 873, ../../app/stylesheets/screen.scss */
+/* line 870, ../../app/stylesheets/screen.scss */
 #sign_up_button {
   margin: 10px 0 10px 0;
 }
 
-/* line 877, ../../app/stylesheets/screen.scss */
+/* line 874, ../../app/stylesheets/screen.scss */
 div #sign_in_button {
   margin: 5px 0 10px 0;
 }
 
-/* line 881, ../../app/stylesheets/screen.scss */
+/* line 878, ../../app/stylesheets/screen.scss */
 .eval_shadow, .prof_name {
   margin-bottom: 5px;
 }
 
-/* line 885, ../../app/stylesheets/screen.scss */
+/* line 882, ../../app/stylesheets/screen.scss */
 #no_courses {
   font-style: italic;
   font-size: 105%;
   margin-left: 4px;
 }
 
-/* line 891, ../../app/stylesheets/screen.scss */
+/* line 888, ../../app/stylesheets/screen.scss */
 .hide_search, #show_search {
   display: inline-block;
   position: relative;
   left: 705px;
 }
 
-/* line 897, ../../app/stylesheets/screen.scss */
+/* line 894, ../../app/stylesheets/screen.scss */
 .hide_search_img {
   display: inline-block;
   position: relative;
@@ -961,7 +961,7 @@ div #sign_in_button {
 }
 
 /* Calendar */
-/* line 906, ../../app/stylesheets/screen.scss */
+/* line 903, ../../app/stylesheets/screen.scss */
 #cal_wrapper {
   height: 582px;
   width: 970px;
@@ -970,7 +970,7 @@ div #sign_in_button {
   padding: 0 10px 0 10px;
 }
 
-/* line 914, ../../app/stylesheets/screen.scss */
+/* line 911, ../../app/stylesheets/screen.scss */
 #cal_header {
   background-color: #2d647f;
   clear: both;
@@ -980,7 +980,7 @@ div #sign_in_button {
   float: right;
 }
 
-/* line 923, ../../app/stylesheets/screen.scss */
+/* line 920, ../../app/stylesheets/screen.scss */
 .day {
   float: left;
   text-align: center;
@@ -989,12 +989,12 @@ div #sign_in_button {
   margin-right: 10px;
 }
 
-/* line 932, ../../app/stylesheets/screen.scss */
+/* line 929, ../../app/stylesheets/screen.scss */
 .day#friday {
   margin-right: 0px;
 }
 
-/* line 936, ../../app/stylesheets/screen.scss */
+/* line 933, ../../app/stylesheets/screen.scss */
 #hour_header_wrapper {
   width: 65px;
   float: left;
@@ -1002,32 +1002,32 @@ div #sign_in_button {
   margin-top: 2px;
 }
 
-/* line 943, ../../app/stylesheets/screen.scss */
+/* line 940, ../../app/stylesheets/screen.scss */
 #week_hour_rows {
   float: right;
 }
 
-/* line 947, ../../app/stylesheets/screen.scss */
+/* line 944, ../../app/stylesheets/screen.scss */
 .day_hour_rows {
   float: right;
 }
 
-/* line 952, ../../app/stylesheets/screen.scss */
+/* line 949, ../../app/stylesheets/screen.scss */
 .hour_header {
   padding: 0px 0 28px 0;
 }
 
-/* line 956, ../../app/stylesheets/screen.scss */
+/* line 953, ../../app/stylesheets/screen.scss */
 .hour_header#hour_8 {
   padding: 36px 0 30px 0;
 }
 
-/* line 960, ../../app/stylesheets/screen.scss */
+/* line 957, ../../app/stylesheets/screen.scss */
 .hour_header#hour_9 {
   padding: 0px 0 0px 0;
 }
 
-/* line 964, ../../app/stylesheets/screen.scss */
+/* line 961, ../../app/stylesheets/screen.scss */
 .hour {
   height: 39px;
   border-top: 1px solid white;
@@ -1036,22 +1036,22 @@ div #sign_in_button {
   z-index: 20;
 }
 
-/* line 972, ../../app/stylesheets/screen.scss */
+/* line 969, ../../app/stylesheets/screen.scss */
 #M8_PM, #T8_PM, #W8_PM, #Th8_PM, #F8_PM {
   border-bottom: 1px solid white;
 }
 
-/* line 976, ../../app/stylesheets/screen.scss */
+/* line 973, ../../app/stylesheets/screen.scss */
 .day, .hour {
   width: 170px;
 }
 
-/* line 980, ../../app/stylesheets/screen.scss */
+/* line 977, ../../app/stylesheets/screen.scss */
 .first_hour {
   margin-top: 35px;
 }
 
-/* line 984, ../../app/stylesheets/screen.scss */
+/* line 981, ../../app/stylesheets/screen.scss */
 .marked {
   height: 84px;
   background-color: #00374F;
@@ -1065,32 +1065,32 @@ div #sign_in_button {
   word-wrap: break-word;
 }
 
-/* line 997, ../../app/stylesheets/screen.scss */
+/* line 994, ../../app/stylesheets/screen.scss */
 #cal_header_div {
   margin-bottom: 2px;
   font-size: 135%;
   display: inline-block;
 }
 
-/* line 1003, ../../app/stylesheets/screen.scss */
+/* line 1000, ../../app/stylesheets/screen.scss */
 .class_name {
   font-size: 105%;
 }
 
-/* line 1007, ../../app/stylesheets/screen.scss */
+/* line 1004, ../../app/stylesheets/screen.scss */
 .class_time {
   font-size: 95%;
   margin-top: 2px;
   display: inline-block;
 }
 
-/* line 1013, ../../app/stylesheets/screen.scss */
+/* line 1010, ../../app/stylesheets/screen.scss */
 #close_cal {
   display: inline-block;
   float: right;
 }
 
-/* line 1018, ../../app/stylesheets/screen.scss */
+/* line 1015, ../../app/stylesheets/screen.scss */
 #cal_cart_toggle {
   display: inline-block;
   float: right;
@@ -1098,7 +1098,7 @@ div #sign_in_button {
   margin-right: 5px;
 }
 
-/* line 1026, ../../app/stylesheets/screen.scss */
+/* line 1023, ../../app/stylesheets/screen.scss */
 .tooltip {
   display: none;
   font-size: 12px;
@@ -1108,17 +1108,17 @@ div #sign_in_button {
   color: #fff;
 }
 
-/* line 1035, ../../app/stylesheets/screen.scss */
+/* line 1032, ../../app/stylesheets/screen.scss */
 .default_text {
   color: gray;
 }
 
-/* line 1039, ../../app/stylesheets/screen.scss */
+/* line 1036, ../../app/stylesheets/screen.scss */
 .ct_container {
   margin-left: 40px;
 }
 
-/* line 1043, ../../app/stylesheets/screen.scss */
+/* line 1040, ../../app/stylesheets/screen.scss */
 .iq_container {
   margin-left: 8px;
 }
