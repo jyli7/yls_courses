@@ -561,6 +561,7 @@ hr#border_line {
 
 .delete_line_item {
 	display:inline-block;
+	margin-right:10px;
 }
 
 #current_item, .non_current_item {
@@ -577,7 +578,7 @@ hr#border_line {
 	border-top:1px solid white;
 	display:inline-block;
 	position:relative;
-	left:70px;
+	left:60px;
 	width:180px;
 	margin:7px 0 10px 0;
 }
@@ -588,7 +589,7 @@ hr#border_line {
 	width:55px;
 	border-top:1px solid white;
 	position: relative;
-	left:100px;
+	left:90px;
 }
 
 #units_range_title, #units_range {
@@ -792,7 +793,7 @@ nav, #cart_border, #eval_toggle_wrapper, #eval_toggle_wrapper_faux, #see_calenda
 #legend_gcal, #legend_eval, #legend_cart {
 	position:relative;
 	bottom:5px;
-	padding:0 2px 0px 8px;
+	padding:0 2px 0px 3px;
 	
 }
 
