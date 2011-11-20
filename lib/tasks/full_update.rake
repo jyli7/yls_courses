@@ -181,10 +181,13 @@ task :get_evals => :environment do
       #to grab the first two letters of the second word (if it exists)
       if course.name.include? " "
         space_index = course.name.index(" ")
-        middle_str = course.name[space_index+1..space_index+2]
-      elsif course.name.include? "&"
-        space_index = course.name.index("&")
-        middle_str = course.name[space_index+1..space_index+2]
+        #for courses that have a '&' after the first space
+        if course.name[space_index+1] == "&"
+          middle_str = course.name[space_index+1]
+        #for other courses
+        else 
+          middle_str = course.name[space_index+1..space_index+2]
+        end
       else 
         middle_str = ""
       end 
