@@ -323,6 +323,16 @@ end
 desc "Get test or paper options for each class"
 task :get_testing => :environment do
 
+  #delete testing attributes first
+  for course in Course.all 
+    unless course.exam_type.nil?
+      course.update_attribute :exam_type, nil
+    end 
+    unless course.paper_type.nil?
+      course.update_attribute :paper_type, nil
+    end
+  end
+
   for course in Course.all  
 
     course.update_attribute :exam_type, "None"
@@ -336,7 +346,7 @@ task :get_testing => :environment do
     end
 
     if course.descrip =~ /self-scheduled/i
-      course.update_attribute :exam_type, "Self-scheduled" 
+      course.update_attribute :exam_type, "Self-schedule" 
     end
 
     course.update_attribute :paper_type, "None"
