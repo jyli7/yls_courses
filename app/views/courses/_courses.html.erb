@@ -5,20 +5,20 @@
 <% end %>
 
 <div id="first_row"> 
-	<span id="name_header"><%= sort_link @search, :name, "Course Name", {:toggle=>@toggle}, :remote => true %></span>
+	<span id="name_header"><%= sort_link @search, :name, "Course Name", {:toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]}, :remote => true %></span>
 	<span id="icons_header"></span>
-	<span id="instructor_header"><%= sort_link @search, :instructor, {:toggle=>@toggle}, :remote => true %></span>
+	<span id="instructor_header"><%= sort_link @search, :instructor, {:toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]}, :remote => true %></span>
 	<% if @toggle == "0" %> <!-- For info view -->
-		<span id="day_header"><%= sort_link @search, :day_num, "Day", {:toggle=>@toggle}, :remote => true %></span>
-		<span id="time_header"><%= sort_link @search, :time_num, "Time", {:toggle=>@toggle}, :remote => true %></span>			
-		<span id="units_header"><%= sort_link @search, :units_alt, "Units", {:toggle=>@toggle}, :remote => true %></span>
-		<span id="limitations_header"><%= sort_link @search, :limitations,  {:default_order => :desc, :toggle=>@toggle}, :remote => true  %></span>
-		<span id="exam_header"><%= sort_link @search, :exam_type, "Exam",  {:default_order => :desc, :toggle=>@toggle}, :remote => true   %></span>
-		<span id="paper_header"><%= sort_link @search, :paper_type, "Paper",  {:default_order => :desc, :toggle=>@toggle}, :remote => true  %></span>
+		<span id="day_header"><%= sort_link @search, :day_num, "Day", {:toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]}, :remote => true %></span>
+		<span id="time_header"><%= sort_link @search, :time_num, "Time", {:toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]}, :remote => true %></span>			
+		<span id="units_header"><%= sort_link @search, :units_alt, "Units", {:toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]}, :remote => true %></span>
+		<span id="limitations_header"><%= sort_link @search, :limitations,  {:default_order => :desc, :toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]}, :remote => true  %></span>
+		<span id="exam_header"><%= sort_link @search, :exam_type, "Exam",  {:default_order => :desc, :toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]}, :remote => true   %></span>
+		<span id="paper_header"><%= sort_link @search, :paper_type, "Paper",  {:default_order => :desc, :toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]}, :remote => true  %></span>
 	<% else %> <!-- For eval view -->
-		<span id="classtime_value_header" title=""><%= sort_link @search, :classtime_value_alt, "Classtime Value", {:default_order => :desc, :toggle=>@toggle},  :remote => true  %></span>
-		<span id="instructor_quality_header"><%= sort_link @search, :instructor_quality_alt, "Instructor Quality", {:default_order => :desc, :toggle=>@toggle}, :remote => true  %></span>		
-		<span id="workload_header"><%= sort_link @search, :workload_alt, "Workload",  {:default_order => :asc, :toggle=>@toggle}, :remote => true %></span>
+		<span id="classtime_value_header" title=""><%= sort_link @search, :classtime_value_alt, "Classtime Value", {:default_order => :desc, :toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]},  :remote => true  %></span>
+		<span id="instructor_quality_header"><%= sort_link @search, :instructor_quality_alt, "Instructor Quality", {:default_order => :desc, :toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]}, :remote => true  %></span>		
+		<span id="workload_header"><%= sort_link @search, :workload_alt, "Workload",  {:default_order => :asc, :toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]}, :remote => true %></span>
 	<% end %>
 </div>
 
