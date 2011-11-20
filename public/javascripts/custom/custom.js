@@ -146,16 +146,18 @@ $(document).ready(function() {
 				'top' : '0px',
 				'z-index' : '50'
 			});
+			
 			$('#below_first_row').css({
 				'position' : 'relative',
 				'top' : '32px'
 			});
 			
 		}
-		if (doc_position <=279) {
+		if (doc_position <=278) {
 			$('#first_row').css({
 				'position' : '',
-				'top' : ''
+				'top' : '', 
+				'z-index' : ''
 			});
 			$('#below_first_row').css({
 				'position' : '',
