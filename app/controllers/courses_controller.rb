@@ -23,7 +23,7 @@ class CoursesController < ApplicationController
 
     #present all courses, or just present courses in cart
     if params[:filter_by_cart] == "1"
-      @courses = @cart.line_items.all.map {|line_item| line_item.course}
+      @courses = @search.order("name asc").all & @cart.line_items.all.map {|line_item| line_item.course}
     else 
       @courses = @search.order("name asc").all
     end 

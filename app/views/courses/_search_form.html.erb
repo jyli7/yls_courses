@@ -60,7 +60,11 @@
 <div class="search_button"><%= f.submit "Search", :remote => true, :class=>"search_submit", :id=>'' %></div>
 <div class="course_list_link">| <%= link_to "Reset search and courses", courses_path(:filter_by_cart => "0", :toggle => @toggle ), :remote => true %></div>
 <% if user_signed_in? %>
-<div class="course_list_link">| <%= link_to "Filter by courses in cart", courses_path(:filter_by_cart => "1", :toggle => @toggle ), :remote => true %></div>
+	<% if params[:filter_by_cart] == "1"%>
+		<div class="course_list_link">| Currently showing courses in cart</div>
+	<% else %>
+		<div class="course_list_link">| <%= link_to "Filter by courses in cart", courses_path(:filter_by_cart => "1", :toggle => @toggle ), :remote => true %></div>
+	<% end %>
 <% end %>
 
 <div id="legend">
