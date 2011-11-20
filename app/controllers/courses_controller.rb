@@ -6,14 +6,6 @@ class CoursesController < ApplicationController
   def index
     @search = Course.search(params[:search])
 
-    #present all courses, or just present courses in cart
-    if params[:filter_by_cart] == "1"
-      @courses = @cart.line_items.all.map {|line_item| line_item.course}
-    else 
-      @courses = @search.order("name asc").all
-    end 
-    
-    
     #for creating line items in the cart
     if user_signed_in?
       @user = current_user
@@ -28,7 +20,14 @@ class CoursesController < ApplicationController
         end        
       end
     end
-            
+
+    #present all courses, or just present courses in cart
+    if params[:filter_by_cart] == "1"
+      @courses = @cart.line_items.all.map {|line_item| line_item.course}
+    else 
+      @courses = @search.order("name asc").all
+    end 
+                
     #toggle 0 corresponds to information view, 1 for ratings view
     if params[:toggle] == "0" or params[:toggle] == "1"
       @toggle = params[:toggle]
