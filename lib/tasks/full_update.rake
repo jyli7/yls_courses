@@ -194,17 +194,26 @@ task :get_evals => :environment do
  
       #to grab the first two letters of the third word (if it exists)
       if not middle_str.blank? and (course.name.count " ") >= 2
-          second_space_index = course.name.index(" ", space_index+1)
-          if course.name[second_space_index+1] == "&"
-            third_str = course.name[second_space_index+1]
-          else 
-            third_str = course.name[(second_space_index+1..second_space_index+2)]
-          end 
+        second_space_index = course.name.index(" ", space_index+1)
+        if course.name[second_space_index+1] == "&"
+          third_str = course.name[second_space_index+1]
+        else 
+          third_str = course.name[(second_space_index+1..second_space_index+2)]
+        end
+      #for courses like Const.Philos.Hist., which have no spaces but are in fact different words
+      elsif course.name[-1] == "."
+        third_str = course.name[-4..-2]
       else 
         third_str = ""
       end 
-            
-      eval = /\(([0-9]+), ([0-9]+)\)">#{course.name[0..2]}[^"]*#{middle_str}[^"]*#{third_str}[^"]*#{course.name[-1]}<\/a>&nbsp;([^<]+)/m.match text
+
+      #if we have a one word course that doesn't have periods:
+      unless course.name.include? " " or course.name.include? "."
+        eval = /\(([0-9]+), ([0-9]+)\)">#{course.name[0..4]}[^"]*<\/a>&nbsp;([^<]+)/m.match text
+      else
+        eval = /\(([0-9]+), ([0-9]+)\)">#{course.name[0..3]}[^"]*#{middle_str}[^"]*#{third_str}[^"]*#{course.name[-1]}<\/a>&nbsp;([^<]+)/m.match text
+      end 
+
       if eval
         eval_a = [eval[1], eval[2], eval[3]]
 
@@ -250,23 +259,39 @@ task :get_evals => :environment do
       #to grab the first two letters of the second word (if it exists)
       if course.name.include? " "
         space_index = course.name.index(" ")
-        middle_str = course.name[space_index+1..space_index+2]
-      elsif course.name.include? "&"
-        space_index = course.name.index("&")
-        middle_str = course.name[space_index+1..space_index+2]
+        #for courses that have a '&' after the first space
+        if course.name[space_index+1] == "&"
+          middle_str = course.name[space_index+1]
+        #for other courses
+        else 
+          middle_str = course.name[space_index+1..space_index+2]
+        end
       else 
         middle_str = ""
       end 
- 
+
       #to grab the first two letters of the third word (if it exists)
       if not middle_str.blank? and (course.name.count " ") >= 2
-          second_space_index = course.name.index(" ", space_index+1)
+        second_space_index = course.name.index(" ", space_index+1)
+        if course.name[second_space_index+1] == "&"
+          third_str = course.name[second_space_index+1]
+        else 
           third_str = course.name[(second_space_index+1..second_space_index+2)]
+        end
+      #for courses like Const.Philos.Hist., which have no spaces but are in fact different words
+      elsif course.name[-1] == "."
+        third_str = course.name[-4..-2]
       else 
         third_str = ""
       end 
       
-      eval = /\(([0-9]+), ([0-9]+)\)">#{course.name[0..2]}[^"]*#{middle_str}[^"]*#{third_str}[^"]*#{course.name[-1]}<\/a>&nbsp;([^<]+)/m.match text
+      #if we have a one word course that doesn't have periods:
+      unless course.name.include? " " or course.name.include? "."
+        eval = /\(([0-9]+), ([0-9]+)\)">#{course.name[0..4]}[^"]*<\/a>&nbsp;([^<]+)/m.match text
+      else
+        eval = /\(([0-9]+), ([0-9]+)\)">#{course.name[0..3]}[^"]*#{middle_str}[^"]*#{third_str}[^"]*#{course.name[-1]}<\/a>&nbsp;([^<]+)/m.match text
+      end 
+      
       if eval
         eval_a = [eval[1], eval[2], eval[3]]
 
@@ -281,10 +306,11 @@ task :get_evals => :environment do
         else
           course.term_code << eval_a[1]
         end
-
+        
+        #format the matched string so that it fits the format of the url
         if eval_a[2]
-          eval_a[2].strip!.sub!(/\\n\s*/, '').gsub!(/,&nbsp;\s*\\n\s*/, ', ') #clean up past_instructors string        
-        end         
+          eval_a[2].strip!.sub!(/\\n\s*/, '').gsub!(/,&nbsp;\s*\\n\s*/, ', ')
+        end   
 
         if course.past_instructors.blank?
           course.update_attribute :past_instructors, [eval_a[2]]
@@ -293,14 +319,13 @@ task :get_evals => :environment do
         end
 
         if course.past_semesters.blank?
-          course.update_attribute :past_semesters, ["Fall #{fall_count}"]
+          course.update_attribute :past_semesters, ["Spring #{count}"]
         else
-          course.past_semesters << "Fall #{fall_count}"
+          course.past_semesters << "Spring #{count}"
         end
-
         course.save
       end 
-    end 
+    end
   end 
 end
 
