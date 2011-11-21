@@ -27,13 +27,16 @@ class CoursesController < ApplicationController
     else 
       @courses = @search.order("name asc").all
     end 
-                
-    #toggle 0 corresponds to information view, 1 for ratings view
-    if params[:toggle] == "0" or params[:toggle] == "1"
-      @toggle = params[:toggle]
-    else 
-      @toggle = "0"
-    end
+    
+    @toggle = "0"
+    
+    #RATINGS ARE DISABLED
+    # #toggle 0 corresponds to information view, 1 for ratings view
+    # if params[:toggle] == "0" or params[:toggle] == "1"
+    #   @toggle = params[:toggle]
+    # else 
+    #   @toggle = "0"
+    # end
           
     #form an array of course names for the autocomplete function
     @course_names = Course.all.map {|a| a.name}
