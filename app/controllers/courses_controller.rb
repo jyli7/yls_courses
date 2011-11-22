@@ -63,26 +63,26 @@ class CoursesController < ApplicationController
         #cycle through the line items
         @line_items_in_cart.each do |item|
           unless item.course.day.blank? #some courses are clinics and don't meet at a time. don't try to show these. 
+            id = item.course.id
             name = item.course.name
             days = item.course.day 
             time = item.course.time
-            id = item.course.id
             room = item.course.room unless item.course.room.blank?
             room = "No room" if item.course.room.blank?
             
-            @info[name] = [] #for the array value for the name key
+            @info[id] = [name] #for the array value for the name key
                 
             if days.include? "h" #if one day is Thursday ("Th")
               if days.length == 2
-                @info[name] << ["Th"]
+                @info[id] << ["Th"]
               else 
-                @info[name] << ["#{days[0]}", "Th"]
+                @info[id] << ["#{days[0]}", "Th"]
               end 
             else
               if days.length >= 2              
-                @info[name] << [days[0], days[1]] #if class does not meet on Thursday, but meets twice a week
+                @info[id] << [days[0], days[1]] #if class does not meet on Thursday, but meets twice a week
               else 
-                @info[name] << [days] #if class meets just once a week
+                @info[id] << [days] #if class meets just once a week
               end
             end
         
@@ -116,10 +116,10 @@ class CoursesController < ApplicationController
               times_array = [time] #if there's just 1 time (for one or more days) 
             end 
             times_array.each do |t|
-              @info[name] << time_values(t)
+              @info[id] << time_values(t)
             end
-            @info[name] << times_array
-            @info[name] << [room]
+            @info[id] << times_array
+            @info[id] << [room]
           end
         end 
       end 
@@ -128,34 +128,33 @@ class CoursesController < ApplicationController
       #Examples of component arrays: [Admin, M4, 11, 1, SLB], [Antitrust, T2, 11, 1, SLB]
       @result_array = []
       @info.each_key do |key|
+        #add name to temp_array
         count = 0 #just to keep track of which day we're on
-        #loop through each day in the first sub-array of the @info[key] array
-        @info[key][0].each do |day|
-          temp_array = []
+        @info[key][1].each do |day|
           #add course_name to temp_array
-          temp_array << key
-          if @info[key].length == 5 and count == 1 #if we're on the second day, and the days have different times
+          temp_array = [@info[key][0]]
+          if @info[key].length == 6 and count == 1 #if we're on the second day, and the days have different times
+            temp_array << day + @info[key][3][0] # e.g. W4
+            temp_array << @info[key][3][2] # e.g. 11
+            temp_array << @info[key][3][1] # e.g. 1
+            temp_array << @info[key][4][1] # e.g. "3:10p - 5:00p"
+            temp_array << @info[key][5][0] # e.g. "SLB"
+          else #if we're on the second day OR the days do not have different times
             temp_array << day + @info[key][2][0] # e.g. M4
             temp_array << @info[key][2][2] # e.g. 11
             temp_array << @info[key][2][1] # e.g. 1
-            temp_array << @info[key][3][1] # e.g. "3:10p - 5:00p"
-            temp_array << @info[key][4][0] # e.g. "SLB"
-          else
-            temp_array << day + @info[key][1][0] # e.g. M4
-            temp_array << @info[key][1][2] # e.g. 11
-            temp_array << @info[key][1][1] # e.g. 1
-            if @info[key].length == 5 and count == 0 #if we're on the first day, and the days have different times
+            if @info[key].length == 6 and count == 0 #if we're on the first day, and the days have different times
+              temp_array << @info[key][4][0] # e.g. "3:10p - 5:00p"
+              temp_array << @info[key][5][0] # e.g. "SLB"
+            else #if the days do not have different times
               temp_array << @info[key][3][0] # e.g. "3:10p - 5:00p"
               temp_array << @info[key][4][0] # e.g. "SLB"
-            else #if the days do not have different times
-              temp_array << @info[key][2][0] # e.g. "3:10p - 5:00p"
-              temp_array << @info[key][3][0] # e.g. "SLB"
             end
           end
-          @result_array << temp_array
           count += 1
-        end 
-      end
+          @result_array << temp_array          
+        end
+      end 
     end
 
     respond_to do |format|
