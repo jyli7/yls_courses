@@ -63,7 +63,7 @@
 	<% if params[:filter_by_cart] == "1"%>
 		<div class="course_list_link">| Currently showing courses in cart</div>
 	<% else %>
-		<div class="course_list_link">| <%= link_to "Filter by courses in cart", courses_path(:filter_by_cart => "1", :toggle => @toggle ), :remote => true %></div>
+		<div class="course_list_link">| <%= link_to "Show only courses in cart", courses_path(:filter_by_cart => "1", :toggle => @toggle ), :remote => true %></div>
 	<% end %>
 <% end %>
 

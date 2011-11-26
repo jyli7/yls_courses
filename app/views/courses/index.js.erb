@@ -81,8 +81,8 @@
 	//Run through all the courses again so we adjust the width *after* all divs have been placed on the calendar
 	<% @result_array.each do |mini_arr| %>
 		//count the number of divs already in the time block
-		var count =  $('#<%= mini_arr[1] %>').children().length; 
-
+		var count =  $('#<%= mini_arr[1] %>').children().length;
+		
 		//see if there are already divs in the previous blocks or in the succeeding blocks
 		if($('#<%= mini_arr[1] %>').prev().children().length >= 1){
 			count += $('#<%= mini_arr[1] %>').prev().children().length;
@@ -90,21 +90,107 @@
 		if($('#<%= mini_arr[1] %>').next().children().length >= 1) {
 			count += $('#<%= mini_arr[1] %>').next().children().length;
 		} 
+		
+		//find the height of the tallest (i.e. longest) class from two back
+		var max_height_of_two_previous = 0;
+		$('#<%= mini_arr[1] %>').prev().prev().children().each(function() {
+			if(parseInt($(this).css('height')) > max_height_of_two_previous){
+				max_height_of_two_previous = parseInt($(this).css('height'));
+			}
+		});
+		
+		//find the height of the tallest class from one back
+		var max_height_of_current = 0;
+		$('#<%= mini_arr[1] %>').children().each(function() {
+			if(parseInt($(this).css('height')) > max_height_of_current){
+				max_height_of_current = parseInt($(this).css('height'));
+			}
+		});
+		
+		//account for those classes that meet for 3 hours
+		if($('#<%= mini_arr[1] %>').prev().prev().children().length >= 1 && max_height_of_two_previous > 100){
+			count += $('#<%= mini_arr[1] %>').prev().prev().children().length;
+		}
+
+		if(max_height_of_current > 100 && $('#<%= mini_arr[1] %>').next().next().children().length >= 1){
+			count += $('#<%= mini_arr[1] %>').next().next().children().length;
+		}
+		
 		var width = 164/(count); //decrease width, based on number of divs already in time block
 		if(count >= 2){
 			width -= 1+count
 		}
-
+				
 		$("#<%= mini_arr[1] %>").find('#'+id).css({
 			'width': width,
 		});
 
-		//if the count is too high (i.e. the width is too small), remove the course name and time and use tooltips
-		if(count >=3) {
+		id += 1;
+	<% end %>
+	
+	
+	//Run through all the classes 1 final time, to fix 3 period chaining problems. 
+	id = 0;
+	<% @result_array.each do |mini_arr| %>
+		$('#<%= mini_arr[1] %>').children().each(function() {
+			var current_width = parseInt($(this).css('width'));
+			var one_back_width = parseInt($(this).parent().prev().children().first().css('width'));
+			
+			//if the current width is greater than the width of the class right before, decrease the current width
+			if(one_back_width < current_width) {
+				current_width = one_back_width;
+			}
+			
+			//grab the class's height
+			height_of_current = parseInt($(this).css('height'));
+			
+			//to account for 3 hour long classes (which are taller than 100 px)
+			if(height_of_current > 100) {
+				//if the current width is larger than the width of the class 2 blocks down, decrease the current width
+				if(current_width > parseInt($(this).parent().next().next().children().first().css('width'))){
+					current_width = parseInt($(this).parent().next().next().children().first().css('width'));
+					
+					//equalize the width of all the classes in that 3 hour block
+					$(this).parent().children().each(function() {
+						$(this).css({
+							'width':current_width
+						});
+					});
+				}
+				
+				//if the width of the 3 hour class is less than that of the one preceding it, decrease the width of the classes in that block as well
+				if(current_width < parseInt($(this).parent().prev().children().first().css('width'))){
+					$(this).parent().prev().children().each(function() {
+						$(this).css({
+							'width':current_width
+						});
+					});
+				}
+
+				//if the width of the 3 hour class is less than that of the one two blocks after it, decrease the width of the classes in that block as well
+				if(current_width < parseInt($(this).parent().next().next().children().first().css('width'))){
+					$(this).parent().next().next().children().each(function() {
+						$(this).css({
+							'width':current_width
+						});
+					});
+				}			
+				
+			}
+			
+			$(this).css({
+				'width': current_width
+			});			
+		});
+		
+		//if the course width is too small, remove the course name and time and use tooltips
+		if(parseInt($('#<%= mini_arr[1] %>').children().first().css('width')) < 52) {
 			$('#'+id).html("<span class='for_tooltip' title='<%=mini_arr[0] %> <%= mini_arr[4] %>'><%= mini_arr[0][0..-3]%></span><br>..."); //replace HTML with shortened course name
 		}
 		id += 1;
+		
 	<% end %>
+	
 
 $('#courses_cal').fadeIn();	
 
