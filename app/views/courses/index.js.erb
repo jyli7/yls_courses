@@ -135,10 +135,16 @@
 		$('#<%= mini_arr[1] %>').children().each(function() {
 			var current_width = parseInt($(this).css('width'));
 			var one_back_width = parseInt($(this).parent().prev().children().first().css('width'));
+			var one_forward_width = parseInt($(this).parent().next().children().first().css('width'));
 			
 			//if the current width is greater than the width of the class right before, decrease the current width
 			if(one_back_width < current_width) {
 				current_width = one_back_width;
+			}
+
+			//if the current width is less than than the width of the class right after, decrease the current width
+			if(one_forward_width < current_width) {
+				current_width = one_forward_width;
 			}
 			
 			//grab the class's height
