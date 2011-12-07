@@ -20,6 +20,47 @@ task :limitations_shorten => :environment do
   end
 end
 
+desc "Find new courses"
+task :find_new_and_deleted_courses => :environment do
+  require 'spreadsheet'
+  require 'rubygems'
+  require 'time'
+
+  Spreadsheet.client_encoding = 'UTF-8'
+
+  book = Spreadsheet.open '/Users/jimmyli/rails_projects/yls_courses/public/data/YLS_Classes_2.xls'
+  sheet1 = book.worksheet 'Sheet1'
+  
+  temp_array = [] # for names
+  sheet1.each 2 do |row|
+    temp_array << row[0] 
+  end
+  
+  #Go through each name in the temp array and see if the course already exists. 
+  #If it does, update the name, and delete the entry from temp array.
+  row = 1
+  
+  still_existing_courses = []
+  
+  temp_array.each do |new_name|
+    found_course = Course.find_all_by_name(new_name)
+    if found_course == []
+      print row, "  ", new_name, "\n"
+      row += 1
+    else
+      found_course.each do |found_course|
+        still_existing_courses << found_course
+      end
+    end
+  end
+  
+  Course.all.each do |course|
+    unless still_existing_courses.include? course
+      puts "Course requires deletion:", course.name
+    end
+  end
+end
+
 desc "Fetch law classes"
 task :fetch_classes => :environment do 
   require 'spreadsheet'
@@ -28,18 +69,46 @@ task :fetch_classes => :environment do
 
   Spreadsheet.client_encoding = 'UTF-8'
 
-  book = Spreadsheet.open '/Users/jimmyli/rails_projects/yls_courses/public/data/YLS_Classes.xls'
+  book = Spreadsheet.open '/Users/jimmyli/rails_projects/yls_courses/public/data/YLS_Classes_2.xls'
   sheet1 = book.worksheet 'Sheet1'
 
   temp_array = [] # for names
   sheet1.each 2 do |row|
     temp_array << row[0] 
   end
-    
-  for name in temp_array
-    Course.create!(:name => name) 
+  
+  #Go through each name in the temp array and see if the course already exists. 
+  #If it does, update the name, and delete the entry from temp array.
+  
+  save_course = []
+  
+  temp_array.each do |new_name|
+    found_course = Course.find_by_name(new_name)
+    if found_course == nil
+      new_courses_names << new_name
+    else
+      puts found_course.name
+      found_course.update_attribute :name, new_name
+      save_course << found_course
+    end
   end
   
+  puts "number of total courses", temp_array.length
+  puts new_course_names
+  #Now use the leftover names to create the new courses
+  new_course_names.each do |new_course_name|
+    new_course = Course.create!(:name => new_course_name)
+    puts "new course!", new_course_name
+    save_course << new_course
+  end
+  
+  #Finally, delete courses that are no longer offered
+  for course in Course.all
+    unless save_course.include? course
+      course.destroy
+    end
+  end
+    
   temp_array = [] # for course numbers
   sheet1.each 2 do |row|
     temp_array << row[1] 
@@ -612,6 +681,7 @@ task :get_other_evals => :environment do
   end
 end 
 
-task :full_update => [:destroy_all_classes, :fetch_classes, :get_address, :get_evals, :get_descrip, :get_testing, :get_time_num, :get_tod, :change_units, :get_units_alt, :day_sort_fix, :limitations_shorten, :get_other_evals, :get_ratings_alt] do
+#Full_update will not destroy courses. It will just update their attributes.
+task :full_update => [:fetch_classes, :get_address, :get_evals, :get_descrip, :get_testing, :get_time_num, :get_tod, :change_units, :get_units_alt, :day_sort_fix, :limitations_shorten, :get_other_evals, :get_ratings_alt] do
   puts "Full update complete!"
-end 
+end

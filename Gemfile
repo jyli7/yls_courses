@@ -22,7 +22,7 @@ end
 
 group :development do
   gem 'ruby-debug19'
-  gem 'rspec-rails', '2.6.1'
+  # gem 'rspec-rails', '2.6.1'
   gem 'annotate', '2.4.0'
   gem 'faker', '0.3.1'
   gem "nifty-generators"
@@ -30,13 +30,14 @@ group :development do
   gem 'mailcatcher'
 end
 
-group :test do
-  gem 'rspec-rails', '2.6.1'
-  gem 'webrat', '0.7.1'
-  gem 'spork', '0.9.0.rc8'
-  gem 'factory_girl_rails', '1.2'
-  gem 'capybara'
-end
+# group :test do
+#   gem 'rspec-expectations'
+#   gem 'rspec-rails', '2.6.1'
+#   gem 'webrat', '0.7.1'
+#   gem 'spork', '0.9.0.rc8'
+#   gem 'factory_girl_rails', '1.2'
+#   gem "capybara"
+# end
 
 
 gem "mocha", :group => :test
