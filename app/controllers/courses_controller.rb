@@ -6,6 +6,8 @@ class CoursesController < ApplicationController
   def index
     @search = Course.search(params[:search])
 
+    @cas_address = "https://secure.its.yale.edu/cas/login?service=http://localhost:3000/activate_ratings"
+    
     #for creating line items in the cart
     if user_signed_in?
       @user = current_user
@@ -29,14 +31,13 @@ class CoursesController < ApplicationController
     end 
     
     @toggle = "0"
-    
-    #RATINGS ARE DISABLED
-    # #toggle 0 corresponds to information view, 1 for ratings view
-    # if params[:toggle] == "0" or params[:toggle] == "1"
-    #   @toggle = params[:toggle]
-    # else 
-    #   @toggle = "0"
-    # end
+        
+    #toggle 0 corresponds to information view, 1 for ratings view
+    if params[:toggle] == "0" or params[:toggle] == "1"
+      @toggle = params[:toggle]
+    else 
+      @toggle = "0"
+    end
           
     #form an array of course names for the autocomplete function
     @course_names = Course.all.map {|a| a.name}

@@ -192,7 +192,7 @@ body div#container #sidebar #sidebar_inner_wrapper_1 {
   position: absolute;
 }
 /* line 195, ../../app/stylesheets/screen.scss */
-body div#container #sidebar #cart, body div#container #sidebar #see_calendar {
+body div#container #sidebar #cart, body div#container #sidebar #see_calendar, body div#container #sidebar #activate_ratings, body div#container #sidebar #flash_notice {
   padding: 0 3px 8px 5px;
   margin: 5px 0px 5px 0;
   font-size: 100%;
@@ -769,7 +769,7 @@ img#arrow {
 }
 
 /* line 731, ../../app/stylesheets/screen.scss */
-#cart_border, #eval_toggle_wrapper, #eval_toggle_wrapper_faux, #info_toggle_wrapper, #see_calendar {
+#cart_border, #eval_toggle_wrapper, #eval_toggle_wrapper_faux, #info_toggle_wrapper, #see_calendar, #activate_ratings {
   position: fixed;
   left: 1080px;
   display: inline-block;
@@ -779,7 +779,7 @@ img#arrow {
 }
 
 /* line 740, ../../app/stylesheets/screen.scss */
-#cart_border, #see_calendar {
+#cart_border, #see_calendar, #activate_ratings {
   width: 110px;
   text-align: center;
   padding: 5px 0 5px 0;
@@ -787,125 +787,136 @@ img#arrow {
 }
 
 /* line 747, ../../app/stylesheets/screen.scss */
-#eval_toggle_wrapper {
-  top: 72px;
+#flash_notice {
+  width: 130px;
+  padding: 5px 0 5px 0;
 }
 
-/* line 751, ../../app/stylesheets/screen.scss */
+/* line 752, ../../app/stylesheets/screen.scss */
+#eval_toggle_wrapper {
+  top: 113px;
+}
+
+/* line 756, ../../app/stylesheets/screen.scss */
 #info_toggle_wrapper {
   top: 72px;
 }
 
-/* line 755, ../../app/stylesheets/screen.scss */
+/* line 760, ../../app/stylesheets/screen.scss */
 #see_calendar {
   top: 70px;
 }
 
-/* line 759, ../../app/stylesheets/screen.scss */
+/* line 764, ../../app/stylesheets/screen.scss */
+#activate_ratings {
+  top: 110px;
+}
+
+/* line 768, ../../app/stylesheets/screen.scss */
 #eval_toggle_td {
   padding: 10px 0 5px 0;
   text-align: center;
 }
 
-/* line 764, ../../app/stylesheets/screen.scss */
+/* line 773, ../../app/stylesheets/screen.scss */
 #info_toggle_td {
   padding: 5px 0 10px 0;
   text-align: center;
   border-bottom: 1px solid white;
 }
 
-/* line 770, ../../app/stylesheets/screen.scss */
-nav, #cart_border, #eval_toggle_wrapper, #eval_toggle_wrapper_faux, #see_calendar {
+/* line 779, ../../app/stylesheets/screen.scss */
+nav, #cart_border, #eval_toggle_wrapper, #eval_toggle_wrapper_faux, #see_calendar, #activate_ratings {
   padding: 8px 6px 8px 6px;
   font-size: 13px;
   float: right;
 }
 
-/* line 776, ../../app/stylesheets/screen.scss */
+/* line 785, ../../app/stylesheets/screen.scss */
 #eval_toggle_wrapper, #eval_toggle_wrapper_faux {
   padding: 8px;
 }
 
-/* line 780, ../../app/stylesheets/screen.scss */
+/* line 789, ../../app/stylesheets/screen.scss */
 #eval_toggle_wrapper_faux {
   padding: 8px 10px;
   top: 27px;
 }
 
-/* line 785, ../../app/stylesheets/screen.scss */
+/* line 794, ../../app/stylesheets/screen.scss */
 #legend img {
   vertical-align: top;
 }
 
-/* line 789, ../../app/stylesheets/screen.scss */
+/* line 798, ../../app/stylesheets/screen.scss */
 #legend {
   margin: 2px 0 0 0;
   padding-bottom: 5px;
 }
 
-/* line 794, ../../app/stylesheets/screen.scss */
+/* line 803, ../../app/stylesheets/screen.scss */
 #legend_gcal, #legend_eval, #legend_cart {
   position: relative;
   bottom: 5px;
   padding: 0 2px 0px 3px;
 }
 
-/* line 801, ../../app/stylesheets/screen.scss */
+/* line 810, ../../app/stylesheets/screen.scss */
 #sign_up, #sign_in {
   margin-top: 0px;
 }
 
 /*About Page */
-/* line 809, ../../app/stylesheets/screen.scss */
+/* line 818, ../../app/stylesheets/screen.scss */
 #about {
   font-size: 1.05em;
 }
 
-/* line 813, ../../app/stylesheets/screen.scss */
+/* line 822, ../../app/stylesheets/screen.scss */
 #about_header, #faq_header {
   margin-bottom: 15px;
 }
 
-/* line 817, ../../app/stylesheets/screen.scss */
+/* line 826, ../../app/stylesheets/screen.scss */
 #about_p {
   font-size: 14px;
 }
 
-/* line 821, ../../app/stylesheets/screen.scss */
+/* line 830, ../../app/stylesheets/screen.scss */
 #about_wrapper, #faq_wrapper {
   font-size: 13px;
   padding: 8px;
 }
-/* line 825, ../../app/stylesheets/screen.scss */
+/* line 834, ../../app/stylesheets/screen.scss */
 #about_wrapper li, #faq_wrapper li {
   margin: 15px 0 15px 30px;
 }
 
-/* line 830, ../../app/stylesheets/screen.scss */
+/* line 839, ../../app/stylesheets/screen.scss */
 #faq_wrapper div {
   margin: 5px 0 5px 0px;
   padding: 5px 0px 5px 5px;
 }
 
-/* line 835, ../../app/stylesheets/screen.scss */
+/* line 844, ../../app/stylesheets/screen.scss */
 .faq_q {
   font-size: 110%;
   margin-bottom: 13px;
 }
 
-/* line 840, ../../app/stylesheets/screen.scss */
+/* line 849, ../../app/stylesheets/screen.scss */
 .faq_a {
   margin-bottom: 13px;
   line-height: 18px;
 }
 
-/* line 845, ../../app/stylesheets/screen.scss */
+/* line 854, ../../app/stylesheets/screen.scss */
 #contact {
   margin: 20px 0 0 0;
 }
 
 /*Sign Up Page*/
-/* line 851, ../../app/stylesheets/screen.scss */
+/* line 860, ../../app/stylesheets/screen.scss */
 .form_wrapper {
   padding: 8px 0 10px 25px;
   margin: 5px 0 0 10px;
@@ -913,51 +924,51 @@ nav, #cart_border, #eval_toggle_wrapper, #eval_toggle_wrapper_faux, #see_calenda
   background-color: #2D647F;
   font-size: 105%;
 }
-/* line 858, ../../app/stylesheets/screen.scss */
+/* line 867, ../../app/stylesheets/screen.scss */
 .form_wrapper div {
   margin: 15px 0 5px 0;
 }
-/* line 862, ../../app/stylesheets/screen.scss */
+/* line 871, ../../app/stylesheets/screen.scss */
 .form_wrapper .field_with_errors {
   position: relative;
   margin: -6px 0px 0px 0px;
 }
-/* line 867, ../../app/stylesheets/screen.scss */
+/* line 876, ../../app/stylesheets/screen.scss */
 .form_wrapper a {
   display: inline-block;
   margin-bottom: 5px;
 }
 
-/* line 874, ../../app/stylesheets/screen.scss */
+/* line 883, ../../app/stylesheets/screen.scss */
 #sign_up_button {
   margin: 10px 0 10px 0;
 }
 
-/* line 878, ../../app/stylesheets/screen.scss */
+/* line 887, ../../app/stylesheets/screen.scss */
 div #sign_in_button {
   margin: 5px 0 10px 0;
 }
 
-/* line 882, ../../app/stylesheets/screen.scss */
+/* line 891, ../../app/stylesheets/screen.scss */
 .eval_shadow, .prof_name {
   margin-bottom: 5px;
 }
 
-/* line 886, ../../app/stylesheets/screen.scss */
+/* line 895, ../../app/stylesheets/screen.scss */
 #no_courses {
   font-style: italic;
   font-size: 105%;
   margin-left: 4px;
 }
 
-/* line 892, ../../app/stylesheets/screen.scss */
+/* line 901, ../../app/stylesheets/screen.scss */
 .hide_search, #show_search {
   display: inline-block;
   position: relative;
   left: 705px;
 }
 
-/* line 898, ../../app/stylesheets/screen.scss */
+/* line 907, ../../app/stylesheets/screen.scss */
 .hide_search_img {
   display: inline-block;
   position: relative;
@@ -966,7 +977,7 @@ div #sign_in_button {
 }
 
 /* Calendar */
-/* line 907, ../../app/stylesheets/screen.scss */
+/* line 916, ../../app/stylesheets/screen.scss */
 #cal_wrapper {
   height: 582px;
   width: 970px;
@@ -975,7 +986,7 @@ div #sign_in_button {
   padding: 0 10px 0 10px;
 }
 
-/* line 915, ../../app/stylesheets/screen.scss */
+/* line 924, ../../app/stylesheets/screen.scss */
 #cal_header {
   background-color: #2d647f;
   clear: both;
@@ -985,7 +996,7 @@ div #sign_in_button {
   float: right;
 }
 
-/* line 924, ../../app/stylesheets/screen.scss */
+/* line 933, ../../app/stylesheets/screen.scss */
 .day {
   float: left;
   text-align: center;
@@ -994,12 +1005,12 @@ div #sign_in_button {
   margin-right: 10px;
 }
 
-/* line 933, ../../app/stylesheets/screen.scss */
+/* line 942, ../../app/stylesheets/screen.scss */
 .day#friday {
   margin-right: 0px;
 }
 
-/* line 937, ../../app/stylesheets/screen.scss */
+/* line 946, ../../app/stylesheets/screen.scss */
 #hour_header_wrapper {
   width: 65px;
   float: left;
@@ -1007,32 +1018,32 @@ div #sign_in_button {
   margin-top: 2px;
 }
 
-/* line 944, ../../app/stylesheets/screen.scss */
+/* line 953, ../../app/stylesheets/screen.scss */
 #week_hour_rows {
   float: right;
 }
 
-/* line 948, ../../app/stylesheets/screen.scss */
+/* line 957, ../../app/stylesheets/screen.scss */
 .day_hour_rows {
   float: right;
 }
 
-/* line 953, ../../app/stylesheets/screen.scss */
+/* line 962, ../../app/stylesheets/screen.scss */
 .hour_header {
   padding: 0px 0 28px 0;
 }
 
-/* line 957, ../../app/stylesheets/screen.scss */
+/* line 966, ../../app/stylesheets/screen.scss */
 .hour_header#hour_8 {
   padding: 36px 0 30px 0;
 }
 
-/* line 961, ../../app/stylesheets/screen.scss */
+/* line 970, ../../app/stylesheets/screen.scss */
 .hour_header#hour_9 {
   padding: 0px 0 0px 0;
 }
 
-/* line 965, ../../app/stylesheets/screen.scss */
+/* line 974, ../../app/stylesheets/screen.scss */
 .hour {
   height: 39px;
   border-top: 1px solid white;
@@ -1041,22 +1052,22 @@ div #sign_in_button {
   z-index: 20;
 }
 
-/* line 973, ../../app/stylesheets/screen.scss */
+/* line 982, ../../app/stylesheets/screen.scss */
 #M8_PM, #T8_PM, #W8_PM, #Th8_PM, #F8_PM {
   border-bottom: 1px solid white;
 }
 
-/* line 977, ../../app/stylesheets/screen.scss */
+/* line 986, ../../app/stylesheets/screen.scss */
 .day, .hour {
   width: 170px;
 }
 
-/* line 981, ../../app/stylesheets/screen.scss */
+/* line 990, ../../app/stylesheets/screen.scss */
 .first_hour {
   margin-top: 35px;
 }
 
-/* line 985, ../../app/stylesheets/screen.scss */
+/* line 994, ../../app/stylesheets/screen.scss */
 .marked {
   height: 84px;
   background-color: #00374F;
@@ -1070,32 +1081,32 @@ div #sign_in_button {
   word-wrap: break-word;
 }
 
-/* line 998, ../../app/stylesheets/screen.scss */
+/* line 1007, ../../app/stylesheets/screen.scss */
 #cal_header_div {
   margin-bottom: 2px;
   font-size: 135%;
   display: inline-block;
 }
 
-/* line 1004, ../../app/stylesheets/screen.scss */
+/* line 1013, ../../app/stylesheets/screen.scss */
 .class_name {
   font-size: 105%;
 }
 
-/* line 1008, ../../app/stylesheets/screen.scss */
+/* line 1017, ../../app/stylesheets/screen.scss */
 .class_time {
   font-size: 95%;
   margin-top: 2px;
   display: inline-block;
 }
 
-/* line 1014, ../../app/stylesheets/screen.scss */
+/* line 1023, ../../app/stylesheets/screen.scss */
 #close_cal {
   display: inline-block;
   float: right;
 }
 
-/* line 1019, ../../app/stylesheets/screen.scss */
+/* line 1028, ../../app/stylesheets/screen.scss */
 #cal_cart_toggle {
   display: inline-block;
   float: right;
@@ -1103,7 +1114,7 @@ div #sign_in_button {
   margin-right: 5px;
 }
 
-/* line 1027, ../../app/stylesheets/screen.scss */
+/* line 1036, ../../app/stylesheets/screen.scss */
 .tooltip {
   display: none;
   font-size: 12px;
@@ -1113,17 +1124,26 @@ div #sign_in_button {
   color: #fff;
 }
 
-/* line 1036, ../../app/stylesheets/screen.scss */
+/* line 1045, ../../app/stylesheets/screen.scss */
 .default_text {
   color: gray;
 }
 
-/* line 1040, ../../app/stylesheets/screen.scss */
+/* line 1049, ../../app/stylesheets/screen.scss */
 .ct_container {
   margin-left: 40px;
 }
 
-/* line 1044, ../../app/stylesheets/screen.scss */
+/* line 1053, ../../app/stylesheets/screen.scss */
 .iq_container {
   margin-left: 8px;
+}
+
+/* line 1057, ../../app/stylesheets/screen.scss */
+#flash_notice {
+  position: fixed;
+  right: 23px;
+  top: 197px;
+  width: 120px;
+  text-align: center;
 }

@@ -192,7 +192,7 @@ body {
 		
 		
 			
-			#cart, #see_calendar{
+			#cart, #see_calendar, #activate_ratings, #flash_notice{
 				padding: 0 3px 8px 5px;
 				margin: 5px 0px 5px 0;
 				font-size:100%;
@@ -728,7 +728,7 @@ img#arrow {
 }
 
 
-#cart_border, #eval_toggle_wrapper, #eval_toggle_wrapper_faux, #info_toggle_wrapper, #see_calendar {
+#cart_border, #eval_toggle_wrapper, #eval_toggle_wrapper_faux, #info_toggle_wrapper, #see_calendar, #activate_ratings {
 	position:fixed;
 	left:1080px;
 	display:inline-block;
@@ -737,15 +737,20 @@ img#arrow {
 	font-size:13px;
 }
 
-#cart_border, #see_calendar {
+#cart_border, #see_calendar, #activate_ratings {
 	width:110px;
 	text-align:center;
 	padding:5px 0 5px 0;
 	top:27px;
 }
 
+#flash_notice {
+	width:130px;
+	padding:5px 0 5px 0;
+}
+
 #eval_toggle_wrapper {
-	top:72px;
+	top:113px;
 }
 
 #info_toggle_wrapper {
@@ -754,6 +759,10 @@ img#arrow {
 
 #see_calendar {
 	top:70px;
+}
+
+#activate_ratings {
+	top:110px;
 }
 
 #eval_toggle_td {
@@ -767,7 +776,7 @@ img#arrow {
 	border-bottom:1px solid white;
 }
 
-nav, #cart_border, #eval_toggle_wrapper, #eval_toggle_wrapper_faux, #see_calendar {
+nav, #cart_border, #eval_toggle_wrapper, #eval_toggle_wrapper_faux, #see_calendar, #activate_ratings {
 	padding: 8px 6px 8px 6px;
 	font-size:13px;
 	float:right;
@@ -1043,4 +1052,12 @@ div #sign_in_button {
 
 .iq_container {
 	margin-left:8px;
+}
+
+#flash_notice {
+	position:fixed;
+	right:23px;
+	top:197px;
+	width:120px;
+	text-align:center;
 }

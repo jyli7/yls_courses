@@ -5,9 +5,7 @@ class Course < ActiveRecord::Base
   serialize :past_semesters
   
   has_many :line_items, :dependent => :destroy
-  
-  before_destroy :ensure_not_referenced_by_any_line_item
-  
+    
   def self.tod_array
     a = []
     Course.all.each do |course|
@@ -21,17 +19,6 @@ class Course < ActiveRecord::Base
     a.slice!(0..1)
     a.push(first_two[0], first_two[1], last)
     return a
-  end 
-  
-  private
-    # ensure that there are no line items referencing this product
-    def ensure_not_referenced_by_any_line_item
-      if line_items.empty?
-        return true
-      else
-        errors.add(:base, 'Line Items present')
-        return false
-      end
-    end
-    
+  end
+      
 end

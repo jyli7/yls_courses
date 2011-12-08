@@ -69,7 +69,7 @@ task :fetch_classes => :environment do
 
   Spreadsheet.client_encoding = 'UTF-8'
 
-  book = Spreadsheet.open '/Users/jimmyli/rails_projects/yls_courses/public/data/YLS_Classes_2.xls'
+  book = Spreadsheet.open '/Users/jimmyli/rails_projects/yls_courses/public/data/YLS_Classes_2011_12_8.xls'
   sheet1 = book.worksheet 'Sheet1'
 
   temp_array = [] # for names
@@ -80,31 +80,24 @@ task :fetch_classes => :environment do
   #Go through each name in the temp array and see if the course already exists. 
   #If it does, update the name, and delete the entry from temp array.
   
-  save_course = []
-  
+  keep_these_courses = []
+
   temp_array.each do |new_name|
-    found_course = Course.find_by_name(new_name)
-    if found_course == nil
-      new_courses_names << new_name
+    found_course = Course.find_all_by_name(new_name)
+    if found_course == []
+      print "new course!", new_name, "\n"
+      new_course = Course.create!(:name => new_name)
+      keep_these_courses << new_course
     else
-      puts found_course.name
-      found_course.update_attribute :name, new_name
-      save_course << found_course
+      found_course.each do |found_course|
+        keep_these_courses << found_course
+      end
     end
   end
-  
-  puts "number of total courses", temp_array.length
-  puts new_course_names
-  #Now use the leftover names to create the new courses
-  new_course_names.each do |new_course_name|
-    new_course = Course.create!(:name => new_course_name)
-    puts "new course!", new_course_name
-    save_course << new_course
-  end
-  
-  #Finally, delete courses that are no longer offered
-  for course in Course.all
-    unless save_course.include? course
+
+  Course.all.each do |course|
+    unless keep_these_courses.include? course
+      print "course destroyed:", course.name, "\n"
       course.destroy
     end
   end
@@ -164,7 +157,6 @@ task :fetch_classes => :environment do
     count += 1
   end
 
-
   temp_array = [] # for units
   sheet1.each 2 do |row|
     temp_array << row[6] 
@@ -210,7 +202,8 @@ task :get_address => :environment do
   end
   
   count = 0
-  Course.all.each do |c|
+  @ordered_courses  = Course.all.sort_by { |course| course.name }
+  @ordered_courses.each do |c|
     c.update_attribute :address, address_array[count]
     count += 1
   end 

@@ -12,7 +12,7 @@ YlsCourses::Application.routes.draw do
   match '/about',  :to => 'pages#about'
   match '/about_ratings',  :to => 'pages#about_ratings'
   match '/faq',  :to => 'pages#faq'
-
+  match '/activate_ratings', :to => 'pages#activate_ratings'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
