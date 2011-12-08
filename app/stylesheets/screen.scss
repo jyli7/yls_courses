@@ -231,7 +231,7 @@ body {
 			
 			#name_search, #search_name_like {	
 				width:205px;
-				margin-right:75px;
+				margin-right:86px;
 			}
 			
 			#instructor_search, #search_instructor_like {
@@ -282,7 +282,7 @@ body {
 }
 
 .icons {
-	@include icons_width;
+	width: 80px;
 	display:inline-block;
 }
 
@@ -302,6 +302,10 @@ div#first_row {
 	width:210px;
 	max-height:50px;
 	display:inline-block;
+}
+
+#name_header {
+	margin-right:13px;
 }
 
 .course_name_click {

@@ -20,7 +20,7 @@ task :limitations_shorten => :environment do
   end
 end
 
-desc "Find new courses"
+desc "Find new courses. Only prints out new/deleted courses. No side effects."
 task :find_new_and_deleted_courses => :environment do
   require 'spreadsheet'
   require 'rubygems'
