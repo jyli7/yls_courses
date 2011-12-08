@@ -362,7 +362,7 @@ div#first_row {
 	@include classtime_value_width;
 	display:inline-block;
 	margin-right:$mbc;
-	margin-left:32px;
+	margin-left:17px;
 }
 
 #instructor_quality_header, .instructor_quality_body {
@@ -762,7 +762,7 @@ img#arrow {
 }
 
 #activate_ratings {
-	top:110px;
+	top:113px;
 }
 
 #eval_toggle_td {
@@ -1047,7 +1047,7 @@ div #sign_in_button {
 }
 
 .ct_container {
-	margin-left:40px;
+	margin-left:20px;
 }
 
 .iq_container {
@@ -1055,9 +1055,9 @@ div #sign_in_button {
 }
 
 #flash_notice {
-	position:fixed;
-	right:23px;
-	top:197px;
-	width:120px;
-	text-align:center;
+	position:absolute;
+	right:170px;
+	width:auto;
+	top:85px;
+	text-align:right;
 }

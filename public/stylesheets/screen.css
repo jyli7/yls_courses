@@ -369,7 +369,7 @@ div#first_row {
   width: 158.75px;
   display: inline-block;
   margin-right: 15px;
-  margin-left: 32px;
+  margin-left: 17px;
 }
 
 /* line 368, ../../app/stylesheets/screen.scss */
@@ -1131,7 +1131,7 @@ div #sign_in_button {
 
 /* line 1049, ../../app/stylesheets/screen.scss */
 .ct_container {
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 /* line 1053, ../../app/stylesheets/screen.scss */
@@ -1141,9 +1141,9 @@ div #sign_in_button {
 
 /* line 1057, ../../app/stylesheets/screen.scss */
 #flash_notice {
-  position: fixed;
-  right: 23px;
-  top: 197px;
-  width: 120px;
-  text-align: center;
+  position: absolute;
+  right: 170px;
+  width: auto;
+  top: 85px;
+  text-align: right;
 }
