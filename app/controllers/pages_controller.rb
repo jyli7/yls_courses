@@ -23,6 +23,6 @@ class PagesController < ApplicationController
     else
       current_user.update_attribute :ratings_authorized, true
     end
-    redirect_to("http://localhost:3000", :notice => "Ratings activated!")
+    redirect_to("http://www.ylsclassaction.com", :notice => "Ratings activated!")
   end
 end
