@@ -12,7 +12,7 @@ class PagesController < ApplicationController
   
   def activate_ratings
     @ticket = params[:ticket]
-    callback_url ="http://localhost:3000/activate_ratings_view"
+    callback_url ="http://www.ylsclassaction.com/activate_ratings_view"
     uri = URI.parse("https://secure.its.yale.edu/cas/serviceValidate?ticket=#{@ticket}&service=#{callback_url}")
     
     response = Net::HTTP.start(uri.host, uri.port, :use_ssl => true) do |http| 

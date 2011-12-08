@@ -6,7 +6,7 @@ class CoursesController < ApplicationController
   def index
     @search = Course.search(params[:search])
 
-    @cas_address = "https://secure.its.yale.edu/cas/login?service=http://localhost:3000/activate_ratings"
+    @cas_address = "https://secure.its.yale.edu/cas/login?service=http://www.ylsclassaction.com/activate_ratings"
     
     #for creating line items in the cart
     if user_signed_in?
