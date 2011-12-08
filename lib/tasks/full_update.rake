@@ -61,6 +61,107 @@ task :find_new_and_deleted_courses => :environment do
   end
 end
 
+desc "Add a new course, fetch all its info"
+task :add_new_courses => :environment do
+  require 'spreadsheet'
+  require 'rubygems'
+  require 'time'
+
+  Spreadsheet.client_encoding = 'UTF-8'
+
+  book = Spreadsheet.open '/Users/jimmyli/rails_projects/yls_courses/public/data/YLS_Classes_new_courses.xls'
+  sheet1 = book.worksheet 'Sheet1'
+
+  temp_array = [] # for names
+  sheet1.each 2 do |row|
+    temp_array << row[0] 
+  end
+  
+  new_courses = []
+  temp_array.each do |new_course_name|
+    new_course = Course.create!(:name => new_course_name)
+    new_courses << new_course
+  end
+  
+  temp_array = [] # for course numbers
+  sheet1.each 2 do |row|
+    temp_array << row[1] 
+  end
+
+  count = 0
+  new_courses.each do |course|
+    course.update_attribute :number, temp_array[count]
+    count += 1
+  end
+
+  temp_array = [] # for instructors
+  sheet1.each 2 do |row|
+    temp_array << row[2] 
+  end
+
+  count = 0
+  new_courses.each do |course|
+    course.update_attribute :instructor, temp_array[count]
+    count += 1
+  end
+
+  temp_array = [] # for day
+  sheet1.each 2 do |row|
+    temp_array << row[3] 
+  end
+
+  count = 0
+  new_courses.each do |course|
+    course.update_attribute :day, temp_array[count]
+    count += 1
+  end
+
+  temp_array = [] # for time
+  sheet1.each 2 do |row|
+    temp_array << row[4] 
+  end
+
+  count = 0
+  new_courses.each do |course|
+    course.update_attribute :time, temp_array[count]
+    count += 1
+  end
+
+  temp_array = [] # for room
+  sheet1.each 2 do |row|
+    temp_array << row[5] 
+  end
+
+  count = 0
+  new_courses.each do |course|
+    course.update_attribute :room, temp_array[count]
+    count += 1
+  end
+
+  temp_array = [] # for units
+  sheet1.each 2 do |row|
+    temp_array << row[6] 
+  end
+
+  count = 0
+  new_courses.each do |course|
+    course.update_attribute :units, temp_array[count]
+    count += 1
+  end
+
+  temp_array = [] # for limitations
+  sheet1.each 2 do |row|
+    temp_array << row[7] 
+  end
+
+  count = 0
+  new_courses.each do |course|
+    course.update_attribute :limitations, temp_array[count]
+    count += 1
+  end
+end
+  
+  
 desc "Fetch law classes"
 task :fetch_classes => :environment do 
   require 'spreadsheet'
@@ -677,4 +778,8 @@ end
 #Full_update will not destroy courses. It will just update their attributes.
 task :full_update => [:fetch_classes, :get_address, :get_evals, :get_descrip, :get_testing, :get_time_num, :get_tod, :change_units, :get_units_alt, :day_sort_fix, :limitations_shorten, :get_other_evals, :get_ratings_alt] do
   puts "Full update complete!"
+end
+
+task :almost_full_update => [:get_evals, :get_descrip, :get_testing, :get_time_num, :get_tod, :change_units, :get_units_alt, :day_sort_fix, :limitations_shorten, :get_other_evals, :get_ratings_alt] do
+  puts "Full update -- minus fetch_classes and get_address -- complete!"
 end

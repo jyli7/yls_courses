@@ -65,7 +65,7 @@
 		<% end %>
 	<% if user_signed_in? %>
 		<div id="see_calendar" class="round"><%= link_to "Show calendar", courses_path(:cal_on => 1), :class=>"cal_toggle", :remote => true %></div>
-		<% if current_user.ratings_authorized == false %>
+		<% if current_user.ratings_authorized == nil %>
 		<div id="activate_ratings" class="round"><%= link_to "Activate ratings", @cas_address %></div>
 		<% end %>
 	<% end %>
