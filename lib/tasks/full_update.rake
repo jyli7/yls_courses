@@ -628,7 +628,7 @@ desc "Create a units_alt (e.g. 1-3) for display"
 task :get_units_alt => :environment do
 
   for course in Course.all
-    if course.units == '1-3'
+    if course.units == '1, 2, or 3'
       course.update_attribute :units_alt, '1-3'
       course.update_attribute :units, '1, 2, or 3'
     else 
