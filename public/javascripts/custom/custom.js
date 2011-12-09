@@ -237,5 +237,5 @@ $(document).ready(function() {
 	});
 	
 	/*Highlight fade for 'ratings activated' flash notice */
-	$('#flash_notice').highlightFade({color:'#1752c6',speed:1500, end:'#1F5168', iterator:'sinusoidal'}).delay(1800).fadeOut();
+	$('#flash_notice').highlightFade({color:'#1752c6',speed:1500, end:'#1F5168', iterator:'sinusoidal'}).delay(1750).fadeOut();
 });
