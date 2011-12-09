@@ -70,13 +70,14 @@ class CoursesController < ApplicationController
             time = item.course.time
             room = item.course.room unless item.course.room.blank?
             room = "No room" if item.course.room.blank?
-            
             @info[id] = [name] #for the array value for the name key
                 
             if days.include? "h" #if one day is Thursday ("Th")
               if days.length == 2
                 @info[id] << ["Th"]
-              else 
+              elsif days[1] == "h"
+                @info[id] << ["Th", "#{days[2]}"]
+              else
                 @info[id] << ["#{days[0]}", "Th"]
               end 
             else
@@ -153,7 +154,7 @@ class CoursesController < ApplicationController
             end
           end
           count += 1
-          @result_array << temp_array          
+          @result_array << temp_array
         end
       end 
     end
