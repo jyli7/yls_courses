@@ -34,7 +34,7 @@
 	<% else %>
 		<div class="hello_message" id="sign_in_for_cart">Please sign in to access cart and calendar</div>
 	<% end %>
-	
+	<div id="disclaimer">Last update on DATE. Fully up-to-date and official data at <a href=" http://ylsinfo.law.yale.edu/wsw/">CISS</div>
 	<% if user_signed_in? and current_user.ratings_authorized == true %>
 	<table id="eval_toggle_wrapper" class="round">
 		<%= render :partial => 'eval_toggle_wrapper' %>

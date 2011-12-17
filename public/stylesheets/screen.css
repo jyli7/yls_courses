@@ -1147,3 +1147,10 @@ div #sign_in_button {
   top: 85px;
   text-align: right;
 }
+
+/* line 1065, ../../app/stylesheets/screen.scss */
+#disclaimer {
+  position: absolute;
+  right: 170px;
+  top: 93px;
+}

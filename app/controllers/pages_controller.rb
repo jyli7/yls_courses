@@ -12,7 +12,9 @@ class PagesController < ApplicationController
   
   def activate_ratings
     @ticket = params[:ticket]
-    callback_url ="http://www.ylsclassaction.com/activate_ratings_view"
+    @development = "localhost:3000"
+    @production = "www.ylsclassaction.com"
+    callback_url ="http://#{@production}/activate_ratings_view"
     uri = URI.parse("https://secure.its.yale.edu/cas/serviceValidate?ticket=#{@ticket}&service=#{callback_url}")
     
     response = Net::HTTP.start(uri.host, uri.port, :use_ssl => true) do |http| 
@@ -23,6 +25,6 @@ class PagesController < ApplicationController
     else
       current_user.update_attribute :ratings_authorized, true
     end
-    redirect_to("http://www.ylsclassaction.com", :notice => "Ratings activated!")
+    redirect_to("http://#{@production}", :notice => "Ratings activated!")
   end
 end
