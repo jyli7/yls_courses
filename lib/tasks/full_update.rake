@@ -161,7 +161,6 @@ task :add_new_courses => :environment do
   end
 end
   
-  
 desc "Fetch law classes"
 task :fetch_classes => :environment do 
   require 'spreadsheet'
@@ -790,6 +789,6 @@ task :full_update => [:fetch_classes, :get_address, :ad_hoc_fixes, :get_evals, :
   puts "Full update complete!"
 end
 
-task :almost_full_update => [:get_evals, :get_descrip, :get_testing, :get_time_num, :get_tod, :change_units, :get_units_alt, :day_sort_fix, :limitations_shorten, :get_other_evals, :get_ratings_alt] do
+task :almost_full_update => [:get_address, :ad_hoc_fixes, :get_evals, :get_descrip, :get_testing, :get_time_num, :get_tod, :change_units, :get_units_alt, :day_sort_fix, :limitations_shorten, :get_other_evals, :get_ratings_alt] do
   puts "Full update -- minus fetch_classes and get_address and ad_hoc_fixes -- complete!"
 end
