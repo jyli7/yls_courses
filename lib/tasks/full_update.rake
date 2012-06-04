@@ -324,7 +324,6 @@ task :ad_hoc_fixes => :environment do
   Course.find(8396).update_attribute :address, romano_address
 end
   
-
 desc "Get evaluation link for each class"
 task :get_evals => :environment do
 
@@ -785,7 +784,7 @@ task :get_other_evals => :environment do
 end 
 
 #Full_update will not destroy courses. It will just update their attributes.
-task :full_update => [:fetch_classes, :get_address, :ad_hoc_fixes, :get_evals, :get_descrip, :get_testing, :get_time_num, :get_tod, :change_units, :get_units_alt, :day_sort_fix, :limitations_shorten, :get_other_evals, :get_ratings_alt] do
+task :full_update => [:fetch_classes, :get_address, :get_evals, :get_descrip, :get_testing, :get_time_num, :get_tod, :change_units, :get_units_alt, :day_sort_fix, :limitations_shorten, :get_ratings_alt] do
   puts "Full update complete!"
 end
 

@@ -4,8 +4,6 @@ class CoursesController < ApplicationController
   # GET /courses
   # GET /courses.xml
   def index
-    @search = Course.search(params[:search])
-
     @cas_address = "https://secure.its.yale.edu/cas/login?service=http://www.ylsclassaction.com/activate_ratings"
     
     #for creating line items in the cart
@@ -15,15 +13,18 @@ class CoursesController < ApplicationController
       
       if @cart
         @line_item = @cart.line_items.build(params[:line_item])
+
+        #for determining whether the little cart icon should be visible
         @line_items_in_cart = @cart.line_items.all
-        @courses_in_cart = @line_items_in_cart.inject({}) do |h, line_item|
-          h[line_item.course] = true
-          h
-        end        
+        @courses_already_in_cart = []
+        @line_items_in_cart.each do |line_item|
+          @courses_already_in_cart << line_item.course
+        end
       end
     end
 
     #present all courses, or just present courses in cart
+    @search = Course.search(params[:search])
     if params[:filter_by_cart] == "1"
       @courses = @search.order("name asc").all & @cart.line_items.all.map {|line_item| line_item.course}
     else 

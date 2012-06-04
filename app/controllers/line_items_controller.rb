@@ -38,8 +38,7 @@ class LineItemsController < ApplicationController
   # POST /line_items
   # POST /line_items.xml
   def create
-    @user = current_user
-    @cart = @user.cart
+    @cart = current_user.cart
     @line_item = @cart.line_items.build(params[:line_item]) 
     
     respond_to do |format|

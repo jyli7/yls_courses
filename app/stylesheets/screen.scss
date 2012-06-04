@@ -282,8 +282,11 @@ body {
 }
 
 .icons {
-	width: 80px;
+	width: 85px;
 	display:inline-block;
+	position:relative;
+	right:12px;
+	margin-right:-7px;
 }
 
 div#first_row {
