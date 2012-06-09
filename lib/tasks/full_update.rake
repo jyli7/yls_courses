@@ -174,7 +174,8 @@ task :fetch_classes => :environment do
 
   temp_array = [] # for names
   sheet1.each 2 do |row|
-    temp_array << row[0] 
+    temp_array << row[0]
+    puts row[0]
   end
   
   #Go through each name in the temp array and see if the course already exists. 
@@ -183,16 +184,16 @@ task :fetch_classes => :environment do
   keep_these_courses = []
 
   temp_array.each do |new_name|
-    found_course = Course.find_all_by_name(new_name)
-    if found_course == []
+    # found_course = Course.find_all_by_name(new_name)
+    # if found_course == []
       print "new course!", new_name, "\n"
       new_course = Course.create!(:name => new_name)
       keep_these_courses << new_course
-    else
-      found_course.each do |found_course|
-        keep_these_courses << found_course
-      end
-    end
+    # else
+    #   found_course.each do |found_course|
+    #     keep_these_courses << found_course
+    #   end
+    # end
   end
 
   Course.all.each do |course|
@@ -292,7 +293,7 @@ task :get_address => :environment do
   require 'nokogiri'
   require 'open-uri'
   address_array = []
-  doc = Nokogiri::HTML(open("http://ylsinfo.law.yale.edu/wsw/prereg/course_overview.asp?Term=Spring"))
+  doc = Nokogiri::HTML(open("http://ylsinfo.law.yale.edu/wsw/prereg/course_overview.asp?Term=Fall"))
   r = /href=\"(.*)\">/
   doc.css("div a").each do |link|
     link = link.to_s
@@ -302,7 +303,7 @@ task :get_address => :environment do
   end
   
   count = 0
-  @ordered_courses  = Course.all.sort_by { |course| course.name }
+  @ordered_courses  = Course.all
   @ordered_courses.each do |c|
     c.update_attribute :address, address_array[count]
     count += 1
