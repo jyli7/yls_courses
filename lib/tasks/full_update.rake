@@ -491,9 +491,9 @@ task :get_evals => :environment do
         end
 
         if course.past_semesters.blank?
-          course.update_attribute :past_semesters, ["Spring #{count}"]
+          course.update_attribute :past_semesters, ["Fall #{count}"]
         else
-          course.past_semesters << "Spring #{count}"
+          course.past_semesters << "Fall #{count}"
         end
         course.save
       end 
