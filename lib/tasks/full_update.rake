@@ -1,3 +1,4 @@
+# Dangerous shit! Do not destroy classes
 desc "Destroy all classes to prepare for update"
 task :destroy_all_classes => :environment do 
   LineItem.all.each do |l|

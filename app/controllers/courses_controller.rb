@@ -64,6 +64,7 @@ class CoursesController < ApplicationController
       unless @line_items_in_cart.blank? #if there are no line items, don't show a calendar 
         #cycle through the line items
         @line_items_in_cart.each do |item|
+          next if item.course.blank?
           unless item.course.day.blank? #some courses are clinics and don't meet at a time. don't try to show these. 
             id = item.course.id
             name = item.course.name
