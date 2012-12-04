@@ -14,15 +14,19 @@ gem 'jquery-rails'
 gem 'cancan'
 gem 'sass'
 gem "compass", ">= 0.11.5"
+gem 'haml'
 
 group :production do
   gem 'pg'
   gem 'thin'
 end
 
+group :test, :development do 
+  gem "rspec-rails"
+end
+
 group :development do
-  gem 'ruby-debug19'
-  # gem 'rspec-rails', '2.6.1'
+  gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'annotate', '2.4.0'
   gem 'faker', '0.3.1'
   gem "nifty-generators"
@@ -30,14 +34,12 @@ group :development do
   gem 'mailcatcher'
 end
 
-# group :test do
-#   gem 'rspec-expectations'
-#   gem 'rspec-rails', '2.6.1'
-#   gem 'webrat', '0.7.1'
-#   gem 'spork', '0.9.0.rc8'
-#   gem 'factory_girl_rails', '1.2'
-#   gem "capybara"
-# end
+group :test do
+  gem "factory_girl_rails"
+  gem "guard-rspec"
+  gem "capybara"
+  gem "spork"
+end
 
 
 gem "mocha", :group => :test

@@ -277,11 +277,14 @@ body div#container div#search_container #search_classtime_value_gt, body div#con
 
 /* line 284, ../../app/stylesheets/screen.scss */
 .icons {
-  width: 80px;
+  width: 85px;
   display: inline-block;
+  position: relative;
+  right: 12px;
+  margin-right: -7px;
 }
 
-/* line 289, ../../app/stylesheets/screen.scss */
+/* line 292, ../../app/stylesheets/screen.scss */
 div#first_row {
   padding: 5px 0 5px 5px;
   display: inline-block;
@@ -293,78 +296,78 @@ div#first_row {
 }
 
 /* Header and Body */
-/* line 301, ../../app/stylesheets/screen.scss */
+/* line 304, ../../app/stylesheets/screen.scss */
 #name_header, .name_body {
   width: 210px;
   max-height: 50px;
   display: inline-block;
 }
 
-/* line 307, ../../app/stylesheets/screen.scss */
+/* line 310, ../../app/stylesheets/screen.scss */
 #name_header {
   margin-right: 13px;
 }
 
-/* line 311, ../../app/stylesheets/screen.scss */
+/* line 314, ../../app/stylesheets/screen.scss */
 .course_name_click {
   width: 215px;
   white-space: normal;
 }
 
-/* line 316, ../../app/stylesheets/screen.scss */
+/* line 319, ../../app/stylesheets/screen.scss */
 #icons_header {
   display: inline-block;
   width: 66.5px;
 }
 
-/* line 321, ../../app/stylesheets/screen.scss */
+/* line 324, ../../app/stylesheets/screen.scss */
 #instructor_header, .instructor_body {
   width: 105px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 327, ../../app/stylesheets/screen.scss */
+/* line 330, ../../app/stylesheets/screen.scss */
 #day_header, .day_body {
   width: 45px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 333, ../../app/stylesheets/screen.scss */
+/* line 336, ../../app/stylesheets/screen.scss */
 #time_header, .time_body {
   width: 98px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 339, ../../app/stylesheets/screen.scss */
+/* line 342, ../../app/stylesheets/screen.scss */
 #time_header {
   margin-right: 13px;
 }
 
-/* line 343, ../../app/stylesheets/screen.scss */
+/* line 346, ../../app/stylesheets/screen.scss */
 #units_header, .units_body {
   width: 45px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 349, ../../app/stylesheets/screen.scss */
+/* line 352, ../../app/stylesheets/screen.scss */
 #limitations_header, .limitations_body {
   width: 62px;
   display: inline-block;
   margin-right: 27px;
 }
 
-/* line 355, ../../app/stylesheets/screen.scss */
+/* line 358, ../../app/stylesheets/screen.scss */
 #exam_header, .exam_body {
   width: 102.5px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 361, ../../app/stylesheets/screen.scss */
+/* line 364, ../../app/stylesheets/screen.scss */
 #classtime_value_header, .classtime_value_body {
   width: 158.75px;
   display: inline-block;
@@ -372,7 +375,7 @@ div#first_row {
   margin-left: 17px;
 }
 
-/* line 368, ../../app/stylesheets/screen.scss */
+/* line 371, ../../app/stylesheets/screen.scss */
 #instructor_quality_header, .instructor_quality_body {
   width: 158.75px;
   display: inline-block;
@@ -380,21 +383,21 @@ div#first_row {
   margin-left: 4px;
 }
 
-/* line 375, ../../app/stylesheets/screen.scss */
+/* line 378, ../../app/stylesheets/screen.scss */
 #workload_header, .workload_body {
   width: 158.75px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 381, ../../app/stylesheets/screen.scss */
+/* line 384, ../../app/stylesheets/screen.scss */
 #paper_header, .paper_body {
   width: 60px;
   display: inline-block;
   margin-right: 15px;
 }
 
-/* line 387, ../../app/stylesheets/screen.scss */
+/* line 390, ../../app/stylesheets/screen.scss */
 .eval_container_bar {
   border: 1px solid black;
   font: #7FEAFF;
@@ -404,14 +407,14 @@ div#first_row {
   margin-right: 21px;
 }
 
-/* line 396, ../../app/stylesheets/screen.scss */
+/* line 399, ../../app/stylesheets/screen.scss */
 .eval_super_container {
   overflow: auto;
   float: right;
   margin-right: 11px;
 }
 
-/* line 402, ../../app/stylesheets/screen.scss */
+/* line 405, ../../app/stylesheets/screen.scss */
 .eval_bar {
   display: inline-block;
   color: black;
@@ -422,7 +425,7 @@ div#first_row {
   border-right: 1px solid black;
 }
 
-/* line 412, ../../app/stylesheets/screen.scss */
+/* line 415, ../../app/stylesheets/screen.scss */
 .eval_bar_cell {
   text-align: right;
   background-color: blue;
@@ -430,58 +433,58 @@ div#first_row {
 }
 
 /* Search Box */
-/* line 421, ../../app/stylesheets/screen.scss */
+/* line 424, ../../app/stylesheets/screen.scss */
 #search_title, #shopping_title {
   display: inline-block;
   margin: 0 0 0 0;
 }
 
-/* line 426, ../../app/stylesheets/screen.scss */
+/* line 429, ../../app/stylesheets/screen.scss */
 #shopping_title {
   font-size: 1.5em;
 }
 
-/* line 430, ../../app/stylesheets/screen.scss */
+/* line 433, ../../app/stylesheets/screen.scss */
 #search_title {
   font-size: 135%;
 }
 
-/* line 434, ../../app/stylesheets/screen.scss */
+/* line 437, ../../app/stylesheets/screen.scss */
 #search_name_div {
   border: 1px solid white;
   width: 13em;
 }
 
 /* Typography */
-/* line 446, ../../app/stylesheets/screen.scss */
+/* line 449, ../../app/stylesheets/screen.scss */
 html {
   font-size: 100.01%;
 }
 
 /* Links */
-/* line 451, ../../app/stylesheets/screen.scss */
+/* line 454, ../../app/stylesheets/screen.scss */
 a {
   color: #7FEAFF;
   text-decoration: none;
 }
 
-/* line 456, ../../app/stylesheets/screen.scss */
+/* line 459, ../../app/stylesheets/screen.scss */
 a:hover {
   color: #B3EBEF;
   text-decoration: underline;
 }
 
-/* line 461, ../../app/stylesheets/screen.scss */
+/* line 464, ../../app/stylesheets/screen.scss */
 a:visited {
   color: #7FEAFF;
 }
 
-/* line 465, ../../app/stylesheets/screen.scss */
+/* line 468, ../../app/stylesheets/screen.scss */
 #first_row a:visited {
   color: #AFF9FF;
 }
 
-/* line 470, ../../app/stylesheets/screen.scss */
+/* line 473, ../../app/stylesheets/screen.scss */
 table#yls {
   font-size: 25px;
   width: 100%;
@@ -490,7 +493,7 @@ table#yls {
   border-bottom: 2px solid #FFFFFF;
 }
 
-/* line 478, ../../app/stylesheets/screen.scss */
+/* line 481, ../../app/stylesheets/screen.scss */
 #logo {
   height: 45px;
   position: relative;
@@ -498,14 +501,14 @@ table#yls {
   margin-bottom: 3px;
 }
 
-/* line 485, ../../app/stylesheets/screen.scss */
+/* line 488, ../../app/stylesheets/screen.scss */
 #logo_wrapper {
   border-bottom: 2px solid white;
   margin-bottom: 14px;
 }
 
 /*Search Form */
-/* line 493, ../../app/stylesheets/screen.scss */
+/* line 496, ../../app/stylesheets/screen.scss */
 .search_button {
   margin: 8px 5px 3px 0;
   width: 50px;
@@ -514,7 +517,7 @@ table#yls {
   float: left;
 }
 
-/* line 501, ../../app/stylesheets/screen.scss */
+/* line 504, ../../app/stylesheets/screen.scss */
 div.course_list_link {
   display: inline-block;
   clear: both;
@@ -523,20 +526,20 @@ div.course_list_link {
   font-size: 1em;
 }
 
-/* line 509, ../../app/stylesheets/screen.scss */
+/* line 512, ../../app/stylesheets/screen.scss */
 .field_container {
   height: 35px;
 }
 
 /*horizontal bars */
-/* line 516, ../../app/stylesheets/screen.scss */
+/* line 519, ../../app/stylesheets/screen.scss */
 .zebra {
   padding: 2px 0 2px 0;
   background-color: #2d647f;
 }
 
 /* Round corners */
-/* line 523, ../../app/stylesheets/screen.scss */
+/* line 526, ../../app/stylesheets/screen.scss */
 .round {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -544,26 +547,26 @@ div.course_list_link {
 }
 
 /*Course Table */
-/* line 531, ../../app/stylesheets/screen.scss */
+/* line 534, ../../app/stylesheets/screen.scss */
 div#course_table {
   margin: 10px 0 0 0;
   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 }
 
-/* line 537, ../../app/stylesheets/screen.scss */
+/* line 540, ../../app/stylesheets/screen.scss */
 .other_rows {
   margin: 5px 0 3px 0;
   padding: 2px 0 2px 5px;
 }
 
-/* line 542, ../../app/stylesheets/screen.scss */
+/* line 545, ../../app/stylesheets/screen.scss */
 .descrip_body {
   margin: 3px 0 0 0;
   padding: 0 0 2px 5px;
   display: none;
 }
 
-/* line 549, ../../app/stylesheets/screen.scss */
+/* line 552, ../../app/stylesheets/screen.scss */
 hr#border_line {
   margin-top: 0px;
   height: 0.5px;
@@ -571,32 +574,32 @@ hr#border_line {
   background-color: transparent;
 }
 
-/* line 557, ../../app/stylesheets/screen.scss */
+/* line 560, ../../app/stylesheets/screen.scss */
 .toggle_link_hide, .toggle_link_show {
   display: inline-block;
   float: right;
   margin-bottom: 5px;
 }
 
-/* line 563, ../../app/stylesheets/screen.scss */
+/* line 566, ../../app/stylesheets/screen.scss */
 .delete_line_item {
   display: inline-block;
   margin-right: 10px;
 }
 
-/* line 568, ../../app/stylesheets/screen.scss */
+/* line 571, ../../app/stylesheets/screen.scss */
 #current_item, .non_current_item {
   display: inline-block;
   width: 350px;
   margin-bottom: 1px;
 }
 
-/* line 574, ../../app/stylesheets/screen.scss */
+/* line 577, ../../app/stylesheets/screen.scss */
 .non_current_item:last-child {
   margin-bottom: -20px;
 }
 
-/* line 578, ../../app/stylesheets/screen.scss */
+/* line 581, ../../app/stylesheets/screen.scss */
 #units_range_title {
   border-top: 1px solid white;
   display: inline-block;
@@ -606,7 +609,7 @@ hr#border_line {
   margin: 7px 0 10px 0;
 }
 
-/* line 587, ../../app/stylesheets/screen.scss */
+/* line 590, ../../app/stylesheets/screen.scss */
 #units_range {
   display: inline-block;
   border-top: 10px;
@@ -616,41 +619,41 @@ hr#border_line {
   left: 90px;
 }
 
-/* line 596, ../../app/stylesheets/screen.scss */
+/* line 599, ../../app/stylesheets/screen.scss */
 #units_range_title, #units_range {
   margin-top: 5px;
   padding-top: 3px;
 }
 
-/* line 601, ../../app/stylesheets/screen.scss */
+/* line 604, ../../app/stylesheets/screen.scss */
 #calendar_header, .calendar_body, #eval_header, .eval_body, #cart_header, .cart_body {
   display: inline-block;
   width: 20px;
   margin: 0 0 0 0;
 }
 
-/* line 607, ../../app/stylesheets/screen.scss */
+/* line 610, ../../app/stylesheets/screen.scss */
 .eval_body {
   margin-right: 2px;
 }
 
-/* line 611, ../../app/stylesheets/screen.scss */
+/* line 614, ../../app/stylesheets/screen.scss */
 #cart_header, .cart_body {
   width: 30px;
 }
 
-/* line 615, ../../app/stylesheets/screen.scss */
+/* line 618, ../../app/stylesheets/screen.scss */
 .units_body_cart {
   display: inline-block;
   margin-right: -10px;
 }
 
-/* line 620, ../../app/stylesheets/screen.scss */
+/* line 623, ../../app/stylesheets/screen.scss */
 .cart_add_hidden {
   display: none;
 }
 
-/* line 624, ../../app/stylesheets/screen.scss */
+/* line 627, ../../app/stylesheets/screen.scss */
 .gt_or_lt_sign {
   display: inline-block;
   float: left;
@@ -659,7 +662,7 @@ hr#border_line {
 }
 
 /*Lightbox */
-/* line 633, ../../app/stylesheets/screen.scss */
+/* line 636, ../../app/stylesheets/screen.scss */
 .lightbox_back {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
@@ -670,7 +673,7 @@ hr#border_line {
   z-index: 70;
 }
 
-/* line 643, ../../app/stylesheets/screen.scss */
+/* line 646, ../../app/stylesheets/screen.scss */
 .lightbox_front {
   padding: 10px;
   position: relative;
@@ -684,13 +687,13 @@ hr#border_line {
   border: 5px solid #EFEFEF;
 }
 
-/* line 656, ../../app/stylesheets/screen.scss */
+/* line 659, ../../app/stylesheets/screen.scss */
 #about_ratings_lightbox_front {
   top: 15%;
   width: 75%;
 }
 
-/* line 661, ../../app/stylesheets/screen.scss */
+/* line 664, ../../app/stylesheets/screen.scss */
 .cal_lightbox_front {
   padding: 10px;
   position: relative;
@@ -704,7 +707,7 @@ hr#border_line {
   border: 5px solid #EFEFEF;
 }
 
-/* line 674, ../../app/stylesheets/screen.scss */
+/* line 677, ../../app/stylesheets/screen.scss */
 .faq_lightbox_front {
   padding: 10px;
   position: relative;
@@ -717,13 +720,13 @@ hr#border_line {
   z-index: 70;
 }
 
-/* line 686, ../../app/stylesheets/screen.scss */
+/* line 689, ../../app/stylesheets/screen.scss */
 #about_lightbox_front {
   width: 65%;
   top: 21%;
 }
 
-/* line 691, ../../app/stylesheets/screen.scss */
+/* line 694, ../../app/stylesheets/screen.scss */
 .cal_lightbox_close, .lightbox_close {
   font-color: gray;
   position: relative;
@@ -731,44 +734,44 @@ hr#border_line {
 }
 
 /* show course page */
-/* line 698, ../../app/stylesheets/screen.scss */
+/* line 701, ../../app/stylesheets/screen.scss */
 #show_header {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-/* line 704, ../../app/stylesheets/screen.scss */
+/* line 707, ../../app/stylesheets/screen.scss */
 #show_eval_header {
   font-style: italic;
   font-size: 13px;
   margin-bottom: 1em;
 }
 
-/* line 710, ../../app/stylesheets/screen.scss */
+/* line 713, ../../app/stylesheets/screen.scss */
 .indiv_eval_link {
   display: inline-block;
   width: 90px;
 }
 
-/* line 716, ../../app/stylesheets/screen.scss */
+/* line 719, ../../app/stylesheets/screen.scss */
 .prof_name {
   display: inline-block;
 }
 
-/* line 720, ../../app/stylesheets/screen.scss */
+/* line 723, ../../app/stylesheets/screen.scss */
 img {
   border: none;
 }
 
-/* line 724, ../../app/stylesheets/screen.scss */
+/* line 727, ../../app/stylesheets/screen.scss */
 img#arrow {
   margin-left: 3px;
   margin-top: 10px;
   margin-bottom: -4px;
 }
 
-/* line 731, ../../app/stylesheets/screen.scss */
+/* line 734, ../../app/stylesheets/screen.scss */
 #cart_border, #eval_toggle_wrapper, #eval_toggle_wrapper_faux, #info_toggle_wrapper, #see_calendar, #activate_ratings {
   position: fixed;
   left: 1080px;
@@ -778,7 +781,7 @@ img#arrow {
   font-size: 13px;
 }
 
-/* line 740, ../../app/stylesheets/screen.scss */
+/* line 743, ../../app/stylesheets/screen.scss */
 #cart_border, #see_calendar, #activate_ratings {
   width: 110px;
   text-align: center;
@@ -786,137 +789,137 @@ img#arrow {
   top: 27px;
 }
 
-/* line 747, ../../app/stylesheets/screen.scss */
+/* line 750, ../../app/stylesheets/screen.scss */
 #flash_notice {
   width: 130px;
   padding: 5px 0 5px 0;
 }
 
-/* line 752, ../../app/stylesheets/screen.scss */
+/* line 755, ../../app/stylesheets/screen.scss */
 #eval_toggle_wrapper {
   top: 113px;
 }
 
-/* line 756, ../../app/stylesheets/screen.scss */
+/* line 759, ../../app/stylesheets/screen.scss */
 #info_toggle_wrapper {
   top: 72px;
 }
 
-/* line 760, ../../app/stylesheets/screen.scss */
+/* line 763, ../../app/stylesheets/screen.scss */
 #see_calendar {
   top: 70px;
 }
 
-/* line 764, ../../app/stylesheets/screen.scss */
+/* line 767, ../../app/stylesheets/screen.scss */
 #activate_ratings {
   top: 113px;
 }
 
-/* line 768, ../../app/stylesheets/screen.scss */
+/* line 771, ../../app/stylesheets/screen.scss */
 #eval_toggle_td {
   padding: 10px 0 5px 0;
   text-align: center;
 }
 
-/* line 773, ../../app/stylesheets/screen.scss */
+/* line 776, ../../app/stylesheets/screen.scss */
 #info_toggle_td {
   padding: 5px 0 10px 0;
   text-align: center;
   border-bottom: 1px solid white;
 }
 
-/* line 779, ../../app/stylesheets/screen.scss */
+/* line 782, ../../app/stylesheets/screen.scss */
 nav, #cart_border, #eval_toggle_wrapper, #eval_toggle_wrapper_faux, #see_calendar, #activate_ratings {
   padding: 8px 6px 8px 6px;
   font-size: 13px;
   float: right;
 }
 
-/* line 785, ../../app/stylesheets/screen.scss */
+/* line 788, ../../app/stylesheets/screen.scss */
 #eval_toggle_wrapper, #eval_toggle_wrapper_faux {
   padding: 8px;
 }
 
-/* line 789, ../../app/stylesheets/screen.scss */
+/* line 792, ../../app/stylesheets/screen.scss */
 #eval_toggle_wrapper_faux {
   padding: 8px 10px;
   top: 27px;
 }
 
-/* line 794, ../../app/stylesheets/screen.scss */
+/* line 797, ../../app/stylesheets/screen.scss */
 #legend img {
   vertical-align: top;
 }
 
-/* line 798, ../../app/stylesheets/screen.scss */
+/* line 801, ../../app/stylesheets/screen.scss */
 #legend {
   margin: 2px 0 0 0;
   padding-bottom: 5px;
 }
 
-/* line 803, ../../app/stylesheets/screen.scss */
+/* line 806, ../../app/stylesheets/screen.scss */
 #legend_gcal, #legend_eval, #legend_cart {
   position: relative;
   bottom: 5px;
   padding: 0 2px 0px 3px;
 }
 
-/* line 810, ../../app/stylesheets/screen.scss */
+/* line 813, ../../app/stylesheets/screen.scss */
 #sign_up, #sign_in {
   margin-top: 0px;
 }
 
 /*About Page */
-/* line 818, ../../app/stylesheets/screen.scss */
+/* line 821, ../../app/stylesheets/screen.scss */
 #about {
   font-size: 1.05em;
 }
 
-/* line 822, ../../app/stylesheets/screen.scss */
+/* line 825, ../../app/stylesheets/screen.scss */
 #about_header, #faq_header {
   margin-bottom: 15px;
 }
 
-/* line 826, ../../app/stylesheets/screen.scss */
+/* line 829, ../../app/stylesheets/screen.scss */
 #about_p {
   font-size: 14px;
 }
 
-/* line 830, ../../app/stylesheets/screen.scss */
+/* line 833, ../../app/stylesheets/screen.scss */
 #about_wrapper, #faq_wrapper {
   font-size: 13px;
   padding: 8px;
 }
-/* line 834, ../../app/stylesheets/screen.scss */
+/* line 837, ../../app/stylesheets/screen.scss */
 #about_wrapper li, #faq_wrapper li {
   margin: 15px 0 15px 30px;
 }
 
-/* line 839, ../../app/stylesheets/screen.scss */
+/* line 842, ../../app/stylesheets/screen.scss */
 #faq_wrapper div {
   margin: 5px 0 5px 0px;
   padding: 5px 0px 5px 5px;
 }
 
-/* line 844, ../../app/stylesheets/screen.scss */
+/* line 847, ../../app/stylesheets/screen.scss */
 .faq_q {
   font-size: 110%;
   margin-bottom: 13px;
 }
 
-/* line 849, ../../app/stylesheets/screen.scss */
+/* line 852, ../../app/stylesheets/screen.scss */
 .faq_a {
   margin-bottom: 13px;
   line-height: 18px;
 }
 
-/* line 854, ../../app/stylesheets/screen.scss */
+/* line 857, ../../app/stylesheets/screen.scss */
 #contact {
   margin: 20px 0 0 0;
 }
 
 /*Sign Up Page*/
-/* line 860, ../../app/stylesheets/screen.scss */
+/* line 863, ../../app/stylesheets/screen.scss */
 .form_wrapper {
   padding: 8px 0 10px 25px;
   margin: 5px 0 0 10px;
@@ -924,51 +927,51 @@ nav, #cart_border, #eval_toggle_wrapper, #eval_toggle_wrapper_faux, #see_calenda
   background-color: #2D647F;
   font-size: 105%;
 }
-/* line 867, ../../app/stylesheets/screen.scss */
+/* line 870, ../../app/stylesheets/screen.scss */
 .form_wrapper div {
   margin: 15px 0 5px 0;
 }
-/* line 871, ../../app/stylesheets/screen.scss */
+/* line 874, ../../app/stylesheets/screen.scss */
 .form_wrapper .field_with_errors {
   position: relative;
   margin: -6px 0px 0px 0px;
 }
-/* line 876, ../../app/stylesheets/screen.scss */
+/* line 879, ../../app/stylesheets/screen.scss */
 .form_wrapper a {
   display: inline-block;
   margin-bottom: 5px;
 }
 
-/* line 883, ../../app/stylesheets/screen.scss */
+/* line 886, ../../app/stylesheets/screen.scss */
 #sign_up_button {
   margin: 10px 0 10px 0;
 }
 
-/* line 887, ../../app/stylesheets/screen.scss */
+/* line 890, ../../app/stylesheets/screen.scss */
 div #sign_in_button {
   margin: 5px 0 10px 0;
 }
 
-/* line 891, ../../app/stylesheets/screen.scss */
+/* line 894, ../../app/stylesheets/screen.scss */
 .eval_shadow, .prof_name {
   margin-bottom: 5px;
 }
 
-/* line 895, ../../app/stylesheets/screen.scss */
+/* line 898, ../../app/stylesheets/screen.scss */
 #no_courses {
   font-style: italic;
   font-size: 105%;
   margin-left: 4px;
 }
 
-/* line 901, ../../app/stylesheets/screen.scss */
+/* line 904, ../../app/stylesheets/screen.scss */
 .hide_search, #show_search {
   display: inline-block;
   position: relative;
   left: 705px;
 }
 
-/* line 907, ../../app/stylesheets/screen.scss */
+/* line 910, ../../app/stylesheets/screen.scss */
 .hide_search_img {
   display: inline-block;
   position: relative;
@@ -977,7 +980,7 @@ div #sign_in_button {
 }
 
 /* Calendar */
-/* line 916, ../../app/stylesheets/screen.scss */
+/* line 919, ../../app/stylesheets/screen.scss */
 #cal_wrapper {
   height: 582px;
   width: 970px;
@@ -986,7 +989,7 @@ div #sign_in_button {
   padding: 0 10px 0 10px;
 }
 
-/* line 924, ../../app/stylesheets/screen.scss */
+/* line 927, ../../app/stylesheets/screen.scss */
 #cal_header {
   background-color: #2d647f;
   clear: both;
@@ -996,7 +999,7 @@ div #sign_in_button {
   float: right;
 }
 
-/* line 933, ../../app/stylesheets/screen.scss */
+/* line 936, ../../app/stylesheets/screen.scss */
 .day {
   float: left;
   text-align: center;
@@ -1005,12 +1008,12 @@ div #sign_in_button {
   margin-right: 10px;
 }
 
-/* line 942, ../../app/stylesheets/screen.scss */
+/* line 945, ../../app/stylesheets/screen.scss */
 .day#friday {
   margin-right: 0px;
 }
 
-/* line 946, ../../app/stylesheets/screen.scss */
+/* line 949, ../../app/stylesheets/screen.scss */
 #hour_header_wrapper {
   width: 65px;
   float: left;
@@ -1018,32 +1021,32 @@ div #sign_in_button {
   margin-top: 2px;
 }
 
-/* line 953, ../../app/stylesheets/screen.scss */
+/* line 956, ../../app/stylesheets/screen.scss */
 #week_hour_rows {
   float: right;
 }
 
-/* line 957, ../../app/stylesheets/screen.scss */
+/* line 960, ../../app/stylesheets/screen.scss */
 .day_hour_rows {
   float: right;
 }
 
-/* line 962, ../../app/stylesheets/screen.scss */
+/* line 965, ../../app/stylesheets/screen.scss */
 .hour_header {
   padding: 0px 0 28px 0;
 }
 
-/* line 966, ../../app/stylesheets/screen.scss */
+/* line 969, ../../app/stylesheets/screen.scss */
 .hour_header#hour_8 {
   padding: 36px 0 30px 0;
 }
 
-/* line 970, ../../app/stylesheets/screen.scss */
+/* line 973, ../../app/stylesheets/screen.scss */
 .hour_header#hour_9 {
   padding: 0px 0 0px 0;
 }
 
-/* line 974, ../../app/stylesheets/screen.scss */
+/* line 977, ../../app/stylesheets/screen.scss */
 .hour {
   height: 39px;
   border-top: 1px solid white;
@@ -1052,22 +1055,22 @@ div #sign_in_button {
   z-index: 20;
 }
 
-/* line 982, ../../app/stylesheets/screen.scss */
+/* line 985, ../../app/stylesheets/screen.scss */
 #M8_PM, #T8_PM, #W8_PM, #Th8_PM, #F8_PM {
   border-bottom: 1px solid white;
 }
 
-/* line 986, ../../app/stylesheets/screen.scss */
+/* line 989, ../../app/stylesheets/screen.scss */
 .day, .hour {
   width: 170px;
 }
 
-/* line 990, ../../app/stylesheets/screen.scss */
+/* line 993, ../../app/stylesheets/screen.scss */
 .first_hour {
   margin-top: 35px;
 }
 
-/* line 994, ../../app/stylesheets/screen.scss */
+/* line 997, ../../app/stylesheets/screen.scss */
 .marked {
   height: 84px;
   background-color: #00374F;
@@ -1081,32 +1084,32 @@ div #sign_in_button {
   word-wrap: break-word;
 }
 
-/* line 1007, ../../app/stylesheets/screen.scss */
+/* line 1010, ../../app/stylesheets/screen.scss */
 #cal_header_div {
   margin-bottom: 2px;
   font-size: 135%;
   display: inline-block;
 }
 
-/* line 1013, ../../app/stylesheets/screen.scss */
+/* line 1016, ../../app/stylesheets/screen.scss */
 .class_name {
   font-size: 105%;
 }
 
-/* line 1017, ../../app/stylesheets/screen.scss */
+/* line 1020, ../../app/stylesheets/screen.scss */
 .class_time {
   font-size: 95%;
   margin-top: 2px;
   display: inline-block;
 }
 
-/* line 1023, ../../app/stylesheets/screen.scss */
+/* line 1026, ../../app/stylesheets/screen.scss */
 #close_cal {
   display: inline-block;
   float: right;
 }
 
-/* line 1028, ../../app/stylesheets/screen.scss */
+/* line 1031, ../../app/stylesheets/screen.scss */
 #cal_cart_toggle {
   display: inline-block;
   float: right;
@@ -1114,7 +1117,7 @@ div #sign_in_button {
   margin-right: 5px;
 }
 
-/* line 1036, ../../app/stylesheets/screen.scss */
+/* line 1039, ../../app/stylesheets/screen.scss */
 .tooltip {
   display: none;
   font-size: 12px;
@@ -1124,33 +1127,33 @@ div #sign_in_button {
   color: #fff;
 }
 
-/* line 1045, ../../app/stylesheets/screen.scss */
+/* line 1048, ../../app/stylesheets/screen.scss */
 .default_text {
   color: gray;
 }
 
-/* line 1049, ../../app/stylesheets/screen.scss */
+/* line 1052, ../../app/stylesheets/screen.scss */
 .ct_container {
   margin-left: 20px;
 }
 
-/* line 1053, ../../app/stylesheets/screen.scss */
+/* line 1056, ../../app/stylesheets/screen.scss */
 .iq_container {
   margin-left: 8px;
 }
 
-/* line 1057, ../../app/stylesheets/screen.scss */
+/* line 1060, ../../app/stylesheets/screen.scss */
 #flash_notice {
   position: absolute;
-  right: 170px;
+  right: 224px;
   width: auto;
-  top: 75px;
+  top: 67px;
   text-align: right;
 }
 
-/* line 1065, ../../app/stylesheets/screen.scss */
+/* line 1068, ../../app/stylesheets/screen.scss */
 #disclaimer {
-  position: absolute;
-  right: 170px;
-  top: 93px;
+  position: relative;
+  left: 578px;
+  top: 45px;
 }

@@ -282,8 +282,11 @@ body {
 }
 
 .icons {
-	width: 80px;
+	width: 85px;
 	display:inline-block;
+	position:relative;
+	right:12px;
+	margin-right:-7px;
 }
 
 div#first_row {
@@ -1056,14 +1059,14 @@ div #sign_in_button {
 
 #flash_notice {
 	position:absolute;
-	right:170px;
+	right:224px;
 	width:auto;
-	top:75px;
+	top:67px;
 	text-align:right;
 }
 
 #disclaimer {
-	position:absolute;
-	right:170px;
-	top:93px;
+	position:relative;
+	left:578px;
+	top:45px;
 }
