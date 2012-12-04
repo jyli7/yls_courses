@@ -26,7 +26,6 @@ group :test, :development do
 end
 
 group :development do
-  gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'annotate', '2.4.0'
   gem 'faker', '0.3.1'
   gem "nifty-generators"
