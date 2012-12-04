@@ -21,7 +21,7 @@ group :production do
   gem 'thin'
 end
 
-group :test, :development do 
+group :test, :development do
   gem "rspec-rails"
 end
 
