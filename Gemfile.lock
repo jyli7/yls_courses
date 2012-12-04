@@ -126,7 +126,7 @@ GEM
     sass (3.1.10)
     sinatra (1.2.7)
       rack (~> 1.1)
-      tilt (< 2.0, >= 1.2.2)
+      tilt (>= 1.2.2, < 2.0)
     skinny (0.2.0)
       eventmachine (~> 0.12)
       thin (~> 1.2)

@@ -18,7 +18,7 @@ gem "compass", ">= 0.11.5"
 group :production do
   gem 'pg'
   gem 'thin'
-end 
+end
 
 group :development do
   gem 'ruby-debug19'

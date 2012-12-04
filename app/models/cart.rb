@@ -1,7 +1,7 @@
 class Cart < ActiveRecord::Base
   has_many :line_items, :dependent => :destroy 
   belongs_to :user
-  
+
   def lower_bound
     sum = 0
     line_items.each do |item| 
@@ -20,5 +20,6 @@ class Cart < ActiveRecord::Base
       end
     end 
     sum
-  end 
+  end
+
 end
