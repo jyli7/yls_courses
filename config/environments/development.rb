@@ -1,4 +1,4 @@
-APP_CONFIG = YAML.load_file("#{Rails.root.to_s}/config/config.yml")
+# APP_CONFIG = YAML.load_file("#{Rails.root.to_s}/config/config.yml")
 
 YlsCourses::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
@@ -18,7 +18,7 @@ YlsCourses::Application.configure do
 
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = true
-  
+
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
@@ -26,8 +26,8 @@ YlsCourses::Application.configure do
     :port => 587,
     :domain => "gmail.com",
     :authentication => :login,
-    :user_name => APP_CONFIG['email'],
-    :password => APP_CONFIG['password']
+    :user_name => "11",
+    :password => "22"
   }
 
   # Print deprecation notices to the Rails logger

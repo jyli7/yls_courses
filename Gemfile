@@ -19,14 +19,14 @@ gem 'haml'
 group :production do
   gem 'pg'
   gem 'thin'
-end 
+end
 
-group :test, :development do 
+group :test, :development do
   gem "rspec-rails"
 end
 
 group :development do
-  gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'taps'
   gem 'annotate', '2.4.0'
   gem 'faker', '0.3.1'
   gem "nifty-generators"
