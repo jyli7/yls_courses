@@ -32,6 +32,7 @@ group :development do
   gem "nifty-generators"
   gem 'sqlite3', '1.3.3'
   gem 'mailcatcher'
+  gem 'pry'
 end
 
 group :test do

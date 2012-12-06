@@ -1,10 +1,10 @@
 class CartsController < ApplicationController
   load_and_authorize_resource
-  
+
   # GET /carts
   # GET /carts.xml
   def index
-    # 
+    #
     # respond_to do |format|
     #   format.html # index.html.erb
     #   format.xml  { render :xml => @carts }
@@ -18,7 +18,7 @@ class CartsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @cart }
-    end 
+    end
   end
 
   # GET /carts/new
@@ -37,7 +37,7 @@ class CartsController < ApplicationController
 
   # POST /carts
   # POST /carts.xml
-  def create    
+  def create
     @cart.user = current_user
 
     respond_to do |format|
@@ -57,12 +57,12 @@ class CartsController < ApplicationController
     if @cart.line_items
       @course_id_array = []
       @cart.line_items.each do |item|
-        @course_id_array << item.course.id
+        @course_id_array << item.course.id if item.course
         item.destroy
       end
-    end 
+    end
     @user = current_user
-    @cart = @user.cart 
+    @cart = @user.cart
 
     respond_to do |format|
       if @cart.update_attributes(params[:cart])
@@ -82,7 +82,7 @@ class CartsController < ApplicationController
     @cart.destroy
 
     respond_to do |format|
-      format.html { redirect_to(root_path, 
+      format.html { redirect_to(root_path,
         :notice => 'Your course cart is now empty') }
       format.xml  { head :ok }
     end

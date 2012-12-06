@@ -6,7 +6,7 @@
 	$("#courses_body").append(courses); //tack on the evals section after the info section.
 
 	//Fix the courses_body height to the current height, so that it does not collapse when you remove its contents
-	var temp_fixed_height = $("#courses_body").height(); 
+	var temp_fixed_height = $("#courses_body").height();
 	$("#courses_body").css("height", temp_fixed_height);
 
 	//Fade out the info section, fade in the evals section, then remove the info from the DOM
@@ -15,7 +15,7 @@
 		courses.fadeIn('slow', function() {
 			that.remove();
 			$("#courses_body").css("height", ''); //change the height back to auto-height
-			
+
 			//set autocomplete again
 			$('#name_input').autocomplete({
 				source: <%= raw(@course_names.to_json) %>, delay:100
@@ -26,41 +26,41 @@
 			});
 
 			//set tooltips again
-			$('#search_day_like').tipTip();		
-			
+			$('#search_day_like').tipTip();
+
 		});
 	});
 
 	//Fade in search container
 	$("#search_container").delay(400).html("<%= escape_javascript(render :partial => 'search_form') %>").fadeIn("slow");
-	
+
 	//Reload eval_toggle_wrapper
 	$("#eval_toggle_wrapper").delay(400).html("<%= escape_javascript(render :partial => 'eval_toggle_wrapper') %>").show();
-	
-	//Re-add zebra stripes to courses_body 
+
+	//Re-add zebra stripes to courses_body
 	$('.other_rows:even').addClass('zebra');
-<% end %>	
+<% end %>
 
 //Everything that follows is for bringing up the calendar
 <% if @cal_on == 1 %>
 //For the calendar
 	$('#cal_wrapper').html("<%= escape_javascript(render :partial => 'courses_main_cal') %>");
-	var id = 0; //used to give each class div a unique id 
+	var id = 0; //used to give each class div a unique id
 
 	//Run through the result_arrays to place the courses on the calendar, and to set all properties but width
 	<% @result_array.each do |mini_arr| %>
-		var marked = '<div class="marked" id=' + id + '></div>';
+		var marked = '<div class="marked" id=course-' + id + '></div>';
 
 		//place div in right position, based on course start time
 		//this works because the [1] indx on the each result_array corresponds to the ids of preset divs on the calendar
-		$("#<%= mini_arr[1] %>").append(marked); 
+		$("#<%= mini_arr[1] %>").append(marked);
 
 		//set parameters for the course div (to be used below)
 		var height = ("<%= mini_arr[2].to_i %>")*6.5-3;
 		var top_num = ("<%= mini_arr[3].to_i %>")*6.5;
 
-		$("#<%= mini_arr[1] %>").find('#'+id).css({ //change div height, based on course minutes start time and course length
-			'height': height, //each course div is 42px long. Each segment, therefore, is 7px long. 
+		$("#<%= mini_arr[1] %>").find('#course-'+id).css({ //change div height, based on course minutes start time and course length
+			'height': height, //each course div is 42px long. Each segment, therefore, is 7px long.
 			'position': 'relative',
 			'top': top_num,
 			'opacity': .9,
@@ -71,8 +71,9 @@
 			'word-wrap': 'break-word',
 			'margin-right': '0',
 		});
-		$('#'+id).append("<span class='class_name'><%= mini_arr[0] %></span>"); //insert name into course div
-		$('#'+id).append("<br><span class='class_time'><%= mini_arr[4] %></span>"); //insert time into course div
+
+		$('#course-'+id).append("<span class='class_name'><%= mini_arr[0] %></span>"); //insert name into course div
+		$('#course-'+id).append("<br><span class='class_time'><%= mini_arr[4] %></span>"); //insert time into course div
 		// $('#'+id).append("<br><span class='class_time'><%= mini_arr[5] %></span>"); //insert room into course div
 		id += 1; //increment the idea for the next class div
 	<% end %>
@@ -82,15 +83,15 @@
 	<% @result_array.each do |mini_arr| %>
 		//count the number of divs already in the time block
 		var count =  $('#<%= mini_arr[1] %>').children().length;
-		
+
 		//see if there are already divs in the previous blocks or in the succeeding blocks
 		if($('#<%= mini_arr[1] %>').prev().children().length >= 1){
 			count += $('#<%= mini_arr[1] %>').prev().children().length;
 		}
 		if($('#<%= mini_arr[1] %>').next().children().length >= 1) {
 			count += $('#<%= mini_arr[1] %>').next().children().length;
-		} 
-		
+		}
+
 		//find the height of the tallest (i.e. longest) class from two back
 		var max_height_of_two_previous = 0;
 		$('#<%= mini_arr[1] %>').prev().prev().children().each(function() {
@@ -98,7 +99,7 @@
 				max_height_of_two_previous = parseInt($(this).css('height'));
 			}
 		});
-		
+
 		//find the height of the tallest class from one back
 		var max_height_of_current = 0;
 		$('#<%= mini_arr[1] %>').children().each(function() {
@@ -106,7 +107,7 @@
 				max_height_of_current = parseInt($(this).css('height'));
 			}
 		});
-		
+
 		//account for those classes that meet for 3 hours
 		if($('#<%= mini_arr[1] %>').prev().prev().children().length >= 1 && max_height_of_two_previous > 100){
 			count += $('#<%= mini_arr[1] %>').prev().prev().children().length;
@@ -115,28 +116,28 @@
 		if(max_height_of_current > 100 && $('#<%= mini_arr[1] %>').next().next().children().length >= 1){
 			count += $('#<%= mini_arr[1] %>').next().next().children().length;
 		}
-		
+
 		var width = 164/(count); //decrease width, based on number of divs already in time block
 		if(count >= 2){
 			width -= 1+count
 		}
-				
-		$("#<%= mini_arr[1] %>").find('#'+id).css({
+
+		$("#<%= mini_arr[1] %>").find('#course-'+id).css({
 			'width': width,
 		});
 
 		id += 1;
 	<% end %>
-	
-	
-	//Run through all the classes 1 final time, to fix 3 period chaining problems. 
+
+
+	//Run through all the classes 1 final time, to fix 3 period chaining problems.
 	id = 0;
 	<% @result_array.each do |mini_arr| %>
 		$('#<%= mini_arr[1] %>').children().each(function() {
 			var current_width = parseInt($(this).css('width'));
 			var one_back_width = parseInt($(this).parent().prev().children().first().css('width'));
 			var one_forward_width = parseInt($(this).parent().next().children().first().css('width'));
-			
+
 			//if the current width is greater than the width of the class right before, decrease the current width
 			if(one_back_width < current_width) {
 				current_width = one_back_width;
@@ -146,16 +147,16 @@
 			if(one_forward_width < current_width) {
 				current_width = one_forward_width;
 			}
-			
+
 			//grab the class's height
 			height_of_current = parseInt($(this).css('height'));
-			
+
 			//to account for 3 hour long classes (which are taller than 100 px)
 			if(height_of_current > 100) {
 				//if the current width is larger than the width of the class 2 blocks down, decrease the current width
 				if(current_width > parseInt($(this).parent().next().next().children().first().css('width'))){
 					current_width = parseInt($(this).parent().next().next().children().first().css('width'));
-					
+
 					//equalize the width of all the classes in that 3 hour block
 					$(this).parent().children().each(function() {
 						$(this).css({
@@ -163,7 +164,7 @@
 						});
 					});
 				}
-				
+
 				//if the width of the 3 hour class is less than that of the one preceding it, decrease the width of the classes in that block as well
 				if(current_width < parseInt($(this).parent().prev().children().first().css('width'))){
 					$(this).parent().prev().children().each(function() {
@@ -180,25 +181,25 @@
 							'width':current_width
 						});
 					});
-				}			
-				
+				}
+
 			}
-			
+
 			$(this).css({
 				'width': current_width
-			});			
+			});
 		});
-		
+
 		//if the course width is too small, remove the course name and time and use tooltips
 		if(parseInt($('#<%= mini_arr[1] %>').children().first().css('width')) < 52) {
-			$('#'+id).html("<span class='for_tooltip' title='<%=mini_arr[0] %> <%= mini_arr[4] %>'><%= mini_arr[0][0..-3]%></span><br>..."); //replace HTML with shortened course name
+			$('#course'+id).html("<span class='for_tooltip' title='<%=mini_arr[0] %> <%= mini_arr[4] %>'><%= mini_arr[0][0..-3]%></span><br>..."); //replace HTML with shortened course name
 		}
 		id += 1;
-		
-	<% end %>
-	
 
-$('#courses_cal').fadeIn();	
+	<% end %>
+
+
+$('#courses_cal').fadeIn();
 
 //Tooltip for classes with shortened widths
 $('.for_tooltip').tipTip({

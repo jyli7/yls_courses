@@ -229,6 +229,7 @@ DEPENDENCIES
   nifty-generators
   nokogiri
   pg
+  pry
   rails (= 3.0.9)
   rspec-rails
   sass
