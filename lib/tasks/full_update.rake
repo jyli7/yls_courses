@@ -185,16 +185,16 @@ task :fetch_classes => :environment do
   keep_these_courses = []
 
   temp_array.each do |new_name|
-    # found_course = Course.find_all_by_name(new_name)
-    # if found_course == []
+    found_course = Course.find_all_by_name(new_name)
+    if found_course == []
       print "new course!", new_name, "\n"
       new_course = Course.create!(:name => new_name)
       keep_these_courses << new_course
-    # else
-    #   found_course.each do |found_course|
-    #     keep_these_courses << found_course
-    #   end
-    # end
+    else
+      found_course.each do |found_course|
+        keep_these_courses << found_course
+      end
+    end
   end
 
   Course.all.each do |course|

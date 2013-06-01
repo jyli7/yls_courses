@@ -15,6 +15,7 @@ gem 'cancan'
 gem 'sass'
 gem "compass", ">= 0.11.5"
 gem 'haml'
+gem 'newrelic_rpm'
 
 group :production do
   gem 'pg'
