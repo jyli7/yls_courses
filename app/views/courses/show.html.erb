@@ -3,15 +3,21 @@
 		<span class="lightbox_close"><a href=''>CLOSE [X]</a></span>
 		<div id="show_header"><%= @course.name%></div>
 		<div id="show_eval_header"><em>Course evaluations:</div></em>
-		<% if @course.crn.blank? %>
+		<% if @course.crn.blank? && @course.evals.nil? %>
 			No evaluations found
 		<% else %>
-			<% i = 0 %>
-			<% while i < @course.crn.length %>
-				<span class="indiv_eval_link"><a class="eval_shadow" href="https://faculty.yale.edu/lawevals/student/Summary?crn=<%= @course.crn[i] %>&termCode=<%=@course.term_code[i]%>"><%=@course.past_semesters[i]%></a></span>
-				<span class="prof_name"><%=@course.past_instructors[i]%></span>
+			<% if !@course.crn.blank? %>
+				<% i = 0 %>
+				<% while i < @course.crn.length %>
+					<span class="indiv_eval_link"><a class="eval_shadow" href="https://faculty.yale.edu/lawevals/student/Summary?crn=<%= @course.crn[i] %>&termCode=<%=@course.term_code[i]%>"><%=@course.past_semesters[i]%></a></span>
+					<span class="prof_name"><%=@course.past_instructors[i]%></span>
+					<br>
+					<% i = i + 1 %>
+				<% end %>
+			<% else %>
+				<span class="indiv_eval_link"><a class="eval_shadow" href="<%= @course.evals %>">Spring 2012</a></span>
+				<span class="prof_name"><%=@course.instructor%></span>
 				<br>
-				<% i = i + 1 %>
 			<% end %>
 		<% end %>
 	</div>

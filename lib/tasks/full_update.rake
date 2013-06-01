@@ -1,13 +1,13 @@
 # Dangerous shit! Do not destroy classes
 desc "Destroy all classes to prepare for update"
-task :destroy_all_classes => :environment do 
+task :destroy_all_classes => :environment do
   LineItem.all.each do |l|
     l.destroy
   end
-  
-  Course.all.each do |c| 
+
+  Course.all.each do |c|
     c.destroy
-  end 
+  end
 end
 
 desc "Shortens limitations descriptions"
@@ -17,7 +17,7 @@ task :limitations_shorten => :environment do
       c.update_attribute :limitations, "Permission"
     elsif c.limitations == "LSO Ballot Required"
       c.update_attribute :limitations, "LSO"
-    end 
+    end
   end
 end
 
@@ -31,18 +31,18 @@ task :find_new_and_deleted_courses => :environment do
 
   book = Spreadsheet.open '/Users/jimmyli/rails_projects/yls_courses/public/data/YLS_Classes_2.xls'
   sheet1 = book.worksheet 'Sheet1'
-  
+
   temp_array = [] # for names
   sheet1.each 2 do |row|
-    temp_array << row[0] 
+    temp_array << row[0]
   end
-  
-  #Go through each name in the temp array and see if the course already exists. 
+
+  #Go through each name in the temp array and see if the course already exists.
   #If it does, update the name, and delete the entry from temp array.
   row = 1
-  
+
   still_existing_courses = []
-  
+
   temp_array.each do |new_name|
     found_course = Course.find_all_by_name(new_name)
     if found_course == []
@@ -54,7 +54,7 @@ task :find_new_and_deleted_courses => :environment do
       end
     end
   end
-  
+
   Course.all.each do |course|
     unless still_existing_courses.include? course
       puts "Course requires deletion:", course.name
@@ -75,18 +75,18 @@ task :add_new_courses => :environment do
 
   temp_array = [] # for names
   sheet1.each 2 do |row|
-    temp_array << row[0] 
+    temp_array << row[0]
   end
-  
+
   new_courses = []
   temp_array.each do |new_course_name|
     new_course = Course.create!(:name => new_course_name)
     new_courses << new_course
   end
-  
+
   temp_array = [] # for course numbers
   sheet1.each 2 do |row|
-    temp_array << row[1] 
+    temp_array << row[1]
   end
 
   count = 0
@@ -97,7 +97,7 @@ task :add_new_courses => :environment do
 
   temp_array = [] # for instructors
   sheet1.each 2 do |row|
-    temp_array << row[2] 
+    temp_array << row[2]
   end
 
   count = 0
@@ -108,7 +108,7 @@ task :add_new_courses => :environment do
 
   temp_array = [] # for day
   sheet1.each 2 do |row|
-    temp_array << row[3] 
+    temp_array << row[3]
   end
 
   count = 0
@@ -119,7 +119,7 @@ task :add_new_courses => :environment do
 
   temp_array = [] # for time
   sheet1.each 2 do |row|
-    temp_array << row[4] 
+    temp_array << row[4]
   end
 
   count = 0
@@ -130,7 +130,7 @@ task :add_new_courses => :environment do
 
   temp_array = [] # for room
   sheet1.each 2 do |row|
-    temp_array << row[5] 
+    temp_array << row[5]
   end
 
   count = 0
@@ -141,7 +141,7 @@ task :add_new_courses => :environment do
 
   temp_array = [] # for units
   sheet1.each 2 do |row|
-    temp_array << row[6] 
+    temp_array << row[6]
   end
 
   count = 0
@@ -152,7 +152,7 @@ task :add_new_courses => :environment do
 
   temp_array = [] # for limitations
   sheet1.each 2 do |row|
-    temp_array << row[7] 
+    temp_array << row[7]
   end
 
   count = 0
@@ -161,16 +161,16 @@ task :add_new_courses => :environment do
     count += 1
   end
 end
-  
+
 desc "Fetch law classes"
-task :fetch_classes => :environment do 
+task :fetch_classes => :environment do
   require 'spreadsheet'
   require 'rubygems'
   require 'time'
 
   Spreadsheet.client_encoding = 'UTF-8'
 
-  book = Spreadsheet.open '/Users/jimmyli/rails_projects/yls_courses/public/data/YLS_Classes_2011_12_8.xls'
+  book = Spreadsheet.open '/Users/jyl702/workspace/yls_courses/public/data/YLS_Classes_2011_12_8.xls'
   sheet1 = book.worksheet 'Sheet1'
 
   temp_array = [] # for names
@@ -178,10 +178,10 @@ task :fetch_classes => :environment do
     temp_array << row[0]
     puts row[0]
   end
-  
-  #Go through each name in the temp array and see if the course already exists. 
+
+  #Go through each name in the temp array and see if the course already exists.
   #If it does, update the name, and delete the entry from temp array.
-  
+
   keep_these_courses = []
 
   temp_array.each do |new_name|
@@ -203,10 +203,10 @@ task :fetch_classes => :environment do
       course.destroy
     end
   end
-    
+
   temp_array = [] # for course numbers
   sheet1.each 2 do |row|
-    temp_array << row[1] 
+    temp_array << row[1]
   end
 
   count = 0
@@ -217,7 +217,7 @@ task :fetch_classes => :environment do
 
   temp_array = [] # for instructors
   sheet1.each 2 do |row|
-    temp_array << row[2] 
+    temp_array << row[2]
   end
 
   count = 0
@@ -228,7 +228,7 @@ task :fetch_classes => :environment do
 
   temp_array = [] # for day
   sheet1.each 2 do |row|
-    temp_array << row[3] 
+    temp_array << row[3]
   end
 
   count = 0
@@ -239,7 +239,7 @@ task :fetch_classes => :environment do
 
   temp_array = [] # for time
   sheet1.each 2 do |row|
-    temp_array << row[4] 
+    temp_array << row[4]
   end
 
   count = 0
@@ -250,7 +250,7 @@ task :fetch_classes => :environment do
 
   temp_array = [] # for room
   sheet1.each 2 do |row|
-    temp_array << row[5] 
+    temp_array << row[5]
   end
 
   count = 0
@@ -261,7 +261,7 @@ task :fetch_classes => :environment do
 
   temp_array = [] # for units
   sheet1.each 2 do |row|
-    temp_array << row[6] 
+    temp_array << row[6]
   end
 
   count = 0
@@ -272,7 +272,7 @@ task :fetch_classes => :environment do
 
   temp_array = [] # for limitations
   sheet1.each 2 do |row|
-    temp_array << row[7] 
+    temp_array << row[7]
   end
 
   count = 0
@@ -280,21 +280,21 @@ task :fetch_classes => :environment do
     course.update_attribute :limitations, temp_array[count]
     count += 1
   end
-  
+
   Course.all.each do |c|
     if c.name.blank?
       c.destroy
     end
   end
-end 
+end
 
 desc "Get http address for each class"
-task :get_address => :environment do 
+task :get_address => :environment do
   require 'rubygems'
   require 'nokogiri'
   require 'open-uri'
   address_array = []
-  doc = Nokogiri::HTML(open("http://ylsinfo.law.yale.edu/wsw/prereg/course_overview.asp?Term=Fall"))
+  doc = Nokogiri::HTML(open("http://ylsinfo.law.yale.edu/wsw/prereg/course_overview.asp?Term=Spring"))
   r = /href=\"(.*)\">/
   doc.css("div a").each do |link|
     link = link.to_s
@@ -302,18 +302,18 @@ task :get_address => :environment do
     address = "http://ylsinfo.law.yale.edu/wsw/prereg/" + m[1]
     address_array << address #add each address to the address array
   end
-  
+
   count = 0
   @ordered_courses  = Course.all
   @ordered_courses.each do |c|
     c.update_attribute :address, address_array[count]
     count += 1
-  end 
-  
+  end
+
   Course.all.each do |c| #destroy nil courses
     if c.name.blank?
       c.destroy
-    end 
+    end
   end
 end
 
@@ -325,15 +325,15 @@ task :ad_hoc_fixes => :environment do
   Course.find(8397).update_attribute :address, brooks_address
   Course.find(8396).update_attribute :address, romano_address
 end
-  
+
 desc "Get evaluation link for each class"
 task :get_evals => :environment do
 
   #delete evals first
-  for course in Course.all 
+  for course in Course.all
     unless course.crn.nil?
       course.update_attribute :crn, nil
-    end 
+    end
     unless course.term_code.nil?
       course.update_attribute :term_code, nil
     end
@@ -343,7 +343,7 @@ task :get_evals => :environment do
     unless course.past_semesters.nil?
       course.update_attribute :past_semesters, nil
     end
-  end 
+  end
 
   2011.downto(2004) do |count|
     file = File.new("course_data/Spring#{count}.html")
@@ -358,34 +358,34 @@ task :get_evals => :environment do
         if course.name[space_index+1] == "&"
           middle_str = course.name[space_index+1]
         #for other courses
-        else 
+        else
           middle_str = course.name[space_index+1..space_index+2]
         end
-      else 
+      else
         middle_str = ""
-      end 
- 
+      end
+
       #to grab the first two letters of the third word (if it exists)
       if not middle_str.blank? and (course.name.count " ") >= 2
         second_space_index = course.name.index(" ", space_index+1)
         if course.name[second_space_index+1] == "&"
           third_str = course.name[second_space_index+1]
-        else 
+        else
           third_str = course.name[(second_space_index+1..second_space_index+2)]
         end
       #for courses like Const.Philos.Hist., which have no spaces but are in fact different words
       elsif course.name[-1] == "."
         third_str = course.name[-4..-2]
-      else 
+      else
         third_str = ""
-      end 
+      end
 
       #if we have a one word course that doesn't have periods:
       unless course.name.include? " " or course.name.include? "."
         eval = /\(([0-9]+), ([0-9]+)\)">#{course.name[0..4]}[^"]*<\/a>&nbsp;([^<]+)/m.match text
       else
         eval = /\(([0-9]+), ([0-9]+)\)">#{course.name[0..3]}[^"]*#{middle_str}[^"]*#{third_str}[^"]*#{course.name[-1]}<\/a>&nbsp;([^<]+)/m.match text
-      end 
+      end
 
       if eval
         eval_a = [eval[1], eval[2], eval[3]]
@@ -401,11 +401,11 @@ task :get_evals => :environment do
         else
           course.term_code << eval_a[1]
         end
-        
+
         #format the matched string so that it fits the format of the url
         if eval_a[2]
           eval_a[2].strip!.sub!(/\\n\s*/, '').gsub!(/,&nbsp;\s*\\n\s*/, ', ')
-        end   
+        end
 
         if course.past_instructors.blank?
           course.update_attribute :past_instructors, [eval_a[2]]
@@ -419,7 +419,7 @@ task :get_evals => :environment do
           course.past_semesters << "Spring #{count}"
         end
         course.save
-      end 
+      end
     end
 
     fall_count = count-1
@@ -436,35 +436,35 @@ task :get_evals => :environment do
         if course.name[space_index+1] == "&"
           middle_str = course.name[space_index+1]
         #for other courses
-        else 
+        else
           middle_str = course.name[space_index+1..space_index+2]
         end
-      else 
+      else
         middle_str = ""
-      end 
+      end
 
       #to grab the first two letters of the third word (if it exists)
       if not middle_str.blank? and (course.name.count " ") >= 2
         second_space_index = course.name.index(" ", space_index+1)
         if course.name[second_space_index+1] == "&"
           third_str = course.name[second_space_index+1]
-        else 
+        else
           third_str = course.name[(second_space_index+1..second_space_index+2)]
         end
       #for courses like Const.Philos.Hist., which have no spaces but are in fact different words
       elsif course.name[-1] == "."
         third_str = course.name[-4..-2]
-      else 
+      else
         third_str = ""
-      end 
-      
+      end
+
       #if we have a one word course that doesn't have periods:
       unless course.name.include? " " or course.name.include? "."
         eval = /\(([0-9]+), ([0-9]+)\)">#{course.name[0..4]}[^"]*<\/a>&nbsp;([^<]+)/m.match text
       else
         eval = /\(([0-9]+), ([0-9]+)\)">#{course.name[0..3]}[^"]*#{middle_str}[^"]*#{third_str}[^"]*#{course.name[-1]}<\/a>&nbsp;([^<]+)/m.match text
-      end 
-      
+      end
+
       if eval
         eval_a = [eval[1], eval[2], eval[3]]
 
@@ -479,11 +479,11 @@ task :get_evals => :environment do
         else
           course.term_code << eval_a[1]
         end
-        
+
         #format the matched string so that it fits the format of the url
         if eval_a[2]
           eval_a[2].strip!.sub!(/\\n\s*/, '').gsub!(/,&nbsp;\s*\\n\s*/, ', ')
-        end   
+        end
 
         if course.past_instructors.blank?
           course.update_attribute :past_instructors, [eval_a[2]]
@@ -497,13 +497,13 @@ task :get_evals => :environment do
           course.past_semesters << "Fall #{count}"
         end
         course.save
-      end 
+      end
     end
-  end 
+  end
 end
 
 desc "Get description of each class"
-task :get_descrip => :environment do 
+task :get_descrip => :environment do
   require 'rubygems'
   require 'nokogiri'
   require 'open-uri'
@@ -514,63 +514,63 @@ task :get_descrip => :environment do
       doc = Nokogiri::HTML(open(url))
       new_descrip = doc.at_css("tr:nth-child(4) td").text
       course.update_attribute :descrip, new_descrip
-    end 
-  end 
-end 
+    end
+  end
+end
 
 desc "Get test or paper options for each class"
 task :get_testing => :environment do
 
   #delete testing attributes first
-  for course in Course.all 
+  for course in Course.all
     unless course.exam_type.nil?
       course.update_attribute :exam_type, nil
-    end 
+    end
     unless course.paper_type.nil?
       course.update_attribute :paper_type, nil
     end
   end
 
-  for course in Course.all  
+  for course in Course.all
 
     course.update_attribute :exam_type, "None"
 
     if course.descrip =~ /examination/i
-      course.update_attribute :exam_type, "Scheduled" 
+      course.update_attribute :exam_type, "Scheduled"
     end
 
     if course.descrip =~ /no examination/i
-      course.update_attribute :exam_type, "None" 
+      course.update_attribute :exam_type, "None"
     end
 
     if course.descrip =~ /self-scheduled/i
-      course.update_attribute :exam_type, "Self-schedule" 
+      course.update_attribute :exam_type, "Self-schedule"
     end
 
     course.update_attribute :paper_type, "None"
 
-    if course.descrip =~ /paper option/i 
+    if course.descrip =~ /paper option/i
       course.update_attribute :paper_type, "Option"
-    end 
+    end
 
-    if course.descrip =~ /paper required/i 
+    if course.descrip =~ /paper required/i
       course.update_attribute :paper_type, "Required"
-    end 
+    end
   end
 end
 
 #This rake is unfinished. Need to write the right regular expression. It is also NOT part of full update.
-desc "Get test or paper options for each class" 
+desc "Get test or paper options for each class"
 task :get_enrollment => :environment do
 
-  for course in Course.all  
+  for course in Course.all
     r = /enrollment.*limited to (\w*)|enrollment.*capped at (\w*)/i
     m = course.descrip.match r
     course.update_attribute :enrollment, m[1] unless m[1].blank?
     if m[1].blank? and not m[2].blank?
       course.update_attribute :enrollment, m[2]
     end
-  end 
+  end
 end
 
 desc "Get a time_num for each time, to be used for future sorting"
@@ -580,11 +580,11 @@ task :get_time_num => :environment do
     t = course.time
 
     if t.nil? #if course has no time at all, move to the next course
-      course.update_attribute :time_num, nil  
+      course.update_attribute :time_num, nil
       next
     end
 
-    time_array = [8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6] 
+    time_array = [8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6]
 
     colon_location = t.index(':') #determine the number of digits before :
 
@@ -592,12 +592,12 @@ task :get_time_num => :environment do
       i = t[0].to_i
     elsif colon_location == 2 #if course time has 2 digits before the colon, e.g. (11:00 or 12:00)
       i = t[0..1].to_i
-    end 
+    end
     time_num = time_array.index(i)
-    course.update_attribute :time_num, time_num      
+    course.update_attribute :time_num, time_num
   end
-end 
-  
+end
+
 desc "Categorize each course's time into 'morning', 'early aft', 'late aft', 'evening'"
 task :get_tod => :environment do
 
@@ -605,9 +605,9 @@ task :get_tod => :environment do
     t = course.time
 
     if t.blank? #if course has no time at all, move to the next course
-      course.update_attribute :tod, 'No set time'  
+      course.update_attribute :tod, 'No set time'
       next
-    end 
+    end
 
     colon_location = t.index(':') #determine the number of digits before :
 
@@ -621,7 +621,7 @@ task :get_tod => :environment do
         course.update_attribute :tod, 'Late aft (4-6)'
       elsif i >= 6
         course.update_attribute :tod, 'Evening (after 6)'
-      end 
+      end
 
     elsif colon_location == 2 #if course time has 2 digits before the colon, e.g. (11:00 or 12:00)
       i = t[0..1].to_i
@@ -630,7 +630,7 @@ task :get_tod => :environment do
       else
         course.update_attribute :tod, 'Early aft (12-4)'
       end
-    end 
+    end
   end
 end
 
@@ -641,39 +641,39 @@ task :get_units_alt => :environment do
     if course.units == '1, 2, or 3'
       course.update_attribute :units_alt, '1-3'
       course.update_attribute :units, '1, 2, or 3'
-    else 
+    else
       course.update_attribute :units_alt, course.units
-    end 
-  end 
-end 
+    end
+  end
+end
 
 desc "Create alt ratings for that ratings sort treats blanks in the right way"
 task :get_ratings_alt => :environment do
   for course in Course.all
     if course.workload.blank?
       course.update_attribute :workload_alt, 11.0
-    else 
+    else
       course.update_attribute :workload_alt, course.workload
     end
 
     if course.classtime_value.blank?
       course.update_attribute :classtime_value_alt, 0
-    else 
+    else
       course.update_attribute :classtime_value_alt, course.classtime_value
     end
 
     if course.instructor_quality.blank?
       course.update_attribute :instructor_quality_alt, 0
-    else 
+    else
       course.update_attribute :instructor_quality_alt, course.instructor_quality
     end
-  end  
+  end
 end
 
 desc "Get a day_num, so that sort is based on days of week, not alphabet"
 task :day_sort_fix => :environment do
   days = ['M', 'T', 'W', 'Th', 'F']
-  
+
   def gen_comb_array(array)
     ca = [] #ca for "combination_array"
     first = array[0]
@@ -681,59 +681,59 @@ task :day_sort_fix => :environment do
     len = array.length
     new_array = array[1...len]
     for element in new_array
-      ca << first + element #add combo of first day + all other day combos, e.g. "MT", "MW", "MTh", etc. 
-    end 
+      ca << first + element #add combo of first day + all other day combos, e.g. "MT", "MW", "MTh", etc.
+    end
     if new_array.length > 1
       ca << gen_comb_array(new_array)
-    else 
+    else
       ca << new_array
       return ca
-    end 
-  end 
-  
+    end
+  end
+
   p gen_comb_array(days).flatten
-  
+
   days_comb = gen_comb_array(days).flatten
-  
-  for course in Course.all 
+
+  for course in Course.all
     day_num = days_comb.index(course.day)
-    course.update_attribute :day_num, day_num 
-  end 
+    course.update_attribute :day_num, day_num
+  end
 end
 
 desc "Get description of each class"
-task :change_units => :environment do 
+task :change_units => :environment do
   require 'rubygems'
-  
+
   courses = Course.find_all_by_units("4.0")
-  
-  for course in courses 
+
+  for course in courses
     course.update_attribute :units, 4
   end
-  
+
   courses = Course.find_all_by_units("2.0")
-  
-  for course in courses 
+
+  for course in courses
     course.update_attribute :units, 2
   end
-  
+
   courses = Course.find_all_by_units("1.0")
-  
-  for course in courses 
+
+  for course in courses
     course.update_attribute :units, 1
   end
-  
+
   courses = Course.find_all_by_units("3.0")
-  
-  for course in courses 
+
+  for course in courses
     course.update_attribute :units, 3
   end
-  
+
 end
 
 desc "Get higher-level evaluations from unofficial spreadsheet"
-task :get_other_evals => :environment do 
-  
+task :get_other_evals => :environment do
+
   require 'spreadsheet'
   require 'rubygems'
   require 'time'
@@ -742,19 +742,19 @@ task :get_other_evals => :environment do
 
   book = Spreadsheet.open '/Users/jimmyli/rails_projects/yls_courses/public/data/class_action_ratings_formatted.xls'
   sheet1 = book.worksheet 'Sheet1'
-  
-  for course in Course.all 
+
+  for course in Course.all
     unless course.instructor_quality.nil?
       course.update_attribute :instructor_quality, nil
-    end 
+    end
     unless course.classtime_value.nil?
       course.update_attribute :classtime_value, nil
-    end 
+    end
     unless course.workload.nil?
       course.update_attribute :workload, nil
     end
-  end 
-  
+  end
+
   #Store data from spreadsheet
   #If spreadsheet names match (some part) of existing names, then attach the additional information
   count = 0
@@ -770,7 +770,7 @@ task :get_other_evals => :environment do
       prof_match = false
       spreadsheet_prof_name_array.each do |prof|
         if course.instructor.include? prof[0..2]
-          prof_match = true 
+          prof_match = true
           break
         end
       end
@@ -781,9 +781,9 @@ task :get_other_evals => :environment do
         course.update_attribute :classtime_value, spreadsheet_classtime_value.to_f.round(1)
         course.update_attribute :workload, spreadsheet_workload.to_f.round(1)
       end
-    end 
+    end
   end
-end 
+end
 
 #Full_update will not destroy courses. It will just update their attributes.
 task :full_update => [:fetch_classes, :get_address, :get_evals, :get_descrip, :get_testing, :get_time_num, :get_tod, :change_units, :get_units_alt, :day_sort_fix, :limitations_shorten, :get_ratings_alt] do

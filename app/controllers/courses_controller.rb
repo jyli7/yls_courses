@@ -1,16 +1,16 @@
 class CoursesController < ApplicationController
   helper_method :sort_column, :sort_direction
-  
+
   # GET /courses
   # GET /courses.xml
   def index
     @cas_address = "https://secure.its.yale.edu/cas/login?service=http://www.ylsclassaction.com/activate_ratings"
-    
+
     #for creating line items in the cart
     if user_signed_in?
       @user = current_user
       @cart = @user.cart
-      
+
       if @cart
         @line_item = @cart.line_items.build(params[:line_item])
 
@@ -27,53 +27,53 @@ class CoursesController < ApplicationController
     @search = Course.search(params[:search])
     if params[:filter_by_cart] == "1"
       @courses = @search.order("name asc").all & @cart.line_items.all.map {|line_item| line_item.course}
-    else 
+    else
       @courses = @search.order("name asc").all
-    end 
-    
+    end
+
     @toggle = "0"
-        
+
     #toggle 0 corresponds to information view, 1 for ratings view
     if params[:toggle] == "0" or params[:toggle] == "1"
       @toggle = params[:toggle]
-    else 
+    else
       @toggle = "0"
     end
-          
+
     #form an array of course names for the autocomplete function
     @course_names = Course.all.map {|a| a.name}
     @instructor_names = Course.all.map {|a| a.instructor}
     @instructor_names.uniq!
-    
+
     #for retaining search results
     @tod_results = params[:search] == nil ? :blank : params[:search][:tod_like]
     @units_results = params[:search] == nil ? :blank : params[:search][:units_like]
     @limitations_results = params[:search] == nil ? :blank : params[:search][:limitations_like]
     @exam_results = params[:search] == nil ? :blank : params[:search][:exam_type_like]
     @paper_results = params[:search] == nil ? :blank : params[:search][:paper_type_like]
-        
+
     #everything that follows is for the calendar
     if params[:cal_on] == "1" #'1' is for calendar view --> triggers a different part of index.js.erb
       @cal_on = 1
-    else 
+    else
       @cal_on = 0
-    end 
-    
+    end
+
     if @cal_on == 1
       @info = {} #hash structure is {:name => [[days], [start_hour, start_segment], class_length, time, room]}
-      unless @line_items_in_cart.blank? #if there are no line items, don't show a calendar 
+      unless @line_items_in_cart.blank? #if there are no line items, don't show a calendar
         #cycle through the line items
         @line_items_in_cart.each do |item|
           next if item.course.blank?
-          unless item.course.day.blank? #some courses are clinics and don't meet at a time. don't try to show these. 
+          unless item.course.day.blank? #some courses are clinics and don't meet at a time. don't try to show these.
             id = item.course.id
             name = item.course.name
-            days = item.course.day 
+            days = item.course.day
             time = item.course.time
             room = item.course.room unless item.course.room.blank?
             room = "No room" if item.course.room.blank?
             @info[id] = [name] #for the array value for the name key
-                
+
             if days.include? "h" #if one day is Thursday ("Th")
               if days.length == 2
                 @info[id] << ["Th"]
@@ -81,23 +81,23 @@ class CoursesController < ApplicationController
                 @info[id] << ["Th", "#{days[2]}"]
               else
                 @info[id] << ["#{days[0]}", "Th"]
-              end 
+              end
             else
-              if days.length >= 2              
+              if days.length >= 2
                 @info[id] << [days[0], days[1]] #if class does not meet on Thursday, but meets twice a week
-              else 
+              else
                 @info[id] << [days] #if class meets just once a week
               end
             end
-        
+
             def time_values(time) #returns an arrray with start hour, start minutes (segments past the hour), length
               hours_array = ['8','9','10','11','12','1','2','3','4','5','6','7','8']
 
-              #find the difference between the hours 
+              #find the difference between the hours
               start_hour = time[0...time.index(":")]
               finish_hour = time[(time.index("-")+1)...time.index(":", 3)]
               #find the distance between the finish hour and the start hour *within the hours array*
-              if start_hour == '6' and finish_hour == '8' #account for the fact that there are two "8s" in the array. 
+              if start_hour == '6' and finish_hour == '8' #account for the fact that there are two "8s" in the array.
                 #each "segment" is 10 minutes
                 segments = ((hours_array.length-1) - hours_array.index(start_hour))*6 #this ensures that we index the second 8
               else
@@ -110,25 +110,25 @@ class CoursesController < ApplicationController
 
               #then add intervals to the ending hour (e.g. the :30 in -7:30)
               finish_segments = time[time.index(":", 3)+1].to_i
-              segments = segments + finish_segments 
-              return [start_hour, start_segments, segments] 
-            end             
-        
+              segments = segments + finish_segments
+              return [start_hour, start_segments, segments]
+            end
+
             if time.include? "," #if there are two different times for two days
               times_array = time.split(", ")
-            else 
-              times_array = [time] #if there's just 1 time (for one or more days) 
-            end 
+            else
+              times_array = [time] #if there's just 1 time (for one or more days)
+            end
             times_array.each do |t|
               @info[id] << time_values(t)
             end
             @info[id] << times_array
             @info[id] << [room]
           end
-        end 
-      end 
-      
-      #create a single array, composed of smaller arrays, that feeds into the view 
+        end
+      end
+
+      #create a single array, composed of smaller arrays, that feeds into the view
       #Examples of component arrays: [Admin, M4, 11, 1, SLB], [Antitrust, T2, 11, 1, SLB]
       @result_array = []
       @info.each_key do |key|
@@ -137,6 +137,7 @@ class CoursesController < ApplicationController
         @info[key][1].each do |day|
           #add course_name to temp_array
           temp_array = [@info[key][0]]
+
           if @info[key].length == 6 and count == 1 #if we're on the second day, and the days have different times
             temp_array << day + @info[key][3][0] # e.g. W4
             temp_array << @info[key][3][2] # e.g. 11
@@ -158,7 +159,7 @@ class CoursesController < ApplicationController
           count += 1
           @result_array << temp_array
         end
-      end 
+      end
     end
 
     respond_to do |format|
@@ -238,15 +239,15 @@ class CoursesController < ApplicationController
       format.xml  { head :ok }
     end
   end
-  
+
   private
-  
+
   def sort_column
     Course.column_names.include?(params[:sort]) ? params[:sort] : "name"
   end
-  
+
   def sort_direction
     %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
-  
+
 end

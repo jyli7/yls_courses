@@ -4,20 +4,20 @@
 	<span id= "courses_eval_view">
 <% end %>
 
-<div id="first_row"> 
+<div id="first_row">
 	<span id="name_header"><%= sort_link @search, :name, "Course Name", {:toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]}, :remote => true %></span>
 	<span id="icons_header"></span>
 	<span id="instructor_header"><%= sort_link @search, :instructor, {:toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]}, :remote => true %></span>
 	<% if @toggle == "0" %> <!-- For info view -->
 		<span id="day_header"><%= sort_link @search, :day_num, "Day", {:toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]}, :remote => true %></span>
-		<span id="time_header"><%= sort_link @search, :time_num, "Time", {:toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]}, :remote => true %></span>			
+		<span id="time_header"><%= sort_link @search, :time_num, "Time", {:toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]}, :remote => true %></span>
 		<span id="units_header"><%= sort_link @search, :units_alt, "Units", {:toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]}, :remote => true %></span>
 		<span id="limitations_header"><%= sort_link @search, :limitations,  {:default_order => :desc, :toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]}, :remote => true  %></span>
 		<span id="exam_header"><%= sort_link @search, :exam_type, "Exam",  {:default_order => :desc, :toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]}, :remote => true   %></span>
 		<span id="paper_header"><%= sort_link @search, :paper_type, "Paper",  {:default_order => :desc, :toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]}, :remote => true  %></span>
 	<% else %> <!-- For eval view -->
 		<span id="classtime_value_header" title=""><%= sort_link @search, :classtime_value_alt, "Classtime Value", {:default_order => :desc, :toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]},  :remote => true  %></span>
-		<span id="instructor_quality_header"><%= sort_link @search, :instructor_quality_alt, "Instructor Quality", {:default_order => :desc, :toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]}, :remote => true  %></span>		
+		<span id="instructor_quality_header"><%= sort_link @search, :instructor_quality_alt, "Instructor Quality", {:default_order => :desc, :toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]}, :remote => true  %></span>
 		<span id="workload_header"><%= sort_link @search, :workload_alt, "Workload",  {:default_order => :asc, :toggle=>@toggle, :filter_by_cart => params[:filter_by_cart]}, :remote => true %></span>
 	<% end %>
 </div>
@@ -29,25 +29,25 @@
 <div id="below_first_row">
 
 <% for course in @courses %>
-	<div class="other_rows">		
+	<div class="other_rows">
 		<span class="name_body"><a class="course_name_click" href='#'><%= course.name %></a></span>
 		<span class="icons">
 			<span class="eval_body">
-			<% if course.crn.blank? %>
+			<% if course.crn.blank? && course.evals.nil? %>
 			<% else %>
 				<span class="eval_link">
 				<%= link_to image_tag("chart.png", :border=>0, :align=>"absbottom", :title=>"Course evaluations", :height=>20, :width=>20), course %></span>
 				<span id="lightbox"></span>
 			<% end %>
 			</span>
-			<% if user_signed_in? %>			
+			<% if user_signed_in? %>
 			<span class="cart_body">
 					<%= form_for(@line_item, :remote => true) do |f| %>
-						<%= f.hidden_field :course_id, :value => course.id %> 
+						<%= f.hidden_field :course_id, :value => course.id %>
 						<span class="cart_add<%= '_hidden' if @courses_already_in_cart.include?(course) %>" title="Add to cart" id="<%="#{course.id}"%>"><%= image_submit_tag("shopping_cart.png", :border=>0, :align=>"absbottom", :height=>20, :width=>20) %></span>
 					<% end %>
 			</span>
-			<span><%= course.line_items.count %></span>			
+			<span><%= course.line_items.count %></span>
 			<% end %>
 		</span>
 
@@ -55,7 +55,7 @@
 
 		<% if @toggle == "0" %> <!-- For info view -->
 			<span class="day_body"><%= course.day %></span>
-			<span class="time_body"><%= course.time %></span>			
+			<span class="time_body"><%= course.time %></span>
 			<span class="units_body"><%= course.units_alt %></span>
 			<span class="limitations_body"><%= course.limitations %></span>
 			<span class="exam_body"><%= course.exam_type %></span>
@@ -65,7 +65,7 @@
 		<div class="eval_super_container">
 
 			<% unless course.classtime_value.blank? %>
-			<div class="eval_container_bar"> 
+			<div class="eval_container_bar">
 				<div class="eval_bar" style="width:<%=(course.classtime_value * 15)%>px">
 					<%= course.classtime_value %>
 				</div>
@@ -73,21 +73,21 @@
 			<% end %>
 
 			<% unless course.instructor_quality.blank? %>
-				<div class="eval_container_bar"> 
+				<div class="eval_container_bar">
 					<div class="eval_bar" style="width:<%=(course.instructor_quality * 15)%>px">
 						<%= course.instructor_quality %>
 					</div>
 				</div>
 			<% end %>
-			
-			<% unless course.workload.blank? %>		
+
+			<% unless course.workload.blank? %>
 				<div class="eval_container_bar" id="eval_bar_workload">
 					<div class="eval_bar" height="100px" style="width:<%=(course.workload * 15)%>px">
 						<%= course.workload %>
 					</div>
 				</div>
 			<% end %>
-			
+
 		</div>
 		<% end %>
 	</div>
