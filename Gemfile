@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+ruby '1.9.3'
 
 gem 'rails', '3.0.9'
 gem 'gravatar_image_tag', '1.0.0.pre2'
