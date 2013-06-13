@@ -1154,6 +1154,6 @@ div #sign_in_button {
 /* line 1068, ../../app/stylesheets/screen.scss */
 #disclaimer {
   position: relative;
-  left: 578px;
+  right: -561px;
   top: 45px;
 }
