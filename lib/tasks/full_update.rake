@@ -170,7 +170,7 @@ task :fetch_classes => :environment do
 
   Spreadsheet.client_encoding = 'UTF-8'
 
-  book = Spreadsheet.open '/Users/jimmyli/rails_projects/yls_courses/public/data/latest-courses.xls'
+  book = Spreadsheet.open(Rails.root.join('public', 'data', 'latest-courses.xls'))
   sheet1 = book.worksheet 'Sheet1'
 
   temp_array = [] # for names
