@@ -29,7 +29,7 @@ task :find_new_and_deleted_courses => :environment do
 
   Spreadsheet.client_encoding = 'UTF-8'
 
-  book = Spreadsheet.open '/Users/jimmyli/rails_projects/yls_courses/public/data/YLS_Classes_2.xls'
+  book = Spreadsheet.open '/Users/jimmyli/rails_projects/yls_courses/public/data/latest-courses.xls'
   sheet1 = book.worksheet 'Sheet1'
 
   temp_array = [] # for names
@@ -70,7 +70,7 @@ task :add_new_courses => :environment do
 
   Spreadsheet.client_encoding = 'UTF-8'
 
-  book = Spreadsheet.open '/Users/jimmyli/rails_projects/yls_courses/public/data/YLS_Classes_new_courses.xls'
+  book = Spreadsheet.open '/Users/jimmyli/rails_projects/yls_courses/public/data/latest-courses.xls'
   sheet1 = book.worksheet 'Sheet1'
 
   temp_array = [] # for names
@@ -170,7 +170,7 @@ task :fetch_classes => :environment do
 
   Spreadsheet.client_encoding = 'UTF-8'
 
-  book = Spreadsheet.open '/Users/jyl702/workspace/yls_courses/public/data/YLS_Classes_2011_12_8.xls'
+  book = Spreadsheet.open '/Users/jimmyli/rails_projects/yls_courses/public/data/latest-courses.xls'
   sheet1 = book.worksheet 'Sheet1'
 
   temp_array = [] # for names
@@ -185,24 +185,24 @@ task :fetch_classes => :environment do
   keep_these_courses = []
 
   temp_array.each do |new_name|
-    found_course = Course.find_all_by_name(new_name)
-    if found_course == []
-      print "new course!", new_name, "\n"
+    # found_course = Course.find_all_by_name(new_name)
+    # if found_course == []
+      # print "new course!", new_name, "\n"
       new_course = Course.create!(:name => new_name)
-      keep_these_courses << new_course
-    else
-      found_course.each do |found_course|
-        keep_these_courses << found_course
-      end
-    end
+      # keep_these_courses << new_course
+    # else
+      # found_course.each do |found_course|
+        # keep_these_courses << found_course
+      # end
+    # end
   end
 
-  Course.all.each do |course|
-    unless keep_these_courses.include? course
-      print "course destroyed:", course.name, "\n"
-      course.destroy
-    end
-  end
+  # Course.all.each do |course|
+  #   unless keep_these_courses.include? course
+  #     print "course destroyed:", course.name, "\n"
+  #     course.destroy
+  #   end
+  # end
 
   temp_array = [] # for course numbers
   sheet1.each 2 do |row|
