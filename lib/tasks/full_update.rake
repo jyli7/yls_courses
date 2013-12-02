@@ -294,7 +294,7 @@ task :get_address => :environment do
   require 'nokogiri'
   require 'open-uri'
   address_array = []
-  doc = Nokogiri::HTML(open("http://ylsinfo.law.yale.edu/wsw/prereg/course_overview.asp?Term=Fall"))
+  doc = Nokogiri::HTML(open("http://ylsinfo.law.yale.edu/wsw/prereg/course_overview.asp?Term=Spring"))
   r = /href=\"(.*)\">/
   doc.css("div a").each do |link|
     link = link.to_s
